@@ -1,0 +1,8 @@
+node-modules
+package.json
+package-lock.json
+.build
+*.out
+*.exe
+.vscode
+
