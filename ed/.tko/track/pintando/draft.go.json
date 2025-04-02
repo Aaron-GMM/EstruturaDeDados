@@ -2,7 +2,31 @@
     "patches": [
         {
             "label": "2025-04-02_11-25-55",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n"
+            "content": "@@ -41,168 +41,28 @@\n     \n-var ladoA float32  = 0.00%0A    var ladoB float32  = 0.00%0A    var ladoC float32  = 0.00%0A%0A    fmt.Scanln(&ladoA,&ladoB, &ladoC)%0A%0A    fmt.Println(ladoA,ladoB,ladoC)%0A\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_18-27-17",
+            "content": "@@ -149,41 +149,34 @@\n adoA\n-)%0A    fmt.Scanln(\n+,&ladoB, \n &lado\n-B\n+C\n )%0A\n+%0A\n     fmt.\n Scan\n@@ -175,24 +175,36 @@\n fmt.\n-Scanln(&\n+Println(ladoA,ladoB,\n ladoC)%0A%0A\n    %0A\n@@ -203,11 +203,6 @@\n C)%0A%0A\n-   %0A%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_18-28-09",
+            "content": "@@ -201,39 +201,8 @@\n %0A   \n- fmt.Println(ladoA,ladoB,ladoC)\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_18-28-34",
+            "content": "@@ -128,71 +128,8 @@\n 00%0A%0A\n-    var semiPerimetro float32 = 0.0%0A    var raiz float32 = 0.0%0A\n     \n@@ -198,434 +198,42 @@\n C)%0A%0A\n-%0A%0A\n     \n-semiPerimetro = (ladoA+ladoB+ladoC)/ 2%0A    raiz = semiPerimetro * ((semiPerimetro-ladoA) * (semiPerimetro-ladoB) * (semiPerimetro-ladoC))%0A    var area float32 = fraiz(raiz) %0A    %0A    fmt.Printf(%22%25.2f%5Cn%22, area)%0A%7D%0A%0Afunc fraiz(raiz float32) float32%7B%0A %0A    var i float32%0A    for i = 0; i%3C=raiz; i++%7B%0A        if i*i == raiz%7B%0A            return i%0A        %7Delse if i*i %3E raiz %7B%0A            return 0%0A        %7D%0A    %7D%0A    return -1\n+fmt.Println(ladoA,ladoB,ladoC)%0A\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_18-50-19",
+            "content": "@@ -187,17 +187,16 @@\n 2 = 0.0%0A\n-%0A\n     fmt.\n@@ -462,16 +462,18 @@\n tf(%22%25.2f\n+%5Cn\n %22, area)\n"
+        },
+        {
+            "label": "2025-04-02_18-51-52",
+            "content": "@@ -17,32 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)\n+%22fmt%22\n %0Afun\n@@ -467,10 +467,8 @@\n %25.2f\n-%5Cn\n %22, a\n@@ -472,16 +472,16 @@\n , area)%0A\n+\n %7D%0A%0Afunc \n@@ -514,25 +514,26 @@\n 2%7B%0A \n+%0A\n    \n-raiz =\n+ var i\n  float32\n (mat\n@@ -532,50 +532,162 @@\n at32\n-(math.Sqrt(float64(\n+%0A    for i = 0; i%3C=raiz; i++%7B%0A        if i*i == \n raiz\n-)))\n+%7B\n %0A    \n-return raiz%0A\n+        return i%0A        %7Delse if i*i %3E raiz %7B%0A            return 0%0A        %7D%0A    %7D%0A    return -1\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_19-06-30",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"math\"\n)\nfunc main() {\n    var ladoA float32  = 0.00\n    var ladoB float32  = 0.00\n    var ladoC float32  = 0.00\n\n    var semiPerimetro float32 = 0.0\n    var raiz float32 = 0.0\n\n    fmt.Scanln(&ladoA)\n    fmt.Scanln(&ladoB)\n    fmt.Scanln(&ladoC)\n\n\n\n    semiPerimetro = (ladoA+ladoB+ladoC)/ 2\n    raiz = semiPerimetro * ((semiPerimetro-ladoA) * (semiPerimetro-ladoB) * (semiPerimetro-ladoC))\n    var area float32 = fraiz(raiz) \n    \n    fmt.Printf(\"%.2f\\n\", area)\n}\n\nfunc fraiz(raiz float32) float32{\n    raiz = float32(math.Sqrt(float64(raiz)))\n    return raiz\n\n}\n"
         }
     ]
 }
