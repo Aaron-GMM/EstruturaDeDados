@@ -8,6 +8,7 @@ expanded:
 - aquecimento-com-fup
 tasks:
   pintando: '{cov:100, aut:4, hab:5, idx:0}'
+  mumia: '{cov:100, aut:5, hab:5, idx:0}'
 flags:
   minimum: 0
   reward: 0
@@ -18,4 +19,4 @@ flags:
   devel: 0
 new_items: []
 lang: go
-index: mumia
+index: fuga

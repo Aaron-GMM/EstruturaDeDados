@@ -1,0 +1,20 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-02_20-24-56",
+            "content": "@@ -41,399 +41,28 @@\n     \n-var nome string = %22 %22%0A    var idade int32 = 0%0A    var faixaEtaria string %0A    fmt.Scanln(&nome)%0A    fmt.Scanln(&idade)%0A    switch %7B%0A%09case idade %3C 12:%0A%09%09faixaEtaria = %22criaca%22%0A%09case idade %3C 18:%0A%09%09faixaEtaria = %22jovem%22%0A%09case idade %3C 65:%0A%09%09faixaEtaria = %22adulto%22%0A    case idade%3C1000:%0A%09%09faixaEtaria = %22idoso%22%0A    default:%0A         faixaEtaria = %22idoso%22%0A%09%7D%0A    fmt.Println(nome+ %22eh%22+ faixaEtaria\n+fmt.Println(%22qxcode%22\n )%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-02_20-39-03",
+            "content": "@@ -416,12 +416,10 @@\n e+ %22\n- \n eh\n- \n %22+ f\n"
+        },
+        {
+            "label": "2025-04-02_20-39-52",
+            "content": "@@ -208,17 +208,16 @@\n  = %22cria\n-n\n ca%22%0A%09cas\n"
+        },
+        {
+            "label": "2025-04-02_20-40-08",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nome string = \" \"\n    var idade int32 = 0\n    var faixaEtaria string \n    fmt.Scanln(&nome)\n    fmt.Scanln(&idade)\n    switch {\n\tcase idade < 12:\n\t\tfaixaEtaria = \"crianca\"\n\tcase idade < 18:\n\t\tfaixaEtaria = \"jovem\"\n\tcase idade < 65:\n\t\tfaixaEtaria = \"adulto\"\n    case idade<1000:\n\t\tfaixaEtaria = \"idoso\"\n    default:\n         faixaEtaria = \"idoso\"\n\t}\n    fmt.Println(nome+ \" eh \"+ faixaEtaria)\n}\n"
+        }
+    ]
+}
