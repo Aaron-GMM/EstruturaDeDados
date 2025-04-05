@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-04_11-02-50",
+            "content": "@@ -320,45 +320,1826 @@\n     \n-fmt.Println(%22Testando a SAIDA DO TKO%22)\n+ if (positionHelic %3C 0 %7C%7C positionHelic %3E15) %7B%0A                fmt.Printf(%22Error: insira para o Helicoptero  uma posi%C3%A7%C3%A3o entre 0 e 15%22)   %0A        %7D%0A        if (positionPolic %3C 0 %7C%7C positionPolic %3E15 ) %7B%0A                fmt.Printf(%22Error: insira para o Policial uma posi%C3%A7%C3%A3o entre 0 e 15%22)      %0A        %7D%0A        if (positionFugit %3C 0 %7C%7C positionFugit %3E15 ) %7B%0A                fmt.Printf(%22Error: insira para o Fugitivo uma posi%C3%A7%C3%A3o entre 0 e 15%22)      %0A        %7D%0A        %0A        if (%0A        (positionHelic == positionPolic) %7C%7C%0A        (positionFugit == positionPolic) %7C%7C%0A        (positionFugit == positionHelic)) %7B%0A                fmt.Printf(%22Error: posi%C3%A7%C3%B5es nao podem ser iguais%22)      %0A                return%0A        %7D%0A%0A        if directionFugit == -1%7B%0A                var p int8  = positionFugit%0A               %0A%0A        for  %7B%0A                   if p == positionHelic  %7B%0A                        fmt.Printf(%22S%5Cn%22)%0A                        return   %0A                   %7D %0A                   if  p == positionPolic %7B%0A                        fmt.Printf(%22N%5Cn%22)%0A                        return     %0A                   %7D  %0A                p--%0A                if p %3C 0%7B%0A                        p = 15%0A                          %7D%0A                     %0A        %7D%0A                        %7D%0A%0A%0A        if directionFugit == 1%7B%0A              var p int8 = positionFugit %0A                for   %7B%0A                   if p == positionPolic  %7B%0A                        fmt.Printf(%22N%5Cn%22)  %0A                        return%0A                   %7D %0A                   if  p == positionHelic %7B%0A                        fmt.Printf(%22S%5Cn%22) %0A                        return    %0A                   %7D  %0A                p++%0A                if p %3C 0%7B%0A                        p = 15%0A                %7D%0A                    %0A                %7D%0A        %7D%0A        \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_11-12-11",
+            "content": "@@ -308,1152 +308,57 @@\n     \n-%0A%0A\n     \n-    if directionFugit == -1%7B%0A                var p int8  = positionFugit%0A               %0A               %0A        for i := 0; i%3C16; i++  %7B%0A                   if p == positionHelic  %7B%0A                        fmt.Println(%22S%22)%0A                        return   %0A                   %7D %0A                   if  p == positionPolic %7B%0A                        fmt.Println(%22N%22)%0A                        return     %0A                   %7D  %0A                p--%0A                if p %3C 0%7B%0A                        p = 15%0A                          %7D%0A                     %0A        %7D%0A                        %7D%0A%0A%0A        if directionFugit == 1%7B%0A              var p int8 = positionFugit %0A                for i := 0; i%3C16; i++  %7B%0A                   if p == positionPolic  %7B%0A                        fmt.Println(%22N%22)  %0A                        return%0A                   %7D %0A                   if  p == positionHelic %7B%0A                        fmt.Println(%22S%22) %0A                        return    %0A                   %7D  %0A                p++%0A                if p %3C 0%7B%0A                        p = 15%0A                %7D%0A                    %0A                %7D%0A        %7D%0A        \n+%0A       fmt.Println(%22Testando a SAIDA DO TKO%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_11-16-54",
+            "content": "@@ -309,39 +309,8 @@\n    %0A\n-        println(directionFugit)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-04_11-17-34",
+            "content": "@@ -308,24 +308,48 @@\n     %0A       \n+ println(directionFugit)\n %0A        if \n@@ -386,25 +386,16 @@\n         \n-%0A        \n var p in\n@@ -413,16 +413,41 @@\n ionFugit\n+%0A               %0A        \n        %0A\n"
+        },
+        {
+            "label": "2025-04-04_11-21-44",
+            "content": "@@ -540,32 +540,41 @@\n                 \n+return   \n %0A               \n@@ -681,32 +681,41 @@\n                 \n+return   \n   %0A             \n@@ -1105,32 +1105,40 @@\n                 \n+  return\n %0A               \n@@ -1246,32 +1246,40 @@\n                 \n+return  \n   %0A             \n"
+        },
+        {
+            "label": "2025-04-04_11-22-04",
+            "content": "@@ -162,38 +162,9 @@\n nt8%0A\n-        var saida string = %22%22\n %0A\n+\n     \n@@ -487,44 +487,8 @@\n   %7B%0A\n-                        saida = %22S%22%0A\n     \n@@ -511,37 +511,35 @@\n     fmt.Println(\n-saida\n+%22S%22\n )%0A              \n@@ -619,44 +619,8 @@\n c %7B%0A\n-                        saida = %22N%22%0A\n     \n@@ -651,21 +651,19 @@\n Println(\n-saida\n+%22N%22\n )%0A      \n@@ -1034,44 +1034,8 @@\n   %7B%0A\n-                        saida = %22N%22%0A\n     \n@@ -1058,38 +1058,37 @@\n     fmt.Println(\n-saida)\n+%22N%22) \n  %0A              \n@@ -1166,44 +1166,8 @@\n c %7B%0A\n-                        saida = %22S%22%0A\n     \n@@ -1202,13 +1202,11 @@\n tln(\n-saida\n+%22S%22\n ) %0A \n"
+        },
+        {
+            "label": "2025-04-04_11-24-23",
+            "content": "@@ -573,33 +573,34 @@\n        fmt.Print\n-f\n+ln\n (saida)%0A        \n@@ -747,25 +747,26 @@\n    fmt.Print\n-f\n+ln\n (saida)%0A    \n@@ -1196,33 +1196,34 @@\n        fmt.Print\n-f\n+ln\n (saida) %0A       \n@@ -1373,17 +1373,18 @@\n mt.Print\n-f\n+ln\n (saida) \n"
+        },
+        {
+            "label": "2025-04-05_20-12-01",
+            "content": "@@ -150,32 +150,62 @@\n ctionFugit int8%0A\n+        var saida string = %22%22%0A\n         fmt.Scan\n@@ -219,24 +219,24 @@\n itionHelic)%0A\n-\n         fmt.\n@@ -508,24 +508,60 @@\n ionHelic  %7B%0A\n+                        saida = %22S%22%0A\n             \n@@ -583,19 +583,21 @@\n .Printf(\n-%22S%22\n+saida\n )%0A      \n@@ -677,24 +677,60 @@\n tionPolic %7B%0A\n+                        saida = %22N%22%0A\n             \n@@ -752,19 +752,21 @@\n .Printf(\n-%22N%22\n+saida\n )%0A      \n@@ -1129,24 +1129,60 @@\n ionPolic  %7B%0A\n+                        saida = %22N%22%0A\n             \n@@ -1204,19 +1204,21 @@\n .Printf(\n-%22N%22\n+saida\n ) %0A     \n@@ -1297,24 +1297,60 @@\n tionHelic %7B%0A\n+                        saida = %22S%22%0A\n             \n@@ -1372,19 +1372,21 @@\n .Printf(\n-%22S%22\n+saida\n ) %0A     \n"
+        },
+        {
+            "label": "2025-04-05_20-14-41",
+            "content": "@@ -166,32 +166,34 @@\n         fmt.Scan\n+ln\n (&positionHelic)\n@@ -201,32 +201,34 @@\n         fmt.Scan\n+ln\n (&positionPolic)\n@@ -244,16 +244,18 @@\n fmt.Scan\n+ln\n (&positi\n@@ -279,16 +279,18 @@\n fmt.Scan\n+ln\n (&direct\n"
+        },
+        {
+            "label": "2025-04-05_20-16-21",
+            "content": "@@ -511,18 +511,16 @@\n rintf(%22S\n-%5Cn\n %22)%0A     \n@@ -642,18 +642,16 @@\n rintf(%22N\n-%5Cn\n %22)%0A     \n@@ -1056,18 +1056,16 @@\n rintf(%22N\n-%5Cn\n %22) %0A    \n@@ -1190,10 +1190,8 @@\n f(%22S\n-%5Cn\n %22) %0A\n"
+        },
+        {
+            "label": "2025-04-05_20-16-53",
+            "content": "@@ -532,38 +532,32 @@\n                 \n-return\n %0A               \n@@ -653,39 +653,8 @@\n n%22)%0A\n-                        return%0A\n     \n@@ -1070,39 +1070,8 @@\n %22) %0A\n-                        return%0A\n     \n@@ -1202,39 +1202,8 @@\n %22) %0A\n-                        return%0A\n     \n"
+        },
+        {
+            "label": "2025-04-05_20-17-35",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n        var positionHelic int8\n        var positionPolic int8\n        var positionFugit int8\n        var directionFugit int8\n        fmt.Scan(&positionHelic)\n        fmt.Scan(&positionPolic)\n        fmt.Scan(&positionFugit)\n        fmt.Scan(&directionFugit)\n    \n       \n        if directionFugit == -1{\n                \n        var p int8  = positionFugit       \n        for i := 0; i<16; i++  {\n                   if p == positionHelic  {\n                        fmt.Printf(\"S\\n\")\n                        return\n                   } \n                   if  p == positionPolic {\n                        fmt.Printf(\"N\\n\")\n                        return\n                          \n                   }  \n                p--\n                if p < 0{\n                        p = 15\n                          }\n                     \n        }\n                        }\n\n\n        if directionFugit == 1{\n              var p int8 = positionFugit \n                for i := 0; i<16; i++  {\n                   if p == positionPolic  {\n                        fmt.Printf(\"N\\n\") \n                        return\n                      \n                   } \n                   if  p == positionHelic {\n                        fmt.Printf(\"S\\n\") \n                        return\n                          \n                   }  \n                p++\n                if p < 0{\n                        p = 15\n                }\n                    \n                }\n        }\n        \n}\n"
+        }
+    ]
+}
