@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-07_20-46-17",
+            "content": "@@ -95,15 +95,33 @@\n &n)%0A\n-%0A%09vetor\n+    var valor int%0A%09machos\n  := \n@@ -135,17 +135,37 @@\n  int\n-, n\n ) %0A   \n+ femeas := make(%5B%5D int)\n %0A   \n@@ -188,16 +188,17 @@\n n; i++%7B%0A\n+%0A\n         \n@@ -212,24 +212,116 @@\n n(&v\n-etor%5Bi%5D)\n+alor)%0A        if valor%3C0%7B%0A            machos%5Bi%5D = valor%0A        %7Delse%7B%0A            femeas%5Bi%5D = valor\n %0A       \n %0A   \n@@ -316,16 +316,18 @@\n %0A       \n+ %7D\n %0A    %7D%0A%0A\n@@ -402,17 +402,16 @@\n      if \n-(\n vetor%5Bi+\n@@ -413,17 +413,18 @@\n or%5Bi+1%5D \n-+\n+==\n  numeroC\n@@ -435,14 +435,8 @@\n rado\n-) == 0\n  %7B%0A \n@@ -460,52 +460,8 @@\n s++%0A\n-            vetor%5Bi%5D, vetor%5Bi+1%5D = 999, 999%0A\n     \n"
+        },
+        {
+            "label": "2025-04-08_16-55-37",
+            "content": "@@ -270,21 +270,11 @@\n     \n-condidtion :=\n+if \n (vet\n@@ -303,31 +303,8 @@\n ado)\n-%0A        if  condidtion\n  == \n"
+        },
+        {
+            "label": "2025-04-08_16-56-32",
+            "content": "@@ -386,26 +386,9 @@\n r%5Bi%5D\n- = 999%0A           \n+,\n  vet\n@@ -397,16 +397,20 @@\n %5Bi+1%5D = \n+999,\n  999%0A   \n"
+        },
+        {
+            "label": "2025-04-08_16-56-52",
+            "content": "@@ -218,10 +218,8 @@\n  %3C n\n--1\n ; i+\n@@ -279,17 +279,16 @@\n dtion :=\n- \n (vetor%5Bi\n@@ -413,16 +413,17 @@\n r%5Bi+1%5D =\n+ \n  999%0A   \n@@ -457,10 +457,8 @@\n (%22%25d\n-%5Cn\n %22, q\n"
+        },
+        {
+            "label": "2025-04-08_17-03-17",
+            "content": "@@ -236,76 +236,119 @@\n     \n-for j:=i+1; j%3Cn; j++%7B%0A    %0A      \n+numeroComparado := vetor%5Bi%5D%0A        condidtion := (vetor%5Bi+1%5D + numeroComparado)%0A\n       \n+  \n if  \n-vetor%5Bi%5D+vetor%5Bj%5D\n+condidtion\n  == 0 %7B%0A\n     \n@@ -343,20 +343,16 @@\n  == 0 %7B%0A\n-    \n         \n@@ -373,28 +373,24 @@\n             \n-    \n vetor%5Bi%5D = 9\n@@ -387,25 +387,24 @@\n tor%5Bi%5D = 999\n-9\n %0A           \n@@ -400,28 +400,24 @@\n             \n-    \n vetor%5Bi+1%5D =\n@@ -424,61 +424,18 @@\n  999\n-9%0A                break%0A            %7D%0A        %7D\n %0A     \n+   %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_17-10-32",
+            "content": "@@ -93,22 +93,21 @@\n n(&n)%0A%0A%09\n-casais\n+vetor\n  := make\n@@ -168,22 +168,21 @@\n t.Scan(&\n-casais\n+vetor\n %5Bi%5D)%0A   \n@@ -279,24 +279,22 @@\n if  \n-casais%5Bi%5D+casais\n+vetor%5Bi%5D+vetor\n %5Bj%5D \n@@ -342,22 +342,21 @@\n         \n-casais\n+vetor\n %5Bi%5D = 99\n@@ -374,22 +374,21 @@\n         \n-casais\n+vetor\n %5Bi+1%5D = \n@@ -402,24 +402,31 @@\n             \n+  break\n %0A           \n"
+        },
+        {
+            "label": "2025-04-08_17-11-55",
+            "content": "@@ -10,27 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A\n func\n@@ -238,166 +238,34 @@\n     \n-if casais%5Bi%5D == 9999 %7B%0A            continue%0A        %7D%0A        for j:=i+1; j%3Cn; j++%7B%0A            if  casais%5Bj%5D == 9999 %7B%0A                continue%0A            %7D\n+for j:=i+1; j%3Cn; j++%7B%0A    \n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_17-17-17",
+            "content": "@@ -554,15 +554,8 @@\n     \n-  break\n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_17-21-44",
+            "content": "@@ -186,24 +186,27 @@\n ais%5Bi%5D)%0A    \n+   \n %0A    %7D%0A%0A    \n@@ -524,17 +524,19 @@\n  casais%5B\n-j\n+i+1\n %5D = 9999\n"
+        },
+        {
+            "label": "2025-04-08_17-23-28",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var n int \n    var qcasais int = 0\n    fmt.Scanln(&n)\n\n\tcasais := make([] int, n) \n   \n    for i:= 0; i < n; i++{\n        fmt.Scan(&casais[i])\n    \n    }\n\n    for i := 0; i < n-1; i++ {\n        if casais[i] == 9999 {\n            continue\n        }\n        for j:=i+1; j<n; j++{\n            if  casais[j] == 9999 {\n                continue\n            }\n            if  casais[i]+casais[j] == 0 {\n                qcasais++\n                casais[i] = 9999\n                casais[j] = 9999\n                break\n            }\n        }\n     \n    }\n    fmt.Printf(\"%d\\n\", qcasais)\n}\n"
+        }
+    ]
+}
