@@ -16,7 +16,7 @@ func main() {
     case idade<1000:
 		faixaEtaria = "idoso"
     default:
-         faixaEtaria = "idoso"
+         faixaEtaria = "mumia"
 	}
     fmt.Println(nome+ " eh "+ faixaEtaria)
 }

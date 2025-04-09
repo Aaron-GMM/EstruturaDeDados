@@ -10,6 +10,8 @@ func main() {
         fmt.Scan(&positionFugit)
         fmt.Scan(&directionFugit)
     
+
+    
        
         if directionFugit == -1{
                 
@@ -34,7 +36,9 @@ func main() {
 
 
         if directionFugit == 1{
+     
               var p int8 = positionFugit 
+             
                 for i := 0; i<16; i++  {
                    if p == positionPolic  {
                         fmt.Printf("N\n") 
@@ -49,6 +53,9 @@ func main() {
                 p++
                 if p < 0{
                         p = 15
+                }
+                if p == 16 {
+                    p = 0
                 }
                     
                 }

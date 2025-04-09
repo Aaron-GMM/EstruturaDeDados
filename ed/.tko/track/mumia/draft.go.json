@@ -14,7 +14,11 @@
         },
         {
             "label": "2025-04-02_20-40-08",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nome string = \" \"\n    var idade int32 = 0\n    var faixaEtaria string \n    fmt.Scanln(&nome)\n    fmt.Scanln(&idade)\n    switch {\n\tcase idade < 12:\n\t\tfaixaEtaria = \"crianca\"\n\tcase idade < 18:\n\t\tfaixaEtaria = \"jovem\"\n\tcase idade < 65:\n\t\tfaixaEtaria = \"adulto\"\n    case idade<1000:\n\t\tfaixaEtaria = \"idoso\"\n    default:\n         faixaEtaria = \"idoso\"\n\t}\n    fmt.Println(nome+ \" eh \"+ faixaEtaria)\n}\n"
+            "content": "@@ -384,13 +384,13 @@\n  = %22\n-mumia\n+idoso\n %22%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-08_20-16-29",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nome string = \" \"\n    var idade int32 = 0\n    var faixaEtaria string \n    fmt.Scanln(&nome)\n    fmt.Scanln(&idade)\n    switch {\n\tcase idade < 12:\n\t\tfaixaEtaria = \"crianca\"\n\tcase idade < 18:\n\t\tfaixaEtaria = \"jovem\"\n\tcase idade < 65:\n\t\tfaixaEtaria = \"adulto\"\n    case idade<1000:\n\t\tfaixaEtaria = \"idoso\"\n    default:\n         faixaEtaria = \"mumia\"\n\t}\n    fmt.Println(nome+ \" eh \"+ faixaEtaria)\n}\n"
         }
     ]
 }

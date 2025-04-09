@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-08_18-03-14",
+            "content": "@@ -840,87 +840,8 @@\n  ++%0A\n-                figurinhaBaruel%5Bi%5D = 0%0A                figurinhaBaruel%5Bj%5D = 0 %0A\n     \n"
+        },
+        {
+            "label": "2025-04-08_18-11-20",
+            "content": "@@ -240,20 +240,16 @@\n as)%0A%0A   \n-var \n figurinh\n@@ -264,14 +264,38 @@\n das \n+:= make(\n %5B%5D\n+ \n int\n-%0A\n+, qtdFigurinhas)\n %0A   \n@@ -674,17 +674,16 @@\n el%5Bj%5D %7B%0A\n-%0A\n         \n@@ -713,38 +713,13 @@\n idas\n- = append(figurinhasRepetidas,\n+%5Bi%5D =\n  fig\n@@ -733,19 +733,16 @@\n aruel%5Bi%5D\n- ) \n %0A       \n@@ -773,38 +773,13 @@\n idas\n- = append(figurinhasRepetidas,\n+%5Bj%5D =\n  fig\n@@ -797,12 +797,8 @@\n l%5Bj%5D\n- ) %0A\n %0A   \n@@ -836,17 +836,16 @@\n idas ++%0A\n-%0A\n         \n@@ -915,17 +915,16 @@\n j%5D = 0 %0A\n-%0A\n         \n@@ -937,16 +937,79 @@\n   break%0A\n+            %7Delse%7B%0A                qtdFigurinhasRepetidas = 0 %0A\n         \n"
+        },
+        {
+            "label": "2025-04-08_18-16-06",
+            "content": "@@ -84,24 +84,59 @@\n urinhas = 0%0A\n+   var qtdFigurinhasRepetidas = 0%0A%0A\n %0A   fmt.Scan\n@@ -361,125 +361,8 @@\n    %7D\n-%0A   for i := 0; i %3C qtdFigurinhas; i++ %7B%0A    fmt.Printf(%22%25d%22, figurinhaBaruel%5Bi%5D)%0A%7D%0A   var qtdFigurinhasRepetidas = 0\n %0A%0A  \n@@ -1128,66 +1128,8 @@\n  %7B%0A \n-         if i%3E0 %7B%0A            fmt.Printf(%22 %22)%0A          %7D%0A\n     \n@@ -1185,34 +1185,16 @@\n         \n-%0A        %7D%0A       \n  fmt.Pri\n@@ -1226,15 +1226,25 @@\n etidas)%0A\n+        %7D%0A\n    %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_19-02-56",
+            "content": "@@ -404,20 +404,16 @@\n uel%5Bi%5D)%0A\n-    \n %7D%0A   var\n"
+        },
+        {
+            "label": "2025-04-08_19-03-47",
+            "content": "@@ -298,17 +298,16 @@\n mt.Scan(\n-&\n figurinh\n@@ -319,24 +319,110 @@\n el%5Bi%5D)%0A   %7D%0A\n+   for i := 0; i %3C qtdFigurinhas; i++ %7B%0A    fmt.Printf(%22%25d%22, figurinhaBaruel%5Bi%5D)%0A    %7D\n %0A   var qtdF\n@@ -1286,33 +1286,32 @@\n fmt.Printf(%22%25d%22,\n- \n figurinhasRepeti\n@@ -1327,18 +1327,28 @@\n         \n+  %0A        \n %7D\n-%0A\n %0A       \n@@ -1364,17 +1364,16 @@\n tf(%22%25d%22,\n- \n qtdFigur\n"
+        },
+        {
+            "label": "2025-04-08_19-05-24",
+            "content": "@@ -1186,58 +1186,8 @@\n    %7D\n- %0A          %0A          if i == (qtdFigurinhas-1) %7B\n %0A   \n@@ -1211,10 +1211,8 @@\n (%22%25d\n-%5Cn\n %22, f\n@@ -1238,93 +1238,8 @@\n i%5D) \n-%0A%0A          %7Delse%7B%0A            fmt.Printf(%22%25d%22, figurinhasRepetidas%5Bi%5D) %0A%0A          %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_19-07-25",
+            "content": "@@ -40,25 +40,35 @@\n %0A   \n- \n var \n-album int %0A \n+qtdFigurinhasAlbum = 0%0A\n    v\n@@ -86,20 +86,15 @@\n inha\n-Baruel int%0A \n+s = 0%0A%0A\n    f\n@@ -106,14 +106,40 @@\n an(&\n-album,\n+qtdFigurinhasAlbum)%0A   fmt.Scan(\n &qtd\n@@ -151,18 +151,12 @@\n inha\n-Baruel\n+s\n )%0A%0A\n- \n    f\n@@ -159,25 +159,24 @@\n    figurinha\n-s\n Baruel := ma\n@@ -185,16 +185,17 @@\n (%5B%5D int,\n+ \n qtdFigur\n@@ -198,27 +198,26 @@\n igurinha\n-Baruel)\n+s)%0A\n %0A   \n+var\n  figurin\n@@ -233,45 +233,20 @@\n das \n-:= make(\n %5B%5D\n- \n int\n-, qtdFigurinhaBaruel)%0A \n+%0A%0A    %0A\n    f\n@@ -264,38 +264,33 @@\n i %3C qtdFigurinha\n-Baruel\n+s\n ; i++ %7B%0A        \n@@ -300,33 +300,32 @@\n .Scan(&figurinha\n-s\n Baruel%5Bi%5D)%0A    %7D\n@@ -326,20 +326,19 @@\n %0A   \n- \n %7D%0A\n- \n+%0A\n    var q\n Repe\n@@ -333,16 +333,28 @@\n    var q\n+tdFigurinhas\n Repetida\n@@ -359,13 +359,13 @@\n das \n-int%0A \n+= 0%0A%0A\n    f\n@@ -387,38 +387,33 @@\n qtdFigurinha\n-Baruel\n+s\n ; i++ %7B%0A\n        if fi\n@@ -396,24 +396,25 @@\n nhas; i++ %7B%0A\n+ \n        if fi\n@@ -403,32 +403,33 @@\n ++ %7B%0A        if \n+ \n figurinhasBaruel\n@@ -413,33 +413,32 @@\n    if  figurinha\n-s\n Baruel%5Bi%5D == 0%7B%0A\n@@ -435,16 +435,17 @@\n %5Bi%5D == 0\n+ \n %7B%0A      \n@@ -438,32 +438,36 @@\n  == 0 %7B%0A        \n+    \n continue%0A       \n@@ -466,24 +466,25 @@\n %0A       \n+ \n %7D%0A      \n for j:= \n@@ -479,13 +479,16 @@\n     \n+ \n+ \n for j\n+ \n := i\n@@ -511,27 +511,23 @@\n inha\n-Baruel\n+s\n ; j++\n+ \n %7B%0A      \n if f\n@@ -522,19 +522,26 @@\n %7B%0A      \n+  \n+    \n if \n+ \n figurinh\n@@ -533,33 +533,32 @@\n    if  figurinha\n-s\n Baruel%5Bj%5D ==0  %7B\n@@ -553,18 +553,18 @@\n el%5Bj%5D ==\n-0\n  \n+0\n  %7B%0A     \n@@ -558,32 +558,40 @@\n  == 0 %7B%0A        \n+   \n+     \n continue%0A      %7D\n@@ -579,24 +579,30 @@\n    continue%0A\n+      \n       %7D%0A    \n@@ -599,28 +599,33 @@\n     %7D%0A      \n+ \n+     \n if \n- \n figurinhasBa\n@@ -613,33 +613,32 @@\n     if figurinha\n-s\n Baruel%5Bi%5D == fig\n@@ -635,33 +635,32 @@\n %5Bi%5D == figurinha\n-s\n Baruel%5Bj%5D %7B%0A    \n@@ -655,16 +655,17 @@\n el%5Bj%5D %7B%0A\n+%0A\n         \n@@ -670,54 +670,101 @@\n     \n-qRepetidas++%0A          figurinhasRepetidas%5Bi%5D,\n+      figurinhasRepetidas = append(figurinhasRepetidas, figurinhaBaruel%5Bi%5D ) %0A               \n  fig\n@@ -779,22 +779,26 @@\n epetidas\n-%5Bj%5D\n  = \n+append(\n figurinh\n@@ -795,33 +795,33 @@\n d(figurinhas\n-Baruel%5Bi%5D\n+Repetidas\n , figurinhas\n@@ -811,33 +811,32 @@\n tidas, figurinha\n-s\n Baruel%5Bj%5D%0A%0A     \n@@ -828,18 +828,70 @@\n aruel%5Bj%5D\n+ ) \n %0A%0A\n+                qtdFigurinhasRepetidas ++%0A%0A      \n         \n@@ -897,25 +897,24 @@\n    figurinha\n-s\n Baruel%5Bi%5D, f\n@@ -910,17 +910,36 @@\n aruel%5Bi%5D\n-,\n+ = 0%0A               \n  figurin\n@@ -940,17 +940,16 @@\n igurinha\n-s\n Baruel%5Bj\n@@ -957,12 +957,39 @@\n  = 0\n-,0\n+ \n %0A%0A\n+                break%0A      \n     \n@@ -1002,16 +1002,93 @@\n     \n+ \n+ \n %7D%0A   \n- \n %7D%0A\n+%0A   if qtdFigurinhasRepetidas == 0  %7B%0A        fmt.Printf(%22N%22)%0A   %7Delse%7B%0A    \n     \n@@ -1119,22 +1119,17 @@\n inha\n-Baruel\n+s\n ; i++ %7B%0A\n     \n@@ -1120,24 +1120,137 @@\n nhas; i++ %7B%0A\n+          if i%3E0 %7B%0A            fmt.Printf(%22 %22)%0A          %7D %0A          %0A          if i == (qtdFigurinhas-1) %7B%0A    \n       fmt.Pr\n@@ -1261,10 +1261,13 @@\n (%22%25d\n+%5Cn\n %22,\n+ \n figu\n@@ -1285,17 +1285,162 @@\n idas%5Bi%5D)\n-%0A\n  \n+%0A%0A          %7Delse%7B%0A            fmt.Printf(%22%25d%22, figurinhasRepetidas%5Bi%5D) %0A%0A          %7D%0A        %7D%0A%0A        fmt.Printf(%22%25d%22, qtdFigurinhasRepetidas)%0A\n    %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_20-35-15",
+            "content": "@@ -441,29 +441,32 @@\n  0%7B%0A        \n-break\n+continue\n %0A       %7D%0A  \n@@ -542,17 +542,16 @@\n el%5Bj%5D ==\n- \n 0  %7B%0A   \n@@ -547,37 +547,40 @@\n  ==0  %7B%0A        \n-break\n+continue\n %0A      %7D%0A      i\n@@ -750,16 +750,17 @@\n ruel%5Bj%5D%0A\n+%0A\n         \n@@ -812,24 +812,9 @@\n 0,0%0A\n-          break\n %0A\n+\n     \n@@ -831,17 +831,16 @@\n %7D%0A    %7D%0A\n-%0A\n     for \n@@ -881,150 +881,8 @@\n + %7B%0A\n-      if i%3E0%7B%0A       fmt.Printf(%22 %22)%0A      %7D%0A      if i == (qtdFigurinhaBaruel-1) %7B%0A        fmt.Printf(%22%25d%5Cn%22,figurinhasRepetidas%5Bi%5D)%0A      %7D%0A\n     \n@@ -927,49 +927,12 @@\n i%5D)%0A\n+\n     %7D%0A\n-%0A%0A    fmt.Printf(%22%25d%5Cn%22, qRepetidas)%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_20-42-37",
+            "content": "@@ -358,12 +358,8 @@\n  int\n- = 0\n %0A   \n@@ -441,34 +441,29 @@\n  0%7B%0A        \n-  continue\n+break\n %0A       %7D%0A  \n@@ -462,16 +462,61 @@\n     %7D%0A  \n+    for j:= i+1; j %3C qtdFigurinhaBaruel; j++%7B\n %0A      i\n@@ -534,19 +534,17 @@\n sBaruel%5B\n-i+1\n+j\n %5D == 0  \n@@ -557,16 +557,13 @@\n     \n-continue\n+break\n %0A   \n@@ -563,25 +563,24 @@\n eak%0A      %7D%0A\n-%0A\n       if  fi\n@@ -617,19 +617,17 @@\n sBaruel%5B\n-i+1\n+j\n %5D %7B%0A    \n@@ -699,19 +699,17 @@\n petidas%5B\n-i+1\n+j\n %5D = figu\n@@ -746,12 +746,67 @@\n uel%5B\n-i+1%5D\n+j%5D%0A          figurinhasBaruel%5Bi%5D, figurinhasBaruel%5Bj%5D = 0,0\n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_20-48-47",
+            "content": "@@ -407,16 +407,145 @@\n i++ %7B%0A  \n+     if figurinhasBaruel%5Bi%5D == 0%7B%0A          continue%0A       %7D%0A  %0A      if figurinhasBaruel%5Bi+1%5D == 0  %7B%0A        continue%0A      %7D%0A\n %0A      i\n@@ -757,16 +757,17 @@\n   %7D%0A    \n+%7D\n %0A%0A    fo\n"
+        },
+        {
+            "label": "2025-04-08_20-50-09",
+            "content": "@@ -212,17 +212,40 @@\n  := \n+make(\n %5B%5D int\n- %7B%7D\n+, qtdFigurinhaBaruel)\n %0A   \n@@ -397,18 +397,16 @@\n haBaruel\n--1\n ; i++ %7B%0A\n@@ -521,18 +521,13 @@\n idas\n- = append(\n+%5Bi%5D, \n figu\n@@ -541,16 +541,43 @@\n epetidas\n+%5Bi+1%5D = figurinhasBaruel%5Bi%5D\n , figuri\n@@ -592,17 +592,27 @@\n el%5Bi\n-%5D)     %0A \n++1%5D%0A          break\n %0A   \n@@ -650,29 +650,28 @@\n  0; i %3C \n-len(f\n+qtdF\n igurinha\n sRepetid\n@@ -662,27 +662,22 @@\n igurinha\n-sRepetidas)\n+Baruel\n ; i++ %7B%0A\n@@ -740,21 +740,20 @@\n == (\n-len(f\n+qtdF\n igurinha\n sRep\n@@ -752,19 +752,14 @@\n inha\n-sRepetidas)\n+Baruel\n -1) \n"
+        },
+        {
+            "label": "2025-04-08_20-58-08",
+            "content": "@@ -317,147 +317,30 @@\n     \n-faltantes := %5B%5D int %7B%7D%0A    qtd:= 0;%0A    for indice:=0; indice%3Calbum; indice++%7B%0A      qtd +=1%0A      faltantes =append(faltantes, qtd)%0A    %7D%0A\n+var qRepetidas int = 0\n %0A   \n@@ -376,32 +376,35 @@\n Baruel-1; i++ %7B%0A\n+  %0A\n       if  figuri\n@@ -444,16 +444,39 @@\n %5Bi+1%5D %7B%0A\n+          qRepetidas++%0A\n         \n@@ -580,72 +580,9 @@\n    %0A\n-    if len(figurinhasRepetidas)%3C=0%7B%0A      fmt.Printf(%22N%22)%0A    %7D\n %0A\n+\n     \n@@ -834,218 +834,42 @@\n  %7D%0A%0A\n-    for i := 0; i %3C len(faltantes); i++ %7B%0A      if i%3E0%7B%0A       fmt.Printf(%22 %22)%0A      %7D%0A      if i == (len(faltantes)-1) %7B%0A        fmt.Printf(%22%25d%5Cn%22,faltantes%5Bi%5D)%0A      %7D%0A      fmt.Printf(%22%25d%22,faltantes%5Bi%5D)%0A    %7D\n+%0A    fmt.Printf(%22%25d%5Cn%22, qRepetidas)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_21-10-43",
+            "content": "@@ -313,40 +313,8 @@\n   %7D%0A\n-    sequencia := %5B%5D int %7B%7D%0A    %0A\n     \n@@ -332,24 +332,24 @@\n = %5B%5D int %7B%7D%0A\n+\n     qtd:= 0;\n@@ -416,17 +416,17 @@\n     \n-sequencia\n+faltantes\n  =ap\n@@ -640,24 +640,26 @@\n el%5Bi%5D)     %0A\n+ %0A\n       %7D%0A    \n@@ -666,17 +666,8 @@\n   %7D%0A\n-      %0A%0A%0A\n     \n@@ -988,25 +988,8 @@\n  %7D%0A%0A\n-    //faltantes %0A\n     \n"
+        },
+        {
+            "label": "2025-04-08_21-14-29",
+            "content": "@@ -332,24 +332,56 @@\n = %5B%5D int %7B%7D%0A\n+    %0A    faltantes := %5B%5D int %7B%7D%0A\n     qtd:= 0;\n@@ -459,25 +459,24 @@\n ia =\n- \n append(\n-sequencia\n+faltantes\n , qt\n@@ -485,23 +485,16 @@\n %0A    %7D%0A%0A\n-%0A%0A    %0A\n     for \n@@ -703,386 +703,8 @@\n    %0A\n-      faltantes := %5B%5D int %7B%7D%0A      for i := 0; i %3C len(sequencia); i++ %7B%0A        num := sequencia%5Bi%5D%0A        encontrado := false%0A        for j := 0; j %3C qtdFigurinhaBaruel; j++ %7B%0A          if figurinhasBaruel%5Bj%5D == num %7B%0A            encontrado = true%0A            break%0A          %7D%0A        %7D%0A        if !encontrado %7B%0A          faltantes = append(faltantes, num)%0A        %7D%0A      %7D\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-08_21-23-38",
+            "content": "@@ -1217,69 +1217,8 @@\n  %22)%0A\n-      %7Delse%7B%0A        fmt.Printf(%22%25d%22,figurinhasRepetidas%5Bi%5D)%0A\n     \n@@ -1333,89 +1333,72 @@\n     \n-%0A    %7D%0A%0A    //faltantes %0A    if len(faltantes)%3C=0 %7B%0A      fmt.Printf(%22N%5Cn%22)%0A    %7D\n+ fmt.Printf(%22%25d%22,figurinhasRepetidas%5Bi%5D)%0A    %7D%0A%0A    //faltantes \n %0A   \n"
+        },
+        {
+            "label": "2025-04-08_21-26-40",
+            "content": "@@ -1555,58 +1555,8 @@\n  %22)%0A\n-      %7Delse%7B%0A      fmt.Printf(%22%25d%22,faltantes%5Bi%5D)%0A%0A\n     \n@@ -1638,20 +1638,56 @@\n i%5D)%0A      %7D%0A\n+      fmt.Printf(%22%25d%22,faltantes%5Bi%5D)%0A\n     %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_21-28-28",
+            "content": "@@ -1107,34 +1107,32 @@\n    fmt.Printf(%22N\n-%5Cn\n %22)%0A    %7D%0A    for\n"
+        },
+        {
+            "label": "2025-04-08_21-29-13",
+            "content": "@@ -1594,32 +1594,33 @@\n %22,faltantes%5Bi%5D)%0A\n+%0A\n       %7D%0A      if\n"
+        },
+        {
+            "label": "2025-04-08_21-29-48",
+            "content": "@@ -1060,18 +1060,17 @@\n %7D%0A%0A    %0A\n-%0A%0A\n+ \n    if le\n@@ -1091,28 +1091,27 @@\n petidas)\n- == 0 \n+%3C=0\n %7B%0A    \n+ \n+ \n fmt.Prin\n@@ -1115,21 +1115,22 @@\n rint\n-ln\n+f\n (%22N\n+%5Cn\n %22)%0A    %7D\n  els\n@@ -1125,25 +1125,17 @@\n %22)%0A    %7D\n- else %7B%0A \n+%0A\n     for \n@@ -1188,33 +1188,23 @@\n     \n-  \n if i\n- %3E 0 %7B%0A  \n+%3E0%7B%0A\n        \n-   \n fmt.\n@@ -1204,39 +1204,43 @@\n    fmt.Print\n+f\n (%22 %22)%0A\n-  \n       %7D\n+else%7B\n %0A        fmt\n@@ -1245,17 +1245,23 @@\n mt.Print\n-(\n+f(%22%25d%22,\n figurinh\n@@ -1292,25 +1292,139 @@\n     \n-fmt.Println()%0A%7D%0A%0A\n+  if i == (len(figurinhasRepetidas)-1) %7B%0A        fmt.Printf(%22%25d%5Cn%22,figurinhasRepetidas%5Bi%5D)%0A      %7D%0A     %0A    %7D%0A%0A    //faltantes %0A  \n   if\n@@ -1442,16 +1442,16 @@\n tes)\n- == \n+%3C=\n 0 %7B%0A\n+  \n     \n@@ -1463,26 +1463,22 @@\n rint\n-ln\n+f\n (%22N\n+%5Cn\n %22)%0A  \n-%7D else %7B\n+  %7D\n %0A   \n@@ -1526,19 +1526,14 @@\n     \n-  \n if i\n- %3E 0 \n+%3E0\n %7B%0A  \n@@ -1537,21 +1537,16 @@\n %0A       \n- \n-    \n fmt.Prin\n@@ -1546,16 +1546,17 @@\n mt.Print\n+f\n (%22 %22)%0A  \n@@ -1555,30 +1555,31 @@\n (%22 %22)%0A      \n- \n- %7D%0A  \n+%7Delse%7B%0A\n       fmt.Pr\n@@ -1581,17 +1581,23 @@\n mt.Print\n-(\n+f(%22%25d%22,\n faltante\n@@ -1610,28 +1610,99 @@\n     \n-%7D%0A    fmt.Println()%0A\n+  %7D%0A      if i == (len(faltantes)-1) %7B%0A        fmt.Printf(%22%25d%5Cn%22,faltantes%5Bi%5D)%0A      %7D%0A    \n %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-08_21-34-51",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var album int \n    var qtdFigurinhaBaruel int\n    fmt.Scan(&album,&qtdFigurinhaBaruel)\n\n    figurinhasBaruel := make([] int,qtdFigurinhaBaruel)\n    figurinhasRepetidas := [] int {}\n    for i := 0; i < qtdFigurinhaBaruel; i++ {\n        fmt.Scan(&figurinhasBaruel[i])\n    }\n    sequencia := [] int {}\n    qtd:= 0;\n    for indice:=0; indice<album; indice++{\n      qtd +=1\n      sequencia = append(sequencia, qtd)\n    }\n\n\n\n    \n    for i := 0; i < qtdFigurinhaBaruel-1; i++ {\n      if  figurinhasBaruel[i] == figurinhasBaruel[i+1] {\n          figurinhasRepetidas = append(figurinhasRepetidas, figurinhasBaruel[i])     \n      }\n      }\n      \n      faltantes := [] int {}\n      for i := 0; i < len(sequencia); i++ {\n        num := sequencia[i]\n        encontrado := false\n        for j := 0; j < qtdFigurinhaBaruel; j++ {\n          if figurinhasBaruel[j] == num {\n            encontrado = true\n            break\n          }\n        }\n        if !encontrado {\n          faltantes = append(faltantes, num)\n        }\n      }\n\n    \n\n\n   if len(figurinhasRepetidas) == 0 {\n    fmt.Println(\"N\")\n    } else {\n     for i := 0; i < len(figurinhasRepetidas); i++ {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(figurinhasRepetidas[i])\n      }\n    fmt.Println()\n}\n\n  if len(faltantes) == 0 {\n    fmt.Println(\"N\")\n  } else {\n    for i := 0; i < len(faltantes); i++ {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(faltantes[i])\n    }\n    fmt.Println()\n}\n}\n"
+        }
+    ]
+}
