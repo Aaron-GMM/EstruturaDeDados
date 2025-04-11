@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-09_18-05-34",
+            "content": "@@ -189,31 +189,7 @@\n     \n-fmt.Println(pessoasFila)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-09_18-05-55",
+            "content": "@@ -127,14 +127,13 @@\n  := \n-0; i %3C\n+range\n  qtn\n@@ -143,13 +143,8 @@\n soas\n-; i++\n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-09_18-07-10",
+            "content": "@@ -106,31 +106,15 @@\n  := \n-make(%5B%5Dint, qtnPessoas)\n+%5B%5Dint%7B%7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-09_18-08-14",
+            "content": "@@ -211,232 +211,31 @@\n     \n-%0A    var qtdPessoasRemover int%0A    fmt.Scan(&qtdPessoasRemover)%0A%0A    pessoasRemover := make(%5B%5Dint, qtdPessoasRemover)%0A    for i := range pessoasRemover%7B%0A        fmt.Sca\n+fmt.Printl\n n(\n-&\n pessoas\n-Remover%5Bi%5D)%0A    %7D%0A    fmt.Print(pessoasRemover\n+Fila\n )%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-09_18-11-22",
+            "content": "@@ -303,15 +303,9 @@\n ake(\n-map%5Bint\n+%5B\n %5Dint\n@@ -372,54 +372,18 @@\n     \n-var valor int%0A        fmt.Scan(valor)%0A        \n+fmt.Scan(&\n pess\n@@ -399,16 +399,9 @@\n r%5Bi%5D\n- = valor\n+)\n %0A   \n@@ -420,10 +420,8 @@\n rint\n-ln\n (pes\n@@ -437,16 +437,6 @@\n er)%0A\n-    %0A    %0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-09_18-19-02",
+            "content": "@@ -460,75 +460,35 @@\n     \n-%0A    for k, v := range pessoasRemover%7B%0A        fmt.Println(v)%0A    %7D\n+fmt.Println(pessoasRemover)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-09_18-21-32",
+            "content": "@@ -469,9 +469,9 @@\n for \n-_\n+k\n , v \n"
+        },
+        {
+            "label": "2025-04-09_18-21-46",
+            "content": "@@ -348,19 +348,15 @@\n  := \n-0; i %3C qtdP\n+range p\n esso\n@@ -364,21 +364,16 @@\n sRemover\n-; i++\n %7B%0A      \n"
+        },
+        {
+            "label": "2025-04-09_18-24-23",
+            "content": "@@ -521,16 +521,18 @@\n mt.Print\n+ln\n (v)%0A    \n"
+        },
+        {
+            "label": "2025-04-09_18-25-01",
+            "content": "@@ -459,45 +459,8 @@\n lor%0A\n-        fmt.Print(pessoasRemover%5Bi%5D)%0A\n     \n"
+        },
+        {
+            "label": "2025-04-09_18-37-57",
+            "content": "@@ -414,17 +414,16 @@\n mt.Scan(\n-&\n valor)%0A \n@@ -455,16 +455,53 @@\n = valor%0A\n+        fmt.Print(pessoasRemover%5Bi%5D)%0A\n     %7D%0A  \n"
+        },
+        {
+            "label": "2025-04-09_18-38-55",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtnPessoas int\n    fmt.Scan(&qtnPessoas)\n\n    pessoasFila := make([]int, qtnPessoas)\n    for i := 0; i < qtnPessoas; i++{\n        fmt.Scan(&pessoasFila[i])\n    }\n    \n    var qtdPessoasRemover int\n    fmt.Scan(&qtdPessoasRemover)\n\n    pessoasRemover := make(map[int]int, qtdPessoasRemover)\n    for i := 0; i < qtdPessoasRemover; i++{\n        var valor int\n        fmt.Scan(&valor)\n        pessoasRemover[i] = valor\n    }\n    \n    for _, v := range pessoasRemover{\n        fmt.Print(v)\n    }\n    \n    \n}\n"
+        }
+    ]
+}

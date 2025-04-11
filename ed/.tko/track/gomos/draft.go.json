@@ -1,0 +1,36 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-09_17-38-28",
+            "content": "@@ -279,64 +279,14 @@\n os, \n-gomos%7Bx: x, y:y%7D)%0A    %7D%0A%0A    fmt.Println(cobraTodosGomos)\n+)%0A    %7D\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-09_17-44-56",
+            "content": "@@ -104,10 +104,8 @@\n     \n-//\n var \n"
+        },
+        {
+            "label": "2025-04-09_17-45-12",
+            "content": "@@ -96,24 +96,26 @@\n mos int%0A    \n+//\n var direcao \n@@ -124,42 +124,8 @@\n ring\n-%0A    fmt.Scan(&qtdGomos, &direcao)\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-09_17-46-22",
+            "content": "@@ -342,97 +342,20 @@\n     \n-var primeiroGomo gomos = cobraTodosGomos%5B0%5D%0A    for i :=range qtdGomos%7B%0A        %0A        \n+fmt.Println(\n cobr\n@@ -369,16 +369,8 @@\n omos\n-%5Bi%5D%0A    %7D\n+)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-09_17-52-27",
+            "content": "@@ -385,106 +385,8 @@\n s%5B0%5D\n-%0A%0A    if direcao == %22L%22%7B%0A        cobraTodosGomos%5B0%5D.x -= 1%0A    %7D if direcao == %22R%22%7B%0A        %0A    %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-09_17-54-44",
+            "content": "@@ -437,37 +437,32 @@\n %5B0%5D.x -= 1%0A    %7D\n- else\n  if direcao == %22\n@@ -477,144 +477,8 @@\n     \n-cobraTodosGomos%5B0%5D.x += 1%0A    %7D else if direcao == %22U%22%7B%0A        cobraTodosGomos%5B0%5D.y -= 1%0A    %7D else %7B%0A        cobraTodosGomos%5B0%5D.y += 1\n %0A   \n@@ -493,244 +493,62 @@\n or i\n+ \n :=\n- 1; i %3C len(cobraTodosGomos); i++%7B%0A       var valor gomos = cobraTodosGomos%5Bi%5D%0A       cobraTodosGomos%5Bi%5D = primeiroGomo%0A       primeiroGomo = valor %0A    %7D%0A%0A    for _, i := range cobraTodosGomos%7B%0A        fmt.Printf(%22%25v %25v%5Cn%22, i.x, i.y)\n+range qtdGomos%7B%0A        %0A        cobraTodosGomos%5Bi%5D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-09_18-01-27",
+            "content": "@@ -34,23 +34,15 @@\n omos\n-Posicao\n  struct\n- \n %7B%0A  \n@@ -65,51 +65,50 @@\n t%0A%7D%0A\n-%0A\n func \n-atualizar_cobra(cobra %5B%5DgomosPosicao,\n+main() %7B%0A    var qtdGomos int%0A    var\n  dir\n@@ -122,491 +122,510 @@\n ring\n-)%7B\n %0A    \n-posiAntiga := cobra%5B0%5D%0A    switch direcao %7B%0A    case %22L%22:%0A        cobra%5B0%5D.x--%0A    case %22R%22:%0A        cobra%5B0%5D.x++%0A    case %22U%22:\n+fmt.Scan(&qtdGomos, &direcao)%0A%0A    cobraTodosGomos := %5B%5Dgomos%7B%7D%0A%0A    for range qtdGomos%7B%0A        var x, y int%0A        fmt.Scan(&x, &y)%0A%0A        cobraTodosGomos = append(cobraTodosGomos, gomos%7Bx: x, y:y%7D)\n %0A    \n+%7D%0A%0A\n     \n-cobra%5B0%5D.y--%0A    case %22D%22:%0A        cobra%5B0%5D.y++%0A    %7D%0A    for i := 1; i %3C len(cobra); i++ %7B%0A        temp := cobra%5Bi%5D%0A        cobra%5Bi%5D = posiAntiga%0A        posiAntiga = temp%0A    %7D%0A%7D%0Afunc main() %7B%0A\n+var primeiroGomo gomos = cobraTodosGomos%5B0%5D%0A%0A    if direcao == %22L%22%7B%0A        cobraTodosGomos%5B0%5D.x -= 1%0A    %7D else if direcao == %22R%22%7B%0A        cobraTodosGomos%5B0%5D.x += 1%0A    %7D else if direcao == %22U%22%7B%0A  \n   \n-%0A\n     \n-var tamanhoCobra int%0A    var direcao string = %22%22%0A    fmt.Scan(&tamanhoCobra,&direcao)%0A    cobra := make(%5B%5DgomosPosicao, tamanhoCobra)\n+cobraTodosGomos%5B0%5D.y -= 1%0A    %7D else %7B%0A        cobraTodosGomos%5B0%5D.y += 1\n %0A    \n+%7D\n %0A   \n@@ -634,120 +634,164 @@\n or i\n- \n := \n-0; i%3CtamanhoCobra; i++%7B%0A        fmt.Scan(&cobra%5Bi%5D.x, &cobra%5Bi%5D.y)\n+1; i %3C len(cobraTodosGomos); i++%7B%0A       var valor gomos = cobraTodosGomos%5Bi%5D%0A       cobraTodosGomos%5Bi%5D = primeiroGomo\n %0A    \n-%7D%0A\n    \n- atualizar_cobra(cobra, direcao)\n+primeiroGomo = valor %0A    %7D\n %0A%0A  \n@@ -799,19 +799,17 @@\n  for _, \n-pos\n+i\n  := rang\n@@ -815,17 +815,26 @@\n ge cobra\n- \n+TodosGomos\n %7B%0A      \n@@ -848,21 +848,27 @@\n rint\n-ln(pos\n+f(%22%25v %25v%5Cn%22, i\n .x, \n-pos\n+i\n .y)%0A\n"
+        },
+        {
+            "label": "2025-04-10_22-50-58",
+            "content": "package main\nimport \"fmt\"\n\ntype gomosPosicao struct {\n    x int\n    y int\n}\n\nfunc atualizar_cobra(cobra []gomosPosicao, direcao string){\n    posiAntiga := cobra[0]\n    switch direcao {\n    case \"L\":\n        cobra[0].x--\n    case \"R\":\n        cobra[0].x++\n    case \"U\":\n        cobra[0].y--\n    case \"D\":\n        cobra[0].y++\n    }\n    for i := 1; i < len(cobra); i++ {\n        temp := cobra[i]\n        cobra[i] = posiAntiga\n        posiAntiga = temp\n    }\n}\nfunc main() {\n  \n    var tamanhoCobra int\n    var direcao string = \"\"\n    fmt.Scan(&tamanhoCobra,&direcao)\n    cobra := make([]gomosPosicao, tamanhoCobra)\n    \n    for i := 0; i<tamanhoCobra; i++{\n        fmt.Scan(&cobra[i].x, &cobra[i].y)\n    }\n    atualizar_cobra(cobra, direcao)\n\n    for _, pos := range cobra {\n        fmt.Println(pos.x, pos.y)\n    }\n}\n"
+        }
+    ]
+}
