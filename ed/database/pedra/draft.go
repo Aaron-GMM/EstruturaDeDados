@@ -1,38 +1,46 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+	"math"
+)
+type Player struct{
+	p1 float64
+	p2 float64
+}
+
+func (p Player) calcPont() int{
+	return int( math.Abs(p.p1-p.p2))
+}
+func (p Player) valido() bool{
+	return p.p1>=10 && p.p2>=10
+}
 func main() {
-    var numeroCompetidores int8
-	fmt.Scanln(&numeroCompetidores)
+    var quantidade int
+	fmt.Scan(&quantidade)
 
-	distancias := make([][2] int, numeroCompetidores) 
+	players := make([]Player, quantidade)
 
-	for i:= 0; i< int(numeroCompetidores); i++{
-		fmt.Scan(&distancias[i][0],&distancias[i][1])
+	for i := range quantidade{
+		player:= &players[i]
+		fmt.Scan(&player.p1,&player.p2)
 	}
+	//fmt.Println(players)
 
-	vencedor := -1
-	melhorPont := 91
+	melhorPlayer:= -1
+	
+	for idice, player := range players{
+	//fmt.Println(idice,"\n",player)
 
-	for i := 0; i < int(numeroCompetidores); i++ {
-		pedraA:= distancias[i][0]
-		pedraB:= distancias[i][1]
-		if (pedraA <10 || pedraB <10){
-			continue
-		}
-		var diferenca int
-		if pedraA > pedraB{
-		 diferenca = pedraA-pedraB
-		}else{
-			diferenca = pedraB-pedraA
-		}
-		if diferenca < melhorPont {
-			melhorPont = diferenca
-			vencedor = i
+		if player.valido() {
+			if melhorPlayer == -1 || (player.calcPont() < players[melhorPlayer].calcPont()){
+				melhorPlayer = idice 
+			}
 		}
 	}
-	if vencedor != -1 {
-		fmt.Println(vencedor)
-	} else {
+	if  melhorPlayer == -1  {
 		fmt.Println("sem ganhador")
+	}else{
+		fmt.Println(melhorPlayer)
 	}
 }

@@ -30,7 +30,59 @@
         },
         {
             "label": "2025-04-06_18-53-14",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var numeroCompetidores int8\n\tfmt.Scanln(&numeroCompetidores)\n\n\tdistancias := make([][2] int, numeroCompetidores) \n\n\tfor i:= 0; i< int(numeroCompetidores); i++{\n\t\tfmt.Scan(&distancias[i][0],&distancias[i][1])\n\t}\n\n\tvencedor := -1\n\tmelhorPont := 91\n\n\tfor i := 0; i < int(numeroCompetidores); i++ {\n\t\tpedraA:= distancias[i][0]\n\t\tpedraB:= distancias[i][1]\n\t\tif (pedraA <10 || pedraB <10){\n\t\t\tcontinue\n\t\t}\n\t\tvar diferenca int\n\t\tif pedraA > pedraB{\n\t\t diferenca = pedraA-pedraB\n\t\t}else{\n\t\t\tdiferenca = pedraB-pedraA\n\t\t}\n\t\tif diferenca < melhorPont {\n\t\t\tmelhorPont = diferenca\n\t\t\tvencedor = i\n\t\t}\n\t}\n\tif vencedor != -1 {\n\t\tfmt.Println(vencedor)\n\t} else {\n\t\tfmt.Println(\"sem ganhador\")\n\t}\n}\n"
+            "content": "@@ -23,54 +23,8 @@\n mt%22%0A\n-type Player struct%7B%0A%09p1 float64%0A%09p2 float64%0A%7D%0A\n func\n@@ -45,22 +45,31 @@\n var \n-quantidade\n+numeroCompetidores\n  int\n+8\n %0A%09fm\n@@ -78,170 +78,649 @@\n Scan\n-(&quantidade)%0A%0A%09players := make(%5B%5DPlayer, quantidade)%0A%0A%09for i := range quantidade%7B%0A%09%09Player:= players%5Bi%5D%0A%09%09fmt.Scan(&Player.p1,&Player.p2)%0A%09%7D%0A%09fmt.Println(players)\n+ln(&numeroCompetidores)%0A%0A%09distancias := make(%5B%5D%5B2%5D int, numeroCompetidores) %0A%0A%09for i:= 0; i%3C int(numeroCompetidores); i++%7B%0A%09%09fmt.Scan(&distancias%5Bi%5D%5B0%5D,&distancias%5Bi%5D%5B1%5D)%0A%09%7D%0A%0A%09vencedor := -1%0A%09melhorPont := 91%0A%0A%09for i := 0; i %3C int(numeroCompetidores); i++ %7B%0A%09%09pedraA:= distancias%5Bi%5D%5B0%5D%0A%09%09pedraB:= distancias%5Bi%5D%5B1%5D%0A%09%09if (pedraA %3C10 %7C%7C pedraB %3C10)%7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09var diferenca int%0A%09%09if pedraA %3E pedraB%7B%0A%09%09 diferenca = pedraA-pedraB%0A%09%09%7Delse%7B%0A%09%09%09diferenca = pedraB-pedraA%0A%09%09%7D%0A%09%09if diferenca %3C melhorPont %7B%0A%09%09%09melhorPont = diferenca%0A%09%09%09vencedor = i%0A%09%09%7D%0A%09%7D%0A%09if vencedor != -1 %7B%0A%09%09fmt.Println(vencedor)%0A%09%7D else %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-13_21-42-10",
+            "content": "@@ -68,128 +68,8 @@\n 64%0A%7D\n-%0A%0Afunc (p Player) calcPont() int%7B%0A%09return int(p.p1-p.p2)%0A%7D%0Afunc (p Player) valido() bool%7B%0A%09return p.p1%3E=10 && p.p2%3E=10%0A%7D\n %0Afun\n@@ -278,217 +278,7 @@\n ers)\n-%0A%0A%09melhorPlayer:= 0%0A%09%0A%09for idice, player := range players%7B%0A%09%09if player.valido() %7B%0A%09%09%09if melhorPlayer == 0 %7C%7C Player.calcPont(player)%3C Player.calcPont(players%5BmelhorPlayer%5D)%7B%0A%09%09%09%09melhorPlayer = idice%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-13_21-50-03",
+            "content": "@@ -374,16 +374,36 @@\n p2)%0A%09%7D%0A%09\n+fmt.Println(players)\n %0A%0A%09melho\n@@ -528,16 +528,32 @@\n layer)%3C \n+Player.calcPont(\n players%5B\n@@ -565,26 +565,16 @@\n rPlayer%5D\n-.calcPont(\n )%7B%0A%09%09%09%09m\n@@ -609,101 +609,6 @@\n %0A%09%7D%0A\n-%09if  melhorPlayer == 0  %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7Delse%7B%0A%09%09fmt.Println(melhorPlayer)%0A%09%7D%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-13_21-52-53",
+            "content": "@@ -392,18 +392,17 @@\n layer:= \n--1\n+0\n %0A%09%0A%09for \n@@ -478,18 +478,17 @@\n ayer == \n--1\n+0\n  %7C%7C Play\n@@ -604,10 +604,9 @@\n  == \n--1\n+0\n   %7B%0A\n"
+        },
+        {
+            "label": "2025-04-13_21-53-44",
+            "content": "@@ -378,28 +378,8 @@\n %09%7D%0A%09\n-fmt.Println(players)\n %0A%0A%09m\n@@ -392,17 +392,18 @@\n layer:= \n-0\n+-1\n %0A%09%0A%09for \n@@ -479,17 +479,18 @@\n ayer == \n-0\n+-1\n  %7C%7C Play\n@@ -602,17 +602,18 @@\n ayer == \n-0\n+-1\n   %7B%0A%09%09fm\n"
+        },
+        {
+            "label": "2025-04-13_21-54-05",
+            "content": "@@ -320,17 +320,17 @@\n %7B%0A%09%09\n-p\n+P\n layer:= \n &pla\n@@ -325,17 +325,16 @@\n layer:= \n-&\n players%5B\n@@ -348,17 +348,17 @@\n t.Scan(&\n-p\n+P\n layer.p1\n@@ -359,17 +359,17 @@\n yer.p1,&\n-p\n+P\n layer.p2\n"
+        },
+        {
+            "label": "2025-04-13_21-55-08",
+            "content": "@@ -379,10 +379,8 @@\n %09%7D%0A%09\n-//\n fmt.\n"
+        },
+        {
+            "label": "2025-04-13_21-55-20",
+            "content": "@@ -415,18 +415,17 @@\n layer:= \n--1\n+0\n %0A%09%0A%09for \n@@ -501,18 +501,17 @@\n ayer == \n--1\n+0\n  %7C%7C Play\n@@ -627,10 +627,9 @@\n  == \n--1\n+0\n   %7B%0A\n"
+        },
+        {
+            "label": "2025-04-13_21-56-03",
+            "content": "@@ -508,18 +508,17 @@\n = -1 %7C%7C \n-(p\n+P\n layer.ca\n@@ -524,16 +524,22 @@\n alcPont(\n+player\n )%3C playe\n@@ -565,17 +565,16 @@\n lcPont()\n-)\n %7B%0A%09%09%09%09me\n"
+        },
+        {
+            "label": "2025-04-13_21-57-37",
+            "content": "@@ -587,17 +587,16 @@\n  = idice\n- \n %0A%09%09%09%7D%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-13_21-59-29",
+            "content": "@@ -461,41 +461,8 @@\n rs%7B%0A\n-%09fmt.Println(idice,%22%5Cn%22,player)%0A%0A\n %09%09if\n@@ -526,17 +526,16 @@\n lcPont()\n- \n %3C player\n"
+        },
+        {
+            "label": "2025-04-13_22-01-38",
+            "content": "@@ -458,18 +458,16 @@\n ayers%7B%0A%09\n-//\n fmt.Prin\n"
+        },
+        {
+            "label": "2025-04-13_22-02-13",
+            "content": "@@ -10,35 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A\n type\n@@ -114,18 +114,8 @@\n int(\n- math.Abs(\n p.p1\n@@ -120,17 +120,16 @@\n p1-p.p2)\n-)\n %0A%7D%0Afunc \n"
+        },
+        {
+            "label": "2025-04-13_22-03-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\ntype Player struct{\n\tp1 float64\n\tp2 float64\n}\n\nfunc (p Player) calcPont() int{\n\treturn int( math.Abs(p.p1-p.p2))\n}\nfunc (p Player) valido() bool{\n\treturn p.p1>=10 && p.p2>=10\n}\nfunc main() {\n    var quantidade int\n\tfmt.Scan(&quantidade)\n\n\tplayers := make([]Player, quantidade)\n\n\tfor i := range quantidade{\n\t\tplayer:= &players[i]\n\t\tfmt.Scan(&player.p1,&player.p2)\n\t}\n\t//fmt.Println(players)\n\n\tmelhorPlayer:= -1\n\t\n\tfor idice, player := range players{\n\t//fmt.Println(idice,\"\\n\",player)\n\n\t\tif player.valido() {\n\t\t\tif melhorPlayer == -1 || (player.calcPont() < players[melhorPlayer].calcPont()){\n\t\t\t\tmelhorPlayer = idice \n\t\t\t}\n\t\t}\n\t}\n\tif  melhorPlayer == -1  {\n\t\tfmt.Println(\"sem ganhador\")\n\t}else{\n\t\tfmt.Println(melhorPlayer)\n\t}\n}\n"
         }
     ]
 }

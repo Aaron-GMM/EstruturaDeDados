@@ -46,7 +46,123 @@
         },
         {
             "label": "2025-04-09_18-38-55",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtnPessoas int\n    fmt.Scan(&qtnPessoas)\n\n    pessoasFila := make([]int, qtnPessoas)\n    for i := 0; i < qtnPessoas; i++{\n        fmt.Scan(&pessoasFila[i])\n    }\n    \n    var qtdPessoasRemover int\n    fmt.Scan(&qtdPessoasRemover)\n\n    pessoasRemover := make(map[int]int, qtdPessoasRemover)\n    for i := 0; i < qtdPessoasRemover; i++{\n        var valor int\n        fmt.Scan(&valor)\n        pessoasRemover[i] = valor\n    }\n    \n    for _, v := range pessoasRemover{\n        fmt.Print(v)\n    }\n    \n    \n}\n"
+            "content": "@@ -6,18 +6,16 @@\n ge main%0A\n-%0A%0A\n import %22\n@@ -23,41 +23,8 @@\n mt%22%0A\n-type Pessoa struct%7B%0A    id int%0A%7D%0A\n func\n@@ -37,20 +37,16 @@\n ) %7B%0A\n-   %0A\n     var \n nume\n@@ -45,56 +45,22 @@\n var \n-numeroDePessoas = 0 %0A    //var pessosOutput = 0%0A\n+qtnPessoas int\n %0A   \n@@ -70,24 +70,19 @@\n t.Scan(&\n-numeroDe\n+qtn\n Pessoas)\n@@ -86,25 +86,24 @@\n as)%0A\n+%0A\n     \n-filaDeP\n+p\n essoas\n+Fila\n  := \n@@ -113,24 +113,16 @@\n e(%5B%5D\n-Pessoa, numeroDe\n+int, qtn\n Pess\n@@ -143,59 +143,31 @@\n  := \n-range numeroDePessoas%7B%0A%09%09pessoa:= &filaDePessoas%5Bi%5D\n+0; i %3C qtnPessoas; i++%7B\n %0A   \n@@ -191,11 +191,16 @@\n ssoa\n-.id\n+sFila%5Bi%5D\n )%0A  \n@@ -211,51 +211,91 @@\n     \n-fmt.Println(filaDePessoas\n+%0A    var qtdPessoasRemover int%0A    fmt.Scan(&qtdPessoasRemover\n )%0A\n+%0A\n     \n-//\n pessoas\n-Out\n+Remover\n  := \n@@ -303,29 +303,245 @@\n ake(\n-%5B%5D int, pessosOutput)\n+map%5Bint%5Dint, qtdPessoasRemover)%0A    for i := 0; i %3C qtdPessoasRemover; i++%7B%0A        var valor int%0A        fmt.Scan(&valor)%0A        pessoasRemover%5Bi%5D = valor%0A    %7D%0A    %0A    for _, v := range pessoasRemover%7B%0A        fmt.Print(v)%0A    %7D%0A    \n %0A   \n"
+        },
+        {
+            "label": "2025-04-15_08-42-35",
+            "content": "@@ -54,17 +54,16 @@\n d int%0A%7D%0A\n-%0A\n func mai\n@@ -101,24 +101,26 @@\n as = 0 %0A    \n+//\n var pessoasO\n@@ -112,25 +112,24 @@\n  //var pesso\n-a\n sOutput = 0%0A\n@@ -213,17 +213,16 @@\n essoas)%0A\n-%0A\n     for \n@@ -348,219 +348,51 @@\n as)%0A\n-%0A%0A\n     \n-fmt.Scan(&pessoasOutput)%0A    pessoasOut := make(%5B%5DPessoa, pessoasOutput)%0A    %0A    for i := range pessoasOutput%7B%0A%09%09pessoasOut:= &\n+//pessoasOut := make(%5B%5D int, \n pesso\n-a\n sOut\n-%5Bi%5D%0A        fmt.Scan(&pessoasOut.id)%0A    %7D%0A    fmt.Println(pessoasO\n+p\n ut)%0A\n"
+        },
+        {
+            "label": "2025-04-15_08-46-57",
+            "content": "@@ -7,16 +7,17 @@\n e main%0A%0A\n+%0A\n import %22\n@@ -58,166 +58,8 @@\n t%0A%7D%0A\n-func removerPessoas(fila map%5BPessoa%5Dbool, pessoasOutput %5B%5DPessoa) map%5BPessoa%5Dbool %7B%0A%09for _, rem := range pessoasOutput %7B%0A%09%09delete(fila, rem)%0A%09%7D%0A%09return fila%0A%7D\n %0Afun\n@@ -168,16 +168,25 @@\n     fila\n+DePessoas\n  := make\n@@ -190,24 +190,33 @@\n ake(\n-map\n %5B\n+%5D\n Pessoa\n-%5D bool\n+, numeroDePessoas\n )%0A%0A \n@@ -227,15 +227,18 @@\n or i\n+ \n :=\n-0; i%3C\n+ range \n nume\n@@ -252,35 +252,38 @@\n soas\n-; i++%7B%0A        var p \n+%7B%0A%09%09pessoa:= &filaDe\n Pessoa\n+s%5Bi%5D\n %0A   \n@@ -302,38 +302,17 @@\n n(&p\n-.id)%0A        fila%5Bp%5D = true   \n+essoa.id)\n %0A   \n@@ -321,11 +321,8 @@\n %0A   \n- //\n  fmt\n@@ -334,16 +334,25 @@\n tln(fila\n+DePessoas\n )%0A%0A%0A    \n@@ -446,14 +446,13 @@\n  := \n-0; i %3C\n+range\n  pes\n@@ -465,86 +465,58 @@\n tput\n-; i++ %7B%0A%09%09fmt.Scan(&pessoasOut%5Bi%5D.id)%0A%09%7D%0A    novaFila := removerPessoas(fila, \n+%7B%0A%09%09pessoasOut:= &pessoasOut%5Bi%5D%0A        fmt.Scan(&\n pess\n@@ -525,61 +525,50 @@\n sOut\n+.id\n )%0A    \n-for p := range novaFila %7B%0A%09%09fmt.Println(p.id)%0A%09%7D\n+%7D%0A    fmt.Println(pessoasOut)%0A    \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-15_09-38-57",
+            "content": "@@ -712,16 +712,9 @@\n for \n-i, valor\n+p\n  := \n@@ -745,39 +745,15 @@\n rint\n-f(%22Indice:%25v  valor:%25v%22,i,valor\n+ln(p.id\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-40-24",
+            "content": "@@ -705,24 +705,31 @@\n t)%0A    for i\n+, valor\n  := range no\n@@ -755,13 +755,36 @@\n tf(%22\n-%25v%22,i\n+Indice:%25v  valor:%25v%22,i,valor\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-41-10",
+            "content": "@@ -709,22 +709,16 @@\n    for i\n-,valor\n  := rang\n@@ -750,25 +750,11 @@\n (%22%25v\n-: %25v %5Cn%22,i ,valor\n+%22,i\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-42-24",
+            "content": "@@ -708,17 +708,23 @@\n     for \n-p\n+i,valor\n  := rang\n@@ -751,15 +751,30 @@\n rint\n-ln(p.id\n+f(%22%25v: %25v %5Cn%22,i ,valor\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-44-59",
+            "content": "@@ -745,17 +745,11 @@\n rint\n-f(%22%25d %22, \n+ln(\n p.id\n"
+        },
+        {
+            "label": "2025-04-15_09-48-41",
+            "content": "@@ -746,16 +746,17 @@\n intf(%22%25d\n+ \n %22, p.id)\n"
+        },
+        {
+            "label": "2025-04-15_09-48-58",
+            "content": "@@ -746,17 +746,16 @@\n intf(%22%25d\n- \n %22, p.id)\n"
+        },
+        {
+            "label": "2025-04-15_09-49-14",
+            "content": "@@ -708,18 +708,16 @@\n     for \n-i,\n p := ran\n@@ -749,18 +749,11 @@\n f(%22%25\n-v, %25d %22, i\n+d %22\n , p.\n"
+        },
+        {
+            "label": "2025-04-15_09-49-57",
+            "content": "@@ -710,17 +710,16 @@\n   for i,\n- \n p := ran\n@@ -755,19 +755,20 @@\n v, %25\n-v\n+d \n %22, i\n-.id\n , p\n+.id\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-50-36",
+            "content": "@@ -707,16 +707,19 @@\n %0A    for\n+ i,\n  p := ra\n@@ -752,17 +752,23 @@\n f(%22%25\n-d %22, p\n+v, %25v%22, i\n .id\n+, p\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_09-51-19",
+            "content": "@@ -763,24 +763,6 @@\n %0A%09%7D%0A\n-    fmt.Println()%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-15_09-52-57",
+            "content": "@@ -212,17 +212,16 @@\n  fila%0A%7D%0A\n-%0A\n func mai\n@@ -709,23 +709,16 @@\n    for p\n-, valor\n  := rang\n@@ -751,27 +751,15 @@\n %22%25d \n- : %25v\n %22, p.id\n-, valor\n )%0A%09%7D\n"
+        },
+        {
+            "label": "2025-04-15_10-05-04",
+            "content": "@@ -704,31 +704,8 @@\n Out)\n-%0A%0A    println(novaFila)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-15_10-16-25",
+            "content": "@@ -727,19 +727,16 @@\n ila)%0A   \n- //\n  for p, \n@@ -762,19 +762,16 @@\n Fila %7B%0A%09\n-// \n %09fmt.Pri\n@@ -800,19 +800,16 @@\n valor)%0A%09\n-// \n %7D%0A    fm\n"
+        },
+        {
+            "label": "2025-04-15_10-16-35",
+            "content": "@@ -702,29 +702,25 @@\n asOut)%0A%0A    \n-fmt.P\n+p\n rintln(novaF\n"
+        },
+        {
+            "label": "2025-04-15_10-16-55",
+            "content": "@@ -201,30 +201,8 @@\n %0A%09%7D%0A\n-    fmt.Println(fila)%0A\n %09ret\n"
+        },
+        {
+            "label": "2025-04-15_10-17-48",
+            "content": "@@ -142,31 +142,8 @@\n  %7B%0A%09\n- fmt.Println(fila)%0A    \n for \n"
+        },
+        {
+            "label": "2025-04-15_10-18-18",
+            "content": "@@ -513,24 +513,27 @@\n   %0A    %7D%0A   \n+ //\n  fmt.Println\n"
+        },
+        {
+            "label": "2025-04-15_10-19-24",
+            "content": "@@ -73,20 +73,197 @@\n Pessoas(\n-) %7B%0A\n+fila map%5BPessoa%5Dbool, pessoasOutput %5B%5DPessoa) map%5BPessoa%5Dbool %7B%0A%09 fmt.Println(fila)%0A    for _, rem := range pessoasOutput %7B%0A%09%09delete(fila, rem)%0A%09%7D%0A    fmt.Println(fila)%0A%09return fila\n %0A%7D%0A%0Afunc\n@@ -272,16 +272,20 @@\n ain() %7B%0A\n+   %0A\n     var \n@@ -294,16 +294,18 @@\n mero\n+De\n Pessoas \n int8\n@@ -304,45 +304,88 @@\n oas \n-int8 \n = 0\n+ \n %0A    \n-%0A    filaPessoas\n+var pessoasOutput = 0%0A%0A    fmt.Scan(&numeroDePessoas)%0A    fila \n := make(\n %5B%5DPe\n@@ -384,31 +384,24 @@\n ake(\n+map\n %5B\n-%5D\n Pessoa\n-, numeroPessoas\n+%5D bool\n )%0A%0A \n@@ -414,28 +414,33 @@\n  i:=\n- range \n+0; i%3C\n numero\n+De\n Pessoas\n+; i++\n %7B%0A  \n@@ -449,41 +449,226 @@\n     \n-pessoa:= &filaPessoas%5Bi%5D\n+var p Pessoa%0A        fmt.Scan(&p.id)%0A        fila%5Bp%5D = true   %0A    %7D%0A    fmt.Println(fila)%0A%0A%0A    fmt.Scan(&pessoasOutput)%0A    pessoasOut := make(%5B%5DPessoa, pessoasOutput)\n %0A    \n+%0A\n     \n+for i := 0; i %3C pessoasOutput; i++ %7B%0A%09%09\n fmt.\n@@ -676,54 +676,209 @@\n can(\n+&\n pessoa\n-.id)\n+sOut%5Bi%5D.id)%0A%09%7D%0A\n   \n-%0A\n   \n-  %7D%0A    fmt.Println(filaPessoas\n+novaFila := removerPessoas(fila, pessoasOut)%0A%0A    fmt.Println(novaFila)%0A    // for p, valor := range novaFila %7B%0A%09// %09fmt.Printf(%22%25d  : %25v%22, p.id, valor)%0A%09// %7D%0A    fmt.Println(\n )%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_08-57-31",
+            "content": "@@ -134,32 +134,8 @@\n     \n-fmt.Scan(&numeroPessoas)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-16_08-58-09",
+            "content": "@@ -287,17 +287,16 @@\n mt.Scan(\n-&\n pessoa.i\n"
+        },
+        {
+            "label": "2025-04-16_08-58-25",
+            "content": "@@ -77,974 +77,269 @@\n oas(\n-filaPessoas %5B%5DPessoa, pessoasRemovidas %5B%5DPessoa ) %5B%5DPessoa%7B%0A        for _, rem := range pessoasRemovidas  %7B%0A                for i, p := range filaPessoas%7B%0A                     if p.id == rem.id%7B%0A                        filaPessoas = append(filaPessoas%5B:i%5D, filaPessoas%5Bi+1:%5D...)%0A                        break%0A                    %7D%0A                %7D%0A        %7D%0A        return filaPessoas%0A%7D%0A%0Afunc main() %7B%0A    var numeroPessoas int8 = 0%0A    fmt.Scan(&numeroPessoas)%0A    filaPessoas:= make(%5B%5DPessoa, numeroPessoas)%0A%0A    for i:= range numeroPessoas%7B%0A        pessoa:= &filaPessoas%5Bi%5D%0A        fmt.Scan(&pessoa.id)  %0A    %7D%0A    %0A    var numeroPessoasFora int8 = 0%0A    fmt.Scan(&numeroPessoasFora)%0A    pessoasRemovidas:= make(%5B%5DPessoa, numeroPessoasFora)%0A    %0A    for i:= range numeroPessoasFora  %7B%0A        pessoasFora:= &pessoasRemovidas%5Bi%5D%0A        fmt.Scan(&pessoasFora.id)%0A    %7D%0A%0A    newFila:= removerPessoas(filaPessoas,pessoasRemovidas)%0A%0A    fmt.Println(newFila)%0A%0A    %0A%0A%0A%0A\n+) %7B%0A%0A%7D%0A%0Afunc main() %7B%0A    var numeroPessoas int8 = 0%0A    fmt.Scan(&numeroPessoas)%0A    filaPessoas:= make(%5B%5DPessoa, numeroPessoas)%0A%0A    for i:= range numeroPessoas%7B%0A        pessoa:= &filaPessoas%5Bi%5D%0A        fmt.Scan(&pessoa.id)  %0A    %7D%0A    fmt.Println(filaPessoas)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_09-06-43",
+            "content": "@@ -1015,63 +1015,27 @@\n    f\n-or i := range newFila%7B%0A        fmt.Printf(%22%25v%22,i)%0A    %7D\n+mt.Println(newFila)\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-16_09-07-25",
+            "content": "@@ -1018,12 +1018,9 @@\n for \n-_, v\n+i\n  := \n@@ -1058,17 +1058,17 @@\n tf(%22%25v%22,\n-v\n+i\n )%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_09-07-43",
+            "content": "@@ -1059,17 +1059,16 @@\n intf(%22%25v\n- \n %22,v)%0A   \n@@ -1073,26 +1073,8 @@\n    %7D\n-%0A    fmt.Println()\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-16_09-08-14",
+            "content": "@@ -1063,19 +1063,16 @@\n (%22%25v %22,v\n-.id\n )%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_09-08-36",
+            "content": "package main\n\nimport \"fmt\"\ntype Pessoa struct{\n    id int\n}\nfunc removerPessoas(filaPessoas []Pessoa, pessoasRemovidas []Pessoa ) []Pessoa{\n        for _, rem := range pessoasRemovidas  {\n                for i, p := range filaPessoas{\n                     if p.id == rem.id{\n                        filaPessoas = append(filaPessoas[:i], filaPessoas[i+1:]...)\n                        break\n                    }\n                }\n        }\n        return filaPessoas\n}\n\nfunc main() {\n    var numeroPessoas int8 = 0\n    fmt.Scan(&numeroPessoas)\n    filaPessoas:= make([]Pessoa, numeroPessoas)\n\n    for i:= range numeroPessoas{\n        pessoa:= &filaPessoas[i]\n        fmt.Scan(&pessoa.id)  \n    }\n    \n    var numeroPessoasFora int8 = 0\n    fmt.Scan(&numeroPessoasFora)\n    pessoasRemovidas:= make([]Pessoa, numeroPessoasFora)\n    \n    for i:= range numeroPessoasFora  {\n        pessoasFora:= &pessoasRemovidas[i]\n        fmt.Scan(&pessoasFora.id)\n    }\n\n    newFila:= removerPessoas(filaPessoas,pessoasRemovidas)\n\n    for _, v := range newFila{\n        fmt.Printf(\"%v \",v.id)\n    }\n    fmt.Println()\n\n    \n\n\n\n\n}\n"
         }
     ]
 }

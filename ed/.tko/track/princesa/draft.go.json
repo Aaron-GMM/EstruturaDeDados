@@ -1,0 +1,96 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-10_22-53-57",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,325 +41,28 @@\n     \n-var numeroPessoas int %0A    var pessoaEscolhida int %0A    fmt.Scan(&numeroPessoas, &pessoaEscolhida)%0A    filaCircular := make(%5B%5D int, numeroPessoas)%0A%0A    for i := 1; i %3C=numeroPessoas; i++ %7B%0A        filaCircular%5Bi%5D = i %0A    %7D%0A    for i := 1; i %3C=numeroPessoas; i++ %7B%0A        fmt.Printf(%22%25v%22,filaCircular%5Bi%5D)  %0A    %7D%0A    \n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-11_14-26-14",
+            "content": "@@ -174,9 +174,21 @@\n nt, \n-0\n+numeroPessoas\n )%0A%0A \n@@ -205,16 +205,17 @@\n = 1; i %3C\n+=\n numeroPe\n@@ -254,16 +254,17 @@\n r%5Bi%5D = i\n+ \n %0A    %7D%0A \n"
+        },
+        {
+            "label": "2025-04-11_14-29-03",
+            "content": "@@ -170,29 +170,17 @@\n %5B%5D int, \n-numeroPessoas\n+0\n )%0A%0A    f\n@@ -187,17 +187,17 @@\n or i := \n-0\n+1\n ; i %3Cnum\n"
+        },
+        {
+            "label": "2025-04-11_14-29-37",
+            "content": "@@ -20,18 +20,16 @@\n  %22fmt%22%0A%0A\n-%0A%0A\n func mai\n@@ -88,16 +88,17 @@\n hida int\n+ \n %0A    fmt\n@@ -185,17 +185,16 @@\n essoas)%0A\n- \n %0A    for\n@@ -253,18 +253,16 @@\n r%5Bi%5D = i\n-+1\n %0A    %7D%0A \n@@ -268,147 +268,69 @@\n     \n-%0A    for len(filaCircular)%3E1%7B%0A        indiceAlvo := (pessoaEscolhida+1) %25 len(filaCircular)%0A        fmt.Printf(%22Valor %25d foi eliminado%5Cn\n+for i := 1; i %3C=numeroPessoas; i++ %7B%0A        fmt.Printf(%22%25v\n %22,\n- \n fila\n@@ -343,26 +343,19 @@\n ar%5Bi\n-ndiceAlvo\n %5D)\n+  \n %0A    %7D%0A \n %0A%7D%0A\n@@ -351,11 +351,14 @@\n %0A    %7D%0A \n+   \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-11_16-11-10",
+            "content": "@@ -269,24 +269,48 @@\n  %7D%0A    %0A    \n+for len(filaCircular)%3E1%7B\n %0A        ind\n@@ -437,13 +437,14 @@\n o%5D)%0A    \n+%7D\n %0A %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-11_16-12-13",
+            "content": "@@ -20,16 +20,18 @@\n  %22fmt%22%0A%0A\n+%0A%0A\n func mai\n@@ -272,224 +272,75 @@\n     \n-for i := 0; i %3Clen(filaCircular); i++ %7B%0A        fmt.Printf(%22%25d%5Ct%22, filaCircular%5Bi%5D)%0A    %7D%0A        %0A       %0A        fmt.Printf(%22%5CnEspada ta no fela da puta:%25d%5Cn%22, pessoaEscolhida)%0A        indiceAlvo:= pessoaEscolhida \n+%0A    %0A        indiceAlvo := (pessoaEscolhida+1) %25 len(filaCircular)\n %0A   \n@@ -356,18 +356,16 @@\n Printf(%22\n-%5Cn\n Valor %25d\n@@ -413,178 +413,13 @@\n o%5D)%0A\n-%0A\n     \n-    filaCircular = append(filaCircular%5B:indiceAlvo%5D, )%0A        for i := 0; i %3C len(filaCircular); i++ %7B%0A            fmt.Printf(%22%25d%5Ct%22, filaCircular%5Bi%5D)%0A        %7D%0A   \n+%0A\n  %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-13_22-45-43",
+            "content": "@@ -38,16 +38,20 @@\n ) %7B%0A    \n+var \n numeroPe\n@@ -59,14 +59,88 @@\n soas\n-:= 0 %0A\n+ int %0A    var pessoaEscolhida int%0A    fmt.Scan(&numeroPessoas, &pessoaEscolhida)\n %0A   \n@@ -184,16 +184,17 @@\n essoas)%0A\n+ \n %0A    for\n@@ -203,58 +203,528 @@\n  := \n-range numeroPessoas %7B%0A        filaCircular%5Bi%5D = i%0A\n+0; i %3CnumeroPessoas; i++ %7B%0A        filaCircular%5Bi%5D = i+1%0A    %7D%0A    for i := 0; i %3Clen(filaCircular); i++ %7B%0A        fmt.Printf(%22%25d%5Ct%22, filaCircular%5Bi%5D)%0A    %7D%0A        %0A       %0A        fmt.Printf(%22%5CnEspada ta no fela da puta:%25d%5Cn%22, pessoaEscolhida)%0A        indiceAlvo:= pessoaEscolhida %0A        fmt.Printf(%22%5CnValor %25d foi eliminado%5Cn%22, filaCircular%5BindiceAlvo%5D)%0A%0A        filaCircular = append(filaCircular%5B:indiceAlvo%5D, )%0A        for i := 0; i %3C len(filaCircular); i++ %7B%0A            fmt.Printf(%22%25d%5Ct%22, filaCircular%5Bi%5D)%0A    \n     \n"
+        },
+        {
+            "label": "2025-04-14_10-30-36",
+            "content": "@@ -61,76 +61,8 @@\n  0 %0A\n-    pessoaInicial := -1%0A%0A    fmt.Scan(&numeroPessoas,&pessoaInicial)\n %0A   \n@@ -106,16 +106,17 @@\n essoas)%0A\n+%0A\n     for \n@@ -180,59 +180,8 @@\n   %7D%0A\n-    fmt.Println(numeroPessoas,%22%5Cn%22, pessoaInicial)%0A\n     \n"
+        },
+        {
+            "label": "2025-04-14_10-32-43",
+            "content": "@@ -78,17 +78,18 @@\n cial := \n-0\n+-1\n %0A%0A    fm\n@@ -251,198 +251,54 @@\n     \n-indiceAlvo:= -1%0A    posicaoAtual := pessoaInicial%0A  for  i:=posicaoAtual;  i%3C numeroPessoas; i++%7B%0A    indiceAlvo = posicaoAtual+1%0A    fmt.Println(%22morreu oh:%22,filaCircular%5BindiceAlvo%5D)%0A%0A  %7D \n+fmt.Println(numeroPessoas,%22%5Cn%22, pessoaInicial)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-14_10-47-18",
+            "content": "@@ -172,21 +172,16 @@\n Pessoas)\n-%0A%0A   \n %0A    for\n@@ -246,129 +246,8 @@\n   %7D%0A\n-    pessoas:= make(map%5Bint%5D int)%0A    for i,v := range pessoas %7B%0A        fmt.Printf(%22Indice:%25v %5Ct Valor:%25v%22, i, v) %0A    %7D%0A\n     \n@@ -431,18 +431,16 @@\n eAlvo%5D)%0A\n-  \n %0A  %7D %0A  \n"
+        },
+        {
+            "label": "2025-04-14_10-53-13",
+            "content": "@@ -178,41 +178,8 @@\n s)%0A%0A\n-    pessoas:= make(map%5Bint%5D int)%0A\n    %0A\n@@ -195,13 +195,14 @@\n  := \n-0; i%3C\n+range \n nume\n@@ -214,13 +214,8 @@\n soas\n-; i++\n  %7B%0A \n@@ -244,15 +244,15 @@\n  = i\n-+1\n %0A    \n+%7D%0A\n     \n@@ -262,40 +262,29 @@\n soas\n-%5Bi%5D = filaCircular%5Bi%5D%0A    %7D%0A    \n+:= make(map%5Bint%5D int)\n %0A   \n@@ -311,17 +311,16 @@\n ssoas %7B%0A\n-%0A\n         \n@@ -356,11 +356,8 @@\n r:%25v\n- %5Cn\n %22, i\n@@ -394,350 +394,183 @@\n 1%0A  \n-for len(pessoas)%3E1%7B%0A    for  _, valor := range filaCircular%7B%0A        indiceAlvo  = pessoaInicial%0A        %0A%0A        if valor %3E pessoas%5BindiceAlvo%5D %7B%0A            fmt.Println(%22morreu oh:%22,pessoas%5BindiceAlvo%5D)%0A            delete(pessoas,indiceAlvo)%0A            %0A        %7D%0A        fmt.Println(%22%5Cn%22, valor)%0A        fmt.Println(pessoas\n+  posicaoAtual := pessoaInicial%0A  for  i:=posicaoAtual;  i%3C numeroPessoas; i++%7B%0A    indiceAlvo = posicaoAtual+1%0A    fmt.Println(%22morreu oh:%22,filaCircular%5BindiceAlvo%5D\n )%0A  \n+%0A\n   %7D %0A\n-%7D%0A  %0A\n     \n"
+        },
+        {
+            "label": "2025-04-14_11-07-50",
+            "content": "@@ -458,17 +458,17 @@\n pessoas)\n-%3C\n+%3E\n 1%7B%0A    f\n@@ -713,50 +713,70 @@\n    %7D\n-else%7B%0A            break%0A        %7D%0A        \n+%0A        fmt.Println(%22%5Cn%22, valor)%0A        fmt.Println(pessoas)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-14_11-10-23",
+            "content": "@@ -23,212 +23,8 @@\n mt%22%0A\n-func exibirEstado(fila %5B%5Dint, posicaoEspada int) %7B%0A%09for i, valor := range fila %7B%0A%09%09marcador := %22%22%0A%09%09if i == posicaoEspada %7B%0A%09%09%09marcador = %22%3E%22%0A%09%09%7D%0A%09%09fmt.Printf(%22%25d%25s %22, valor, marcador)%0A%09%7D%0A%09fmt.Println()%0A%7D\n %0Afun\n@@ -327,904 +327,150 @@\n   %7D%0A\n-%09posicaoEspada := pessoaInicial - 1%0A%0A%09exibirEstado(filaCircular, posicaoEspada)%0A  %0A    //indiceAlvo:= -1%0A    %0A    for len(filaCircular) %3E 1 %7B%0A%09%09// O alvo %C3%A9 o pr%C3%B3ximo da pessoa com a espada.%0A%09%09indiceAlvo := (posicaoEspada + 1) %25 len(filaCircular)%0A%09%09// Exibe quem foi eliminado.%0A%09%09//fmt.Printf(%22Pessoa %25d foi eliminada.%5Cn%22, filaCircular%5BindiceAlvo%5D)%0A%09%09%0A%09%09// Remove o elemento eliminado do slice.%0A%09%09// A fun%C3%A7%C3%A3o append reagrupa os elementos, mantendo a ordem.%0A%09%09filaCircular = append(filaCircular%5B:indiceAlvo%5D, filaCircular%5BindiceAlvo+1:%5D...)%0A%09%09%0A%09%09// Atualiza a posi%C3%A7%C3%A3o da espada.%0A%09%09// Se o %C3%ADndice do alvo era o %C3%BAltimo, com a remo%C3%A7%C3%A3o o novo slice se ajusta automaticamente.%0A%09%09posicaoEspada = indiceAlvo %25 len(filaCircular)%0A%09%09%0A%09%09// Exibe o estado atual da fila.%0A%09%09exibirEstado(filaCircular, posicaoEspada)%0A%09%7D%0A%0A%09// O %C3%BAltimo elemento restante %C3%A9 o sobrevivente.%0A%09fmt.Printf(%22%25d%22, filaCircular%5B0%5D)%0A\n+    %0A    for i,v := range pessoas %7B%0A%0A        fmt.Printf(%22Indice:%25v %5Ct Valor:%25v %5Cn%22, i, v) %0A    %7D%0A    indiceAlvo:= -1%0A  for len(pessoas)%3C1%7B\n %0A   \n- //\n  for\n@@ -507,23 +507,20 @@\n ar%7B%0A    \n-//\n     \n- \n indiceAl\n@@ -548,29 +548,20 @@\n        %0A\n-      \n %0A   \n- //\n      if \n@@ -589,27 +589,24 @@\n eAlvo%5D %7B%0A   \n- //\n          fmt\n@@ -647,27 +647,24 @@\n ceAlvo%5D)%0A   \n- //\n          del\n@@ -695,59 +695,58 @@\n     \n-//         pessoaInicial = indiceAlvo+1\n+        %0A        %7Delse%7B%0A            break\n %0A    \n-//\n     \n- \n %7D%0A  \n@@ -759,11 +759,8 @@\n %0A   \n- //\n  %7D %0A\n@@ -765,12 +765,14 @@\n  %0A%7D%0A  %0A    %0A\n+%7D%0A\n"
+        },
+        {
+            "label": "2025-04-15_08-00-15",
+            "content": "@@ -183,16 +183,13 @@\n tf(%22\n-%5B \n %25d%25s \n-%5D\n %22, v\n"
+        },
+        {
+            "label": "2025-04-15_08-00-55",
+            "content": "@@ -1385,18 +1385,16 @@\n vente.%0A%09\n-//\n fmt.Prin\n"
+        },
+        {
+            "label": "2025-04-15_08-01-19",
+            "content": "@@ -169,32 +169,8 @@\n %09%09%7D%0A\n-        fmt.Printf(%22%5B%22)%0A\n %09%09fm\n@@ -183,14 +183,16 @@\n tf(%22\n+%5B\n  %25d%25s \n+%5D\n %22, v\n@@ -211,32 +211,8 @@\n or)%0A\n-        fmt.Printf(%22%5D%22)%0A\n %09%7D%0A%09\n"
+        },
+        {
+            "label": "2025-04-15_08-02-39",
+            "content": "@@ -173,16 +173,31 @@\n         \n+fmt.Printf(%22%5B%22)\n %0A%09%09fmt.P\n@@ -203,17 +203,17 @@\n Printf(%22\n-%5B\n+ \n %25d%25s %22, \n"
+        },
+        {
+            "label": "2025-04-15_08-15-32",
+            "content": "@@ -177,86 +177,29 @@\n     \n-if  i ==0  %7B%0A            fmt.Printf(%22%5B %22)%0A        %7D%0A          fmt.Printf(%22\n+%0A%09%09fmt.Printf(%22%5B\n %25d%25s\n+ \n %22, v\n@@ -218,39 +218,8 @@\n or)%0A\n-        if i == len(fila)%7B%0A    \n     \n@@ -238,35 +238,12 @@\n tf(%22\n- \n %5D%22)%0A\n-        %7D%0A%09%09%0A        %0A\n %09%7D%0A%09\n"
+        },
+        {
+            "label": "2025-04-15_08-18-34",
+            "content": "@@ -249,17 +249,16 @@\n intf(%22%25d\n- \n %25s%22, val\n"
+        },
+        {
+            "label": "2025-04-15_08-18-47",
+            "content": "@@ -253,11 +253,11 @@\n (%22%25d\n+ \n %25s\n- \n %22, v\n@@ -285,17 +285,18 @@\n    if i \n-%3E\n+==\n  len(fil\n@@ -301,32 +301,34 @@\n ila)%7B%0A          \n+  \n fmt.Printf(%22%5D%22)%0A\n@@ -327,13 +327,13 @@\n tf(%22\n+ \n %5D%22)%0A\n-%0A\n     \n"
+        },
+        {
+            "label": "2025-04-15_08-21-18",
+            "content": "@@ -285,18 +285,17 @@\n    if i \n-==\n+%3E\n  len(fil\n@@ -296,18 +296,16 @@\n en(fila)\n--1\n %7B%0A      \n"
+        },
+        {
+            "label": "2025-04-15_08-21-46",
+            "content": "@@ -756,24 +756,41 @@\n ada)%0A  %0A    \n+//indiceAlvo:= -1\n %0A    %0A    fo\n@@ -815,16 +815,64 @@\n ) %3E 1 %7B%0A\n+%09%09// O alvo %C3%A9 o pr%C3%B3ximo da pessoa com a espada.%0A\n %09%09indice\n@@ -925,94 +925,429 @@\n )%0A%09%09\n-%0A%09%09filaCircular = append(filaCircular%5B:indiceAlvo%5D, filaCircular%5BindiceAlvo+1:%5D...)%0A%09%09\n+// Exibe quem foi eliminado.%0A%09%09//fmt.Printf(%22Pessoa %25d foi eliminada.%5Cn%22, filaCircular%5BindiceAlvo%5D)%0A%09%09%0A%09%09// Remove o elemento eliminado do slice.%0A%09%09// A fun%C3%A7%C3%A3o append reagrupa os elementos, mantendo a ordem.%0A%09%09filaCircular = append(filaCircular%5B:indiceAlvo%5D, filaCircular%5BindiceAlvo+1:%5D...)%0A%09%09%0A%09%09// Atualiza a posi%C3%A7%C3%A3o da espada.%0A%09%09// Se o %C3%ADndice do alvo era o %C3%BAltimo, com a remo%C3%A7%C3%A3o o novo slice se ajusta automaticamente.\n %0A%09%09p\n@@ -1395,16 +1395,51 @@\n lar)%0A%09%09%0A\n+%09%09// Exibe o estado atual da fila.%0A\n %09%09exibir\n@@ -1478,16 +1478,102 @@\n da)%0A%09%7D%0A%0A\n+%09// O %C3%BAltimo elemento restante %C3%A9 o sobrevivente.%0A%09//fmt.Printf(%22%25d%22, filaCircular%5B0%5D)%0A\n %0A    // \n"
+        },
+        {
+            "label": "2025-04-15_08-22-53",
+            "content": "package main\nimport \"fmt\"\nfunc exibirEstado(fila []int, posicaoEspada int) {\n\tfor i, valor := range fila {\n\t\tmarcador := \"\"\n\t\tif i == posicaoEspada {\n\t\t\tmarcador = \">\"\n\t\t}\n        if  i ==0  {\n            fmt.Printf(\"[ \")\n        }\n          fmt.Printf(\"%d%s \", valor, marcador)\n        if i == len(fila)-1{\n          fmt.Printf(\"]\")\n\n        }\n\t\t\n        \n\t}\n\tfmt.Println()\n}\nfunc main() {\n    numeroPessoas:= 0 \n    pessoaInicial := 0\n\n    fmt.Scan(&numeroPessoas,&pessoaInicial)\n    filaCircular := make([] int, numeroPessoas)\n\n    pessoas:= make(map[int] int)\n   \n    for i := 0; i<numeroPessoas; i++ {\n        filaCircular[i] = i+1\n        pessoas[i] = filaCircular[i]\n    }\n\tposicaoEspada := pessoaInicial - 1\n\n\texibirEstado(filaCircular, posicaoEspada)\n  \n    \n    \n    for len(filaCircular) > 1 {\n\t\tindiceAlvo := (posicaoEspada + 1) % len(filaCircular)\n\t\t\n\t\tfilaCircular = append(filaCircular[:indiceAlvo], filaCircular[indiceAlvo+1:]...)\n\t\t\n\t\tposicaoEspada = indiceAlvo % len(filaCircular)\n\t\t\n\t\texibirEstado(filaCircular, posicaoEspada)\n\t}\n\n\n    // for  _, valor := range filaCircular{\n    //     indiceAlvo  = pessoaInicial\n        \n      \n    //     if valor > pessoas[indiceAlvo] {\n    //         fmt.Println(\"morreu oh:\",pessoas[indiceAlvo])\n    //         delete(pessoas,indiceAlvo)\n    //         pessoaInicial = indiceAlvo+1\n    //     }\n        \n    // } \n}\n  \n    \n"
+        }
+    ]
+}
