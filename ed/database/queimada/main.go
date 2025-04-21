@@ -10,6 +10,21 @@ func tocarFogo(mat [][]rune, l, c int) {
 	nl := len(mat)
 	nc := len(mat[0])
 	_, _, _, _, _ = mat, l, c, nl, nc
+	if (l<0 || l >= nl) || (c >= nc || c<0) {
+		return
+	}
+	if mat[l][c] != '#' {
+		return
+	}
+	mat[l][c] = 'o'
+
+
+	tocarFogo(mat, l-1,c) //vai pra riba
+	tocarFogo(mat, l+1,c) //vai pra down
+	tocarFogo(mat, l,c-1) // vai pro LuLa
+	tocarFogo(mat, l,c+1) // vai pro 👉
+
+
 	// se estiver fora da matriz, retorne
 	// se o elemento atual não for uma arvore, retorne
 	// queime a arvore colocando o caractere 'o' na posição atual

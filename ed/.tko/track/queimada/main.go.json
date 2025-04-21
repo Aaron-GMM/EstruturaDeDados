@@ -1,0 +1,20 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-21_20-04-28",
+            "content": "@@ -257,16 +257,17 @@\n %5D = 'o'%0A\n+%09\n %0A%0A%09tocar\n@@ -274,16 +274,20 @@\n Fogo(mat\n+%5B1:%5D\n , l,c)%0A%09\n"
+        },
+        {
+            "label": "2025-04-21_20-04-43",
+            "content": "@@ -277,23 +277,8 @@\n (mat\n-%5B1: len(mat)-1%5D\n , l,\n"
+        },
+        {
+            "label": "2025-04-21_20-05-25",
+            "content": "@@ -167,17 +167,16 @@\n 0 %7C%7C l %3E\n-=\n  nl) %7C%7C \n@@ -179,17 +179,16 @@\n  %7C%7C (c %3E\n-=\n  nc %7C%7C c\n@@ -277,84 +277,28 @@\n (mat\n-, l-1,c)%0A%09tocarFogo(mat, l+1,c)%0A%09tocarFogo(mat, l,c-1)%0A%09tocarFogo(mat\n+%5B1: len(mat)-1%5D\n , l,c\n-+1\n )%0A%09/\n"
+        },
+        {
+            "label": "2025-04-21_20-08-10",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc tocarFogo(mat [][]rune, l, c int) {\n\tnl := len(mat)\n\tnc := len(mat[0])\n\t_, _, _, _, _ = mat, l, c, nl, nc\n\tif (l<0 || l >= nl) || (c >= nc || c<0) {\n\t\treturn\n\t}\n\tif mat[l][c] != '#' {\n\t\treturn\n\t}\n\tmat[l][c] = 'o'\n\n\n\ttocarFogo(mat, l-1,c)\n\ttocarFogo(mat, l+1,c)\n\ttocarFogo(mat, l,c-1)\n\ttocarFogo(mat, l,c+1)\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tmat := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tlinha := []rune(scanner.Text())\n\t\tmat = append(mat, linha)\n\t}\n\ttocarFogo(mat, lfire, cfire)\n\tshowMat(mat)\n}\n\nfunc showMat(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n"
+        }
+    ]
+}
