@@ -4,46 +4,92 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	newVet := make([]int, 0, len(vet))
+	for _, v := range vet{
+		if v >= 0 {
+			newVet =  append(newVet, v)		
+		}
+	}
+	return newVet
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	calmWomen := make([]int,0, len(vet))
+	
+	for _, v := range vet{			
+		if v<0 && -v <10{
+				calmWomen = append(calmWomen, v)
+		}
+	}
+return calmWomen
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	sort.Ints(vet)
+	return vet
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	sortvet := make([]int, len(vet))
+	copy(sortvet, vet)
+	sort.Slice(sortvet, func (i,j int) bool  {
+		ai, aj := sortvet[i], sortvet[j]
+		if ai<0{
+			ai = -ai
+		}
+		if aj < 0 {
+			aj = -aj
+		}
+		return ai < aj
+	})
+	return sortvet
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	rVetor := make([]int, 0, len(vet))
+
+	for i:= len(vet); i>0; i--{
+		rVetor = append(rVetor, vet[i-1])
+		
+	}
+	
+	return rVetor
 }
 
 func reverseInplace(vet []int) {
 	_ = vet
 }
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	 uniqueVet := make([]int, 0, len(vet))
+	 controle := make(map[int]bool,len(vet))
+	 for _,v := range vet{
+		if !controle[v] {
+			controle[v] = true
+			uniqueVet = append(uniqueVet, v)
+		}
+	 }
+	return uniqueVet
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	repeatedVetor := make([]int, 0, len(vet))
+	controle := make(map[int]bool,len(vet))
+	for _,v := range vet{
+	   if controle[v] {
+		  repeatedVetor = append(repeatedVetor, v)
+	   }else{
+		controle[v] = true
+
+	   }
+
+	}
+   return repeatedVetor
 }
 
 func main() {

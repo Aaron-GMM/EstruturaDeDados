@@ -1,0 +1,224 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-16_11-31-14",
+            "content": "@@ -128,58 +128,8 @@\n %7D%0A%09%09\n-soma:= make(%5B%5Dint, len(vet)-1)%0A%09%09fmt.Println(soma)\n %0A%09%09p\n"
+        },
+        {
+            "label": "2025-04-16_11-31-55",
+            "content": "@@ -162,72 +162,24 @@\n %0A%09%09f\n-or i := range soma%7B%0A%09%09%09soma = append(soma, vet%5Bi%5D+vet%5Bi+1%5D)%09%0A%09%09%7D\n+mt.Println(soma)\n %0A%09%09p\n"
+        },
+        {
+            "label": "2025-04-16_11-34-56",
+            "content": "@@ -234,20 +234,19 @@\n rocessa(\n-soma\n+vet\n %5B1:%5D)%0A%0A%09\n"
+        },
+        {
+            "label": "2025-04-16_11-35-10",
+            "content": "@@ -170,29 +170,18 @@\n  := \n-0; i%3C len(vet)-1; i++\n+range soma\n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-36-01",
+            "content": "@@ -200,13 +200,23 @@\n soma\n-%5Bi%5D =\n+ = append(soma,\n  vet\n@@ -227,16 +227,17 @@\n vet%5Bi+1%5D\n+)\n %09%0A%09%09%7D%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-36-11",
+            "content": "@@ -146,10 +146,8 @@\n int,\n-0,\n  len\n@@ -189,17 +189,16 @@\n 1; i++%7B%0A\n-%0A\n %09%09%09soma%5B\n"
+        },
+        {
+            "label": "2025-04-16_11-36-36",
+            "content": "@@ -215,11 +215,9 @@\n t%5Bi%5D\n- + \n++\n vet%5B\n"
+        },
+        {
+            "label": "2025-04-16_11-37-18",
+            "content": "@@ -153,16 +153,18 @@\n len(vet)\n+-1\n )%0A%09%09for \n"
+        },
+        {
+            "label": "2025-04-16_11-37-30",
+            "content": "@@ -184,15 +184,18 @@\n vet)\n+-1\n ; i++%7B%0A\n+%0A\n %09%09%09s\n"
+        },
+        {
+            "label": "2025-04-16_11-37-40",
+            "content": "@@ -234,19 +234,20 @@\n rocessa(\n-vet\n+soma\n %5B1:%5D)%0A%0A%09\n"
+        },
+        {
+            "label": "2025-04-16_11-37-50",
+            "content": "@@ -142,16 +142,18 @@\n e(%5B%5Dint,\n+0,\n  len(vet\n"
+        },
+        {
+            "label": "2025-04-16_11-38-12",
+            "content": "@@ -192,10 +192,8 @@\n %0A%09%09%09\n-//\n soma\n"
+        },
+        {
+            "label": "2025-04-16_11-38-24",
+            "content": "@@ -157,11 +157,8 @@\n t))%0A\n-%09%09%0A\n %09%09fo\n@@ -178,15 +178,12 @@\n len(\n-soma)-1\n+vet)\n ; i+\n@@ -188,16 +188,18 @@\n i++%7B%0A%09%09%09\n+//\n soma%5Bi%5D \n"
+        },
+        {
+            "label": "2025-04-16_11-38-49",
+            "content": "@@ -238,20 +238,19 @@\n rocessa(\n-soma\n+vet\n %5B1:%5D)%0A%0A%09\n"
+        },
+        {
+            "label": "2025-04-16_11-39-02",
+            "content": "@@ -151,18 +151,16 @@\n len(vet)\n--1\n )%0A%09%09%0A%09%09f\n"
+        },
+        {
+            "label": "2025-04-16_11-39-25",
+            "content": "@@ -184,16 +184,18 @@\n en(soma)\n+-1\n ; i++%7B%0A%09\n"
+        },
+        {
+            "label": "2025-04-16_11-39-44",
+            "content": "@@ -174,16 +174,17 @@\n := 0; i%3C\n+ \n len(soma\n@@ -184,18 +184,16 @@\n en(soma)\n--1\n ; i++%7B%0A%09\n@@ -272,20 +272,19 @@\n %5B%22,Join(\n-soma\n+vet\n , %22 %22),%22\n"
+        },
+        {
+            "label": "2025-04-16_11-40-08",
+            "content": "@@ -146,10 +146,8 @@\n int,\n-0,\n  len\n@@ -273,19 +273,20 @@\n %5B%22,Join(\n-vet\n+soma\n , %22 %22),%22\n"
+        },
+        {
+            "label": "2025-04-16_11-40-20",
+            "content": "@@ -153,16 +153,18 @@\n len(vet)\n+-1\n )%0A%09%09%0A%09%09f\n"
+        },
+        {
+            "label": "2025-04-16_11-40-27",
+            "content": "@@ -142,16 +142,18 @@\n e(%5B%5Dint,\n+0,\n  len(vet\n"
+        },
+        {
+            "label": "2025-04-16_11-40-37",
+            "content": "@@ -171,18 +171,29 @@\n  := \n-range soma\n+0; i%3Clen(soma)-1; i++\n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-41-10",
+            "content": "@@ -155,10 +155,8 @@\n vet)\n--1\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-41-18",
+            "content": "@@ -126,32 +126,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println(len(vet))%0A\n %09%09so\n"
+        },
+        {
+            "label": "2025-04-16_11-42-22",
+            "content": "@@ -196,30 +196,19 @@\n i :=\n-0; i%3Clen(soma)-1; i++ \n+ range soma\n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-43-07",
+            "content": "@@ -206,16 +206,18 @@\n en(soma)\n+-1\n ; i++ %7B%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-43-17",
+            "content": "@@ -171,24 +171,26 @@\n nt, len(vet)\n+-1\n )%0A%09%09%0A%09%09for i\n"
+        },
+        {
+            "label": "2025-04-16_11-43-25",
+            "content": "@@ -208,10 +208,8 @@\n oma)\n--1\n ; i+\n"
+        },
+        {
+            "label": "2025-04-16_11-43-32",
+            "content": "@@ -270,10 +270,10 @@\n oma%5B\n-:\n 1\n+:\n %5D)%0A%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-44-06",
+            "content": "@@ -270,10 +270,10 @@\n oma%5B\n-1\n :\n+1\n %5D)%0A%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-44-36",
+            "content": "@@ -261,19 +261,20 @@\n rocessa(\n-vet\n+soma\n %5B1:%5D)%0A%0A%09\n"
+        },
+        {
+            "label": "2025-04-16_11-44-51",
+            "content": "@@ -184,28 +184,8 @@\n %0A%09%09%0A\n-%09%09processa(vet%5B1:%5D)%0A\n %09%09fo\n@@ -246,24 +246,45 @@\n t%5Bi+1%5D%09%0A%09%09%7D%0A\n+%09%09processa(vet%5B1:%5D)%0A%0A\n %09%09fmt.Printl\n"
+        },
+        {
+            "label": "2025-04-16_11-45-09",
+            "content": "@@ -191,20 +191,19 @@\n rocessa(\n-soma\n+vet\n %5B1:%5D)%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-45-24",
+            "content": "@@ -180,11 +180,33 @@\n et))\n+%0A\n %09%09%0A\n+%09%09processa(soma%5B1:%5D)%0A\n %09%09fo\n@@ -271,37 +271,16 @@\n 1%5D%09%0A%09%09%7D%0A\n-%09%09processa(soma%5B1:%5D)%0A\n %09%09fmt.Pr\n"
+        },
+        {
+            "label": "2025-04-16_11-45-42",
+            "content": "@@ -124,16 +124,37 @@\n n%0A%09%09%7D%0A%09%09\n+fmt.Println(len(vet))\n %0A%09%09soma:\n@@ -179,30 +179,8 @@\n vet)\n--1)%0A%09%09fmt.Println(soma\n )%09%09%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-46-05",
+            "content": "@@ -154,16 +154,18 @@\n len(vet)\n+-1\n )%0A%09%09fmt.\n"
+        },
+        {
+            "label": "2025-04-16_11-46-14",
+            "content": "@@ -248,29 +248,8 @@\n 1%5D%09%0A\n-%09%09%09fmt.Println(soma)%0A\n %09%09%7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-47-03",
+            "content": "@@ -202,16 +202,18 @@\n en(soma)\n+-1\n ; i++ %7B%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-47-13",
+            "content": "@@ -206,10 +206,8 @@\n oma)\n--1\n ; i+\n@@ -261,20 +261,8 @@\n tln(\n-%22soma for:%22,\n soma\n"
+        },
+        {
+            "label": "2025-04-16_11-47-34",
+            "content": "@@ -158,12 +158,29 @@\n vet)\n--1\n )%0A\n+%09%09fmt.Println(soma)\n %09%09%0A%09\n@@ -202,16 +202,18 @@\n en(soma)\n+-1\n ; i++ %7B%0A\n@@ -215,16 +215,77 @@\n ++ %7B%0A%09%09%09\n+soma%5Bi%5D = vet%5Bi%5D + vet%5Bi+1%5D%09%0A%09%09%09fmt.Println(%22soma for:%22,soma)\n %0A%09%09%7D%0A%09%09p\n"
+        },
+        {
+            "label": "2025-04-16_11-48-42",
+            "content": "@@ -150,30 +150,22 @@\n nt, \n-0)%0A%09%09fmt.Println(soma)\n+len(vet)-1)%0A%09%09\n %0A%09%09f\n"
+        },
+        {
+            "label": "2025-04-16_11-49-15",
+            "content": "@@ -208,44 +208,8 @@\n %0A%09%09%09\n-soma = append(soma, vet%5Bi%5D+vet%5Bi+1%5D)\n %0A%09%09%7D\n"
+        },
+        {
+            "label": "2025-04-16_11-50-07",
+            "content": "@@ -150,18 +150,9 @@\n nt, \n-len(vet)-1\n+0\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-16_11-50-51",
+            "content": "@@ -160,16 +160,33 @@\n t)-1)%0A%09%09\n+fmt.Println(soma)\n %0A%09%09for i\n"
+        },
+        {
+            "label": "2025-04-16_11-51-08",
+            "content": "@@ -180,22 +180,21 @@\n ; i%3Clen(\n-vet)-1\n+soma)\n ; i++ %7B%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-56-16",
+            "content": "@@ -138,16 +138,31 @@\n a:= \n-%5B%5D int%7B%7D\n+make(%5B%5Dint, len(vet)-1)\n %0A%09%09%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-56-44",
+            "content": "@@ -238,16 +238,20 @@\n ssa(soma\n+%5B1:%5D\n )%0A%09%09fmt.\n"
+        },
+        {
+            "label": "2025-04-16_11-57-03",
+            "content": "@@ -269,17 +269,17 @@\n n(vet, %22\n-,\n+ \n %22),%22%5D%22)%0A\n"
+        },
+        {
+            "label": "2025-04-16_11-57-20",
+            "content": "@@ -138,29 +138,16 @@\n a:= \n-make(\n %5B%5D\n+ \n int\n-, len(vet))\n+%7B%7D\n %0A%09%09%0A\n"
+        },
+        {
+            "label": "2025-04-16_14-58-10",
+            "content": "@@ -122,16 +122,19 @@\n urn%0A%09%09%7D%0A\n+%09%09%0A\n %09%09soma:=\n@@ -255,12 +255,8 @@\n soma\n-%5B1:%5D\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-20_10-05-09",
+            "content": "@@ -253,10 +253,10 @@\n oma%5B\n-:\n 1\n+:\n %5D)%0A%09\n"
+        },
+        {
+            "label": "2025-04-20_10-05-20",
+            "content": "@@ -239,26 +239,8 @@\n %7D%0A%09%09\n-println(soma)%0A%09%09//\n proc\n@@ -248,16 +248,20 @@\n ssa(soma\n+%5B:1%5D\n )%0A%09%09fmt.\n"
+        },
+        {
+            "label": "2025-04-20_10-05-51",
+            "content": "@@ -251,12 +251,8 @@\n soma\n-%5B1:%5D\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-20_10-06-17",
+            "content": "@@ -252,10 +252,10 @@\n oma%5B\n-:\n 1\n+:\n %5D)%0A%09\n"
+        },
+        {
+            "label": "2025-04-20_10-06-28",
+            "content": "@@ -90,16 +90,17 @@\n %5Dint) %7B%0A\n+%09\n %09if len(\n@@ -107,47 +107,62 @@\n vet)\n- \n ==\n- 0 \n+0\n %7B%0A%09%09\n+%09\n return%0A\n+%09\n %09%7D%0A\n-%0A\n+%09\n %09soma\n- \n := \n-%5B%5Dint%7B%7D%0A%0A\n+make(%5B%5Dint, len(vet))%0A%09%09%0A%09\n %09for\n@@ -170,16 +170,13 @@\n i :=\n- \n 0; i\n- %3C \n+%3C\n len(\n@@ -189,16 +189,17 @@\n ; i++ %7B%0A\n+%09\n %09%09soma =\n@@ -233,13 +233,36 @@\n 1%5D)%0A\n+%09\n %09%7D%0A\n-%0A\n %09\n+%09println(soma%5B:1%5D)%0A%09%09//\n proc\n@@ -272,16 +272,17 @@\n a(soma)%0A\n+%09\n %09fmt.Pri\n@@ -290,17 +290,16 @@\n tln(%22%5B%22,\n- \n Join(vet\n@@ -305,13 +305,12 @@\n t, %22\n- \n+,\n %22),\n- \n %22%5D%22)\n"
+        },
+        {
+            "label": "2025-04-20_10-07-18",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc processa(vet []int) {\n\tif len(vet) == 0 {\n\t\treturn\n\t}\n\n\tsoma := []int{}\n\n\tfor i := 0; i < len(vet)-1; i++ {\n\t\tsoma = append(soma, vet[i]+vet[i+1])\n\t}\n\n\tprocessa(soma)\n\tfmt.Println(\"[\", Join(vet, \" \"), \"]\")\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n"
+        }
+    ]
+}
