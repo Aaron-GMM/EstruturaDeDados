@@ -17,6 +17,7 @@ tasks:
   manipulacao: '{cov:100, aut:5, hab:5, idx:0}'
   triangulo: '{cov:100, aut:5, hab:4, idx:0}'
   treinando: '{cov:100, aut:3, hab:3, idx:0}'
+  queimada: '{cov:100, aut:4, hab:4, idx:0}'
 flags:
   minimum: 1
   reward: 1
@@ -27,4 +28,4 @@ flags:
   devel: 0
 new_items: []
 lang: go
-index: queimada
+index: resto

@@ -1,0 +1,36 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-21_20-10-52",
+            "content": "@@ -23,234 +23,46 @@\n mt%22%0A\n-%0A\n func \n-__div(valor int)%7B%0A    for valor !=0%7B%0A        div := valor /2%0A        resto := valor %25 2%0A        fmt.Printf(%22%25v  %25v%22,div,resto)%0A        valor = div%0A    %7D%0A%7D%0Afunc main() %7B%0A    valor:= 0%0A%0A    fmt.Scan(&valor)%0A    __div(valor\n+main() %7B%0A    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-21_20-21-07",
+            "content": "@@ -143,11 +143,8 @@\n   %25v\n- %5Cn\n %22,di\n"
+        },
+        {
+            "label": "2025-04-21_20-21-38",
+            "content": "@@ -51,52 +51,35 @@\n     \n-if(\n+for \n valor \n-== 0)\n+!=0\n %7B%0A    \n-    return%0A    %7D%0A\n     div\n+ \n := v\n@@ -88,11 +88,14 @@\n or /\n- \n 2%0A\n+    \n     \n@@ -110,18 +110,23 @@\n  valor %25\n+ \n 2%0A\n+    \n     fmt.\n@@ -139,16 +139,19 @@\n (%22%25v  %25v\n+ %5Cn\n %22,div,re\n@@ -163,18 +163,29 @@\n     \n-__div(div)\n+    valor = div%0A    %7D\n %0A%7D%0Af\n"
+        },
+        {
+            "label": "2025-04-21_20-26-37",
+            "content": "@@ -152,11 +152,8 @@\n   %25v\n- %5Cn\n %22,di\n"
+        },
+        {
+            "label": "2025-04-21_20-26-46",
+            "content": "@@ -130,23 +130,8 @@\n  %252%0A\n-    __div(div)%0A\n     \n@@ -164,16 +164,31 @@\n ,resto)%0A\n+    __div(div)%0A\n %7D%0Afunc m\n"
+        },
+        {
+            "label": "2025-04-21_20-27-02",
+            "content": "@@ -160,16 +160,17 @@\n ntf(%22%25v \n+ \n %25v %5Cn%22,d\n"
+        },
+        {
+            "label": "2025-04-21_20-27-10",
+            "content": "@@ -162,16 +162,17 @@\n f(%22%25v %25v\n+ \n %5Cn%22,div,\n"
+        },
+        {
+            "label": "2025-04-21_20-27-17",
+            "content": "package main\nimport \"fmt\"\n\nfunc __div(valor int){\n    if(valor == 0){\n        return\n    }\n    div:= valor / 2\n    resto := valor %2\n    __div(div)\n    fmt.Printf(\"%v %v\\n\",div,resto)\n}\nfunc main() {\n    valor:= 0\n\n    fmt.Scan(&valor)\n    __div(valor)\n}\n"
+        }
+    ]
+}
