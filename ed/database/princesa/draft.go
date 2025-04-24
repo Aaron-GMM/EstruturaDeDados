@@ -14,8 +14,6 @@ func exibirEstado(fila []int, posicaoEspada int) {
           fmt.Printf("]")
 
         }
-		
-        
 	}
 	fmt.Println()
 }

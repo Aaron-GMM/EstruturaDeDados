@@ -50,7 +50,8 @@ Significado das tags nas questões:
 - [ ] `@labirinto retrocesso *04  :leet`[Escapando do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/labirinto/Readme.md)
 - [ ] `@distancia retrocesso +05  :leet`[Colocando os números no lugar certo](https://github.com/qxcodeed/arcade/blob/master/base/distancia/Readme.md)
 - [ ] `@sudoku    retrocesso +10  :leet`[Sudoku](https://github.com/qxcodeed/arcade/blob/master/base/sudoku/Readme.md)
-- [ ] `@fractais             +10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais/Readme.md)
+- [ ] `@fractais             *10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais/Readme.md)
+- [ ] `@fractais_png         +10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais_png/Readme.md)
 - [ ] `@hex                  +10  :open`[Desenhando labirinto perfeito](https://github.com/qxcodeed/arcade/blob/master/base/hex/Readme.md)
 
 

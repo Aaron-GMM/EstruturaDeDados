@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -14,28 +15,82 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+	par := make(map[int]int)
+	for _, x := range vet {
+		lvl := x
+		if lvl < 0 {
+			lvl = -lvl
+		}
+		par[lvl]++
+	}
+	keys := make([]int, 0, len(vet))
+	for k := range par {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
+	res := make([]Pair, len(keys))
+	for i, k := range keys {
+		res[i] = Pair{One: k, Two: par[k]}
+	}
+	return res
 }
 
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	res := []Pair{}
+	tam := len(vet)
+	for i := 0; i < tam; {
+		j := i + 1
+		for j < tam && vet[j] == vet[i] {
+			j++
+		}
+		res = append(res, Pair{One: vet[i], Two: j - i})
+		i = j
+	}
+	return res
 }
 
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+	for i, x := range vet {
+		if x > 0 {
+			if (i > 0 && vet[i-1] < 0) || (i+1 < len(vet) && vet[i+1] < 0) {
+				res[i] = 1
+			}
+		}
+	}
+	return res
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+	for i, x := range vet {
+		if x > 0 {
+			if (i > 0 && vet[i-1] < 0) || (i+1 < len(vet) && vet[i+1] < 0) {
+				continue
+			} else {
+				res[i] = 1
+			}
+		}
+	}
+	return res
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	count := make(map[int]int)
+	for _, x := range vet {
+		count[x]++
+	}
+	couples := 0
+	for k, v := range count {
+		if k > 0 && count[-k] > 0 {
+			if v < count[-k] {
+				couples += v
+			} else {
+				couples += count[-k]
+			}
+		}
+	}
+	return couples
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
@@ -46,21 +101,45 @@ func hasSubseq(vet []int, seq []int, pos int) bool {
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	for i := 0; i+len(seq) <= len(vet); i++ {
+		ok := true
+
+		for j := 0; j < len(seq); j++ {
+			if vet[i+j] != seq[j] {
+				ok = false
+				break
+			}
+		}
+		if ok {
+			return i
+		}
+	}
+
 	return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	rem := make(map[int]bool)
+	for _, pos := range posList {
+		rem[pos] = true
+	}
+	newfila:=[]int{}
+	for i, v := range vet {
+		if !rem[i] {
+			newfila = append(newfila, v)
+		}
+	}
+	return newfila
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	newvet := []int{}
+	for _, v := range vet{
+		if v != value {
+			newvet = append(newvet, v)
+		}
+	}
+	return newvet
 }
 
 func main() {
