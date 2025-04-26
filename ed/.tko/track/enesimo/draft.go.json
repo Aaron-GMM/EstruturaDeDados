@@ -1,0 +1,8 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-26_19-15-57",
+            "content": "package main\nimport \"fmt\"\nfunc eh_primo(x int, div int) bool {\n\tif x ==0|| x == 1 || x <0 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\nfunc encontrarPrimo(x int, contador int, numeroAtual int) int {\n    if contador == x {\n        return numeroAtual - 1\n    }\n    if eh_primo(numeroAtual, 2) {\n        return encontrarPrimo(x, contador+1, numeroAtual+1)\n    }\n    return encontrarPrimo(x, contador, numeroAtual+1)\n}\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n    enesimo :=  encontrarPrimo(x, 0, 1)\n    fmt.Println(enesimo)\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-26_19-21-45",
+            "content": "@@ -206,199 +206,8 @@\n )%0A%7D%0A\n-func printArr(arr %5B%5Dint) %7B%0A    fmt.Print(%22%5B%22)%0A    for i, v := range arr %7B%0A        fmt.Print(v)%0A        if i != len(arr)-1 %7B%0A            fmt.Print(%22, %22)%0A        %7D%0A    %7D%0A    fmt.Println(%22%5D%22)%0A%7D%0A\n func\n@@ -678,16 +678,19 @@\n     \n-p\n+fmt.P\n rint\n-Arr\n+ln\n (pri\n"
+        },
+        {
+            "label": "2025-04-26_19-23-45",
+            "content": "package main\nimport \"fmt\"\nfunc eh_primo(x int, div int) bool {\n\tif x ==0|| x == 1 || x <0 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\nfunc printArr(arr []int) {\n    fmt.Print(\"[\")\n    for i, v := range arr {\n        fmt.Print(v)\n        if i != len(arr)-1 {\n            fmt.Print(\", \")\n        }\n    }\n    fmt.Println(\"]\")\n}\nfunc primeirosPrimos(x int,contador int, numeroAtual int, primosArr []int) []int {\n    if x == contador || x == 0 {\n        return primosArr\n    }\n    if eh_primo(numeroAtual, 2) {\n        primosArr = append(primosArr, numeroAtual)\n        return primeirosPrimos(x, contador+1, numeroAtual+1, primosArr)\n    }\n    return primeirosPrimos(x, contador, numeroAtual+1, primosArr)\n}\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n    primosArr := primeirosPrimos(x, 0, 2, []int{})\n    printArr(primosArr)\n}"
+        }
+    ]
+}
