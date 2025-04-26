@@ -11,10 +11,10 @@ func randInt(min, max int) int {
 }
 
 func tree(p *Pen, tam float64) {
-	fator := 0.75
+	fator := 0.80
 	ang := 35.0
 
-	if tam < 2 {
+	if tam < 1 {
 		// if randInt(0, 10) < 1 {
 		// 	p.SetColor(255, 0, 0)
 		// 	p.DrawCircle(tam)

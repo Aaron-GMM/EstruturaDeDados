@@ -54,15 +54,13 @@ Significado das tags nas questões:
 - [ ] `@fractais_png         +10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais_png/Readme.md)
 - [ ] `@hex                  +10  :open`[Desenhando labirinto perfeito](https://github.com/qxcodeed/arcade/blob/master/base/hex/Readme.md)
 
-
 ### Vetor
 
-- [ ] `@vetbuild    *10 :make`[Implementando lista sequencial dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
-- [ ] `@ponteiros   *01 :make`[Implementando vector com ponteiros](https://github.com/qxcodeed/arcade/blob/master/base/ponteiros/Readme.md)
-- [ ] `@classes     *01 :make`[Implementando vector com @classes](https://github.com/qxcodeed/arcade/blob/master/base/classes/Readme.md)
-- [ ] `@inteiros    *01 :make`[Lista Sequencial de Inteiros](https://github.com/qxcodeed/arcade/blob/master/base/inteiros/Readme.md)
-- [ ] `@ordenada    *01 :make`[Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/ordenada/Readme.md)
-- [ ] `@circular    *01 :make`[Lista Sequencial Circular](https://github.com/qxcodeed/arcade/blob/master/base/circular/Readme.md)
+- [ ] `@vetbuild    *10 :make`[Lista Sequencial Dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
+- [ ] `@setbuild    *10 :make`[Conjunto usando Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/setbuild/Readme.md)
+- [ ] `@magicsearch *05 :make`[Magic Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/magicsearch/Readme.md)
+- [ ] `@multiset    *10 :make`[MultiSet usando vetor dinâmico](https://github.com/qxcodeed/arcade/blob/master/base/multiset/Readme.md)
+- [ ] `@iterador    *05 :make`[Criando um iterador](https://github.com/qxcodeed/arcade/blob/master/base/iterador/Readme.md)
 
 ### Lista
 

@@ -1,0 +1,92 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-26_14-44-28",
+            "content": "@@ -355,19 +355,20 @@\n  make(%5B%5D\n-int\n+bool\n , quanti\n@@ -616,10 +616,15 @@\n idx%5D\n-++\n+ = true\n %0A   \n"
+        },
+        {
+            "label": "2025-04-26_14-44-59",
+            "content": "@@ -662,17 +662,17 @@\n tf(%22%25s %25\n-v\n+t\n %5Cn%22, str\n"
+        },
+        {
+            "label": "2025-04-26_14-45-15",
+            "content": "@@ -663,12 +663,21 @@\n f(%22%25\n-v%22, \n+s %25v%5Cn%22, str,\n  arr\n"
+        },
+        {
+            "label": "2025-04-26_14-45-41",
+            "content": "@@ -660,17 +660,16 @@\n intf(%22%25v\n- \n %22,  arrC\n"
+        },
+        {
+            "label": "2025-04-26_14-45-51",
+            "content": "@@ -689,24 +689,6 @@\n   %7D%0A\n-    fmt.Println()%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-26_14-46-05",
+            "content": "@@ -642,104 +642,8 @@\n   %7D%0A\n-        if( idx == len(stringsSearch)-1)%7B%0A            fmt.Printf(%22%25v%22,  arrCont%5Bidx%5D)%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2025-04-26_14-47-31",
+            "content": "@@ -675,16 +675,18 @@\n sSearch)\n+-1\n )%7B%0A     \n"
+        },
+        {
+            "label": "2025-04-26_14-47-44",
+            "content": "@@ -678,32 +678,36 @@\n arch))%7B%0A        \n+    \n fmt.Printf(%22%25v %22\n@@ -704,17 +704,16 @@\n intf(%22%25v\n- \n %22,  arrC\n@@ -718,25 +718,24 @@\n rCont%5Bidx%5D)%0A\n-%0A\n         %7D%0A  \n@@ -746,32 +746,33 @@\n   fmt.Printf(%22%25v\n+ \n %22,  arrCont%5Bidx%5D\n@@ -773,17 +773,16 @@\n t%5Bidx%5D)%0A\n-%0A\n     %7D%0A  \n"
+        },
+        {
+            "label": "2025-04-26_14-48-07",
+            "content": "@@ -682,28 +682,24 @@\n ))%7B%0A        \n-    \n fmt.Printf(%22\n@@ -700,16 +700,17 @@\n intf(%22%25v\n+ \n %22,  arrC\n@@ -719,16 +719,17 @@\n t%5Bidx%5D)%0A\n+%0A\n         \n@@ -744,33 +744,32 @@\n   fmt.Printf(%22%25v\n- \n %22,  arrCont%5Bidx%5D\n"
+        },
+        {
+            "label": "2025-04-26_14-49-14",
+            "content": "@@ -726,34 +726,8 @@\n x%5D)%0A\n-            fmt.Println()%0A\n     \n@@ -784,11 +784,24 @@\n   %7D%0A    \n+fmt.Println()\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-26_14-50-52",
+            "content": "@@ -708,10 +708,8 @@\n (%22%25v\n-%5Cn\n %22,  \n"
+        },
+        {
+            "label": "2025-04-26_14-51-04",
+            "content": "@@ -706,11 +706,8 @@\n tf(%22\n-aaa\n %25v%5Cn\n@@ -730,24 +730,39 @@\n )%0A          \n+  fmt.Println()\n %0A        %7D%0A \n"
+        },
+        {
+            "label": "2025-04-26_14-51-14",
+            "content": "@@ -679,10 +679,8 @@\n rch)\n--1\n )%7B%0A \n"
+        },
+        {
+            "label": "2025-04-26_14-51-37",
+            "content": "@@ -704,16 +704,19 @@\n Printf(%22\n+aaa\n %25v%5Cn%22,  \n"
+        },
+        {
+            "label": "2025-04-26_14-51-45",
+            "content": "@@ -706,16 +706,18 @@\n intf(%22%25v\n+%5Cn\n %22,  arrC\n"
+        },
+        {
+            "label": "2025-04-26_14-51-53",
+            "content": "@@ -704,17 +704,16 @@\n Printf(%22\n- \n %25v%22,  ar\n"
+        },
+        {
+            "label": "2025-04-26_14-52-02",
+            "content": "@@ -737,14 +737,20 @@\n     \n-%7Delse%7B\n+  %0A        %7D\n %0A   \n@@ -787,25 +787,16 @@\n t%5Bidx%5D)%0A\n-        %7D\n %0A    %7D%0A \n"
+        },
+        {
+            "label": "2025-04-26_14-52-22",
+            "content": "@@ -704,16 +704,17 @@\n Printf(%22\n+ \n %25v%22,  ar\n"
+        },
+        {
+            "label": "2025-04-26_14-52-30",
+            "content": "@@ -68,16 +68,19 @@\n int = 0%0A\n+%0A%0A%0A\n     fmt.\n@@ -238,17 +238,16 @@\n )%0A    %7D%0A\n-%0A\n     fmt.\n@@ -379,18 +379,16 @@\n trings)%0A\n-%0A%0A\n     for \n@@ -505,16 +505,22 @@\n Search %7B\n+%0A%0A    \n %0A       \n@@ -620,32 +620,32 @@\n +%0A            %7D%0A\n+\n         %7D%0A      \n@@ -642,17 +642,8 @@\n   %7D%0A\n-        %0A\n     \n"
+        },
+        {
+            "label": "2025-04-26_14-53-50",
+            "content": "@@ -628,24 +628,32 @@\n %7D%0A        %7D%0A\n+        \n %0A        if(\n@@ -713,10 +713,8 @@\n (%22%25v\n-%5Cn\n %22,  \n"
+        },
+        {
+            "label": "2025-04-26_14-54-05",
+            "content": "@@ -332,89 +332,8 @@\n gs)%0A\n-    for i := range quantidadeStrings %7B%0A        fmt.Scan(&stringsSearch%5Bi%5D)%0A    %7D%0A\n     \n@@ -355,18 +355,9 @@\n ake(\n-map%5Bstring\n+%5B\n %5Dint\n@@ -378,24 +378,25 @@\n rings)%0A%0A\n+%0A\n     for \n _, str :\n@@ -387,22 +387,17 @@\n     for \n-_, str\n+i\n  := rang\n@@ -402,205 +402,77 @@\n nge \n-stringsarr %7B%0A        arrCont%5Bstr%5D ++%0A    %7D%0A%0A    for i, s := range stringsSearch %7B%0A        if i %3E0%7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Print(arrCont%5Bs%5D)%0A    %7D%0A    fmt.Println()\n+quantidadeStrings %7B%0A        fmt.Scan(&stringsSearch%5Bi%5D)%0A    %7D%0A  \n %0A%0A   \n- //\n  for\n@@ -510,23 +510,20 @@\n h %7B%0A    \n-//\n     \n- \n for _, s\n@@ -547,27 +547,24 @@\n ngsarr %7B%0A   \n- //\n          if \n@@ -576,27 +576,24 @@\n = str2 %7B%0A   \n- //\n             \n@@ -605,19 +605,19 @@\n ont%5B\n-str\n+idx\n %5D++%0A    \n //  \n@@ -612,26 +612,24 @@\n %5D++%0A    \n-//\n         \n  %7D%0A    /\n@@ -620,25 +620,21 @@\n         \n- \n %7D%0A   \n- //\n      %7D%0A%0A\n@@ -632,27 +632,24 @@\n       %7D%0A%0A   \n- //\n      if( idx\n@@ -683,18 +683,16 @@\n     \n-//\n         \n  fmt\n@@ -683,25 +683,24 @@\n             \n- \n fmt.Printf(%22\n@@ -720,27 +720,24 @@\n nt%5Bidx%5D)%0A   \n- //\n      %7Delse%7B%0A\n@@ -735,27 +735,24 @@\n   %7Delse%7B%0A   \n- //\n      fmt.Pri\n@@ -780,19 +780,16 @@\n dx%5D)%0A   \n- //\n      %7D%0A \n@@ -794,11 +794,8 @@\n %0A   \n- //\n  %7D%0A \n"
+        },
+        {
+            "label": "2025-04-26_15-02-13",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var  quantidadeStrings int = 0\n    fmt.Scan(&quantidadeStrings)\n\n    var stringsarr = make([]string, quantidadeStrings)\n    for i := range quantidadeStrings {\n        fmt.Scan(&stringsarr[i])\n    }\n\n    fmt.Scan(&quantidadeStrings)\n    var stringsSearch  = make([]string, quantidadeStrings)\n    for i := range quantidadeStrings {\n        fmt.Scan(&stringsSearch[i])\n    }\n    var arrCont = make(map[string]int, quantidadeStrings)\n\n    for _, str := range stringsarr {\n        arrCont[str] ++\n    }\n\n    for i, s := range stringsSearch {\n        if i >0{\n            fmt.Print(\" \")\n        }\n        fmt.Print(arrCont[s])\n    }\n    fmt.Println()\n\n    // for idx, str := range stringsSearch {\n    //     for _, str2 := range stringsarr {\n    //         if str == str2 {\n    //             arrCont[str]++\n    //         }\n    //     }\n\n    //     if( idx == len(stringsSearch)-1){\n    //         fmt.Printf(\"%v\\n\",  arrCont[idx])\n    //     }else{\n    //     fmt.Printf(\"%v \",  arrCont[idx])\n    //     }\n    // }\n    \n}\n"
+        }
+    ]
+}

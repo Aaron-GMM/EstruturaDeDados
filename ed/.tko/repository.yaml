@@ -3,34 +3,36 @@ version: 0.0.1
 database: database
 expanded:
 - main-quest
-- análise-otimizando-resoluções
+- side-quests
 - recursão
-- revisão-fup
+- análise-otimizando-resoluções
 tasks:
-  pintando: '{cov:100, aut:6, hab:5, idx:0}'
-  mumia: '{cov:100, aut:6, hab:5, idx:0}'
-  fuga: '{cov:100, aut:6, hab:5, idx:0}'
-  pedra: '{cov:100, aut:5, hab:5, idx:0}'
-  casais: '{cov:100, aut:5, hab:5, idx:0}'
-  baruel: '{cov:100, aut:6, hab:5, idx:0}'
-  gomos: '{cov:100, aut:5, hab:4, idx:0}'
-  princesa: '{cov:100, aut:4, hab:4, idx:0}'
-  apagando: '{cov:100, aut:4, hab:5, idx:0}'
-  manipulacao: '{cov:100, aut:5, hab:5, idx:0}'
-  especiais: '{cov:100, aut:4, hab:4, idx:0}'
-  triangulo: '{cov:100, aut:5, hab:4, idx:0}'
-  treinando: '{cov:100, aut:3, hab:3, idx:0}'
-  queimada: '{cov:100, aut:4, hab:4, idx:0}'
-  resto: '{cov:100, aut:5, hab:5, idx:0}'
-  mdc: '{cov:100, aut:6, hab:5, idx:0}'
+  pintando: '{cov:100, appr:6, auto:5, desc:4, desire:5, effort:5, idx:0}'
+  mumia: '{cov:100, appr:6, auto:5, desc:5, desire:4, effort:5, idx:0}'
+  fuga: '{cov:100, appr:6, auto:5, desc:5, desire:5, effort:5, idx:0}'
+  pedra: '{cov:100, appr:5, auto:5, desc:5, desire:5, effort:4, idx:0}'
+  casais: '{cov:100, appr:5, auto:5, desc:3, desire:5, effort:4, idx:0}'
+  baruel: '{cov:100, appr:6, auto:5, desc:5, desire:5, effort:3, idx:0}'
+  gomos: '{cov:100, appr:5, auto:4, desc:4, desire:4, effort:4, idx:0}'
+  princesa: '{cov:100, appr:5, auto:4, desc:4, desire:5, effort:1, idx:0}'
+  apagando: '{cov:100, appr:4, auto:5, desc:5, desire:5, effort:3, idx:0}'
+  manipulacao: '{cov:100, appr:5, auto:5, desc:4, desire:5, effort:3, idx:0}'
+  especiais: '{cov:100, appr:5, auto:4, desc:3, desire:4, effort:1, idx:0}'
+  buscas: '{cov:100, appr:5, auto:5, desc:4, desire:5, effort:4, idx:0}'
+  rotacoes: '{cov:100, appr:5, auto:4, desc:4, desire:5, effort:3, idx:0}'
+  triangulo: '{cov:100, appr:5, auto:4, desc:4, desire:5, effort:4, idx:0}'
+  treinando: '{cov:100, appr:3, auto:3, desc:2, desire:4, effort:2, idx:0}'
+  queimada: '{cov:100, appr:4, auto:4, desc:3, desire:3, effort:3, idx:0}'
+  resto: '{cov:100, appr:5, auto:5, desc:5, desire:4, effort:5, idx:0}'
+  mdc: '{cov:100, appr:6, auto:5, desc:4, desire:5, effort:4, idx:0}'
+  eh_primo: '{cov:100, appr:6, auto:5, desc:4, desire:5, effort:4, idx:0}'
 flags:
   minimum: 1
-  reward: 1
-  percent: 0
+  percent: 1
   admin: 0
   skills: 1
   graph: 2
   devel: 0
 new_items: []
 lang: go
-index: distancia
+index: alternando

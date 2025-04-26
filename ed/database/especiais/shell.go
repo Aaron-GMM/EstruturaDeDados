@@ -94,27 +94,24 @@ func couple(vet []int) int {
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
-	_ = vet
-	_ = seq
-	_ = pos
-	return false
+	for j := 0; j < len(seq); j++ {
+		if vet[pos+j] != seq[j] {
+			return false
+		}
+	}
+	return true
 }
 
 func subseq(vet []int, seq []int) int {
-	for i := 0; i+len(seq) <= len(vet); i++ {
-		ok := true
+	if len(seq) == 0 || len(vet) < len(seq) {
+		return -1
+	}
 
-		for j := 0; j < len(seq); j++ {
-			if vet[i+j] != seq[j] {
-				ok = false
-				break
-			}
-		}
-		if ok {
+	for i:= 0; i<= len(vet)-len(seq); i++{
+		if  hasSubseq(vet, seq, i){ 
 			return i
 		}
 	}
-
 	return -1
 }
 

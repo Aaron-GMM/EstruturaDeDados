@@ -1,0 +1,48 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-26_15-18-26",
+            "content": "@@ -207,17 +207,16 @@\n .Print(%22\n- \n %5D%22)%0A%7D%0Afu\n"
+        },
+        {
+            "label": "2025-04-26_15-18-45",
+            "content": "@@ -213,10 +213,8 @@\n (%22 %5D\n-%5Cn\n %22)%0A%7D\n"
+        },
+        {
+            "label": "2025-04-26_15-18-57",
+            "content": "@@ -466,21 +466,22 @@\n  0; i %3C \n-tamnh\n+rotaca\n o; i++ %7B\n"
+        },
+        {
+            "label": "2025-04-26_15-19-45",
+            "content": "@@ -417,16 +417,44 @@\n    %7D%0A%0A  \n+  rotacao = rotacao %25 tamnho\n %0A    for\n@@ -466,22 +466,21 @@\n  0; i %3C \n-rotaca\n+tamnh\n o; i++ %7B\n"
+        },
+        {
+            "label": "2025-04-26_15-20-12",
+            "content": "@@ -471,25 +471,25 @@\n , aj := arr%5B\n-0\n+i\n %5D, arr%5Btamnh\n@@ -505,17 +505,17 @@\n     arr%5B\n-0\n+i\n %5D, arr%5Bt\n"
+        },
+        {
+            "label": "2025-04-26_15-24-24",
+            "content": "@@ -421,70 +421,8 @@\n %0A%0A  \n-  rotacao = rotacao %25 tamnho%0A    newArr := make(%5B%5Dint, tamnho)\n %0A   \n@@ -465,34 +465,39 @@\n     \n-np := (i+rotacao) %25 \n+ai, aj := arr%5B0%5D, arr%5B\n tamnho\n+-1%5D\n %0A   \n@@ -505,38 +505,44 @@\n     \n-newArr%5Bnp%5D = arr%5Bi%5D%0A    %7D\n+arr%5B0%5D, arr%5Btamnho-1%5D = aj, ai\n %0A    \n+%7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-26_15-29-07",
+            "content": "@@ -450,61 +450,8 @@\n nho%0A\n-    if rotacao %3C 0 %7B%0A        rotacao += tamnho%0A    %7D%0A\n     \n"
+        },
+        {
+            "label": "2025-04-26_15-30-01",
+            "content": "@@ -655,18 +655,15 @@\n rintArr(\n-newA\n+a\n rr)%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-26_15-30-28",
+            "content": "@@ -448,16 +448,66 @@\n amnho%0A  \n+  if rotacao %3C 0 %7B%0A        rotacao += tamnho%0A    %7D\n %0A    new\n"
+        },
+        {
+            "label": "2025-04-26_15-31-12",
+            "content": "@@ -503,21 +503,22 @@\n  0; i %3C \n-tamnh\n+rotaca\n o; i++ %7B\n"
+        },
+        {
+            "label": "2025-04-26_15-32-08",
+            "content": "package main\nimport \"fmt\"\nfunc printArr(arr []int) {\n    \n    fmt.Print(\"[ \")\n    for i, v := range arr {\n        fmt.Print(v)\n        if i != len(arr)-1 {\n            fmt.Print(\" \")\n        }\n    }\n    fmt.Print(\" ]\\n\")\n}\nfunc main() {\n    var tamnho int  = 0\n    var rotacao int  = 0\n\n    fmt.Scan(&tamnho, &rotacao)\n     \n    var arr  = make([]int, tamnho)\n\n    for i := range tamnho {\n        fmt.Scan(&arr[i])\n    }\n\n    rotacao = rotacao % tamnho\n  \n    newArr := make([]int, tamnho)\n    for i := 0; i < tamnho; i++ {\n        np := (i+rotacao) % tamnho\n        newArr[np] = arr[i]\n    }\n    \n    printArr(newArr)\n}\n"
+        }
+    ]
+}
