@@ -7,70 +7,84 @@ import (
 	"strconv"
 	"strings"
 )
-func __tostr(vet []int) string{
-	if len(vet) == 0  {
-		return ""
+
+func tostr(vet []int) string {
+	if len(vet) == 0 {
+		return "[]"
 	}
-	if  len(vet)==1 {
-		return fmt.Sprint(vet[0])
+	if len(vet) == 1 {
+		return "["+fmt.Sprint(vet[0])+"]"
 	}
-	return fmt.Sprint(vet[0]) +", "+ __tostr(vet[1:])
-}
-func __tostrrev(vet []int) string{
-	if len(vet) == 0  {
-		return ""
-	}
-	if  len(vet)==1 {
-		return fmt.Sprint(vet[0])
-	}
-	return  __tostrrev(vet[1:]) + ", " +fmt.Sprint(vet[0]) 
-}
-func tostr(vet []int) string {	
-	texto := __tostr(vet)
-	return "["+texto+"]"
+			str := "["
+			for i, v := range vet {
+				if i> 0 {
+					str += ", "
+				}
+				str += fmt.Sprint(v)
+			}
+			str += "]"
+	return str
 }
 
 func tostrrev(vet []int) string {
-	textorev := __tostrrev(vet)
-	return "["+textorev+"]"
-}
-
-
-func reverse(vet []int)  {
-	if len(vet) == 0  {
-		return
+	if len(vet) == 0 {
+		return "[]"
 	}
 	if len(vet) == 1 {
-		return
+		return "["+fmt.Sprint(vet[0])+"]"
 	}
-	vet[0], vet[len(vet)-1] = vet[len(vet)-1], vet[0]
-    reverse(vet[1 : len(vet)-1])
+		
+			str := "["
+			for i, v := range reverse(vet) {
+				if i> 0 {
+					str += ", "
+				}
+				str += fmt.Sprint(v)
+			}
+			str += "]"
+	return str
+}
+
+// reverse: inverte os elementos do slice
+func reverse(vet []int)[]int {
+	for i, j := 0, len(vet)-1; i < j; i, j = i+1, j-1 {
+		vet[i], vet[j] = vet[j], vet[i]
+	}
+	return vet
 }
 
 // sum: soma dos elementos do slice
-func sum(vet []int) int{
+func sum(vet []int) int {
+	var soma int = 0
 	if len(vet) == 0 {
 		return 0
-
 	}
-
-	return vet[0]+sum(vet[1:])
+	for _, v := range vet {
+		soma += v
+		
+	}
+	return soma
 }
 
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
-	if len(vet) == 0 {
-		return 1
-	}
-	return vet[0]*mult(vet[1:])
+	
+		var soma int =1
+		if len(vet) == 0 {
+			return 1
+		}
+		for _, v := range vet {
+			soma *= v
+			
+		}
+		return soma
+	
 }
 
 // min: retorna o índice e valor do menor valor
 // crie uma função recursiva interna do modelo
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
-
-
 func min(vet []int) int {
 	if len(vet) == 0 {
 		return -1 
