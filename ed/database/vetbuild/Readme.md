@@ -1,3 +1,4 @@
+
 # Lista Sequencial Dinâmica
 
 - O vetor dinâmico é uma lista sequencial que pode crescer ou diminuir de tamanho conforme necessário.

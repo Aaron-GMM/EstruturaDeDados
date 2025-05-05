@@ -1,0 +1,88 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-05_17-07-31",
+            "content": "@@ -1479,245 +1479,8 @@\n e%0A%7D%0A\n-func (s *Sudoku) String() string %7B%0A    var result string%0A    for i := 0; i %3C s.tamanho; i++ %7B%0A        for j := 0; j %3C s.tamanho; j++ %7B%0A            result += string(s.grid%5Bi%5D%5Bj%5D)%0A        %7D%0A        result += %22%5Cn%22%0A    %7D%0A    return result%0A%7D%0A\n func\n"
+        },
+        {
+            "label": "2025-05-05_17-08-16",
+            "content": "@@ -1036,19 +1036,20 @@\n  return \n-tru\n+fals\n e%0A%7D%0Afunc\n"
+        },
+        {
+            "label": "2025-05-05_17-09-20",
+            "content": "@@ -1474,19 +1474,16 @@\n false%0A%7D%0A\n-// \n func (s \n@@ -1509,19 +1509,16 @@\n tring %7B%0A\n-// \n     var \n@@ -1531,23 +1531,20 @@\n  string%0A\n-//\n     \n- \n for i :=\n@@ -1564,27 +1564,24 @@\n anho; i++ %7B%0A\n-// \n         for \n@@ -1609,19 +1609,16 @@\n ; j++ %7B%0A\n-// \n         \n@@ -1652,19 +1652,16 @@\n %5Bi%5D%5Bj%5D)%0A\n-// \n         \n@@ -1658,27 +1658,24 @@\n )%0A        %7D%0A\n-// \n         resu\n@@ -1689,20 +1689,14 @@\n %5Cn%22%0A\n-// \n     %7D%0A\n-// \n     \n@@ -1713,13 +1713,9 @@\n ult%0A\n-// %7D%0A\n+%7D\n %0Afun\n"
+        },
+        {
+            "label": "2025-05-05_17-10-19",
+            "content": "@@ -1470,24 +1470,27 @@\n urn false%0A%7D%0A\n+// \n func (s *Sud\n@@ -1512,16 +1512,19 @@\n tring %7B%0A\n+// \n     var \n@@ -1537,20 +1537,23 @@\n  string%0A\n+//\n     \n+ \n for i :=\n@@ -1569,32 +1569,35 @@\n .tamanho; i++ %7B%0A\n+// \n         for j :=\n@@ -1613,32 +1613,35 @@\n .tamanho; j++ %7B%0A\n+// \n             resu\n@@ -1667,16 +1667,19 @@\n %5Bi%5D%5Bj%5D)%0A\n+// \n         \n@@ -1672,32 +1672,35 @@\n %5D)%0A//         %7D%0A\n+// \n         result +\n@@ -1706,22 +1706,28 @@\n += %22%5Cn%22%0A\n+//\n     \n+ \n %7D%0A\n+// \n     retu\n@@ -1736,16 +1736,19 @@\n  result%0A\n+// \n %7D%0A%0Afunc \n"
+        },
+        {
+            "label": "2025-05-05_17-11-05",
+            "content": "@@ -750,32 +750,8 @@\n %5D ==\n- val)%7C%7C (s.grid%5Bi%5D%5Bb%5D ==\n  val\n"
+        },
+        {
+            "label": "2025-05-05_17-11-48",
+            "content": "@@ -2080,38 +2080,8 @@\n ku)%0A\n-        fmt.Println(%22solved%22)%0A\n     \n"
+        },
+        {
+            "label": "2025-05-05_17-14-12",
+            "content": "@@ -2096,16 +2096,24 @@\n Println(\n+%22solved%22\n )%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-05-05_17-14-21",
+            "content": "@@ -2080,21 +2080,34 @@\n ku)%0A        \n+fmt.Println()\n %0A    %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-05-05_17-14-31",
+            "content": "@@ -1678,32 +1678,55 @@\n %5D%5Bj%5D)%0A        %7D%0A\n+        result += %22%5Cn%22%0A\n     %7D%0A    return\n"
+        },
+        {
+            "label": "2025-05-05_17-14-41",
+            "content": "@@ -1690,31 +1690,8 @@\n   %7D%0A\n-        result += %22%5Cn%22%0A\n     \n"
+        },
+        {
+            "label": "2025-05-05_17-14-50",
+            "content": "@@ -1713,99 +1713,8 @@\n %5Cn%22%0A\n-        if (i + 1) %25 s.dim == 0 && i != s.tamanho - 1 %7B%0A            result += %22%22%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2025-05-05_17-15-27",
+            "content": "@@ -1720,19 +1720,44 @@\n      if \n+(\n i \n-%3C\n++ 1) %25 s.dim == 0 && i !=\n  s.taman\n@@ -1762,9 +1762,11 @@\n anho\n--\n+ - \n 1 %7B%0A\n"
+        },
+        {
+            "label": "2025-05-05_17-15-57",
+            "content": "@@ -1705,16 +1705,18 @@\n ult += %22\n+%5Cn\n %22%0A      \n@@ -1724,11 +1724,8 @@\n  if \n-! (\n i %3C \n@@ -1735,17 +1735,16 @@\n amanho-1\n-)\n  %7B%0A     \n@@ -1753,34 +1753,32 @@\n      result += %22\n-%5Cn\n %22%0A        %7D%0A    \n"
+        },
+        {
+            "label": "2025-05-05_17-16-19",
+            "content": "@@ -1709,10 +1709,8 @@\n += %22\n-%5Cn\n %22%0A  \n@@ -1755,32 +1755,34 @@\n      result += %22\n+%5Cn\n %22%0A        %7D%0A    \n"
+        },
+        {
+            "label": "2025-05-05_17-16-28",
+            "content": "@@ -1679,13 +1679,8 @@\n %5Bj%5D)\n-+%22%5Cn%22\n %0A   \n@@ -1687,24 +1687,41 @@\n      %7D%0A     \n+   result += %22%5Cn%22\n %0A        if \n"
+        },
+        {
+            "label": "2025-05-05_17-16-56",
+            "content": "@@ -1675,16 +1675,21 @@\n d%5Bi%5D%5Bj%5D)\n++%22%5Cn%22\n %0A       \n@@ -1700,25 +1700,8 @@\n     \n-   result += %22%5Cn%22\n %0A   \n@@ -1713,18 +1713,17 @@\n if ! (i \n-==\n+%3C\n  s.taman\n"
+        },
+        {
+            "label": "2025-05-05_17-17-22",
+            "content": "@@ -1737,16 +1737,18 @@\n .tamanho\n+-1\n ) %7B%0A    \n"
+        },
+        {
+            "label": "2025-05-05_17-17-32",
+            "content": "@@ -1720,16 +1720,17 @@\n      if \n+!\n  (i == s\n"
+        },
+        {
+            "label": "2025-05-05_17-17-39",
+            "content": "@@ -1728,9 +1728,10 @@\n  (i \n-%3E\n+==\n  s.t\n@@ -1740,10 +1740,8 @@\n anho\n--1\n ) %7B%0A\n"
+        },
+        {
+            "label": "2025-05-05_17-17-53",
+            "content": "@@ -1689,24 +1689,39 @@\n    %7D%0A       \n+ result += %22%5Cn%22\n %0A        if \n@@ -1724,17 +1724,17 @@\n  if  (i \n-%3C\n+%3E\n  s.taman\n@@ -1745,33 +1745,32 @@\n ) %7B%0A            \n- \n result += %22%5Cn%22%0A \n@@ -1756,34 +1756,32 @@\n      result += %22\n-%5Cn\n %22%0A        %7D%0A    \n"
+        },
+        {
+            "label": "2025-05-05_17-20-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"math\"\n\t\"os\"\n)\ntype Sudoku struct {\n    tamanho int // tamanho do tabuleiro 4 ou 9\n    dim int\n    grid [][]rune\n    holes [][2]int\n\n}\n\nfunc newSudoku(lines []string) *Sudoku {\n    tamanho := len(lines)\n    dim := int(math.Sqrt(float64(tamanho)))\n    grid := make([][]rune, tamanho)\n    var holes [][2]int\n\n    for i := 0; i < tamanho; i++ {\n        grid[i] = []rune(lines[i])\n        for j, ch := range grid[i] {\n            if ch == '.' {\n                holes = append(holes, [2]int{i, j})\n            }\n        }\n    }\n\n    return &Sudoku{tamanho: tamanho, dim: dim, grid: grid, holes: holes}\n}\nfunc (s *Sudoku) canPlace(a,b int, val rune) bool {\n    for i:=0; i < s.tamanho; i++ {\n        if( s.grid[a][i] == val)|| (s.grid[i][b] == val) {\n            return false\n        }\n    } \n\n    ba := (a/ s.dim) * s.dim\n    bb := (b/ s.dim) * s.dim\n\n    for i := ba; i < s.dim; i++ {\n        for j := bb; j < s.dim; j++ {\n            if s.grid[i][j] == val {\n                return false\n            }\n        }\n    }\n\n    return true\n}\nfunc (s *Sudoku)solve(idx int) bool {\n    if idx == len(s.holes){\n        return true\n    }\n    a, b := s.holes[idx][0], s.holes[idx][1]\n\n    for ch := 1; ch<=s.tamanho  ; ch++ {\n        val := rune(ch + '0')\n\n        if s.canPlace(a, b, val) {\n            s.grid[a][b] = val\n            if s.solve(idx + 1) {\n                return true\n            }\n            s.grid[a][b] = '.' // backtrack\n        }\n    }\n    return false\n}\nfunc (s *Sudoku) String() string {\n    var result string\n    for i := 0; i < s.tamanho; i++ {\n        for j := 0; j < s.tamanho; j++ {\n            result += string(s.grid[i][j])\n        }\n       \n        if  (i < s.tamanho-1) {\n             result += \"\\n\"\n        }\n    }\n    return result\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n        \n    scanner.Scan()\n    var N int\n    fmt.Sscan(scanner.Text(), &N)\n\n    lines := make([]string, N)\n    for i := 0; i < N; i++ {\n        scanner.Scan()\n        lines[i] = scanner.Text()\n    }\n    sudoku := newSudoku(lines)\n    if sudoku.solve(0) {\n        fmt.Println(sudoku)\n        \n    }\n}\n"
+        }
+    ]
+}

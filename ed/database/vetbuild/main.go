@@ -111,6 +111,68 @@ func (v *Vector) Clear() {
 	v.size = 0
 }
 
+func (v *Vector) IndexOf(value int) int {
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			return i
+		}
+	}
+	return -1
+}
+
+func (v *Vector) Contains(value int) bool {
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			return true
+		}
+	}
+	return false
+}
+
+func (v *Vector) Reverse()  {
+	for i, j := 0, v.size-1; i < j; i, j = i+1, j-1 {
+		v.data[i], v.data[j] = v.data[j], v.data[i]
+	}
+}
+func (v *Vector) Sort(){
+	for i := 0; i < v.size-1; i++ {
+		for j := 0; j < v.size-i-1; j++ {
+			if v.data[j] > v.data[j+1] {
+				v.data[j], v.data[j+1] = v.data[j+1], v.data[j]
+			}
+		}
+	}
+}
+
+func (v *Vector) Sorted() []int {
+	sorted := make([]int, v.size)
+	copy(sorted, v.data[:v.size])
+	for i := 0; i < len(sorted)-1; i++ {
+		for j := 0; j < len(sorted)-i-1; j++ {
+			if sorted[j] > sorted[j+1] {
+				sorted[j], sorted[j+1] = sorted[j+1], sorted[j]
+			}
+		}
+	}
+	return sorted
+}
+func (v *Vector) Capacity() int {
+	return v.capacity
+}
+
+func Join[T any](v []T, sep string) string {
+	if len(v) == 0 {
+		return ""
+	}
+	s := ""
+	for i, x := range v {
+		if i > 0 {
+			s += sep
+		}
+		s += fmt.Sprintf("%v", x)
+	}
+	return s
+}
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -164,20 +226,20 @@ func main() {
 			 	fmt.Println(err)
 			 }
 		case "indexOf":
-			// value, _ := strconv.Atoi(parts[1])
-			// index := v.IndexOf(value)
-			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
-			// if v.Contains(value) {
-			// 	fmt.Println("true")
-			// } else {
-			// 	fmt.Println("false")
-			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
 			 v.Clear()
 		case "capacity":
-			// fmt.Println(v.Capacity())
+			 fmt.Println(v.Capacity())
 		case "get":
 			index, _ := strconv.Atoi(parts[1])
 			value, err := v.At(index)
@@ -198,11 +260,11 @@ func main() {
 			 newCapacity, _ := strconv.Atoi(parts[1])
 			 v.Reserve(newCapacity)
 		case "sort":
-			// v.Sort()
+			 v.Sort()
 		case "sorted":
-			// fmt.Println("[" + Join(v.Sorted(), ", ") + "]")
+			 fmt.Println("[" + Join(v.Sorted(), ", ") + "]")
 		case "reverse":
-			// v.Reverse()
+			 v.Reverse()
 		default:
 			fmt.Println("fail: comando invalido")
 		}
