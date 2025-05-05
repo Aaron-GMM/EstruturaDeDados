@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-03_14-52-32",
+            "content": "@@ -433,11 +433,8 @@\n ) &&\n-  j\n  %3C= \n"
+        },
+        {
+            "label": "2025-05-03_14-54-17",
+            "content": "@@ -247,19 +247,20 @@\n   ok := \n-tru\n+fals\n e%0A      \n"
+        },
+        {
+            "label": "2025-05-03_14-55-09",
+            "content": "@@ -351,34 +351,16 @@\n = false%0A\n-            break%0A\n         \n"
+        },
+        {
+            "label": "2025-05-03_14-55-33",
+            "content": "@@ -289,23 +289,18 @@\n ; j \n-%3E= 0 && j%3E= i-L\n+%3C len(seq)\n ; j+\n@@ -389,32 +389,33 @@\n       %7D%0A%0A    if \n+!\n ok%7B continue %7D%0A%0A\n@@ -553,16 +553,17 @@\n %0A    if \n+!\n ok%7B cont\n"
+        },
+        {
+            "label": "2025-05-03_14-57-21",
+            "content": "@@ -279,17 +279,17 @@\n or j:= i\n--\n++\n 1; j %3E= \n"
+        },
+        {
+            "label": "2025-05-03_14-57-40",
+            "content": "@@ -406,9 +406,8 @@\n  if \n-!\n ok%7B \n"
+        },
+        {
+            "label": "2025-05-03_14-58-02",
+            "content": "@@ -307,10 +307,10 @@\n L; j\n---\n+++\n  %7B%0A \n@@ -448,18 +448,16 @@\n len(seq)\n--1\n  &&  j %3C\n"
+        },
+        {
+            "label": "2025-05-03_14-58-26",
+            "content": "@@ -228,10 +228,15 @@\n ('0'\n-+d\n+  + d  \n )%0A  \n@@ -448,16 +448,18 @@\n len(seq)\n+-1\n  &&  j %3C\n"
+        },
+        {
+            "label": "2025-05-03_14-58-44",
+            "content": "@@ -127,17 +127,17 @@\n  seq%5Bi%5D \n-!\n+=\n = '.' %7B%0A\n"
+        },
+        {
+            "label": "2025-05-03_14-59-29",
+            "content": "@@ -45,16 +45,19 @@\n rune, L \n+int\n , i int)\n"
+        },
+        {
+            "label": "2025-05-03_15-00-04",
+            "content": "@@ -542,33 +542,32 @@\n  %7D%0A    %7D%0A    if \n-!\n ok%7B continue %7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-05_10-06-12",
+            "content": "package main\nimport \"fmt\"\n\nfunc solve(seq []rune, L , i int) bool{\n    if i == len(seq) {\n        return true\n    }\n\n    if seq[i] != '.' {\n        return solve(seq, L, i+1)\n    }\n\n    for d:= 0; d<=L; d++ {\n        r:= rune('0'+d)\n        ok := true\n        \n    \n    for j:= i-1; j >= 0 && j>= i-L; j-- {\n        if seq[j] == r {\n            ok = false\n            break\n        }\n        }\n\n    if !ok{ continue }\n\n    for j:= i+1; j < len(seq) &&  j <= i+L; j++ {\n        if seq[j] == r {\n            ok = false\n            break\n        }\n    }\n    if !ok{ continue }\n\n    seq[i] = r\n    if solve(seq, L, i+1) {\n        return true\n    }\n    seq[i] = '.'\n}\n    return false\n}\nfunc main() {\n   var line string\n\n   var L int \n\n   fmt.Scanln(&line)\n   fmt.Scanln(&L)\n\n   seq := []rune(line)\n   solve(seq, L, 0)\n   fmt.Println(string(seq))\n\n\n}\n"
+        }
+    ]
+}

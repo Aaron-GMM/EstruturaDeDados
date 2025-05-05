@@ -20,10 +20,11 @@ func printArr(arr []int) {
             fmt.Print(", ")
         }
     }
+
     fmt.Println("]")
 }
-func primeirosPrimos(x int,contador int, numeroAtual int, primosArr []int) []int {
-    if x == contador || x == 0 {
+func primeirosPrimos(x int, contador int,  numeroAtual int, primosArr []int) []int {
+    if contador == x || x ==0 {
         return primosArr
     }
     if eh_primo(numeroAtual, 2) {
@@ -35,6 +36,6 @@ func primeirosPrimos(x int,contador int, numeroAtual int, primosArr []int) []int
 func main() {
 	var x int
 	fmt.Scan(&x)
-    primosArr := primeirosPrimos(x, 0, 2, []int{})
+    primosArr := primeirosPrimos(x, 0, 0, []int{})
     printArr(primosArr)
 }
