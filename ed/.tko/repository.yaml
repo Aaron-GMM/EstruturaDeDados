@@ -30,6 +30,7 @@ tasks:
   distancia: '{cov:100, appr:5, auto:5, desc:4, desire:4, effort:2, idx:0}'
   sudoku: '{cov:80, appr:4, auto:2, desc:0, desire:0, effort:0, idx:0}'
   fractais: '{cov:20, appr:3, auto:2, desc:4, desire:4, effort:1, idx:0}'
+  vetequals: '{cov:100, appr:6, auto:5, desc:5, desire:5, effort:5, idx:0}'
   vetbuild: '{cov:100, appr:5, auto:5, desc:5, desire:4, effort:3, idx:0}'
 flags:
   minimum: 1
