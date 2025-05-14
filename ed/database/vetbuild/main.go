@@ -17,7 +17,7 @@ func (v *Vector) Reserve(capacity int) {
 		return
 	}
 	novo := make([]int, capacity)
-	for i := range v.size{
+	for i :=0; i< v.size; i++ {
 		novo[i] = v.data[i]
 	}
 	v.capacity = capacity
@@ -34,7 +34,7 @@ func (v *Vector) PushBack(value int) {
 }
 func (v *Vector) String() string {
 	saida := "["
-	for i := range v.size {
+	for i :=0; i< v.size; i++ {
 		if i != 0 {
 			saida += ", "
 		}

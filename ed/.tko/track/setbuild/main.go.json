@@ -1,0 +1,148 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-06_10-51-13",
+            "content": "@@ -55,802 +55,8 @@\n %22%0A)%0A\n-type Set struct %7B%0A%09 data %5B%5Dint                             %0A%09 size int                               %0A%09 capacity int %09%0A%7D%0Afunc (v *Set) Reserve(capacity int) %7B%0A%09if capacity %3C v.size%7B%0A%09%09return%0A%09%7D%0A%09novo := make(%5B%5Dint, capacity)%0A%09for i := range v.size%7B%0A%09%09novo%5Bi%5D = v.data%5Bi%5D%0A%09%7D%0A%09v.capacity = capacity%0A%09v.data = novo%0A%7D%0A%0Afunc  NewSet(capacity int) *Set %7B%0A%09if capacity %3C 0 %7B%0A%09%09capacity = 0%0A%09%7D%0A%09return &Set%7B%0A%09%09data : make(%5B%5Dint, capacity),%0A%09%09size : 0,%0A%09%09capacity : capacity,%0A%09%7D%0A%7D%0A%0A%0Afunc (s *Set) Insert(value int) %7B%0A%09if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09for i := 0; i %3C s.size; i++ %7B%0A%09%09if s.data%5Bi%5D == value %7B%0A%09%09%09return %0A%09%09%7D%0A%09%09if s.data%5Bi%5D %3E value %7B%0A%09%09%09%0A%09%09%09for j := s.size; j %3E i; j-- %7B%0A%09%09%09%09s.data%5Bj%5D = s.data%5Bj-1%5D%0A%09%09%09%7D%0A%09%09%09s.data%5Bi%5D = value%0A%09%09%09s.size++%0A%09%09%09return%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%7D\n %0Afun\n@@ -131,17 +131,16 @@\n in)%0A%0A%09//\n-=\n  v := Ne\n"
+        },
+        {
+            "label": "2025-05-06_11-08-43",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -923,16 +923,19 @@\n tdin)%0A%0A%09\n+//=\n  v := Ne\n@@ -1171,16 +1171,18 @@\n it%22:%0A%09%09%09\n+//\n  value, \n@@ -1212,16 +1212,18 @@\n %5B1%5D)%0A%09%09%09\n+//\n  v = New\n@@ -1253,16 +1253,18 @@\n rt%22:%0A%09%09%09\n+//\n  for _, \n@@ -1292,16 +1292,18 @@\n :%5D %7B%0A%09%09%09\n+//\n  %09value,\n@@ -1334,28 +1334,10 @@\n %0A%09%09%09\n-%09v.Insert(value)%0A%09%09%09\n+//\n  %7D%0A%09\n"
+        },
+        {
+            "label": "2025-05-06_11-09-32",
+            "content": "@@ -1372,41 +1372,8 @@\n w%22:%0A\n-%09%09%09 fmt.Println(v.data%5B:v.size%5D)%0A\n %09%09ca\n"
+        },
+        {
+            "label": "2025-05-06_11-09-50",
+            "content": "@@ -1385,16 +1385,30 @@\n rintln(v\n+.data%5B:v.size%5D\n )%0A%09%09case\n"
+        },
+        {
+            "label": "2025-05-06_11-10-43",
+            "content": "@@ -730,32 +730,70 @@\n  value %7B%0A%09%09%09\n+%0A%09%09%09for j := s.size; j %3E i; j-- %7B%0A%09%09%09%09\n s.data%5B\n-i\n+j\n %5D = s.data%5Bi\n@@ -795,16 +795,17 @@\n ata%5B\n-i\n+j\n -1%5D%0A%09%09%09\n+%7D\n %0A%09%09%09\n"
+        },
+        {
+            "label": "2025-05-06_11-19-56",
+            "content": "@@ -665,16 +665,57 @@\n ; i++ %7B%0A\n+%09%09if s.data%5Bi%5D == value %7B%0A%09%09%09return %0A%09%09%7D%0A\n %09%09if s.d\n"
+        },
+        {
+            "label": "2025-05-06_11-23-43",
+            "content": "@@ -1305,21 +1305,16 @@\n rintln(v\n-.data\n )%0A%09%09case\n"
+        },
+        {
+            "label": "2025-05-06_11-24-04",
+            "content": "@@ -774,41 +774,8 @@\n %09%09%7D%0A\n-%09%09%09s.data%5Bi%5D = value%0A%09%09%09s.size++%0A\n %09%09%09%7D\n"
+        },
+        {
+            "label": "2025-05-06_11-25-00",
+            "content": "@@ -754,16 +754,26 @@\n .size++%0A\n+%09%09%09return%0A\n %09%09%09%09%7D%0A%09%09\n"
+        },
+        {
+            "label": "2025-05-06_11-25-36",
+            "content": "@@ -639,21 +639,144 @@\n %09%7D%0A%09\n-s.data%5Bs.size\n+for i := 0; i %3C s.size; i++ %7B%0A%09%09if s.data%5Bi%5D %3E value %7B%0A%09%09%09s.data%5Bi%5D = s.data%5Bi-1%5D%0A%09%09%09%0A%09%09%09s.data%5Bi%5D = value%0A%09%09%09s.size++%0A%09%09%09%09%7D%0A%09%09%09s.data%5Bi\n %5D = \n@@ -781,16 +781,18 @@\n = value%0A\n+%09%09\n %09s.size+\n@@ -793,16 +793,21 @@\n .size++%0A\n+%09%09%09%7D%0A\n %7D%0Afunc m\n"
+        },
+        {
+            "label": "2025-05-06_11-26-11",
+            "content": "@@ -638,127 +638,8 @@\n %0A%09%7D%0A\n-%09for i := 0; i %3C s.size; i++ %7B%0A%09%09if s.data%5Bi%5D %3E value%7B%0A%09%09%09s.data = append(s.data%5Bi:%5D, s.data%5Bi:%5D...) %0A%09%09%09s.size++%0A%0A%09%09%7D%0A\n %09s.d\n@@ -670,18 +670,16 @@\n ize++%0A%7D%0A\n-%7D%0A\n func mai\n"
+        },
+        {
+            "label": "2025-05-06_11-30-30",
+            "content": "@@ -567,19 +567,8 @@\n lue \n-int, index \n int)\n@@ -748,22 +748,20 @@\n .size++%0A\n-%09%09%7D\n %0A%09%09\n+%7D\n %0A%09s.data\n@@ -1237,21 +1237,17 @@\n %09value, \n-index\n+_\n  := strc\n@@ -1283,15 +1283,8 @@\n alue\n-, index\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-05-06_11-37-12",
+            "content": "@@ -85,29 +85,59 @@\n  %7B%0A%09\n+ \n data %5B%5D\n- \n int\n+                             \n %0A%09\n+ \n size int\n %0A%09ca\n@@ -136,136 +136,50 @@\n  int\n-%0A%09capacity int%0A%7D%0A%0Afunc NewSet(capacity int) *Set %7B%0A%09return &Set%7B%0A%09%09data:     make(%5B%5Dint, 0, capacity),%0A%09%09size:\n+                          \n      \n-0,\n %0A%09\n-%09\n+ \n capacity\n : ca\n@@ -178,22 +178,14 @@\n city\n-: capacity,%0A%09%7D\n+ int %09\n %0A%7D%0Af\n@@ -185,25 +185,25 @@\n t %09%0A%7D%0Afunc (\n-s\n+v\n  *Set) Reser\n@@ -236,23 +236,22 @@\n acity %3C \n-s\n+v\n .size\n- \n %7B%0A%09%09retu\n@@ -303,23 +303,22 @@\n = range \n-s\n+v\n .size\n- \n %7B%0A%09%09novo\n@@ -323,17 +323,17 @@\n vo%5Bi%5D = \n-s\n+v\n .data%5Bi%5D\n@@ -337,17 +337,17 @@\n %5Bi%5D%0A%09%7D%0A%09\n-s\n+v\n .capacit\n@@ -360,17 +360,17 @@\n pacity%0A%09\n-s\n+v\n .data = \n@@ -386,349 +386,270 @@\n unc \n-(s *Set) insert(value int, index\n+ NewSet(capacity\n  int) \n-error\n+*Set \n %7B%0A%09if \n-index %3C 0 %7C%7C index %3E= s.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A%09if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09s.data = append(s.data, 0)%0A%09copy(s.data%5Bindex+1:%5D, s.data%5Bindex:%5D)%0A%09s.data%5Bindex%5D = value%09%0A%09s.size++%0A%09return nil %0A%7D%0A%0Afunc (s *Set) Insert(value int)  %7B\n+capacity %3C 0 %7B%0A%09%09capacity = 0%0A%09%7D%0A%09return &Set%7B%0A%09%09data : make(%5B%5Dint, capacity),%0A%09%09size : 0,%0A%09%09capacity : capacity,%0A%09%7D%0A%7D%0A%0A%0Afunc (s *Set) Insert(value int, index int) %7B%0A%09if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D\n %0A%09fo\n@@ -695,85 +695,117 @@\n %5Bi%5D \n-==\n+%3E\n  value\n- \n %7B%0A%09%09%09\n-return\n+s.data = append(s.data%5Bi:%5D, s.data%5Bi:%5D...) %0A%09%09%09s.size++\n %0A%09%09%7D%0A%09%09\n-if \n+%0A%09\n s.data%5B\n-i%5D %3E\n+s.size%5D =\n  value\n- %7B%0A%09%09%09s.insert(value, i)%0A%09%09%7D%0A%09\n+%0A%09s.size++%0A\n %7D%0A%7D%0A\n@@ -881,16 +881,17 @@\n tdin)%0A%0A%09\n+ \n v := New\n@@ -1246,25 +1246,29 @@\n %09%09%09 %09value, \n-_\n+index\n  := strconv.\n@@ -1296,21 +1296,29 @@\n rt(value\n+, index\n )%0A%09%09%09\n+ \n %7D%0A%09%09case\n@@ -1343,16 +1343,21 @@\n rintln(v\n+.data\n )%0A%09%09case\n"
+        },
+        {
+            "label": "2025-05-06_20-19-40",
+            "content": "@@ -1447,22 +1447,8 @@\n ln(v\n-.data%5B:v.size%5D\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-05-06_20-20-10",
+            "content": "@@ -446,264 +446,8 @@\n o%0A%7D%0A\n-func (s *Set) binarySearch(value int) int %7B%0A%09low, high := 0, s.size-1%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%09%09if s.data%5Bmid%5D == value %7B%0A%09%09%09return mid%0A%09%09%7D else if s.data%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D\n %0Afun\n@@ -795,39 +795,104 @@\n  %7B%0A%09\n-%09indx := s.binarySearch(\n+for i := 0; i %3C s.size; i++ %7B%0A%09%09if s.data%5Bi%5D == value %7B%0A%09%09%09return%0A%09%09%7D%0A%09%09if s.data%5Bi%5D %3E \n value\n-)%0A\n+ %7B%0A%09\n %09%09s.\n@@ -910,12 +910,16 @@\n e, i\n-ndx)\n+)%0A%09%09%7D%0A%09%7D\n %0A%7D%0Af\n"
+        },
+        {
+            "label": "2025-05-06_20-23-42",
+            "content": "@@ -1046,17 +1046,16 @@\n int)  %7B%0A\n-%0A\n %09%09indx :\n@@ -1082,38 +1082,8 @@\n ue)%0A\n-%09%09fmt.Println(%22indice%22, indx)%0A\n %09%09s.\n"
+        },
+        {
+            "label": "2025-05-08_08-30-57",
+            "content": "@@ -1050,13 +1050,14 @@\n   %7B%0A\n+%0A%09\n %09ind\n-e\n x :=\n@@ -1084,39 +1084,39 @@\n e)%0A%09\n-if index != -1 %7B%0A%09%09return%0A%09%7D%0A%09 \n+%09fmt.Println(%22indice%22, indx)%0A%09%09\n s.in\n@@ -1130,17 +1130,16 @@\n lue, ind\n-e\n x)%0A%7D%0Afun\n"
+        },
+        {
+            "label": "2025-05-09_10-10-13",
+            "content": "@@ -1109,16 +1109,17 @@\n urn%0A%09%7D%0A%09\n+ \n s.insert\n"
+        },
+        {
+            "label": "2025-05-13_08-13-51",
+            "content": "@@ -1137,340 +1137,8 @@\n x)%0A%7D\n-%0A%0Afunc (s *Set) Erase(value int) %7B%0A%09index := s.binarySearch(value)%0A%09if index == -1 %7B%0A%09%09return%0A%09%7D%0A%09s.data = append(s.data%5B:index%5D, s.data%5Bindex+1:%5D...)%0A%09s.size--%0A%7D%0Afunc (s *Set) Contains(value int) bool %7B%0A%09index := s.binarySearch(value)%0A%09return index != -1%0A%7D%0Afunc (s *Set) Clear() %7B%0A%09s.data = make(%5B%5Dint, 0, s.capacity)%0A%09s.size = 0%0A%7D\n %0Afun\n@@ -1691,24 +1691,26 @@\n %22erase%22:%0A%09%09%09\n+//\n  value, _ :=\n@@ -1737,27 +1737,8 @@\n 1%5D)%0A\n-%09%09%09 v.Erase(value)%0A\n %09%09ca\n@@ -1751,24 +1751,26 @@\n ntains%22:%0A%09%09%09\n+//\n  value, _ :=\n@@ -1799,58 +1799,21 @@\n )%0A%09%09\n-%09 v.Contains(value)%0A%09%09case %22clear%22:%0A%09%09%09 v.Clear()%0A\n+case %22clear%22:\n %0A%09%09d\n"
+        },
+        {
+            "label": "2025-05-13_08-18-25",
+            "content": "@@ -1113,167 +1113,30 @@\n %09%7D%0A%09\n-if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09s.data = append(s.data, 0)%0A%09copy(s.data%5Bs.size:%5D, s.data%5B:s.size%5D)%0A%09s.data%5B0%5D = value%0A%09s.size++\n+s.insert(value, index)\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-13_08-18-55",
+            "content": "@@ -1607,175 +1607,8 @@\n 0%0A%7D%0A\n-%0A%0A%0Afunc (s * Set) printSet(v %5B%5Dint) %7B%0A%09fmt.Print(%22%5B%22)%0A%09for i := 0; i %3C s.size; i++ %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%09fmt.Print(s.data%5Bi%5D)%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0A\n func\n@@ -2120,25 +2120,35 @@\n %09%09%09 \n-v.p\n+fmt.P\n rint\n-Set\n+ln\n (v.data\n+%5B:v.size%5D\n )%0A%09%09\n"
+        },
+        {
+            "label": "2025-05-13_08-23-15",
+            "content": "@@ -1179,28 +1179,101 @@\n %0A%09s.\n-insert(value, index)\n+data = append(s.data, 0)%0A%09copy(s.data%5Bs.size:%5D, s.data%5B:s.size%5D)%0A%09s.data%5B0%5D = value%0A%09s.size++\n %0A%7D%0A%0A\n@@ -1609,19 +1609,30 @@\n %7D%0A%0A%0A\n+%0A\n func\n+ (s * Set)\n  print\n-V\n+S\n et(v\n@@ -1678,14 +1678,14 @@\n i %3C \n-len(v)\n+s.size\n ; i+\n@@ -1736,17 +1736,22 @@\n t.Print(\n-v\n+s.data\n %5Bi%5D)%0A%09%7D%0A\n@@ -2286,14 +2286,17 @@\n %0A%09%09%09\n+ v.\n print\n-V\n+S\n et(v\n"
+        },
+        {
+            "label": "2025-05-13_08-26-09",
+            "content": "@@ -1173,28 +1173,16 @@\n 2))%0A%09%7D%0A%09\n-fmt.Println(\n s.insert\n@@ -1195,17 +1195,16 @@\n , index)\n-)\n %0A%7D%0A%0Afunc\n"
+        },
+        {
+            "label": "2025-05-13_08-26-59",
+            "content": "@@ -1112,28 +1112,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(index)%0A\n %09if \n"
+        },
+        {
+            "label": "2025-05-13_08-27-33",
+            "content": "@@ -1080,33 +1080,33 @@\n alue)%0A%09if index \n-=\n+!\n = -1 %7B%0A%09%09return%0A\n"
+        },
+        {
+            "label": "2025-05-13_08-27-46",
+            "content": "@@ -1129,16 +1129,78 @@\n index)%0A%09\n+if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D\n %0A%09fmt.Pr\n"
+        },
+        {
+            "label": "2025-05-13_08-28-19",
+            "content": "@@ -1113,27 +1113,29 @@\n %09%7D%0A%09\n-%0A%09if index == 0 %7B\n+fmt.Println(index)\n %0A%09\n+%0A\n %09fmt\n@@ -1147,20 +1147,8 @@\n tln(\n-%22entrou%22)%0A%09%09\n s.in\n@@ -1165,19 +1165,17 @@\n , index)\n-%0A%09%7D\n+)\n %0A%7D%0A%0Afunc\n"
+        },
+        {
+            "label": "2025-05-13_08-34-49",
+            "content": "@@ -1183,36 +1183,8 @@\n %0A%09%7D%0A\n-%09%09fmt.Println(%22aqui fora%22)%0A%0A\n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-05-13_08-35-18",
+            "content": "@@ -2204,27 +2204,24 @@\n ow%22:%0A%09%09%09\n-fmt.P\n+p\n rint\n-ln\n+Vet\n (v.data)\n"
+        },
+        {
+            "label": "2025-05-13_08-36-31",
+            "content": "@@ -1543,19 +1543,16 @@\n = 0%0A%7D%0A%0A%0A\n-// \n func pri\n@@ -1568,19 +1568,16 @@\n %5Dint) %7B%0A\n-// \n %09fmt.Pri\n@@ -1584,19 +1584,16 @@\n nt(%22%5B%22)%0A\n-// \n %09for i :\n@@ -1615,19 +1615,16 @@\n ; i++ %7B%0A\n-// \n %09%09if i %3E\n@@ -1628,19 +1628,16 @@\n i %3E 0 %7B%0A\n-// \n %09%09%09fmt.P\n@@ -1651,18 +1651,12 @@\n  %22)%0A\n-// \n %09%09%7D%0A\n-// \n %09%09fm\n@@ -1673,17 +1673,11 @@\n i%5D)%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09fmt\n@@ -1694,11 +1694,8 @@\n %5D%22)%0A\n-// \n %7D%0Afu\n"
+        },
+        {
+            "label": "2025-05-13_08-36-58",
+            "content": "@@ -1247,29 +1247,8 @@\n ) %7B%0A\n-%09fmt.Println(s.data)%0A\n %09ind\n"
+        },
+        {
+            "label": "2025-05-13_08-39-36",
+            "content": "@@ -1050,30 +1050,8 @@\n   %7B%0A\n-%09fmt.Println(s.data)%0A%0A\n %09ind\n@@ -1243,16 +1243,37 @@\n  int) %7B%0A\n+%09fmt.Println(s.data)%0A\n %09index :\n"
+        },
+        {
+            "label": "2025-05-13_08-39-53",
+            "content": "@@ -753,30 +753,8 @@\n or%7B%0A\n-%09fmt.Println(s.data)%0A%0A\n %09if \n@@ -1045,16 +1045,37 @@\n  int)  %7B\n+%0A%09fmt.Println(s.data)\n %0A%0A%09index\n"
+        },
+        {
+            "label": "2025-05-13_08-40-18",
+            "content": "@@ -2257,16 +2257,35 @@\n ow%22:%0A%09%09%09\n+fmt.Println(v.data)\n %0A%09%09case \n"
+        },
+        {
+            "label": "2025-05-13_09-00-29",
+            "content": "@@ -749,16 +749,38 @@\n  error%7B%0A\n+%09fmt.Println(s.data)%0A%0A\n %09if inde\n@@ -1068,16 +1068,17 @@\n int)  %7B%0A\n+%0A\n %09index :\n@@ -1107,25 +1107,25 @@\n )%0A%09if index \n-!\n+=\n = -1 %7B%0A%09%09ret\n@@ -1135,168 +1135,106 @@\n %0A%09%7D%0A\n+%09%0A\n %09if \n-s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2)\n+index == 0 %7B%0A%09%09fmt.Println(%22entrou%22\n )%0A%09\n-%7D%0A\n %09s.\n-data = append(s.data, 0)%0A%09copy(s.data%5Bs.size:%5D, s.data%5B:s.size%5D)%0A%09s.data%5B0%5D = value%0A%09s.size++\n+insert(value, index)%0A%09%7D%0A%09%09fmt.Println(%22aqui fora%22)%0A\n %0A%7D%0A%0A\n@@ -1566,17 +1566,19 @@\n = 0%0A%7D%0A%0A%0A\n-%0A\n+// \n func pri\n@@ -1594,16 +1594,19 @@\n %5Dint) %7B%0A\n+// \n %09fmt.Pri\n@@ -1613,16 +1613,19 @@\n nt(%22%5B%22)%0A\n+// \n %09for i :\n@@ -1647,16 +1647,19 @@\n ; i++ %7B%0A\n+// \n %09%09if i %3E\n@@ -1663,16 +1663,19 @@\n i %3E 0 %7B%0A\n+// \n %09%09%09fmt.P\n@@ -1685,20 +1685,26 @@\n t(%22, %22)%0A\n+// \n %09%09%7D%0A\n+// \n %09%09fmt.Pr\n@@ -1713,19 +1713,25 @@\n t(v%5Bi%5D)%0A\n-%09%7D%0A\n+// %09%7D%0A// \n %09fmt.Pri\n@@ -1740,16 +1740,19 @@\n ln(%22%5D%22)%0A\n+// \n %7D%0Afunc m\n@@ -2261,25 +2261,8 @@\n %0A%09%09%09\n- printVet(v.data)\n %0A%09%09c\n"
+        },
+        {
+            "label": "2025-05-13_09-03-14",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\ntype Set struct {\n\tdata [] int\n\tsize int\n\tcapacity int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, 0, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\nfunc (s *Set) Reserve(capacity int) {\n\tif capacity < s.size {\n\t\treturn\n\t}\n\tnovo := make([]int, capacity)\n\tfor i := range s.size {\n\t\tnovo[i] = s.data[i]\n\t}\n\ts.capacity = capacity\n\ts.data = novo\n}\nfunc (s *Set) binarySearch(value int) int {\n\tlow, high := 0, s.size-1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif s.data[mid] == value {\n\t\t\treturn mid\n\t\t} else if s.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn -1\n}\nfunc (s *Set) insert(value int, index int) error{\n\tif index < 0 || index >= s.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(max(1, s.capacity*2))\n\t}\n\ts.data = append(s.data, 0)\n\tcopy(s.data[index+1:], s.data[index:])\n\ts.data[index] = value\t\n\ts.size++\n\treturn nil \n}\n\nfunc (s *Set) Insert(value int)  {\n\tindex := s.binarySearch(value)\n\tif index != -1 {\n\t\treturn\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(max(1, s.capacity*2))\n\t}\n\ts.data = append(s.data, 0)\n\tcopy(s.data[s.size:], s.data[:s.size])\n\ts.data[0] = value\n\ts.size++\n}\n\nfunc (s *Set) Erase(value int) {\n\tindex := s.binarySearch(value)\n\tif index == -1 {\n\t\treturn\n\t}\n\ts.data = append(s.data[:index], s.data[index+1:]...)\n\ts.size--\n}\nfunc (s *Set) Contains(value int) bool {\n\tindex := s.binarySearch(value)\n\treturn index != -1\n}\nfunc (s *Set) Clear() {\n\ts.data = make([]int, 0, s.capacity)\n\ts.size = 0\n}\n\n\n\nfunc printVet(v []int) {\n\tfmt.Print(\"[\")\n\tfor i := 0; i < len(v); i++ {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(v[i])\n\t}\n\tfmt.Println(\"]\")\n}\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t for _, part := range parts[1:] {\n\t\t\t \tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\t printVet(v.data)\n\t\tcase \"erase\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v.Erase(value)\n\t\tcase \"contains\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v.Contains(value)\n\t\tcase \"clear\":\n\t\t\t v.Clear()\n\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n"
+        }
+    ]
+}

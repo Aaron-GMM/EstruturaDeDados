@@ -53,6 +53,7 @@ Significado das tags nas questões:
 - [ ] `@fractais             *10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais/Readme.md)
 - [ ] `@fractais_png         +10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais_png/Readme.md)
 - [ ] `@hex                  +10  :open`[Desenhando labirinto perfeito](https://github.com/qxcodeed/arcade/blob/master/base/hex/Readme.md)
+- [ ] `@vetequals`           +01  :leet`[Verifique se dois vetores são iguais recursivamente](https://github.com/qxcodeed/arcade/blob/master/base/vetequals/Readme.md)
 
 ### Vetor
 
@@ -72,6 +73,7 @@ Significado das tags nas questões:
 - [ ] `@banco       *01 :leet`[Gerenciando a fila do banco](https://github.com/qxcodeed/arcade/blob/master/base/banco/Readme.md)
 - [ ] `@editor      *01 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
 - [ ] `@controlz    *01 :leet`[Editor com Control Z](https://github.com/qxcodeed/arcade/blob/master/base/controlz/Readme.md)
+- [ ] `@lista_simples` +05  :leet`[Lista simples](https://github.com/qxcodeed/arcade/blob/master/base/lista_simples/Readme.md)
 
 ### Pilha
 
