@@ -57,22 +57,24 @@ Significado das tags nas questões:
 
 ### Vetor
 
-- [ ] `@vetbuild    *10 :make`[Lista Sequencial Dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
-- [ ] `@setbuild    *10 :make`[Conjunto usando Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/setbuild/Readme.md)
-- [ ] `@magicsearch *05 :make`[Magic Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/magicsearch/Readme.md)
-- [ ] `@multiset    *10 :make`[MultiSet usando vetor dinâmico](https://github.com/qxcodeed/arcade/blob/master/base/multiset/Readme.md)
-- [ ] `@iterador    *05 :make`[Criando um iterador](https://github.com/qxcodeed/arcade/blob/master/base/iterador/Readme.md)
+- [ ] `@vetbuild     *10 :make`[Lista Sequencial Dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
+- [ ] `@setbuild     *10 :make`[Conjunto usando Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/setbuild/Readme.md)
+- [ ] `@bettersearch *00 :make`[Better Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/bettersearch/Readme.md)
+- [ ] `@magicsearch  *05 :make`[Magic Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/magicsearch/Readme.md)
+- [ ] `@multiset     *10 :make`[MultiSet usando vetor dinâmico](https://github.com/qxcodeed/arcade/blob/master/base/multiset/Readme.md)
+- [ ] `@iterador     *05 :make`[Criando um iterador](https://github.com/qxcodeed/arcade/blob/master/base/iterador/Readme.md)
 
 ### Lista
 
 - [ ] `@lista_d1      *03 :make`[Lista Dupla com Nó Sentinela](https://github.com/qxcodeed/arcade/blob/master/base/lista_d1/Readme.md)
 - [ ] `@lista_d2      *04 :make`[Lista Dupla com Nó Iterador](https://github.com/qxcodeed/arcade/blob/master/base/lista_d2/Readme.md)
 - [ ] `@lista_d3      *05 :make`[Lista Dupla - Extra](https://github.com/qxcodeed/arcade/blob/master/base/lista_d3/Readme.md)
+- [ ] `@lista_d4      *05 :make`[Lista Circular utilizando Template](https://github.com/qxcodeed/arcade/blob/master/base/lista_d4/Readme.md)
 - [ ] `@prin_list1    *02 :leet`[Princesa com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list1/Readme.md)
-- [ ] `@editor        *04 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
 - [ ] `@prin_list2    +02 :leet`[Princesa2 com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list2/Readme.md)
-- [ ] `@banco         +03 :leet`[Gerenciando a fila do banco](https://github.com/qxcodeed/arcade/blob/master/base/banco/Readme.md)
+- [ ] `@editor        *04 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
 - [ ] `@controlz      +03 :leet`[Editor com Control Z](https://github.com/qxcodeed/arcade/blob/master/base/controlz/Readme.md)
+- [ ] `@editorint     *08 :open`[Editor de texto interativo utilizando o curses](https://github.com/qxcodeed/arcade/blob/master/base/editorint/Readme.md)
 
 ### Pilha
 
@@ -146,19 +148,20 @@ Nesse primeiro bloco, vamos aprender ou relembrar os conceitos básicos da lingu
 
 ### A consertar<!-- l:cpp -->
 
-- [ ] `@budega      *00 :leet`[Gerencie a fila de espera e atendimento](https://github.com/qxcodepoo/arcade/blob/master/base/budega/Readme.md)
-- [ ] `@agenda      *00 :leet`[Gerencie contatos e telefones](https://github.com/qxcodepoo/arcade/blob/master/base/agenda/Readme.md)
-- [ ] `#cpp_cpref   *00 :info`[Como fazer sobrecarga de cópia e referencia](https://github.com/qxcodeed/arcade/blob/master/wiki/tad/sobrecarga.md)
-- [ ] `#cpp_oper    *00 :info`[Sobrecarga de operadores de classes](https://github.com/qxcodeed/arcade/blob/master/wiki/tad/sobrecarga_operadores.md)
-- [ ] `@ponto       *00 :leet`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/ponto/Readme.md)
-- [ ] `@fracao      *00 :leet`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracao/Readme.md)
-- [ ] `@pontoGo     *00 :make`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/pontoGo/Readme.md)
-- [ ] `@fracaoGo    *00 :make`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracaoGo/Readme.md)
+- [ ] `@budega        *00 :leet`[Gerencie a fila de espera e atendimento](https://github.com/qxcodepoo/arcade/blob/master/base/budega/Readme.md)
+- [ ] `@agenda        *00 :leet`[Gerencie contatos e telefones](https://github.com/qxcodepoo/arcade/blob/master/base/agenda/Readme.md)
+- [ ] `#cpp_cpref     *00 :info`[Como fazer sobrecarga de cópia e referencia](https://github.com/qxcodeed/arcade/blob/master/wiki/tad/sobrecarga.md)
+- [ ] `#cpp_oper      *00 :info`[Sobrecarga de operadores de classes](https://github.com/qxcodeed/arcade/blob/master/wiki/tad/sobrecarga_operadores.md)
+- [ ] `@ponto         *00 :leet`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/ponto/Readme.md)
+- [ ] `@fracao        *00 :leet`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracao/Readme.md)
+- [ ] `@pontoGo       *00 :make`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/pontoGo/Readme.md)
+- [ ] `@fracaoGo      *00 :make`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracaoGo/Readme.md)
 - [ ] `@lista_simples +05 :make`[Lista simples 1](https://github.com/qxcodeed/arcade/blob/master/base/lista_simples/Readme.md)
 - [ ] `@list_basic    *01 :make`[Lista Simplesmente Encadeada - CPP](https://github.com/qxcodeed/arcade/blob/master/base/list_basic/Readme.md)
-- [ ] `@cauda       *00 :leet`[Lista Simplesmente Encadeada com Cauda](https://github.com/qxcodeed/arcade/blob/master/base/cauda/Readme.md)
-- [ ] `@duplamente  *00 :leet`[Lista Dupla - Algoritmos](https://github.com/qxcodeed/arcade/blob/master/base/duplamente/Readme.md)
-- [ ] `@invertendo  *00 :leet`[Inversão usando next e previous](https://github.com/qxcodeed/arcade/blob/master/base/invertendo/Readme.md)
-- [ ] `@invertendo2 *00 :leet`[Pilha - invertendo com pilhas auxiliares](https://github.com/qxcodeed/arcade/blob/master/base/invertendo2/Readme.md)
-- [ ] `@concatenar  *00 :leet`[Concatenar duas listas duplamente encadeadas](https://github.com/qxcodeed/arcade/blob/master/base/concatenar/Readme.md)
-- [ ] `@converte    *00 :leet`[Converte simples em dupla](https://github.com/qxcodeed/arcade/blob/master/base/converte/Readme.md)
+- [ ] `@cauda         *00 :leet`[Lista Simplesmente Encadeada com Cauda](https://github.com/qxcodeed/arcade/blob/master/base/cauda/Readme.md)
+- [ ] `@duplamente    *00 :leet`[Lista Dupla - Algoritmos](https://github.com/qxcodeed/arcade/blob/master/base/duplamente/Readme.md)
+- [ ] `@invertendo    *00 :leet`[Inversão usando next e previous](https://github.com/qxcodeed/arcade/blob/master/base/invertendo/Readme.md)
+- [ ] `@invertendo2   *00 :leet`[Pilha - invertendo com pilhas auxiliares](https://github.com/qxcodeed/arcade/blob/master/base/invertendo2/Readme.md)
+- [ ] `@concatenar    *00 :leet`[Concatenar duas listas duplamente encadeadas](https://github.com/qxcodeed/arcade/blob/master/base/concatenar/Readme.md)
+- [ ] `@converte      *00 :leet`[Converte simples em dupla](https://github.com/qxcodeed/arcade/blob/master/base/converte/Readme.md)
+- [ ] `@banco         +03 :leet`[Gerenciando a fila do banco](https://github.com/qxcodeed/arcade/blob/master/base/banco/Readme.md)
