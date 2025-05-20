@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-19_10-14-20",
+            "content": "@@ -69,17 +69,16 @@\n %0Afunc ma\n-n\n gicSearc\n@@ -106,18 +106,16 @@\n int, inf\n-er\n  int, su\n@@ -119,37 +119,33 @@\n  sup\n-er\n  int)\n+ \n int\n+ \n %7B%0A%09if \n-infer %3E super\n+sup %3C inf\n  %7B%0A%09\n@@ -152,21 +152,20 @@\n %09return \n+-\n inf\n-er\n %0A%09%7D%0A%09mei\n@@ -173,23 +173,17 @@\n  := \n-(\n inf\n-er\n  + sup\n-er)\n  / 2\n@@ -227,16 +227,17 @@\n meio%0A%09%7D%0A\n+%0A\n %09if valu\n@@ -257,33 +257,32 @@\n o%5D %7B%0A%09%09return ma\n-n\n gicSearch(value,\n@@ -296,453 +296,21 @@\n  inf\n-er\n , meio\n+-1\n )%0A%09%7D%0A\n-%09return mangicSearch(value, slice, meio+1, super)%0A%7D%0A%0Afunc MagicSearch(slice %5B%5Dint, value int)int%7B%0A%09return mangicSearch(value, slice, 0, len(slice)-1)%0A%7D%0A%0A// func magicSearch(value int, slice %5B%5Dint, inf int, sup int) int %7B%0A// %09if sup %3C inf %7B%0A// %09%09return -inf%0A// %09%7D%0A// %09meio := inf + sup / 2%0A// %09if slice%5Bmeio%5D == value %7B%0A// %09%09return meio%0A// %09%7D%0A%0A// %09if value %3C slice%5Bmeio%5D %7B%0A// %09%09return magicSearch(value, slice, inf, meio-1)%0A// %09%7D%0A// \n %09ret\n@@ -356,16 +356,10 @@\n up)%0A\n-// %7D%0A// \n+%7D%0A\n func\n@@ -401,19 +401,16 @@\n ) int %7B%0A\n-// \n %09return \n@@ -456,11 +456,8 @@\n -1)%0A\n-// \n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-05-19_10-31-09",
+            "content": "@@ -314,18 +314,16 @@\n er, meio\n--1\n )%0A%09%7D%0A%09re\n"
+        },
+        {
+            "label": "2025-05-19_10-31-32",
+            "content": "@@ -474,16 +474,455 @@\n )-1)%0A%7D%0A%0A\n+// func magicSearch(value int, slice %5B%5Dint, inf int, sup int) int %7B%0A// %09if sup %3C inf %7B%0A// %09%09return -inf%0A// %09%7D%0A// %09meio := inf + sup / 2%0A// %09if slice%5Bmeio%5D == value %7B%0A// %09%09return meio%0A// %09%7D%0A%0A// %09if value %3C slice%5Bmeio%5D %7B%0A// %09%09return magicSearch(value, slice, inf, meio-1)%0A// %09%7D%0A// %09return magicSearch(value, slice, meio-1, sup)%0A// %7D%0A// func MagicSearch(slice %5B%5Dint, value int) int %7B%0A// %09return magicSearch(value, slice, 0, len(slice)-1)%0A// %7D\n %0A%0Afunc m\n"
+        },
+        {
+            "label": "2025-05-19_10-32-13",
+            "content": "@@ -424,17 +424,14 @@\n t%7B%0A%09\n-index := \n+return\n  man\n@@ -475,146 +475,8 @@\n -1)%0A\n-%09if index %3C len(slice) && slice%5Bindex%5D == value %7B%0A%09%09for index+1 %3C len(slice) && slice%5Bindex+1%5D == value %7B%0A%09%09%09index++%0A%09%09%7D%0A%09%7D%0A%09return index%0A\n %7D%0A%0A%0A\n"
+        },
+        {
+            "label": "2025-05-19_10-41-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\nfunc mangicSearch(value int, slice []int, infer int, super int)int{\n\tif infer > super {\n\t\treturn infer\n\t}\n\tmeio := (infer + super) / 2\n\tif slice[meio] == value {\n\t\treturn meio\n\t}\n\tif value < slice[meio] {\n\t\treturn mangicSearch(value, slice, infer, meio-1)\n\t}\n\treturn mangicSearch(value, slice, meio+1, super)\n}\n\nfunc MagicSearch(slice []int, value int)int{\n\tindex :=  mangicSearch(value, slice, 0, len(slice)-1)\n\tif index < len(slice) && slice[index] == value {\n\t\tfor index+1 < len(slice) && slice[index+1] == value {\n\t\t\tindex++\n\t\t}\n\t}\n\treturn index\n}\n\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n"
+        }
+    ]
+}

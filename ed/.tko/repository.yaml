@@ -3,7 +3,7 @@ version: 0.0.1
 database: database
 expanded:
 - main-quest
-- recursão
+- vetor
 tasks:
   pintando: '{cov:100, appr:6, auto:5, desc:4, desire:5, effort:5, idx:0}'
   mumia: '{cov:100, appr:6, auto:5, desc:5, desire:4, effort:5, idx:0}'
@@ -32,13 +32,14 @@ tasks:
   fractais: '{cov:20, appr:3, auto:2, desc:4, desire:4, effort:1, idx:0}'
   vetequals: '{cov:100, appr:6, auto:5, desc:5, desire:5, effort:5, idx:0}'
   vetbuild: '{cov:100, appr:5, auto:5, desc:5, desire:4, effort:3, idx:0}'
+  magicsearch: '{cov:100, appr:6, auto:5, desc:5, desire:4, effort:4, idx:0}'
 flags:
   minimum: 1
-  percent: 1
+  percent: 0
   admin: 0
   skills: 1
   graph: 0
   devel: 0
 new_items: []
 lang: go
-index: vetequals
+index: multiset

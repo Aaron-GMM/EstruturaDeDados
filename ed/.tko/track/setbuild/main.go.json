@@ -142,7 +142,63 @@
         },
         {
             "label": "2025-05-13_09-03-14",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\ntype Set struct {\n\tdata [] int\n\tsize int\n\tcapacity int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, 0, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\nfunc (s *Set) Reserve(capacity int) {\n\tif capacity < s.size {\n\t\treturn\n\t}\n\tnovo := make([]int, capacity)\n\tfor i := range s.size {\n\t\tnovo[i] = s.data[i]\n\t}\n\ts.capacity = capacity\n\ts.data = novo\n}\nfunc (s *Set) binarySearch(value int) int {\n\tlow, high := 0, s.size-1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif s.data[mid] == value {\n\t\t\treturn mid\n\t\t} else if s.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn -1\n}\nfunc (s *Set) insert(value int, index int) error{\n\tif index < 0 || index >= s.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(max(1, s.capacity*2))\n\t}\n\ts.data = append(s.data, 0)\n\tcopy(s.data[index+1:], s.data[index:])\n\ts.data[index] = value\t\n\ts.size++\n\treturn nil \n}\n\nfunc (s *Set) Insert(value int)  {\n\tindex := s.binarySearch(value)\n\tif index != -1 {\n\t\treturn\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(max(1, s.capacity*2))\n\t}\n\ts.data = append(s.data, 0)\n\tcopy(s.data[s.size:], s.data[:s.size])\n\ts.data[0] = value\n\ts.size++\n}\n\nfunc (s *Set) Erase(value int) {\n\tindex := s.binarySearch(value)\n\tif index == -1 {\n\t\treturn\n\t}\n\ts.data = append(s.data[:index], s.data[index+1:]...)\n\ts.size--\n}\nfunc (s *Set) Contains(value int) bool {\n\tindex := s.binarySearch(value)\n\treturn index != -1\n}\nfunc (s *Set) Clear() {\n\ts.data = make([]int, 0, s.capacity)\n\ts.size = 0\n}\n\n\n\nfunc printVet(v []int) {\n\tfmt.Print(\"[\")\n\tfor i := 0; i < len(v); i++ {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(v[i])\n\t}\n\tfmt.Println(\"]\")\n}\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t for _, part := range parts[1:] {\n\t\t\t \tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\t printVet(v.data)\n\t\tcase \"erase\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v.Erase(value)\n\t\tcase \"contains\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v.Contains(value)\n\t\tcase \"clear\":\n\t\t\t v.Clear()\n\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n"
+            "content": "@@ -694,17 +694,18 @@\n %09return \n-0\n+-1\n %0A%7D%0Afunc \n@@ -1092,62 +1092,188 @@\n dex \n-== 0\n+!= -1 %7B%0A%09%09return%0A%09%7D%0A%09if s.size == s.capacity\n  %7B%0A\n+%09\n %09s.\n-insert(value, 0)%0A%09%7D%0A%09s.insert(value, index)%0A\n+Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09s.data = append(s.data, 0)%0A%09copy(s.data%5Bs.size:%5D, s.data%5B:s.size%5D)%0A%09s.data%5B0%5D = value%0A%09s.size++\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-09-27",
+            "content": "@@ -694,19 +694,17 @@\n %09return \n-low\n+0\n %0A%7D%0Afunc \n"
+        },
+        {
+            "label": "2025-05-19_08-11-07",
+            "content": "@@ -1079,16 +1079,56 @@\n (value)%0A\n+%09if index == 0 %7B%0A%09s.insert(value, 0)%0A%09%7D%0A\n %09s.inser\n"
+        },
+        {
+            "label": "2025-05-19_08-11-57",
+            "content": "@@ -1084,230 +1084,31 @@\n e)%0A%09\n-if index %3C s.size && s.data%5Bindex%5D == value %7B%0A%09%09return%0A%09%7D%0A%09if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09s.data = append(s.data, 0)%0A%09copy(s.data%5Bindex+1:%5D, s.data%5Bindex:%5D)%0A%09s.data%5Bindex%5D = value%0A%09s.size++\n+s.insert(value, index)%0A\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-29-21",
+            "content": "@@ -1227,21 +1227,17 @@\n s.data, \n-index\n+0\n )%0A%09copy(\n"
+        },
+        {
+            "label": "2025-05-19_08-29-45",
+            "content": "@@ -1053,16 +1053,17 @@\n %7B%0A%09index\n+ \n := s.bin\n@@ -1130,50 +1130,8 @@\n e %7B%0A\n-%09%09fmt.Println(%22fail: elemento ja existe%22)%0A\n %09%09re\n@@ -1219,33 +1219,37 @@\n  append(s.data, \n-0\n+index\n )%0A%09copy(s.data%5Bi\n@@ -1311,15 +1311,341 @@\n e++%0A\n-%09%0A%09%0A%0A%7D%0A\n+%7D%0A%0Afunc (s *Set) Erase(value int) %7B%0A%09index := s.binarySearch(value)%0A%09if index == -1 %7B%0A%09%09return%0A%09%7D%0A%09s.data = append(s.data%5B:index%5D, s.data%5Bindex+1:%5D...)%0A%09s.size--%0A%7D%0Afunc (s *Set) Contains(value int) bool %7B%0A%09index := s.binarySearch(value)%0A%09return index != -1%0A%7D%0Afunc (s *Set) Clear() %7B%0A%09s.data = make(%5B%5Dint, 0, s.capacity)%0A%09s.size = 0%0A%7D\n %0A%0A%0A%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-31-58",
+            "content": "@@ -1344,16 +1344,17 @@\n .size++%0A\n+%09\n %0A%09%0A%0A%7D%0A%0A%0A\n@@ -2049,27 +2049,24 @@\n %22erase%22:%0A%09%09%09\n-// \n  value, _ :=\n@@ -2092,19 +2092,16 @@\n %5B1%5D)%0A%09%09%09\n-// \n  v.Erase\n@@ -2130,19 +2130,16 @@\n ns%22:%0A%09%09%09\n-// \n  value, \n@@ -2165,27 +2165,24 @@\n arts%5B1%5D)%0A%09%09%09\n-// \n  v.Contains(\n@@ -2211,11 +2211,8 @@\n %0A%09%09%09\n-// \n  v.C\n"
+        },
+        {
+            "label": "2025-05-19_08-32-30",
+            "content": "@@ -1131,42 +1131,224 @@\n %7B%0A%09%09\n-return%0A%09%7D%0A%0A%09s.insert(value, index)\n+fmt.Println(%22fail: elemento ja existe%22)%0A%09%09return%0A%09%7D%0A%09if s.size == s.capacity %7B%0A%09%09s.Reserve(max(1, s.capacity*2))%0A%09%7D%0A%09s.data = append(s.data, 0)%0A%09copy(s.data%5Bindex+1:%5D, s.data%5Bindex:%5D)%0A%09s.data%5Bindex%5D = value%0A%09s.size++\n %0A%0A%09%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-33-28",
+            "content": "@@ -1141,14 +1141,10 @@\n %0A%09%7D%0A\n+%0A\n %09\n-i := \n s.in\n@@ -1165,261 +1165,8 @@\n dex)\n-%0A%09if i != nil %7B%0A%09%09fmt.Println(%22fail: erro ao inserir%22)%0A%09%09return%0A%09%7D%0A%0A%09// if s.size == s.capacity %7B%0A%09// %09s.Reserve(max(1, s.capacity*2))%0A%09// %7D%0A%09// s.data = append(s.data, 0)%0A%09// copy(s.data%5Bindex+1:%5D, s.data%5Bindex:%5D)%0A%09// s.data%5Bindex%5D = value%0A%09// s.size++\n %0A%0A%09%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-35-04",
+            "content": "@@ -1172,17 +1172,17 @@\n )%0A%09if i \n-=\n+!\n = nil %7B%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-35-26",
+            "content": "@@ -750,16 +750,96 @@\n  error%7B%0A\n+%09if index %3C 0 %7C%7C index %3E= s.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A\n %09if s.si\n"
+        },
+        {
+            "label": "2025-05-19_08-35-44",
+            "content": "@@ -1096,9 +1096,9 @@\n f i \n-!\n+=\n = ni\n"
+        },
+        {
+            "label": "2025-05-19_08-36-09",
+            "content": "@@ -814,16 +814,44 @@\n *2))%0A%09%7D%0A\n+%09s.data = append(s.data, 0)%0A\n %09copy(s.\n@@ -1101,16 +1101,55 @@\n = nil %7B%0A\n+%09%09fmt.Println(%22fail: erro ao inserir%22)%0A\n %09%09return\n"
+        },
+        {
+            "label": "2025-05-19_08-37-07",
+            "content": "@@ -446,16 +446,25 @@\n o%0A%7D%0Afunc\n+ (s *Set)\n  binaryS\n@@ -482,111 +482,102 @@\n  int\n-, slice %5B%5Dint, inf int, sup int) int%7B%0A%09if sup %3C inf%7B%0A%09%09return -1%0A%09%7D%0A%09meio := (inf+sup)/\n+) int %7B%0A%09low, high := 0, s.size-1%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / \n 2%0A\n+%09\n %09if s\n-lice%5Bmeio\n+.data%5Bmid\n %5D ==\n@@ -586,20 +586,22 @@\n alue\n+ \n %7B%0A%09%09\n+%09\n return m\n eio%0A\n@@ -600,247 +600,112 @@\n rn m\n-eio%0A%09%7D%0A%0A%09if value %3C slice%5Bmeio%5D%7B%0A%09%09return binarySearch(value, slice, inf, meio-1)%0A%09%7D %0A%09return binarySearch(value, slice, meio+1, sup)%0A%7D%0A%0Afunc BinarySearch(slice %5B%5Dint, value int) int%7B%0A%09return binarySearch(value, slice, 0, len(slice)-1)\n+id%0A%09%09%7D else if s.data%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return low\n %0A%7D%0A\n-%0A\n func\n@@ -754,88 +754,8 @@\n or%7B%0A\n-%09if index %3C 0 %7C%7C index %3E= s.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A\n %09if \n@@ -818,36 +818,8 @@\n %0A%09%7D%0A\n-%09s.data = append(s.data, 0)%0A\n %09cop\n@@ -952,9 +952,11 @@\n x:= \n-B\n+s.b\n inar\n@@ -967,52 +967,14 @@\n rch(\n-s.data, value)%0A%09if index != -1 %7B%0A%09%09return%0A%09%7D\n+value)\n %0A%09if\n@@ -1064,17 +1064,17 @@\n )%0A%09if i \n-=\n+!\n = nil %7B%0A\n"
+        },
+        {
+            "label": "2025-05-19_08-49-58",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\ntype Set struct {\n\tdata [] int\n\tsize int\n\tcapacity int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, 0, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\nfunc (s *Set) Reserve(capacity int) {\n\tif capacity < s.size {\n\t\treturn\n\t}\n\tnovo := make([]int, capacity)\n\tfor i := range s.size {\n\t\tnovo[i] = s.data[i]\n\t}\n\ts.capacity = capacity\n\ts.data = novo\n}\nfunc binarySearch(value int, slice []int, inf int, sup int) int{\n\tif sup < inf{\n\t\treturn -1\n\t}\n\tmeio := (inf+sup)/2\n\tif slice[meio] == value{\n\t\treturn meio\n\t}\n\n\tif value < slice[meio]{\n\t\treturn binarySearch(value, slice, inf, meio-1)\n\t} \n\treturn binarySearch(value, slice, meio+1, sup)\n}\n\nfunc BinarySearch(slice []int, value int) int{\n\treturn binarySearch(value, slice, 0, len(slice)-1)\n}\n\nfunc (s *Set) insert(value int, index int) error{\n\tif index < 0 || index >= s.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(max(1, s.capacity*2))\n\t}\n\ts.data = append(s.data, 0)\n\tcopy(s.data[index+1:], s.data[index:])\n\ts.data[index] = value\t\n\ts.size++\n\treturn nil \n}\n\nfunc (s *Set) Insert(value int)  {\n\tindex:= BinarySearch(s.data, value)\n\tif index != -1 {\n\t\treturn\n\t}\n\tif index < s.size && s.data[index] == value {\n\t\treturn\n\t}\n\ti := s.insert(value, index)\n\tif i == nil {\n\t\treturn\n\t}\n\n\t// if s.size == s.capacity {\n\t// \ts.Reserve(max(1, s.capacity*2))\n\t// }\n\t// s.data = append(s.data, 0)\n\t// copy(s.data[index+1:], s.data[index:])\n\t// s.data[index] = value\n\t// s.size++\n\n\t\n\n}\n\n\n\n\nfunc printVet(v []int) {\n\tfmt.Print(\"[\")\n\tfor i := 0; i < len(v); i++ {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(v[i])\n\t}\n\tfmt.Println(\"]\")\n}\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t for _, part := range parts[1:] {\n\t\t\t \tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\t printVet(v.data)\n\t\tcase \"erase\":\n\t\t\t//  value, _ := strconv.Atoi(parts[1])\n\t\t\t//  v.Erase(value)\n\t\tcase \"contains\":\n\t\t\t//  value, _ := strconv.Atoi(parts[1])\n\t\t\t//  v.Contains(value)\n\t\tcase \"clear\":\n\t\t\t//  v.Clear()\n\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n"
         }
     ]
 }

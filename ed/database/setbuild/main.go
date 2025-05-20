@@ -31,20 +31,25 @@ func (s *Set) Reserve(capacity int) {
 	s.capacity = capacity
 	s.data = novo
 }
-func (s *Set) binarySearch(value int) int {
-	low, high := 0, s.size-1
-	for low <= high {
-		mid := (low + high) / 2
-		if s.data[mid] == value {
-			return mid
-		} else if s.data[mid] < value {
-			low = mid + 1
-		} else {
-			high = mid - 1
-		}
+func binarySearch(value int, slice []int, inf int, sup int) int{
+	if sup < inf{
+		return -1
 	}
-	return -1
+	meio := (inf+sup)/2
+	if slice[meio] == value{
+		return meio
+	}
+
+	if value < slice[meio]{
+		return binarySearch(value, slice, inf, meio-1)
+	} 
+	return binarySearch(value, slice, meio+1, sup)
 }
+
+func BinarySearch(slice []int, value int) int{
+	return binarySearch(value, slice, 0, len(slice)-1)
+}
+
 func (s *Set) insert(value int, index int) error{
 	if index < 0 || index >= s.size {
 		return fmt.Errorf("index out of range")
@@ -60,35 +65,30 @@ func (s *Set) insert(value int, index int) error{
 }
 
 func (s *Set) Insert(value int)  {
-	index := s.binarySearch(value)
+	index:= BinarySearch(s.data, value)
 	if index != -1 {
 		return
 	}
-	if s.size == s.capacity {
-		s.Reserve(max(1, s.capacity*2))
-	}
-	s.data = append(s.data, 0)
-	copy(s.data[s.size:], s.data[:s.size])
-	s.data[0] = value
-	s.size++
-}
-
-func (s *Set) Erase(value int) {
-	index := s.binarySearch(value)
-	if index == -1 {
+	if index < s.size && s.data[index] == value {
 		return
 	}
-	s.data = append(s.data[:index], s.data[index+1:]...)
-	s.size--
+	i := s.insert(value, index)
+	if i == nil {
+		return
+	}
+
+	// if s.size == s.capacity {
+	// 	s.Reserve(max(1, s.capacity*2))
+	// }
+	// s.data = append(s.data, 0)
+	// copy(s.data[index+1:], s.data[index:])
+	// s.data[index] = value
+	// s.size++
+
+	
+
 }
-func (s *Set) Contains(value int) bool {
-	index := s.binarySearch(value)
-	return index != -1
-}
-func (s *Set) Clear() {
-	s.data = make([]int, 0, s.capacity)
-	s.size = 0
-}
+
 
 
 
@@ -131,13 +131,13 @@ func main() {
 		case "show":
 			 printVet(v.data)
 		case "erase":
-			 value, _ := strconv.Atoi(parts[1])
-			 v.Erase(value)
+			//  value, _ := strconv.Atoi(parts[1])
+			//  v.Erase(value)
 		case "contains":
-			 value, _ := strconv.Atoi(parts[1])
-			 v.Contains(value)
+			//  value, _ := strconv.Atoi(parts[1])
+			//  v.Contains(value)
 		case "clear":
-			 v.Clear()
+			//  v.Clear()
 
 		default:
 			fmt.Println("fail: comando invalido")
