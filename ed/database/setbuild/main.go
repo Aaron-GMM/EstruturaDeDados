@@ -7,90 +7,93 @@ import (
 	"strconv"
 	"strings"
 )
+
 type Set struct {
-	data [] int
-	size int
-	capacity int
+	data     []int 
+	size     int  
+	capacity int   
 }
 
+
 func NewSet(capacity int) *Set {
+	if capacity <= 0 {
+		capacity = 1
+	}
 	return &Set{
 		data:     make([]int, 0, capacity),
 		size:     0,
 		capacity: capacity,
 	}
 }
-func (s *Set) Reserve(capacity int) {
-	if capacity < s.size {
+
+
+func (s *Set) reserve(newCap int) {
+	if newCap <= s.capacity {
 		return
 	}
-	novo := make([]int, capacity)
-	for i := range s.size {
-		novo[i] = s.data[i]
-	}
-	s.capacity = capacity
-	s.data = novo
-}
-func binarySearch(value int, slice []int, inf int, sup int) int{
-	if sup < inf{
-		return -1
-	}
-	meio := (inf+sup)/2
-	if slice[meio] == value{
-		return meio
-	}
-
-	if value < slice[meio]{
-		return binarySearch(value, slice, inf, meio-1)
-	} 
-	return binarySearch(value, slice, meio+1, sup)
+	novoSlice := make([]int, s.size, newCap)
+	copy(novoSlice, s.data)
+	s.data = novoSlice
+	s.capacity = newCap
 }
 
-func BinarySearch(slice []int, value int) int{
-	return binarySearch(value, slice, 0, len(slice)-1)
+
+func (s *Set) binarySearch(value int) (found bool, idx int) {
+	low, high := 0, s.size-1
+	for low <= high {
+		mid := (low + high) / 2
+		if s.data[mid] == value {
+			return true, mid
+		}
+		if value < s.data[mid] {
+			high = mid - 1
+		} else {
+			low = mid + 1
+		}
+	}
+
+	return false, low
 }
 
-func (s *Set) insert(value int, index int) error{
-	if index < 0 || index >= s.size {
-		return fmt.Errorf("index out of range")
+
+func (s *Set) Insert(value int) {
+	found, idx := s.binarySearch(value)
+	if found {
+		return
 	}
+
 	if s.size == s.capacity {
-		s.Reserve(max(1, s.capacity*2))
-	}
-	s.data = append(s.data, 0)
-	copy(s.data[index+1:], s.data[index:])
-	s.data[index] = value	
-	s.size++
-	return nil 
-}
-
-func (s *Set) Insert(value int)  {
-	index:= BinarySearch(s.data, value)
-	if index != -1 {
-		return
-	}
-	if index < s.size && s.data[index] == value {
-		return
-	}
-	i := s.insert(value, index)
-	if i == nil {
-		return
-	}
-
-	// if s.size == s.capacity {
-	// 	s.Reserve(max(1, s.capacity*2))
-	// }
-	// s.data = append(s.data, 0)
-	// copy(s.data[index+1:], s.data[index:])
-	// s.data[index] = value
-	// s.size++
-
 	
+		newCap := s.capacity * 2
+		if newCap < 1 {
+			newCap = 1
+		}
+		s.reserve(newCap)
+	}
 
+	s.data = append(s.data, 0)           
+	copy(s.data[idx+1:], s.data[idx:s.size]) 
+	s.data[idx] = value
+	s.size++
+}
+
+func (s *Set) Contains(value int) bool {
+	found, _ := s.binarySearch(value)
+	return found
 }
 
 
-
+func (s *Set) Erase(value int) bool {
+	found, idx := s.binarySearch(value)
+	if !found {
+		fmt.Println("value not found")
+		return false
+	}
+	copy(s.data[idx:], s.data[idx+1:s.size])
+	s.size--
+	s.data = s.data[:s.size]
+	return true
+}
 
 func printVet(v []int) {
 	fmt.Print("[")
@@ -102,42 +105,82 @@ func printVet(v []int) {
 	}
 	fmt.Println("]")
 }
-func main() {
-	var line, cmd string
-	scanner := bufio.NewScanner(os.Stdin)
 
-	v := NewSet(0)
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	var s *Set
+
 	for scanner.Scan() {
-		fmt.Print("$")
-		line = scanner.Text()
-		fmt.Println(line)
-		parts := strings.Fields(line)
-		if len(parts) == 0 {
+		line := scanner.Text()
+		if line == "" {
 			continue
 		}
-		cmd = parts[0]
+		fmt.Print("$")
+		fmt.Println(line)
+
+		parts := strings.Fields(line)
+		cmd := parts[0]
 
 		switch cmd {
 		case "end":
 			return
+
 		case "init":
-			 value, _ := strconv.Atoi(parts[1])
-			 v = NewSet(value)
-		case "insert":
-			 for _, part := range parts[1:] {
-			 	value, _ := strconv.Atoi(part)
-				v.Insert(value)
+			if len(parts) != 2 {
+				fmt.Println("fail: comando invalido")
+				continue
 			}
+			capVal, err := strconv.Atoi(parts[1])
+			if err != nil {
+				fmt.Println("fail: valor invalido")
+				continue
+			}
+			s = NewSet(capVal)
+
 		case "show":
-			 printVet(v.data)
-		case "erase":
-			//  value, _ := strconv.Atoi(parts[1])
-			//  v.Erase(value)
+			printVet(s.data)
+
+		case "insert":
+			if len(parts) < 2 {
+				fmt.Println("fail: comando invalido")
+				continue
+			}
+			for _, tok := range parts[1:] {
+				v, err := strconv.Atoi(tok)
+				if err != nil {
+					fmt.Println("fail: valor invalido")
+					continue
+				}
+				s.Insert(v)
+			}
+
 		case "contains":
-			//  value, _ := strconv.Atoi(parts[1])
-			//  v.Contains(value)
-		case "clear":
-			//  v.Clear()
+			if len(parts) != 2 {
+				fmt.Println("fail: comando invalido")
+				continue
+			}
+			v, err := strconv.Atoi(parts[1])
+			if err != nil {
+				fmt.Println("fail: valor invalido")
+				continue
+			}
+			if s.Contains(v) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
+
+		case "erase":
+			if len(parts) != 2 {
+				fmt.Println("fail: comando invalido")
+				continue
+			}
+			v, err := strconv.Atoi(parts[1])
+			if err != nil {
+				fmt.Println("fail: valor invalido")
+				continue
+			}
+			s.Erase(v)
 
 		default:
 			fmt.Println("fail: comando invalido")

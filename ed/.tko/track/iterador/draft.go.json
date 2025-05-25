@@ -1,0 +1,112 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-25_18-14-25",
+            "content": "@@ -129,19 +129,614 @@\n y int%0A%7D%0A\n-%0A%0A%0A\n+type Interador struct %7B%0A    vetor *Vetor%0A    index int%0A%7D%0A%0A%0Afunc (v *Vetor) NewInterador() *Interador %7B%0A    return &Interador%7B%0A        vetor: v,%0A        index: 0,%0A    %7D%0A%7D%0A%0A%0Afunc (i *Interador) Next() int %7B%0A    if i.index %3E= i.vetor.size %7B%0A        return 0%0A    %7D%0A    value := i.vetor.data%5Bi.index%5D%0A    i.index++%0A    return value%0A%7D %0Afunc (i *Interador) HasNext() bool %7B%0A    return i.index %3C i.vetor.size%0A%7D%0A%0Afunc (v *Vetor) CyclicInterador(limit int) *Interador %7B%0A    if limit %3C= 0 %7C%7C v.size == 0 %7B%0A        return nil%0A    %7D%0A    iter := v.NewInterador()%0A    iter.index = limit %25 v.size%0A    return iter%0A%7D\n %0A%0A%0A%0Afunc\n@@ -1223,16 +1223,134 @@\n ize++%0A%7D%0A\n+func printIterador(i *Interador) %7B%0A    for i.HasNext() %7B%0A        fmt.Printf(%22%25d %22, i.Next())%0A    %7D%0A    fmt.Println()%0A%7D\n %0Afunc ma\n@@ -1903,55 +1903,8 @@\n   %7D%0A\n-            for _, tok := range args%5B1:%5D %7B%0A    \n     \n@@ -1940,29 +1940,16 @@\n toi(\n-tok)%0A                \n+args%5B1%5D)\n %0A   \n@@ -1975,29 +1975,16 @@\n (value)%0A\n-            %7D\n %0A       \n@@ -2031,16 +2031,106 @@\n         \n+ limit, _ := strconv.Atoi(args%5B1%5D)%0A            printIterador(vetor.CyclicInterador(limit))\n %0A       \n"
+        },
+        {
+            "label": "2025-05-25_19-02-26",
+            "content": "@@ -1252,19 +1252,17 @@\n  value, \n-err\n+_\n  := strc\n@@ -1295,126 +1295,8 @@\n     \n-if err != nil %7B%0A                    fmt.Println(%22fail: valor invalido%22)%0A                    continue%0A                %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-05-25_19-02-51",
+            "content": "@@ -518,96 +518,9 @@\n nt) \n- error%7B%0A    %0A    if value %3C 0 %7B%0A        return fmt.Errorf(%22fail: valor invalido%22)%0A    %7D%0A\n+%7B\n %0A   \n@@ -586,17 +586,16 @@\n )%0A    %7D%0A\n-%0A\n     v.da\n@@ -613,16 +613,16 @@\n = value%0A\n+\n     v.si\n@@ -630,23 +630,8 @@\n e++%0A\n-    return nil%0A\n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-05-25_19-04-00",
+            "content": "@@ -522,24 +522,29 @@\n  error%7B%0A    \n+%0A    \n if value %3C 0\n@@ -547,31 +547,8 @@\n  %3C 0\n- %7C%7C value %3E= v.capacity\n  %7B%0A \n@@ -598,24 +598,25 @@\n ido%22)%0A    %7D%0A\n+%0A\n     if v.siz\n@@ -1355,17 +1355,19 @@\n  value, \n-_\n+err\n  := strc\n@@ -1380,24 +1380,155 @@\n oi(tok)%0A    \n+            if err != nil %7B%0A                    fmt.Println(%22fail: valor invalido%22)%0A                    continue%0A                %7D%0A\n             \n"
+        },
+        {
+            "label": "2025-05-25_19-08-18",
+            "content": "@@ -751,223 +751,8 @@\n il%0A%7D\n-%0Afunc (v *Vetor) Show() %7B%0A    if v.size == 0 %7B%0A        fmt.Println(%22%5B%5D%22)%0A        return%0A    %7D%0A    fmt.Print(%22%5B%22)%0A    for i := 0; i %3C v.size; i++ %7B%0A        fmt.Printf(%22%25d %22, v.data%5Bi%5D)%0A    %7D%0A    fmt.Print(%22%5D%22)%0A    %0A%7D\n %0A%0Afu\n"
+        },
+        {
+            "label": "2025-05-25_19-09-11",
+            "content": "@@ -1683,33 +1683,8 @@\n w%22:%0A\n-            vetor.Show()%0A\n     \n"
+        },
+        {
+            "label": "2025-05-25_19-09-22",
+            "content": "@@ -1393,24 +1393,148 @@\n ase %22read%22:%0A\n+            if len(args) %3C 2 %7B%0A                fmt.Println(%22fail: comando invalido%22)%0A                continue%0A            %7D%0A\n             \n"
+        },
+        {
+            "label": "2025-05-25_19-10-26",
+            "content": "@@ -820,29 +820,8 @@\n n(%22%5B\n-aqui nao ha elementos\n %5D%22)%0A\n"
+        },
+        {
+            "label": "2025-05-25_19-10-42",
+            "content": "@@ -798,36 +798,8 @@\n 0 %7B%0A\n-        fmt.Println(v.data)%0A\n     \n"
+        },
+        {
+            "label": "2025-05-25_19-11-19",
+            "content": "@@ -1539,43 +1539,8 @@\n ok)%0A\n-                fmt.Println(value)%0A\n     \n"
+        },
+        {
+            "label": "2025-05-25_19-11-46",
+            "content": "@@ -513,19 +513,122 @@\n lue int)\n-%7B%0A \n+  error%7B%0A    if value %3C 0 %7C%7C value %3E= v.capacity %7B%0A        return fmt.Errorf(%22fail: valor invalido%22)%0A    %7D\n %0A    if \n@@ -731,17 +731,30 @@\n .size++%0A\n-\n  \n+   return nil\n %0A%7D%0Afunc \n"
+        },
+        {
+            "label": "2025-05-25_19-12-11",
+            "content": "@@ -520,67 +520,8 @@\n )%7B%0A \n-   if value %3C 0 %7C%7C value %3E= v.capacity %7B%0A      return%0A    %7D\n %0A   \n@@ -628,16 +628,17 @@\n .size++%0A\n+ \n %0A%7D%0Afunc \n"
+        },
+        {
+            "label": "2025-05-25_19-12-33",
+            "content": "@@ -519,40 +519,8 @@\n t)%7B%0A\n-    fmt.Println(%22lendo%22, value)%0A\n     \n@@ -728,32 +728,60 @@\n f v.size == 0 %7B%0A\n+        fmt.Println(v.data)%0A\n         fmt.Prin\n"
+        },
+        {
+            "label": "2025-05-25_19-13-08",
+            "content": "@@ -1501,10 +1501,8 @@\n     \n-//\n fmt.\n"
+        },
+        {
+            "label": "2025-05-25_19-13-25",
+            "content": "@@ -564,16 +564,38 @@\n lue %3C 0 \n+%7C%7C value %3E= v.capacity\n  %7B%0A     \n@@ -681,66 +681,8 @@\n    %7D\n-%0A    fmt.Println(%22inserindo%22, value, %22na posicao%22, v.size)\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-05-25_19-14-04",
+            "content": "@@ -177,49 +177,8 @@\n r %7B%0A\n-    if capacity %3C= 0 %7B%0A%09%09capacity = 1%0A%09%7D%0A\n     \n"
+        },
+        {
+            "label": "2025-05-25_19-15-59",
+            "content": "@@ -555,26 +555,24 @@\n ue int)%7B%0A   \n-//\n  fmt.Println\n@@ -584,24 +584,24 @@\n do%22, value)%0A\n+\n     if value\n@@ -700,18 +700,16 @@\n    %7D%0A   \n-//\n  fmt.Pri\n@@ -867,16 +867,37 @@\n intln(%22%5B\n+aqui nao ha elementos\n %5D%22)%0A    \n@@ -1032,25 +1032,12 @@\n %5D%22)%0A\n+\n     \n-fmt.Println()\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-25_19-16-38",
+            "content": "@@ -912,17 +912,16 @@\n Print(%22%5B\n- \n %22)%0A    f\n@@ -1007,17 +1007,16 @@\n .Print(%22\n- \n %5D%22)%0A    \n"
+        },
+        {
+            "label": "2025-05-25_19-17-07",
+            "content": "@@ -1008,16 +1008,17 @@\n .Print(%22\n+ \n %5D%22)%0A    \n"
+        },
+        {
+            "label": "2025-05-25_19-17-16",
+            "content": "@@ -1036,357 +1036,8 @@\n )%0A%7D%0A\n-func (v *Vetor) Reverse() %7B%0A    if  v.size == 0 %7B%0A        fmt.Println(%22%5B%5D%22)%0A        return%0A    %7D%0A    %0A    for i, j := 0, v.size-1; i %3C j; i, j = i+1, j-1 %7B%0A        v.data%5Bi%5D, v.data%5Bj%5D = v.data%5Bj%5D, v.data%5Bi%5D%0A    %7D%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C v.size; i++ %7B%0A        fmt.Printf(%22%25d %22, v.data%5Bi%5D)%0A    %7D%0A    fmt.Print(%22%5D%22)%0A    fmt.Println()%0A%7D\n %0Afun\n@@ -1449,34 +1449,8 @@\n e%22:%0A\n-          vetor.Reverse()%0A\n     \n"
+        },
+        {
+            "label": "2025-05-25_19-19-17",
+            "content": "@@ -1385,364 +1385,8 @@\n ()%0A%7D\n-%0A%0Afunc (v *Vetor) Cyclic() %7B%0A    if v.size == 0 %7B%0A        fmt.Println(%22%5B%5D%22)%0A        return%0A    %7D%0A    first := v.data%5B0%5D%0A    for i := 1; i %3C v.size; i++ %7B%0A        v.data%5Bi-1%5D = v.data%5Bi%5D%0A    %7D%0A    v.data%5Bv.size-1%5D = first%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C v.size; i++ %7B%0A        fmt.Printf(%22%25d %22, v.data%5Bi%5D)%0A    %7D%0A    fmt.Print(%22%5D%22)%0A    fmt.Println()%0A%7D\n %0Afun\n"
+        },
+        {
+            "label": "2025-05-25_19-19-40",
+            "content": "@@ -2455,22 +2455,8 @@\n     \n-vetor.Cyclic()\n %0A   \n"
+        },
+        {
+            "label": "2025-05-25_19-19-55",
+            "content": "@@ -1410,18 +1410,8 @@\n lic(\n-limite int\n ) %7B%0A\n@@ -1479,38 +1479,41 @@\n %0A    %7D%0A    f\n-mt.Print(%22%5B %22)\n+irst := v.data%5B0%5D\n %0A    for i :\n@@ -1547,35 +1547,67 @@\n     \n-if i%25limite == 0 %7B\n+v.data%5Bi-1%5D = v.data%5Bi%5D\n %0A    \n+%7D%0A\n     \n+v.data%5Bv.size-1%5D = first%0A\n     \n@@ -1619,44 +1619,46 @@\n rint\n-f\n (%22\n-%25d %22, v.data%5Bi-1%5D)%0A        %7D else\n+%5B %22)%0A    for i := 0; i %3C v.size; i++\n  %7B%0A \n@@ -1660,28 +1660,24 @@\n + %7B%0A        \n-  \n-  \n fmt.Printf(%22\n@@ -1701,23 +1701,49 @@\n     \n+%7D%0A\n     \n-%7D%0A    %7D\n+fmt.Print(%22%5D%22)%0A    fmt.Println()\n %0A%7D%0A\n-%0A\n func\n@@ -2444,54 +2444,8 @@\n c%22:%0A\n-            limit, _ := strconv.Atoi(args%5B1%5D)%0A\n     \n@@ -2468,13 +2468,8 @@\n lic(\n-limit\n )%0A  \n"
+        },
+        {
+            "label": "2025-05-25_19-21-24",
+            "content": "@@ -1690,173 +1690,8 @@\n   %7D%0A\n-    if v.size%25limite == 0 %7B%0A        fmt.Printf(%22%25d %22, v.data%5Bv.size-1%5D)%0A    %7D else %7B%0A        fmt.Printf(%22%25d %22, v.data%5B0%5D)%0A    %7D%0A    fmt.Print(%22%5D%22)%0A    fmt.Println()%0A\n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-05-25_19-21-43",
+            "content": "@@ -1528,21 +1528,21 @@\n  1; i %3C \n-limit\n+v.siz\n e; i++ %7B\n@@ -1555,62 +1555,262 @@\n    i\n-nd :=  i %25 v.size%0A        fmt.Printf(%22%25d %22, v.data%5Bind\n+f i%25limite == 0 %7B%0A            fmt.Printf(%22%25d %22, v.data%5Bi-1%5D)%0A        %7D else %7B%0A            fmt.Printf(%22%25d %22, v.data%5Bi%5D)%0A        %7D%0A    %7D%0A    if v.size%25limite == 0 %7B%0A        fmt.Printf(%22%25d %22, v.data%5Bv.size-1%5D)%0A    %7D else %7B%0A        fmt.Printf(%22%25d %22, v.data%5B0\n %5D)%0A \n"
+        },
+        {
+            "label": "2025-05-25_19-23-12",
+            "content": "@@ -1517,25 +1517,25 @@\n    for i := \n-0\n+1\n ; i %3C limite\n"
+        },
+        {
+            "label": "2025-05-25_19-24-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\ntype Vetor struct {\n    data []int\n    size int\n    capacity int\n}\n\n\n\n\n\n\n\nfunc NewVetor(capacity int) *Vetor {\n    if capacity <= 0 {\n\t\tcapacity = 1\n\t}\n    return &Vetor{\n        data:     make([]int, capacity),\n        size:     0,\n        capacity: capacity,\n    }\n}\nfunc (v *Vetor) reserve(capacity int) {\n    if capacity < v.size {\n        return\n    }\n    novo := make([]int, capacity)\n    copy(novo, v.data)\n    v.data = novo\n    v.capacity = capacity\n}\n\nfunc (v *Vetor) Read(value int){\n   // fmt.Println(\"lendo\", value)\n    if value < 0  {\n      return\n    }\n    if v.size >= v.capacity {\n        v.reserve(v.capacity * 2)\n    }\n   // fmt.Println(\"inserindo\", value, \"na posicao\", v.size)\n\n    v.data[v.size] = value\n    v.size++\n\n}\nfunc (v *Vetor) Show() {\n    if v.size == 0 {\n        fmt.Println(\"[]\")\n        return\n    }\n    fmt.Print(\"[ \")\n    for i := 0; i < v.size; i++ {\n        fmt.Printf(\"%d \", v.data[i])\n    }\n    fmt.Print(\"]\")\n    fmt.Println()\n}\nfunc (v *Vetor) Reverse() {\n    if  v.size == 0 {\n        fmt.Println(\"[]\")\n        return\n    }\n    \n    for i, j := 0, v.size-1; i < j; i, j = i+1, j-1 {\n        v.data[i], v.data[j] = v.data[j], v.data[i]\n    }\n    fmt.Print(\"[ \")\n    for i := 0; i < v.size; i++ {\n        fmt.Printf(\"%d \", v.data[i])\n    }\n    fmt.Print(\"]\")\n    fmt.Println()\n}\n\nfunc (v *Vetor) Cyclic(limite int) {\n    if v.size == 0 {\n        fmt.Println(\"[]\")\n        return\n    }\n    fmt.Print(\"[ \")\n    for i := 0; i < limite; i++ {\n        ind :=  i % v.size\n        fmt.Printf(\"%d \", v.data[ind])\n    }\n    fmt.Print(\"]\")\n    fmt.Println()\n}\n\nfunc main() {\n    var line, cmd string\n    scanner := bufio.NewScanner(os.Stdin)\n    vetor := NewVetor(0)\n    for scanner.Scan() {\n        fmt.Print(\"$\")\n        line = scanner.Text()\n        args := strings.Fields(line)\n        fmt.Println(line)\n        if len(args) == 0 {\n            continue\n        }\n        cmd = args[0]\n        switch cmd {\n        case \"end\":\n            return\n        case \"reverse\":\n          vetor.Reverse()\n        case \"read\":\n            for _, tok := range args[1:] {\n                value, _ := strconv.Atoi(tok)\n                //fmt.Println(value)\n                vetor.Read(value)\n            }\n        case \"show\":\n            vetor.Show()\n        case \"cyclic\":\n            limit, _ := strconv.Atoi(args[1])\n           vetor.Cyclic(limit)\n        default:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n        }\n    }\n}\n"
+        }
+    ]
+}
