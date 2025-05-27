@@ -78,18 +78,13 @@ Significado das tags nas questões:
 
 ### Deque, Pilha e Fila
 
-- [ ] `@bufferring  *03 :make`[Buffer Circular (Deque Dinâmico)](https://github.com/qxcodeed/arcade/blob/master/base/bufferring/Readme.md)
-- [ ] `@fila_enc    *01 :make`[Fila usando lista encadeada simples](https://github.com/qxcodeed/arcade/blob/master/base/fila_enc/Readme.md)
-- [ ] `@fila_2p     *01 :make`[Fila como duas pilhas](https://github.com/qxcodeed/arcade/blob/master/base/fila_2p/Readme.md)
-- [ ] `@queimando   *01 :leet`[Queimando árvores usando pilha](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
-- [ ] `@pilhado     *01 :leet`[Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
-- [ ] `@balanceada  *01 :leet`[Fórmula balanceada](https://github.com/qxcodeed/arcade/blob/master/base/balanceada/Readme.md)
-- [ ] `@polonesa    *01 :leet`[Transforme da notação padrão para polonesa reversa](https://github.com/qxcodeed/arcade/blob/master/base/polonesa/Readme.md)
-- [ ] `@chaves      *01 :leet`[Chaves de disputa](https://github.com/qxcodeed/arcade/blob/master/base/chaves/Readme.md)
-- [ ] `@caminhao    *01 :leet`[Caminhao abastecendo](https://github.com/qxcodeed/arcade/blob/master/base/caminhao/Readme.md)
-- [ ] `@caminho     *01 :leet`[Menor caminho entre dois pontos](https://github.com/qxcodeed/arcade/blob/master/base/caminho/Readme.md)
-- [ ] `@fila_emp    *01 :make`[ANTIGO Utilizando Pilhas para a Criação de uma Fila](https://github.com/qxcodeed/arcade/blob/master/base/fila_emp/Readme.md)
-- [ ] `@fila_seq    *01 :make`[ANTIGO Fila usando vetor circular](https://github.com/qxcodeed/arcade/blob/master/base/fila_seq/Readme.md)
+- [ ] `@bufferring  *04 :make`[Buffer Circular (Deque Dinâmico)](https://github.com/qxcodeed/arcade/blob/master/base/bufferring/Readme.md)
+- [ ] `@fila_enc    *02 :make`[Fila usando lista encadeada simples](https://github.com/qxcodeed/arcade/blob/master/base/fila_enc/Readme.md)
+- [ ] `@pilha       *02 :make`[Pilha sobre uma lista sequencial](https://github.com/qxcodeed/arcade/blob/master/base/pilha/Readme.md)
+- [ ] `@queimando   *03 :leet`[Pilha: Queimando árvores](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
+- [ ] `@pilhado     *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
+- [ ] `@chaves      *01 :leet`[Fila: Chaves de disputa](https://github.com/qxcodeed/arcade/blob/master/base/chaves/Readme.md)
+- [ ] `@caminho     +03 :leet`[Fila: Menor caminho entre dois pontos](https://github.com/qxcodeed/arcade/blob/master/base/caminho/Readme.md)
 
 ### Ordenação
 
@@ -130,6 +125,12 @@ Significado das tags nas questões:
 - [ ] `@fib2        *02 :leet`[Coelhos procriando e morrendo](https://github.com/qxcodeed/arcade/blob/master/base/fib2/Readme.md)
 - [ ] `@santo JM    *03 :leet`[O milagre de ficar pobre](https://github.com/qxcodeed/arcade/blob/master/base/santo/Readme.md)
 - [ ] `@bitcoin     *04 :leet`[Investindo em ativos digitais](https://github.com/qxcodeed/arcade/blob/master/base/bitcoin/Readme.md)
+
+### Pilha e Fila
+
+- [ ] `@balanceada  +02 :leet`[Fórmula balanceada](https://github.com/qxcodeed/arcade/blob/master/base/balanceada/Readme.md)
+- [ ] `@caminhao    +02 :leet`[Caminhao abastecendo](https://github.com/qxcodeed/arcade/blob/master/base/caminhao/Readme.md)
+- [ ] `@polonesa    +03 :leet`[Transforme da notação padrão para polonesa reversa](https://github.com/qxcodeed/arcade/blob/master/base/polonesa/Readme.md)
 
 ### Conceitos Básicos de C++ <!-- l:cpp -->
 
