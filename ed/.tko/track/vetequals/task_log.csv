@@ -1,0 +1,23 @@
+time:2025-05-14 11:18:06, type:DOWN, key:vetequals
+time:2025-05-14 11:18:07, type:PICK, key:vetequals, e:0
+time:2025-05-14 11:18:59, type:BACK, key:vetequals, e:0
+time:2025-05-14 11:20:07, type:PICK, key:vetequals, e:2
+time:2025-05-14 11:26:53, type:TEST, key:vetequals, c:20, e:8
+time:2025-05-14 11:30:57, type:TEST, key:vetequals, c:80, e:12
+time:2025-05-14 11:31:28, type:TEST, key:vetequals, c:80, e:13
+time:2025-05-14 11:31:51, type:TEST, key:vetequals, c:30, e:13
+time:2025-05-14 11:32:16, type:TEST, key:vetequals, c:80, e:14
+time:2025-05-14 11:33:06, type:TEST, key:vetequals, c:20, e:15
+time:2025-05-14 11:33:56, type:TEST, key:vetequals, c:80, e:15
+time:2025-05-14 11:34:33, type:TEST, key:vetequals, c:20, e:16
+time:2025-05-14 11:34:48, type:TEST, key:vetequals, c:80, e:16
+time:2025-05-14 11:35:14, type:TEST, key:vetequals, c:70, e:17
+time:2025-05-14 11:36:07, type:TEST, key:vetequals, c:80, e:18
+time:2025-05-14 11:38:26, type:TEST, key:vetequals, c:80, e:20
+time:2025-05-14 11:40:40, type:TEST, key:vetequals, c:80, e:22
+time:2025-05-14 11:40:50, type:TEST, key:vetequals, c:80, e:22
+time:2025-05-14 11:41:25, type:TEST, key:vetequals, c:100, e:23
+time:2025-05-14 11:44:34, type:BACK, key:vetequals, e:26
+time:2025-05-14 11:45:00, type:SELF, key:vetequals, c:100, a:6, s:5, e:26
+time:2025-06-02 09:46:12, type:PICK, key:vetequals, e:26
+time:2025-06-02 09:46:41, type:BACK, key:vetequals, e:27

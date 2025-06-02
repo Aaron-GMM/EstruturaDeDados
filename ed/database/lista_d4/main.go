@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -34,6 +35,13 @@ func (n *Node[T]) Next() *Node[T] {
 	return n.next
 }
 
+func (n *Node[T]) Prev() *Node[T]{
+	if n.prev == n.root {
+		return n.root.prev
+	}
+	return n.prev
+	}
+
 func (l *LList[T]) PushBack(value T) {
 	l.insertBefore(l.root, value)
 }
@@ -54,11 +62,24 @@ func (l *LList[T]) String() string {
 	}
 	return "[" + strings.Join(values, ", ") + "]"
 }
+func (l *LList[T]) Search(value T) *Node[T] {
+	for n := l.root.next; n != l.root; n = n.next {
+		if n.Value == value {
+			return n
+		}
+	}
+	return nil
+}
 
+func (l *LList[T]) Clear(){
+	l.root.next = l.root
+	l.root.prev = l.root
+	l.size = 0
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList[int]()
+ 	ll := NewLList[int]()
 
 	for {
 		fmt.Print("$")
@@ -77,44 +98,44 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			 fmt.Println(ll.String())
 		case "size":
 			// fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "clear":
-			// ll.Clear()
+			 ll.Clear()
 		case "forward":
-			// search, _ := strconv.Atoi(args[1])
-			// steps, _ := strconv.Atoi(args[2])
-			// node := ll.Search(search)
-			// if node == nil {
-			// 	fmt.Println("fail: valor não encontrado")
-			// 	continue
-			// }
-			// collect := []string{}
-			// for range steps {
-			// 	collect = append(collect, fmt.Sprintf("%v", node.Value))
-			// 	node = node.Next()
-			// }
-			// fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
+			search, _ := strconv.Atoi(args[1])
+			steps, _ := strconv.Atoi(args[2])
+			node := ll.Search(search)
+			if node == nil {
+				fmt.Println("fail: valor não encontrado")
+				continue
+			}
+			collect := []string{}
+			for range steps {
+				collect = append(collect, fmt.Sprintf("%v", node.Value))
+				node = node.Next()
+			}
+			fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
 		case "backward":
-			// search, _ := strconv.Atoi(args[1])
-			// steps, _ := strconv.Atoi(args[2])
-			// node := ll.Search(search)
-			// if node == nil {
-			// 	fmt.Println("fail: valor não encontrado")
-			// 	continue
-			// }
-			// collect := []string{}
-			// for range steps {
-			// 	collect = append(collect, fmt.Sprintf("%v", node.Value))
-			// 	node = node.Prev()
-			// }
-			// fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
+			search, _ := strconv.Atoi(args[1])
+			steps, _ := strconv.Atoi(args[2])
+			node := ll.Search(search)
+			if node == nil {
+				fmt.Println("fail: valor não encontrado")
+				continue
+			}
+			collect := []string{}
+			for range steps {
+				collect = append(collect, fmt.Sprintf("%v", node.Value))
+				node = node.Prev()
+			}
+			fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
 		case "end":
 			return
 		default:

@@ -1,0 +1,37 @@
+time:2025-06-02 09:42:59, type:DOWN, key:lista_d3
+time:2025-06-02 09:43:00, type:PICK, key:lista_d3, e:0
+time:2025-06-02 09:45:33, type:BACK, key:lista_d3, e:2
+time:2025-06-02 09:46:59, type:PICK, key:lista_d3, e:4
+time:2025-06-02 09:54:28, type:TEST, key:lista_d3, c:0, e:11
+time:2025-06-02 09:54:28, type:SIZE, key:lista_d3, e:11, att:1, lines:137
+time:2025-06-02 09:54:32, type:TEST, key:lista_d3, c:0, e:11, att:1, lines:137
+time:2025-06-02 10:07:51, type:TEST, key:lista_d3, c:0, e:24, att:1, lines:137
+time:2025-06-02 10:07:51, type:SIZE, key:lista_d3, e:24, att:2, lines:135
+time:2025-06-02 10:08:58, type:TEST, key:lista_d3, c:0, e:25, att:2, lines:135
+time:2025-06-02 10:08:58, type:SIZE, key:lista_d3, e:25, att:3, lines:135
+time:2025-06-02 10:09:33, type:TEST, key:lista_d3, c:0, e:26, att:3, lines:135
+time:2025-06-02 10:09:33, type:SIZE, key:lista_d3, e:26, att:4, lines:135
+time:2025-06-02 10:10:02, type:TEST, key:lista_d3, c:0, e:27, att:4, lines:135
+time:2025-06-02 10:10:02, type:SIZE, key:lista_d3, e:27, att:5, lines:135
+time:2025-06-02 10:10:18, type:TEST, key:lista_d3, c:0, e:27, att:5, lines:135
+time:2025-06-02 10:10:18, type:SIZE, key:lista_d3, e:27, att:6, lines:130
+time:2025-06-02 10:10:31, type:TEST, key:lista_d3, c:25, e:27, att:6, lines:130
+time:2025-06-02 10:10:31, type:SIZE, key:lista_d3, e:27, att:7, lines:130
+time:2025-06-02 10:14:30, type:TEST, key:lista_d3, c:25, e:31, att:7, lines:130
+time:2025-06-02 10:14:30, type:SIZE, key:lista_d3, e:31, att:8, lines:146
+time:2025-06-02 10:15:12, type:TEST, key:lista_d3, c:25, e:32, att:8, lines:146
+time:2025-06-02 10:15:12, type:SIZE, key:lista_d3, e:32, att:9, lines:146
+time:2025-06-02 10:17:33, type:TEST, key:lista_d3, c:50, e:34, att:9, lines:146
+time:2025-06-02 10:17:33, type:SIZE, key:lista_d3, e:34, att:10, lines:160
+time:2025-06-02 10:31:32, type:TEST, key:lista_d3, c:50, e:48, att:10, lines:160
+time:2025-06-02 10:31:32, type:SIZE, key:lista_d3, e:48, att:11, lines:181
+time:2025-06-02 10:31:47, type:TEST, key:lista_d3, c:50, e:48, att:11, lines:181
+time:2025-06-02 10:31:47, type:SIZE, key:lista_d3, e:48, att:12, lines:181
+time:2025-06-02 10:32:02, type:TEST, key:lista_d3, c:50, e:49, att:12, lines:181
+time:2025-06-02 10:32:02, type:SIZE, key:lista_d3, e:49, att:13, lines:181
+time:2025-06-02 10:37:15, type:TEST, key:lista_d3, c:75, e:54, att:13, lines:181
+time:2025-06-02 10:37:15, type:SIZE, key:lista_d3, e:54, att:14, lines:170
+time:2025-06-02 10:37:57, type:TEST, key:lista_d3, c:100, e:54, att:14, lines:170
+time:2025-06-02 10:37:57, type:SIZE, key:lista_d3, e:54, att:15, lines:196
+time:2025-06-02 10:38:02, type:BACK, key:lista_d3, e:55, att:15, lines:196
+time:2025-06-02 10:38:19, type:SELF, key:lista_d3, c:100, a:6, s:5, clear:4, fun:5, easy:3, e:55, att:15, lines:196

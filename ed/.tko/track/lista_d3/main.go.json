@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-06-02_09-54-28",
+            "content": "@@ -664,19 +664,21 @@\n unc \n+ \n Equals(\n-list\n+other\n A *L\n@@ -682,18 +682,17 @@\n  *LList,\n- l\n+L\n istB *LL\n@@ -703,28 +703,29 @@\n  bool %7B%0A%09if \n-list\n+other\n A.empty() &&\n@@ -725,17 +725,17 @@\n ty() && \n-l\n+L\n istB.emp\n@@ -762,20 +762,21 @@\n %0A%09%7D%0A%09if \n-list\n+other\n A.empty(\n@@ -780,17 +780,17 @@\n ty() %7C%7C \n-l\n+L\n istB.emp\n@@ -822,31 +822,54 @@\n %09if \n-listA.size != listB.siz\n+ListB.root.next.Value != otherA.root.next.Valu\n e %7B%0A\n@@ -891,21 +891,27 @@\n %09%7D%0A%09\n-nodeA := list\n+%0A%09currentA := other\n A.ro\n@@ -923,18 +923,21 @@\n xt%0A%09\n-node\n+current\n B := \n-l\n+L\n istB\n@@ -951,27 +951,30 @@\n ext%0A\n-%0A\n %09for \n-nodeA != list\n+currentA != other\n A.ro\n@@ -983,18 +983,21 @@\n  && \n-node\n+current\n B != \n-l\n+L\n istB\n@@ -1009,20 +1009,23 @@\n  %7B%0A%09%09if \n-node\n+current\n A.Value \n@@ -1027,20 +1027,23 @@\n alue != \n-node\n+current\n B.Value \n@@ -1070,93 +1070,107 @@\n %7D%0A%09%09\n-nodeA = nodeA.next%0A%09%09nodeB = nodeB.next%0A%09%7D%0A%0A%09return nodeA == list\n+currentA = currentA.next%0A%09%09currentB = currentB.next%0A%09%7D%0A%09if currentA != other\n A.root \n-&& nodeB == l\n+%7C%7C currentB != L\n istB\n@@ -1174,16 +1174,49 @@\n stB.root\n+ %7B%0A%09%09return false%0A%09%7D%0A%09return true\n %0A%7D%0A%0Afunc\n"
+        },
+        {
+            "label": "2025-06-02_10-07-51",
+            "content": "@@ -821,25 +821,19 @@\n f listA.\n-root.Valu\n+siz\n e != lis\n@@ -839,17 +839,11 @@\n stB.\n-root.Valu\n+siz\n e %7B%0A\n"
+        },
+        {
+            "label": "2025-06-02_10-08-58",
+            "content": "@@ -1019,19 +1019,20 @@\n %09return \n-tru\n+fals\n e%0A%09%09%7D%0A%09%09\n"
+        },
+        {
+            "label": "2025-06-02_10-09-33",
+            "content": "@@ -859,27 +859,28 @@\n  %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%09nodeA \n"
+        },
+        {
+            "label": "2025-06-02_10-10-02",
+            "content": "@@ -702,16 +702,124 @@\n  bool %7B%0A\n+%09if listA.empty() && listB.empty() %7B%0A%09%09return true%0A%09%7D%0A%09if listA.empty() %7C%7C listB.empty() %7B%0A%09%09return false%0A%09%7D\n %0A%09if lis\n"
+        },
+        {
+            "label": "2025-06-02_10-10-18",
+            "content": "@@ -914,12 +914,11 @@\n urn \n-fals\n+tru\n e%0A%09%09\n"
+        },
+        {
+            "label": "2025-06-02_10-10-31",
+            "content": "@@ -605,301 +605,58 @@\n n%0A%7D%0A\n-%0A\n func \n- addsorted(lla *LList, value int) %7B%0A%09if lla.root.next == lla.root\n+(l *LList) empty() bool\n  %7B\n- \n %0A%09\n-%09lla.PushBack(value)%0A%09%09return%0A%09%7D%0A%0A%09node := lla.root.next%0A%09for node != lla.root && node.Value %3C value %7B%0A%09%09node = node.next%0A%09%7D%0A%0A%09if node == lla.root %7B %0A%09%09lla.PushBack(value)%0A%09%7D else %7B%0A%09%09lla.insertBefore(node, value)%0A%09%7D%0A\n+return l.size == 0\n %0A%7D%0A%0A\n@@ -1715,24 +1715,27 @@\n sorted%22:%0A%09%09%09\n+// \n lla := NewLL\n@@ -1743,16 +1743,19 @@\n st()%0A%09%09%09\n+// \n for i :=\n@@ -1782,16 +1782,19 @@\n ++ %7B%0A%09%09%09\n+// \n %09value, \n@@ -1823,16 +1823,19 @@\n %5Bi%5D)%0A%09%09%09\n+// \n %09addsort\n@@ -1856,13 +1856,19 @@\n %0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.\n"
+        },
+        {
+            "label": "2025-06-02_10-14-30",
+            "content": "@@ -608,26 +608,16 @@\n %0A%0Afunc  \n-(l *LList)\n addsorte\n@@ -2058,20 +2058,16 @@\n i%5D)%0A%09%09%09%09\n-lla.\n addsorte\n"
+        },
+        {
+            "label": "2025-06-02_10-15-12",
+            "content": "@@ -608,16 +608,26 @@\n %0A%0Afunc  \n+(l *LList)\n addsorte\n@@ -1518,286 +1518,8 @@\n l%0A%7D%0A\n-func String(l *LList ) string %7B%0A%09var sb strings.Builder%0A%09sb.WriteString(%22%5B%22)%0A%09node := l.root.next%0A%09for node != l.root %7B%0A%09%09sb.WriteString(strconv.Itoa(node.Value))%0A%09%09node = node.next%0A%09%09if node != l.root %7B%0A%09%09%09sb.WriteString(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09sb.WriteString(%22%5D%22)%0A%09return sb.String()%0A%7D%0A\n func\n@@ -2068,16 +2068,20 @@\n i%5D)%0A%09%09%09%09\n+lla.\n addsorte\n@@ -2118,20 +2118,12 @@\n tln(\n-String(\n lla)\n-)\n %0A%09%09c\n"
+        },
+        {
+            "label": "2025-06-02_10-17-33",
+            "content": "@@ -1265,351 +1265,8 @@\n ot%0A%7D\n-%0Afunc reverse(l *LList) %7B%0A%09if l.root.next == l.root %7B %0A%09%09return%0A%09%7D%0A%0A%09current := l.root.next%0A%09var prev *Node = nil%0A%0A%09for current != l.root %7B%0A%09%09next := current.next%0A%09%09current.next = prev%0A%09%09current.prev = next%0A%09%09prev = current%0A%09%09current = next%0A%09%7D%0A%0A%09l.root.next.prev = l.root%0A%09l.root.next = prev%0A%09l.root.prev = prev.prev%0A%09prev.prev.next = l.root%0A%7D\n %0A%0Afu\n"
+        },
+        {
+            "label": "2025-06-02_10-31-32",
+            "content": "@@ -2751,24 +2751,27 @@\n everse%22:%0A%09%09%09\n+// \n lla := str2l\n@@ -2786,16 +2786,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n reverse(\n@@ -2801,24 +2801,27 @@\n rse(lla)%0A%09%09%09\n+// \n fmt.Println(\n"
+        },
+        {
+            "label": "2025-06-02_10-31-47",
+            "content": "@@ -2807,36 +2807,28 @@\n fmt.Println(\n-String(\n lla)\n-)\n %0A%09%09case %22mer\n"
+        },
+        {
+            "label": "2025-06-02_10-32-02",
+            "content": "@@ -1291,177 +1291,323 @@\n ) %7B%0A\n-     node := l.root%0A    for %7B%0A        node.next, node.prev = node.prev, node.next%0A        node = node.prev %0A        if node == l.root %7B%0A            break%0A        %7D%0A    %7D\n+%09if l.root.next == l.root %7B %0A%09%09return%0A%09%7D%0A%0A%09current := l.root.next%0A%09var prev *Node = nil%0A%0A%09for current != l.root %7B%0A%09%09next := current.next%0A%09%09current.next = prev%0A%09%09current.prev = next%0A%09%09prev = current%0A%09%09current = next%0A%09%7D%0A%0A%09l.root.next.prev = l.root%0A%09l.root.next = prev%0A%09l.root.prev = prev.prev%0A%09prev.prev.next = l.root\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-06-02_10-37-15",
+            "content": "@@ -1463,507 +1463,8 @@\n %7D%0A%7D%0A\n-func merge(lla *LList, llb *LList) *LList %7B%0A%09merged := NewLList()%0A%09nodeA := lla.root.next%0A%09nodeB := llb.root.next%0A%0A%09for nodeA != lla.root && nodeB != llb.root %7B%0A%09%09if nodeA.Value %3C nodeB.Value %7B%0A%09%09%09merged.PushBack(nodeA.Value)%0A%09%09%09nodeA = nodeA.next%0A%09%09%7D else %7B%0A%09%09%09merged.PushBack(nodeB.Value)%0A%09%09%09nodeB = nodeB.next%0A%09%09%7D%0A%09%7D%0A%0A%09for nodeA != lla.root %7B%0A%09%09merged.PushBack(nodeA.Value)%0A%09%09nodeA = nodeA.next%0A%09%7D%0A%0A%09for nodeB != llb.root %7B%0A%09%09merged.PushBack(nodeB.Value)%0A%09%09nodeB = nodeB.next%0A%09%7D%0A%0A%09return merged%0A%7D\n %0Afun\n@@ -2693,24 +2693,27 @@\n %22merge%22:%0A%09%09%09\n+// \n lla := str2l\n@@ -2720,32 +2720,35 @@\n ist(args%5B1%5D)%0A%09%09%09\n+// \n llb := str2list(\n@@ -2759,16 +2759,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n merged :\n@@ -2787,24 +2787,27 @@\n la, llb)%0A%09%09%09\n+// \n fmt.Println(\n@@ -2810,23 +2810,15 @@\n tln(\n-String(\n merged)\n-)\n %0A%09%09c\n"
+        },
+        {
+            "label": "2025-06-02_10-37-57",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n\troot  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tlist := &LList{}\n\tlist.root = &Node{root: nil}\n\tlist.root.next = list.root\n\tlist.root.prev = list.root\n\tlist.root.root = list.root \n\treturn list\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList) insertBefore(mark *Node, value int) {\n\tn := &Node{\n\t\tValue: value,\n\t\troot:  l.root,\n\t}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n}\n\nfunc  addsorted(lla *LList, value int) {\n\tif lla.root.next == lla.root { \n\t\tlla.PushBack(value)\n\t\treturn\n\t}\n\n\tnode := lla.root.next\n\tfor node != lla.root && node.Value < value {\n\t\tnode = node.next\n\t}\n\n\tif node == lla.root { \n\t\tlla.PushBack(value)\n\t} else {\n\t\tlla.insertBefore(node, value)\n\t}\n\n}\n\nfunc Equals(listA *LList, listB *LList) bool {\n\n\tif listA.root.Value != listB.root.Value {\n\t\treturn true\n\t}\n\tnodeA := listA.root.next\n\tnodeB := listB.root.next\n\n\tfor nodeA != listA.root && nodeB != listB.root {\n\t\tif nodeA.Value != nodeB.Value {\n\t\t\treturn false\n\t\t}\n\t\tnodeA = nodeA.next\n\t\tnodeB = nodeB.next\n\t}\n\n\treturn nodeA == listA.root && nodeB == listB.root\n}\nfunc reverse(l *LList) {\n     node := l.root\n    for {\n        node.next, node.prev = node.prev, node.next\n        node = node.prev \n        if node == l.root {\n            break\n        }\n    }\n}\nfunc merge(lla *LList, llb *LList) *LList {\n\tmerged := NewLList()\n\tnodeA := lla.root.next\n\tnodeB := llb.root.next\n\n\tfor nodeA != lla.root && nodeB != llb.root {\n\t\tif nodeA.Value < nodeB.Value {\n\t\t\tmerged.PushBack(nodeA.Value)\n\t\t\tnodeA = nodeA.next\n\t\t} else {\n\t\t\tmerged.PushBack(nodeB.Value)\n\t\t\tnodeB = nodeB.next\n\t\t}\n\t}\n\n\tfor nodeA != lla.root {\n\t\tmerged.PushBack(nodeA.Value)\n\t\tnodeA = nodeA.next\n\t}\n\n\tfor nodeB != llb.root {\n\t\tmerged.PushBack(nodeB.Value)\n\t\tnodeB = nodeB.next\n\t}\n\n\treturn merged\n}\nfunc str2list(serial string) *LList {\n\tserial = serial[1 : len(serial)-1]\n\tll := NewLList()\n\tif serial == \"\" {\n\t\treturn ll\n\t}\n\tfor _, p := range strings.Split(serial, \",\") {\n\t\tvalue, _ := strconv.Atoi(p)\n\t\tll.PushBack(value)\n\t}\n\treturn ll\n}\nfunc String(l *LList ) string {\n\tvar sb strings.Builder\n\tsb.WriteString(\"[\")\n\tnode := l.root.next\n\tfor node != l.root {\n\t\tsb.WriteString(strconv.Itoa(node.Value))\n\t\tnode = node.next\n\t\tif node != l.root {\n\t\t\tsb.WriteString(\", \")\n\t\t}\n\t}\n\tsb.WriteString(\"]\")\n\treturn sb.String()\n}\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"compare\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tif Equals(lla, llb) {\n\t\t\t\tfmt.Println(\"iguais\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"diferentes\")\n\t\t\t}\n\t\tcase \"addsorted\":\n\t\t\tlla := NewLList()\n\t\t\tfor i := 1; i < len(args); i++ {\n\t\t\t\tvalue, _ := strconv.Atoi(args[i])\n\t\t\t\taddsorted(lla, value)\n\t\t\t}\n\t\t\tfmt.Println(String(lla))\n\t\tcase \"reverse\":\n\t\t\tlla := str2list(args[1])\n\t\t\treverse(lla)\n\t\t\tfmt.Println(String(lla))\n\t\tcase \"merge\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tmerged := merge(lla, llb)\n\t\t\tfmt.Println(String(merged))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n"
+        }
+    ]
+}

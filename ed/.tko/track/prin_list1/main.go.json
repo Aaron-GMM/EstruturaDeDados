@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-30_11-53-42",
+            "content": "@@ -43,17 +43,16 @@\n %22fmt%22%0A)%0A\n-%0A\n type Nod\n@@ -92,17 +92,16 @@\n e%0A%09Prev \n- \n *Node%0A%7D%0A\n@@ -236,16 +236,17 @@\n v:  nil,\n+ \n %0A%09%7D%0A%7D%0Afu\n@@ -270,14 +270,14 @@\n t %7B%0A\n+%0A\n %09head\n- \n := N\n@@ -291,17 +291,16 @@\n 0)%0A%09tail\n- \n := NewNo\n@@ -387,17 +387,19 @@\n ail,%0A%09%7D%0A\n-%7D\n+%09%7D%09\n %0A%0Afunc T\n@@ -454,375 +454,126 @@\n %0A%09re\n-sult := %22%22%0A%09for e := l.Front(); e != nil; e = e.Next() %7B%0A%09%09if e == sword %7B%0A%09%09%09result += fmt.Sprintf(%22%5B%25d%5D %22, e.Value)%0A%09%09%7D else %7B%0A%09%09%09result += fmt.Sprintf(%22%25d %22, e.Value)%0A%09%09%7D%0A%09%7D%0A%09return result%5B:len(result)-1%5D %0A%0A%7D%0A%0A%0Afunc Next(l *list.List, it *list.Element) *list.Element %7B%0A%09if it == nil %7B%0A%09%09return nil%0A%09%7D%0A%09if it.Next() == nil %7B%0A%09%09return l.Front()%0A%09%7D%0A%09return it.Next()%0A\n+turn %22%22%0A%7D%0A%0A// move para frente na lista circular%0Afunc Next(l *list.List, it *list.Element) *list.Element %7B%0A%09return nil\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-05-30_14-08-35",
+            "content": "@@ -465,23 +465,8 @@\n  %22%22%0A\n-%09result += %22%5B%22%0A\n %09for\n@@ -555,11 +555,13 @@\n tf(%22\n+%5B\n %25d\n-%3E\n+%5D \n %22, e\n@@ -631,25 +631,8 @@\n %0A%09%7D%0A\n-%09result += %22%5D%5Cn%22%0A\n %09ret\n"
+        },
+        {
+            "label": "2025-05-30_14-09-41",
+            "content": "@@ -569,17 +569,16 @@\n ntf(%22%25d%3E\n- \n %22, e.Val\n"
+        },
+        {
+            "label": "2025-05-30_14-09-52",
+            "content": "@@ -474,17 +474,16 @@\n lt += %22%5B\n- \n %22%0A%09for e\n"
+        },
+        {
+            "label": "2025-05-30_14-10-11",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\ntype Node struct {\n\tValue int\n\tNext  *Node\n\tPrev  *Node\n}\ntype List struct {\n\tHead *Node\n\tTail *Node\n}\n\nfunc NewNode(value int) *Node {\n\treturn &Node{\n\t\tValue: value,\n\t\tNext:  nil,\n\t\tPrev:  nil,\n\t}\n}\nfunc NewList() *List {\n\thead := NewNode(0)\n\ttail := NewNode(0)\n\thead.Next = tail\n\ttail.Prev = head\n\treturn &List{\n\t\tHead: head,\n\t\tTail: tail,\n\t}\n}\n\nfunc ToStr(l *list.List, sword *list.Element) string {\n\tresult := \"\"\n\tresult += \"[ \"\n\tfor e := l.Front(); e != nil; e = e.Next() {\n\t\tif e == sword {\n\t\t\tresult += fmt.Sprintf(\"%d> \", e.Value)\n\t\t} else {\n\t\t\tresult += fmt.Sprintf(\"%d \", e.Value)\n\t\t}\n\t}\n\tresult += \"]\\n\"\n\treturn result[:len(result)-1] \n\n}\n\n\nfunc Next(l *list.List, it *list.Element) *list.Element {\n\tif it == nil {\n\t\treturn nil\n\t}\n\tif it.Next() == nil {\n\t\treturn l.Front()\n\t}\n\treturn it.Next()\n\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tl := list.New()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Remove(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n"
+        }
+    ]
+}
