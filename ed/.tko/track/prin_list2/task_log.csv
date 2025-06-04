@@ -1,2 +1,34 @@
 time:2025-06-02 10:38:31, type:DOWN, key:prin_list2
 time:2025-06-02 10:47:58, type:PICK, key:prin_list2, e:9
+time:2025-06-02 19:23:28, type:PICK, key:prin_list2, e:9
+time:2025-06-02 19:32:02, type:TEST, key:prin_list2, c:0, e:18
+time:2025-06-02 19:32:02, type:SIZE, key:prin_list2, e:18, att:1, lines:77
+time:2025-06-02 19:32:09, type:TEST, key:prin_list2, c:0, e:18, att:1, lines:77
+time:2025-06-02 19:32:33, type:TEST, key:prin_list2, c:0, e:18, att:1, lines:77
+time:2025-06-02 19:32:33, type:SIZE, key:prin_list2, e:18, att:2, lines:77
+time:2025-06-02 19:33:14, type:TEST, key:prin_list2, c:0, e:19, att:2, lines:77
+time:2025-06-02 19:33:14, type:SIZE, key:prin_list2, e:19, att:3, lines:77
+time:2025-06-02 19:33:52, type:TEST, key:prin_list2, c:0, e:19, att:3, lines:77
+time:2025-06-02 19:33:52, type:SIZE, key:prin_list2, e:19, att:4, lines:77
+time:2025-06-02 19:48:12, type:TEST, key:prin_list2, c:0, e:34, att:4, lines:77
+time:2025-06-02 19:48:12, type:SIZE, key:prin_list2, e:34, att:5, lines:73
+time:2025-06-02 19:48:17, type:TEST, key:prin_list2, c:0, e:34, att:5, lines:73
+time:2025-06-02 19:49:06, type:TEST, key:prin_list2, c:0, e:35, att:5, lines:73
+time:2025-06-02 19:49:06, type:SIZE, key:prin_list2, e:35, att:6, lines:73
+time:2025-06-02 19:49:10, type:TEST, key:prin_list2, c:0, e:35, att:6, lines:73
+time:2025-06-02 19:49:14, type:TEST, key:prin_list2, c:0, e:35, att:6, lines:73
+time:2025-06-02 19:49:41, type:BACK, key:prin_list2, e:35, att:6, lines:73
+time:2025-06-03 08:52:51, type:PICK, key:prin_list2, e:35, att:6, lines:73
+time:2025-06-03 08:53:22, type:TEST, key:prin_list2, c:0, e:36, att:6, lines:73
+time:2025-06-03 08:55:52, type:TEST, key:prin_list2, c:30, e:38, att:6, lines:73
+time:2025-06-03 08:55:52, type:SIZE, key:prin_list2, e:38, att:7, lines:64
+time:2025-06-03 08:59:20, type:TEST, key:prin_list2, c:30, e:42, att:7, lines:64
+time:2025-06-03 08:59:20, type:SIZE, key:prin_list2, e:42, att:8, lines:68
+time:2025-06-03 09:00:04, type:TEST, key:prin_list2, c:100, e:42, att:8, lines:68
+time:2025-06-03 09:00:04, type:SIZE, key:prin_list2, e:42, att:9, lines:69
+time:2025-06-03 09:00:37, type:TEST, key:prin_list2, c:100, e:43, att:9, lines:69
+time:2025-06-03 09:00:37, type:SIZE, key:prin_list2, e:43, att:10, lines:66
+time:2025-06-03 09:00:40, type:BACK, key:prin_list2, e:43, att:10, lines:66
+time:2025-06-03 09:01:10, type:SELF, key:prin_list2, c:100, a:6, s:5, clear:4, fun:5, easy:3, e:43, att:10, lines:66
+time:2025-06-03 09:01:11, type:PICK, key:prin_list2, e:44, att:10, lines:66
+time:2025-06-03 09:01:13, type:BACK, key:prin_list2, e:44, att:10, lines:66

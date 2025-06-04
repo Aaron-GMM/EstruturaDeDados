@@ -1,0 +1,17 @@
+time:2025-05-29 08:55:08, type:DOWN, key:prin_list1
+time:2025-05-30 11:44:50, type:PICK, key:prin_list1
+time:2025-05-30 11:53:42, type:TEST, key:prin_list1, c:0, e:8
+time:2025-05-30 11:53:43, type:TEST, key:prin_list1, c:0, e:8
+time:2025-05-30 14:08:35, type:TEST, key:prin_list1, c:0, e:8
+time:2025-05-30 14:08:39, type:TEST, key:prin_list1, c:0, e:8
+time:2025-05-30 14:09:41, type:TEST, key:prin_list1, c:0, e:9
+time:2025-05-30 14:09:52, type:TEST, key:prin_list1, c:0, e:10
+time:2025-05-30 14:10:11, type:TEST, key:prin_list1, c:100, e:10
+time:2025-05-30 14:10:20, type:BACK, key:prin_list1, e:10
+time:2025-05-30 14:10:40, type:SELF, key:prin_list1, c:100, a:6, s:5, e:10
+time:2025-06-03 08:31:41, type:SELF, key:prin_list1, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:10
+time:2025-06-03 08:31:48, type:PICK, key:prin_list1, e:11
+time:2025-06-03 08:32:44, type:TEST, key:prin_list1, c:100, e:12
+time:2025-06-03 08:32:44, type:SIZE, key:prin_list1, e:12, att:1, lines:80
+time:2025-06-03 08:32:53, type:BACK, key:prin_list1, e:12, att:1, lines:80
+time:2025-06-03 08:32:57, type:SELF, key:prin_list1, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:12, att:1, lines:80

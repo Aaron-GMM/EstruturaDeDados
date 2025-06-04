@@ -70,7 +70,9 @@ func (l *LList[T]) Search(value T) *Node[T] {
 	}
 	return nil
 }
-
+func (l *LList[T]) Size() int {
+	return l.size
+}
 func (l *LList[T]) Clear(){
 	l.root.next = l.root
 	l.root.prev = l.root
@@ -100,7 +102,7 @@ func main() {
 		case "show":
 			 fmt.Println(ll.String())
 		case "size":
-			// fmt.Println(ll.Size())
+			 fmt.Println(ll.Size())
 		case "push_back":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)

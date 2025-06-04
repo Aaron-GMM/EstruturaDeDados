@@ -29,18 +29,6 @@ func equals(a []int, b []int) bool {
 
 	
 	return equals(a[1:], b[1:]) 
-	
-	
-	
-
- 
-
-	// não use a função len para ver ou comparar os tamanhos
-	// utilize a função EhVazio para ver se o vetor é vazio
-	// você só pode consultar o primeiro elemento do vetor
-	// e não pode usar nenhum tipo de laço
-	// Use recursao para consultar os outros elementos equals(a[1:], b[1:])
-	// não altere o protótipo da função nem crie funções auxiliares
 
 }
 

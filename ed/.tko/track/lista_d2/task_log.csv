@@ -1,0 +1,26 @@
+time:2025-05-27 11:24:55, type:DOWN, key:lista_d2
+time:2025-05-28 08:24:57, type:PICK, key:lista_d2
+time:2025-05-28 08:25:09, type:BACK, key:lista_d2, e:0
+time:2025-05-28 08:25:13, type:PICK, key:lista_d2, e:0
+time:2025-05-28 08:39:29, type:TEST, key:lista_d2, c:0, e:14
+time:2025-05-28 08:39:32, type:TEST, key:lista_d2, c:0, e:14
+time:2025-05-28 08:42:35, type:TEST, key:lista_d2, c:20, e:17
+time:2025-05-28 11:28:49, type:TEST, key:lista_d2, c:20, e:17
+time:2025-05-28 11:29:26, type:TEST, key:lista_d2, c:20, e:18
+time:2025-05-28 11:29:44, type:TEST, key:lista_d2, c:20, e:18
+time:2025-05-28 11:30:14, type:PICK, key:lista_d2, e:19
+time:2025-05-28 11:30:17, type:TEST, key:lista_d2, c:20, e:19
+time:2025-05-28 11:30:43, type:TEST, key:lista_d2, c:20, e:19
+time:2025-05-28 11:31:02, type:TEST, key:lista_d2, c:20, e:19
+time:2025-05-28 11:31:15, type:TEST, key:lista_d2, c:20, e:20
+time:2025-05-28 11:31:34, type:TEST, key:lista_d2, c:40, e:20
+time:2025-05-28 11:32:33, type:TEST, key:lista_d2, c:40, e:21
+time:2025-05-28 11:34:32, type:TEST, key:lista_d2, c:60, e:23
+time:2025-05-28 11:36:19, type:TEST, key:lista_d2, c:60, e:25
+time:2025-05-28 11:37:10, type:TEST, key:lista_d2, c:80, e:25
+time:2025-05-28 11:38:23, type:TEST, key:lista_d2, c:100, e:27
+time:2025-05-28 11:38:41, type:BACK, key:lista_d2, e:27
+time:2025-05-28 11:38:54, type:SELF, key:lista_d2, c:100, a:6, s:5, e:27
+time:2025-06-03 08:33:11, type:SELF, key:lista_d2, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:27
+time:2025-06-03 08:33:16, type:PICK, key:lista_d2, e:27
+time:2025-06-03 08:33:25, type:BACK, key:lista_d2, e:27

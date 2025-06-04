@@ -1,0 +1,120 @@
+{
+    "patches": [
+        {
+            "label": "2025-06-03_10-23-51",
+            "content": "@@ -1596,24 +1596,36 @@\n    %0A        \n+fmt.Println(\n editor.proce\n@@ -1638,16 +1638,17 @@\n t(input)\n+)\n %0A%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-06-03_10-24-11",
+            "content": "@@ -1604,16 +1604,8 @@\n     \n-resut :=\n edit\n@@ -1630,35 +1630,8 @@\n put)\n-%0A        fmt.Println(resut)\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-06-03_10-24-44",
+            "content": "@@ -1048,16 +1048,22 @@\n string) \n+string\n   %7B%0A    \n@@ -1251,16 +1251,42 @@\n    %7D%0A%0A%7D%0A\n+    return e.showDisplay()\n %0A%7D%0A%0Afunc\n@@ -1595,24 +1595,33 @@\n     %0A       \n+ resut :=\n editor.proce\n@@ -1659,28 +1659,13 @@\n tln(\n-editor.showDisplay()\n+resut\n )%0A%0A \n"
+        },
+        {
+            "label": "2025-06-03_10-25-07",
+            "content": "@@ -1562,47 +1562,9 @@\n     \n-fmt.Println(%22Processing input:%22, input)\n+ \n %0A   \n@@ -1594,16 +1594,17 @@\n (input)%0A\n+ \n        f\n"
+        },
+        {
+            "label": "2025-06-03_10-25-26",
+            "content": "@@ -1369,32 +1369,92 @@\n an() %7B%0A         \n+   if !scanner.Scan() %7B%0A                return%0A            %7D\n %0A        input :\n"
+        },
+        {
+            "label": "2025-06-03_10-30-02",
+            "content": "@@ -1493,24 +1493,64 @@\n     %0A       \n+ fmt.Println(%22Processing input:%22, input)\n %0A       edit\n"
+        },
+        {
+            "label": "2025-06-03_23-53-50",
+            "content": "@@ -1047,23 +1047,16 @@\n  string)\n- string\n    %7B%0A   \n@@ -1249,37 +1249,8 @@\n %0A%0A%7D%0A\n-  return editor.showDisplay()\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-06-03_23-54-27",
+            "content": "@@ -1544,18 +1544,8 @@\n     \n-  resul :=\n  edi\n@@ -1567,33 +1567,32 @@\n t(input)%0A       \n- \n fmt.Println(resu\n@@ -1587,21 +1587,36 @@\n Println(\n-resul\n+editor.showDisplay()\n )%0A%0A    %7D\n"
+        },
+        {
+            "label": "2025-06-03_23-54-59",
+            "content": "@@ -1130,71 +1130,8 @@\n t %7B%0A\n-            fmt.Println(%22Processing character:%22, string(char))%0A\n     \n"
+        },
+        {
+            "label": "2025-06-03_23-55-40",
+            "content": "@@ -648,90 +648,8 @@\n ue)%0A\n-    newNode.Next = e.Cursor%0A    e.Cursor.Prev = newNode%0A    newNode.Value = value%0A\n     \n"
+        },
+        {
+            "label": "2025-06-03_23-58-00",
+            "content": "@@ -365,24 +365,48 @@\n  NewNode(0)%0A\n+    cursor := head.Next%0A\n     head.Nex\n@@ -435,16 +435,34 @@\n  = head%0A\n+    cursor = head%0A\n     retu\n@@ -529,20 +529,22 @@\n Cursor: \n-tail\n+cursor\n ,%0A    %7D%0A\n@@ -580,24 +580,54 @@\n lue rune) %7B%0A\n+    prevNode := e.Cursor.Prev%0A\n     newNode \n@@ -648,56 +648,53 @@\n ue)%0A\n-%0A\n     \n-prevNode := e.Cursor.Prev%0A    prevNode.Next\n+newNode.Next = e.Cursor%0A    e.Cursor.Prev\n  = n\n@@ -716,31 +716,30 @@\n ode.\n-Prev = prevNod\n+Value = valu\n e%0A    \n-new\n+prev\n Node\n@@ -750,37 +750,35 @@\n t = \n-e.Cursor%0A    e.Cursor\n+newNode%0A    newNode\n .Prev = \n newN\n@@ -769,27 +769,28 @@\n Node.Prev = \n-new\n+prev\n Node%0A%7D%0A%0A%0Afun\n@@ -987,22 +987,18 @@\n node\n-.Value == '%5Cn'\n+ == e.Tail\n %7B%0A  \n@@ -1011,42 +1011,24 @@\n     \n+b\n re\n-sult += %22%5Cn%22%0A        %7Delse%7B%0A    \n+ak%0A        %7D%0A\n     \n@@ -1068,76 +1068,9 @@\n     \n-    %7D%0A    %7D%0A    if e.Cursor == e.Tail %7B%0A        result += %22%7C%22%0A    %7D \n+%7D\n %0A   \n@@ -1361,12 +1361,12 @@\n ert(\n-'%5Cn'\n+char\n )%0A  \n"
+        },
+        {
+            "label": "2025-06-04_12-07-13",
+            "content": "@@ -1244,10 +1244,8 @@\n     \n-//\n fmt.\n"
+        },
+        {
+            "label": "2025-06-04_12-07-24",
+            "content": "@@ -1111,16 +1111,27 @@\n %0A%7D%0Afunc \n+(e *Editor)\n  process\n@@ -1161,16 +1161,16 @@\n ing   %7B%0A\n-\n         \n@@ -1405,18 +1405,8 @@\n     \n-case 'B':%0A\n %0A   \n@@ -1513,24 +1513,48 @@\n Stdin)%0A     \n+   editor := NewEditor()\n %0A        for\n@@ -1613,17 +1613,16 @@\n .Text()%0A\n-%0A\n         \n@@ -1693,32 +1693,32 @@\n        %0A       %0A\n-\n         resul :=\n@@ -1718,16 +1718,23 @@\n esul := \n+editor.\n processI\n"
+        },
+        {
+            "label": "2025-06-04_12-09-27",
+            "content": "@@ -40,17 +40,16 @@\n %09%22os%22%0A)%0A\n-%0A\n type Nod\n@@ -59,17 +59,20 @@\n truct %7B%0A\n-%09\n+    \n Value ru\n@@ -78,28 +78,32 @@\n une%0A\n-%09\n+    \n Next \n- \n *Node%0A\n-%09\n+    \n Prev \n- \n *Nod\n@@ -131,37 +131,42 @@\n t %7B%0A\n-%09\n+    \n Head \n-  \n *Node%0A\n-%09\n+    \n Tail \n-  \n *Node%0A\n-%09\n+    \n Curs\n@@ -210,17 +210,20 @@\n *Node %7B%0A\n-%09\n+    \n return &\n@@ -228,18 +228,24 @@\n  &Node%7B%0A\n-%09%09\n+        \n Value: v\n@@ -254,37 +254,50 @@\n ue,%0A\n-%09%09\n+        \n Next:\n- \n  nil,%0A\n-%09%09\n+        \n Prev:\n- \n  nil,%0A\n-%09\n+    \n %7D%0A%7D%0A\n@@ -323,17 +323,20 @@\n ditor %7B%0A\n-%09\n+    \n head := \n@@ -346,17 +346,20 @@\n Node(0)%0A\n-%09\n+    \n tail := \n@@ -369,17 +369,20 @@\n Node(0)%0A\n-%09\n+    \n head.Nex\n@@ -390,17 +390,20 @@\n  = tail%0A\n-%09\n+    \n tail.Pre\n@@ -411,17 +411,20 @@\n  = head%0A\n-%09\n+    \n return &\n@@ -435,42 +435,56 @@\n or%7B%0A\n-%09%09\n+        \n Head:\n-  \n  head,%0A\n-%09%09\n+        \n Tail:\n-  \n  tail,%0A\n-%09%09\n+        \n Curs\n@@ -493,17 +493,20 @@\n : tail,%0A\n-%09\n+    \n %7D%0A%7D%0A%0Afun\n@@ -540,17 +540,20 @@\n rune) %7B%0A\n-%09\n+    \n newNode \n@@ -571,17 +571,20 @@\n value)%0A%0A\n-%09\n+    \n prevNode\n@@ -601,17 +601,20 @@\n or.Prev%0A\n-%09\n+    \n prevNode\n@@ -625,25 +625,28 @@\n t = newNode%0A\n-%09\n+    \n newNode.Prev\n@@ -661,615 +661,67 @@\n ode%0A\n-%09newNode.Next = e.Cursor%0A%09e.Cursor.Prev = newNode%0A%7D%0A%0Afunc (e *Editor) moveLeft() %7B%0A%09if e.Cursor.Prev != e.Head %7B%0A%09%09e.Cursor = e.Cursor.Prev%0A%09%7D%0A%7D%0Afunc (e *Editor) moveRight() %7B%0A%09if e.Cursor\n+    newNode\n .Next \n-!\n = e.\n-Tail %7B%0A%09%09e.Cursor = e.Cursor.Next%0A%09%7D%0A%7D%0Afunc (e *Editor) backspace() %7B%0A%09toDelete := e.Cursor.Prev%0A%09if toDelete != e.Head %7B%0A%09%09left := toDelete.Prev%0A%09%09right := e.Cursor%0A%09%09left.Next = right%0A%09%09right.Prev = left%0A%09%7D%0A%7D%0A%0Afunc (e *Editor) deleteAtCursor() %7B%0A%09if e.Cursor != e.Tail %7B%0A%09%09toDelete := e.Cursor%0A%09%09left := toDelete.Prev%0A%09%09right := toDelete.Next%0A%09%09left.Next = right%0A%09%09right.Prev = left%0A%09%09e.Cursor = right%0A%09%7D%0A%7D\n+Cursor%0A    e.Cursor.Prev = newNode%0A%7D%0A%0A\n %0Afun\n@@ -754,20 +754,22 @@\n ) string\n- \n %7B%0A\n-%09\n+    \n result :\n@@ -773,17 +773,20 @@\n t := %22%22%0A\n-%09\n+    \n for node\n@@ -834,18 +834,24 @@\n .Next %7B%0A\n-%09%09\n+        \n if node \n@@ -861,22 +861,30 @@\n e.Cursor\n- \n %7B%0A\n-%09%09%09\n+            \n result +\n@@ -889,22 +889,34 @@\n  += %22%7C%22%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n if node.\n@@ -928,22 +928,30 @@\n  == '%5Cn'\n- \n %7B%0A\n-%09%09%09\n+            \n result +\n@@ -961,22 +961,35 @@\n %5Cn%22%0A\n-%09%09%7D \n+        %7D\n else\n- \n %7B%0A\n-%09%09%09\n+            \n resu\n@@ -1017,16 +1017,28 @@\n ue)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n if e\n@@ -1057,18 +1057,24 @@\n .Tail %7B%0A\n-%09%09\n+        \n result +\n@@ -1079,20 +1079,27 @@\n  += %22%7C%22%0A\n-%09%7D%0A%09\n+    %7D %0A    \n return r\n@@ -1111,16 +1111,17 @@\n %0A%7D%0Afunc \n+ \n processI\n@@ -1146,19 +1146,28 @@\n  string \n+  \n %7B%0A\n-%09\n+        \n editor :\n@@ -1180,17 +1180,24 @@\n ditor()%0A\n-%09\n+        \n for _, c\n@@ -1221,305 +1221,211 @@\n t %7B%0A\n-%09%09switch char %7B%0A%09%09case 'R':%0A%09%09%09editor.insert('%5Cn')%0A%0A%09%09case 'B':%0A%09%09%09editor.backspace()%0A%0A%09%09case 'D':%0A%09%09%09editor.deleteAtCursor()%0A%0A%09%09\n+            //fmt.Println(%22Processing character:%22, string(char))%0A            switch char %7B%0A                \n case '\n-%3C':%0A%09%09%09editor.moveLeft()%0A%0A%09%09\n+R':%0A                    editor.insert('%5Cn')%0A                \n case '\n-%3E':%0A%09%09%09editor.moveRight()%0A%0A%09%09default:%0A%09%09%09if (char %3E= 'a' && char %3C= 'z') %7C%7C char == '-' %7B%0A%09%09%09%09editor.insert(char)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09\n+B':%0A%0A            %7D%0A%0A%7D%0A  \n retu\n@@ -1448,17 +1448,16 @@\n splay()%0A\n-%0A\n %7D%0A%0Afunc \n@@ -1465,17 +1465,24 @@\n ain() %7B%0A\n-%09\n+        \n scanner \n@@ -1511,18 +1511,30 @@\n .Stdin)%0A\n-%0A%09\n+     %0A        \n for scan\n@@ -1546,19 +1546,34 @@\n can() %7B%0A\n-%0A%09%09\n+         %0A        \n input :=\n@@ -1589,18 +1589,24 @@\n Text()%0A%0A\n-%09%09\n+        \n if input\n@@ -1634,27 +1634,63 @@\n xit%22\n- \n %7B%0A\n-%09%09%09break%0A%09%09%7D%0A%0A%09%09\n+            break%0A        %7D%0A        %0A       %0A        \n resu\n@@ -1714,18 +1714,24 @@\n (input)%0A\n-%09%09\n+        \n fmt.Prin\n@@ -1746,19 +1746,25 @@\n l)%0A%0A\n-%09%7D%0A%09\n+    %7D%0A    \n if \n+ \n err\n- \n := s\n@@ -1794,10 +1794,16 @@\n l %7B%0A\n-%09%09\n+        \n fmt.\n@@ -1843,10 +1843,17 @@\n rr)%0A\n-%09%7D%0A\n+    %7D%0A    \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-06-04_12-14-01",
+            "content": "@@ -2134,30 +2134,8 @@\n sul)\n-%0A        fmt.Println()\n %0A%0A%09%7D\n"
+        },
+        {
+            "label": "2025-06-04_12-15-59",
+            "content": "@@ -1640,17 +1640,18 @@\n insert('\n- \n+%5Cn\n ')%0A%0A%09%09ca\n@@ -2134,16 +2134,34 @@\n sul)%0A   \n+     fmt.Println()\n %0A%0A%09%7D%0A%09if\n"
+        },
+        {
+            "label": "2025-06-04_12-16-19",
+            "content": "@@ -1640,18 +1640,17 @@\n insert('\n-%5Cn\n+ \n ')%0A%0A%09%09ca\n@@ -1787,18 +1787,16 @@\n eRight()\n-  \n %0A%0A%09%09defa\n@@ -2132,13 +2132,8 @@\n esul\n-+%22%5Cn%22\n )%0A  \n"
+        },
+        {
+            "label": "2025-06-04_12-38-08",
+            "content": "@@ -2133,17 +2133,16 @@\n (resul+%22\n- \n %5Cn%22)%0A   \n"
+        },
+        {
+            "label": "2025-06-04_12-38-27",
+            "content": "@@ -2127,20 +2127,22 @@\n rint\n-f(%22%25s%22,resul\n+ln(resul+%22 %5Cn%22\n )%0A  \n"
+        },
+        {
+            "label": "2025-06-04_12-39-19",
+            "content": "@@ -2128,17 +2128,16 @@\n intf(%22%25s\n- \n %22,resul)\n"
+        },
+        {
+            "label": "2025-06-04_12-39-31",
+            "content": "@@ -2129,17 +2129,16 @@\n ntf(%22%25s \n-.\n %22,resul)\n"
+        },
+        {
+            "label": "2025-06-04_12-39-42",
+            "content": "@@ -2129,17 +2129,17 @@\n ntf(%22%25s \n-a\n+.\n %22,resul)\n"
+        },
+        {
+            "label": "2025-06-04_12-39-51",
+            "content": "@@ -1385,18 +1385,18 @@\n ult += %22\n-  \n+%5Cn\n %22%0A%09%09%7D el\n@@ -2128,16 +2128,18 @@\n intf(%22%25s\n+ a\n %22,resul)\n"
+        },
+        {
+            "label": "2025-06-04_12-40-12",
+            "content": "@@ -1385,18 +1385,18 @@\n ult += %22\n-%5Cn\n+  \n %22%0A%09%09%7D el\n@@ -1487,26 +1487,8 @@\n %0A%09%7D%0A\n-    result +=%22%5Cn%22%0A\n %09ret\n@@ -1497,17 +1497,16 @@\n n result\n- \n %0A%7D%0Afunc \n"
+        },
+        {
+            "label": "2025-06-04_12-40-43",
+            "content": "@@ -1497,17 +1497,16 @@\n sult +=%22\n-a\n %5Cn%22%0A%09ret\n"
+        },
+        {
+            "label": "2025-06-04_12-40-50",
+            "content": "@@ -502,16 +502,17 @@\n (value)%0A\n+%0A\n %09prevNod\n@@ -530,17 +530,16 @@\n or.Prev%0A\n-%0A\n %09prevNod\n@@ -1233,26 +1233,20 @@\n  %7B%0A%09\n-var \n result \n-%5B%5Drune \n+:= %22%22\n %0A%09fo\n@@ -1334,37 +1334,22 @@\n %09result \n++\n = \n-append(result, '%7C')\n+%22%7C%22\n %0A%09%09%7D%0A%09%09i\n@@ -1385,30 +1385,15 @@\n ult \n++\n = \n-append(result, '%5Cn')\n+%22%5Cn%22\n %0A%09%09%7D\n@@ -1410,33 +1410,26 @@\n %09result \n++\n = \n-append(result, \n+string(\n node.Val\n@@ -1477,36 +1477,36 @@\n ult \n++\n = \n-append(result, '%7C')%0A%09%7D%0A   \n+%22%7C%22%0A%09%7D%0A    result +=%22a%5Cn%22\n %0A%09re\n@@ -1514,22 +1514,14 @@\n urn \n-string(\n result\n-)\n  %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-06-04_12-46-24",
+            "content": "@@ -2194,19 +2194,23 @@\n mt.Print\n-ln(\n+f(%22%25s%22,\n resul)%0A \n"
+        },
+        {
+            "label": "2025-06-04_12-47-43",
+            "content": "@@ -760,32 +760,37 @@\n ) %7B%0A%09if e.Cursor\n+.Next\n  != e.Tail %7B%0A%09%09e\n@@ -1282,20 +1282,17 @@\n node != \n-e.Ta\n+n\n il; node\n"
+        },
+        {
+            "label": "2025-06-04_12-48-39",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Node struct {\n\tValue rune\n\tNext  *Node\n\tPrev  *Node\n}\ntype Editor struct {\n\tHead   *Node\n\tTail   *Node\n\tCursor *Node\n}\n\nfunc NewNode(value rune) *Node {\n\treturn &Node{\n\t\tValue: value,\n\t\tNext:  nil,\n\t\tPrev:  nil,\n\t}\n}\nfunc NewEditor() *Editor {\n\thead := NewNode(0)\n\ttail := NewNode(0)\n\thead.Next = tail\n\ttail.Prev = head\n\treturn &Editor{\n\t\tHead:   head,\n\t\tTail:   tail,\n\t\tCursor: tail,\n\t}\n}\n\nfunc (e *Editor) insert(value rune) {\n\tnewNode := NewNode(value)\n\tprevNode := e.Cursor.Prev\n\n\tprevNode.Next = newNode\n\tnewNode.Prev = prevNode\n\tnewNode.Next = e.Cursor\n\te.Cursor.Prev = newNode\n}\n\nfunc (e *Editor) moveLeft() {\n\tif e.Cursor.Prev != e.Head {\n\t\te.Cursor = e.Cursor.Prev\n\t}\n}\nfunc (e *Editor) moveRight() {\n\tif e.Cursor != e.Tail {\n\t\te.Cursor = e.Cursor.Next\n\t}\n}\nfunc (e *Editor) backspace() {\n\ttoDelete := e.Cursor.Prev\n\tif toDelete != e.Head {\n\t\tleft := toDelete.Prev\n\t\tright := e.Cursor\n\t\tleft.Next = right\n\t\tright.Prev = left\n\t}\n}\n\nfunc (e *Editor) deleteAtCursor() {\n\tif e.Cursor != e.Tail {\n\t\ttoDelete := e.Cursor\n\t\tleft := toDelete.Prev\n\t\tright := toDelete.Next\n\t\tleft.Next = right\n\t\tright.Prev = left\n\t\te.Cursor = right\n\t}\n}\nfunc (e *Editor) showDisplay() string {\n\tvar result []rune \n\tfor node := e.Head.Next; node != e.Tail; node = node.Next {\n\t\tif node == e.Cursor {\n\t\t\tresult = append(result, '|')\n\t\t}\n\t\tif node.Value == '\\n' {\n\t\t\tresult = append(result, '\\n')\n\t\t} else {\n\t\t\tresult = append(result, node.Value)\n\t\t}\n\t}\n\tif e.Cursor == e.Tail {\n\t\tresult = append(result, '|')\n\t}\n   \n\treturn string(result) \n}\nfunc processInput(input string) string {\n\teditor := NewEditor()\n\tfor _, char := range input {\n\t\tswitch char {\n\t\tcase 'R':\n\t\t\teditor.insert('\\n')\n\n\t\tcase 'B':\n\t\t\teditor.backspace()\n\n\t\tcase 'D':\n\t\t\teditor.deleteAtCursor()\n\n\t\tcase '<':\n\t\t\teditor.moveLeft()\n\n\t\tcase '>':\n\t\t\teditor.moveRight()  \n\n\t\tdefault:\n\t\t\tif (char >= 'a' && char <= 'z') || char == '-' {\n\t\t\t\teditor.insert(char)\n\t\t\t}\n\t\t}\n\t}\n\n\treturn editor.showDisplay()\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor scanner.Scan() {\n\n\t\tinput := scanner.Text()\n\n\t\tif input == \"\" || input == \"exit\" {\n\t\t\tbreak\n\t\t}\n\n\t\tresul := processInput(input)\n\t\tfmt.Println(resul)\n   \n\n\t}\n\tif err := scanner.Err(); err != nil {\n\t\tfmt.Println(\"Error reading input:\", err)\n\t}\n\n}\n"
+        }
+    ]
+}

@@ -11,8 +11,8 @@ type Node struct {
 	Prev  *Node
 }
 type List struct {
-	Head *Node
-	Tail *Node
+	head *Node
+	tail *Node
 }
 
 func NewNode(value int) *Node {
@@ -28,8 +28,8 @@ func NewList() *List {
 	head.Next = tail
 	tail.Prev = head
 	return &List{
-		Head: head,
-		Tail: tail,
+		head: head,
+		tail: tail,
 	}
 }
 
