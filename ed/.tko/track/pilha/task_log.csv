@@ -1,0 +1,86 @@
+time:2025-06-06 10:10:01, type:DOWN, key:pilha
+time:2025-06-09 08:10:37, type:PICK, key:pilha
+time:2025-06-09 08:12:12, type:TEST, key:pilha, c:0, e:1
+time:2025-06-09 08:12:12, type:SIZE, key:pilha, e:1, att:1, lines:84
+time:2025-06-09 08:12:12, type:TEST, key:pilha, c:0, e:1, att:1, lines:84
+time:2025-06-09 08:12:12, type:SIZE, key:pilha, e:1, att:2, lines:84
+time:2025-06-09 08:12:32, type:TEST, key:pilha, c:0, e:1, att:2, lines:84
+time:2025-06-09 08:12:32, type:SIZE, key:pilha, e:1, att:3, lines:85
+time:2025-06-09 08:16:46, type:TEST, key:pilha, c:0, e:6, att:3, lines:85
+time:2025-06-09 08:16:46, type:SIZE, key:pilha, e:6, att:4, lines:87
+time:2025-06-09 08:16:56, type:TEST, key:pilha, c:0, e:6, att:4, lines:87
+time:2025-06-09 08:16:56, type:SIZE, key:pilha, e:6, att:5, lines:87
+time:2025-06-09 08:21:33, type:TEST, key:pilha, c:0, e:10, att:5, lines:87
+time:2025-06-09 08:21:33, type:SIZE, key:pilha, e:10, att:6, lines:98
+time:2025-06-09 08:21:50, type:TEST, key:pilha, c:0, e:11, att:6, lines:98
+time:2025-06-09 08:21:51, type:SIZE, key:pilha, e:11, att:7, lines:98
+time:2025-06-09 08:23:14, type:TEST, key:pilha, c:0, e:12, att:7, lines:98
+time:2025-06-09 08:23:14, type:SIZE, key:pilha, e:12, att:8, lines:101
+time:2025-06-09 08:23:40, type:TEST, key:pilha, c:0, e:13, att:8, lines:101
+time:2025-06-09 08:23:40, type:SIZE, key:pilha, e:13, att:9, lines:100
+time:2025-06-09 08:24:04, type:TEST, key:pilha, c:0, e:13, att:9, lines:100
+time:2025-06-09 08:24:04, type:SIZE, key:pilha, e:13, att:10, lines:100
+time:2025-06-09 08:24:23, type:TEST, key:pilha, c:0, e:13, att:10, lines:100
+time:2025-06-09 08:24:23, type:SIZE, key:pilha, e:13, att:11, lines:99
+time:2025-06-09 08:24:32, type:TEST, key:pilha, c:33, e:13, att:11, lines:99
+time:2025-06-09 08:24:32, type:SIZE, key:pilha, e:13, att:12, lines:99
+time:2025-06-09 08:29:06, type:TEST, key:pilha, c:33, e:18, att:12, lines:99
+time:2025-06-09 08:29:06, type:SIZE, key:pilha, e:18, att:13, lines:109
+time:2025-06-09 08:30:07, type:TEST, key:pilha, c:0, e:19, att:13, lines:109
+time:2025-06-09 08:30:08, type:SIZE, key:pilha, e:19, att:14, lines:109
+time:2025-06-09 08:32:34, type:TEST, key:pilha, c:33, e:21, att:14, lines:109
+time:2025-06-09 08:32:34, type:SIZE, key:pilha, e:21, att:15, lines:111
+time:2025-06-09 08:32:51, type:TEST, key:pilha, c:33, e:22, att:15, lines:111
+time:2025-06-09 08:32:51, type:SIZE, key:pilha, e:22, att:16, lines:109
+time:2025-06-09 08:33:54, type:TEST, key:pilha, c:33, e:23, att:16, lines:109
+time:2025-06-09 08:33:54, type:SIZE, key:pilha, e:23, att:17, lines:109
+time:2025-06-09 08:35:59, type:TEST, key:pilha, c:33, e:25, att:17, lines:109
+time:2025-06-09 08:35:59, type:SIZE, key:pilha, e:25, att:18, lines:117
+time:2025-06-09 08:37:54, type:TEST, key:pilha, c:33, e:27, att:18, lines:117
+time:2025-06-09 08:37:54, type:SIZE, key:pilha, e:27, att:19, lines:119
+time:2025-06-09 08:39:07, type:TEST, key:pilha, c:33, e:28, att:19, lines:119
+time:2025-06-09 08:39:07, type:SIZE, key:pilha, e:28, att:20, lines:120
+time:2025-06-09 08:39:25, type:BACK, key:pilha, e:28, att:20, lines:120
+time:2025-06-09 08:39:29, type:PICK, key:pilha, e:28, att:20, lines:120
+time:2025-06-09 08:39:40, type:TEST, key:pilha, c:33, e:29, att:20, lines:120
+time:2025-06-09 08:40:24, type:TEST, key:pilha, c:33, e:29, att:20, lines:120
+time:2025-06-09 08:40:24, type:SIZE, key:pilha, e:29, att:21, lines:120
+time:2025-06-09 08:42:05, type:TEST, key:pilha, c:33, e:31, att:21, lines:120
+time:2025-06-09 08:42:05, type:SIZE, key:pilha, e:31, att:22, lines:120
+time:2025-06-09 08:42:47, type:TEST, key:pilha, c:0, e:32, att:22, lines:120
+time:2025-06-09 08:42:47, type:SIZE, key:pilha, e:32, att:23, lines:120
+time:2025-06-09 08:43:05, type:TEST, key:pilha, c:33, e:32, att:23, lines:120
+time:2025-06-09 08:43:05, type:SIZE, key:pilha, e:32, att:24, lines:120
+time:2025-06-09 08:43:46, type:TEST, key:pilha, c:66, e:33, att:24, lines:120
+time:2025-06-09 08:43:46, type:SIZE, key:pilha, e:33, att:25, lines:120
+time:2025-06-09 08:43:50, type:TEST, key:pilha, c:66, e:33, att:25, lines:120
+time:2025-06-09 08:46:23, type:TEST, key:pilha, c:66, e:35, att:25, lines:120
+time:2025-06-09 08:46:23, type:SIZE, key:pilha, e:35, att:26, lines:121
+time:2025-06-09 08:47:10, type:TEST, key:pilha, c:33, e:36, att:26, lines:121
+time:2025-06-09 08:47:10, type:SIZE, key:pilha, e:36, att:27, lines:121
+time:2025-06-09 08:47:24, type:TEST, key:pilha, c:66, e:36, att:27, lines:121
+time:2025-06-09 08:47:24, type:SIZE, key:pilha, e:36, att:28, lines:121
+time:2025-06-09 08:47:25, type:TEST, key:pilha, c:66, e:36, att:28, lines:121
+time:2025-06-09 08:48:39, type:TEST, key:pilha, c:66, e:38, att:28, lines:121
+time:2025-06-09 08:48:39, type:SIZE, key:pilha, e:38, att:29, lines:121
+time:2025-06-09 08:48:55, type:TEST, key:pilha, c:66, e:38, att:29, lines:121
+time:2025-06-09 08:48:55, type:SIZE, key:pilha, e:38, att:30, lines:121
+time:2025-06-09 08:49:27, type:TEST, key:pilha, c:66, e:38, att:30, lines:121
+time:2025-06-09 08:49:27, type:SIZE, key:pilha, e:38, att:31, lines:121
+time:2025-06-09 08:49:42, type:TEST, key:pilha, c:66, e:39, att:31, lines:121
+time:2025-06-09 08:49:42, type:SIZE, key:pilha, e:39, att:32, lines:121
+time:2025-06-09 08:50:14, type:TEST, key:pilha, c:66, e:39, att:32, lines:121
+time:2025-06-09 08:50:14, type:SIZE, key:pilha, e:39, att:33, lines:121
+time:2025-06-09 08:50:35, type:TEST, key:pilha, c:66, e:39, att:33, lines:121
+time:2025-06-09 08:50:35, type:SIZE, key:pilha, e:39, att:34, lines:121
+time:2025-06-09 08:51:43, type:PICK, key:pilha, e:41, att:34, lines:121
+time:2025-06-09 08:51:47, type:TEST, key:pilha, c:66, e:41, att:34, lines:121
+time:2025-06-09 09:03:18, type:TEST, key:pilha, c:0, e:52, att:34, lines:121
+time:2025-06-09 09:03:18, type:SIZE, key:pilha, e:52, att:35, lines:122
+time:2025-06-09 09:03:23, type:TEST, key:pilha, c:66, e:52, att:35, lines:122
+time:2025-06-09 09:03:45, type:TEST, key:pilha, c:0, e:53, att:35, lines:122
+time:2025-06-09 09:03:45, type:SIZE, key:pilha, e:53, att:36, lines:122
+time:2025-06-09 09:03:48, type:TEST, key:pilha, c:100, e:53, att:36, lines:122
+time:2025-06-09 09:03:52, type:TEST, key:pilha, c:100, e:53, att:36, lines:122
+time:2025-06-09 09:03:53, type:BACK, key:pilha, e:53, att:36, lines:122
+time:2025-06-09 09:04:06, type:SELF, key:pilha, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:53, att:36, lines:122

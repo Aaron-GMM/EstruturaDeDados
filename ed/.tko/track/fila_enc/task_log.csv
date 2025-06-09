@@ -1,0 +1,41 @@
+time:2025-06-06 09:43:16, type:DOWN, key:fila_enc
+time:2025-06-06 09:43:17, type:PICK, key:fila_enc, e:0
+time:2025-06-06 09:45:24, type:TEST, key:fila_enc, c:0, e:2
+time:2025-06-06 09:45:24, type:SIZE, key:fila_enc, e:2, att:1, lines:84
+time:2025-06-06 09:45:26, type:TEST, key:fila_enc, c:0, e:2, att:1, lines:84
+time:2025-06-06 09:48:45, type:TEST, key:fila_enc, c:0, e:5, att:1, lines:84
+time:2025-06-06 09:48:45, type:SIZE, key:fila_enc, e:5, att:2, lines:97
+time:2025-06-06 09:49:31, type:TEST, key:fila_enc, c:33, e:6, att:2, lines:97
+time:2025-06-06 09:49:31, type:SIZE, key:fila_enc, e:6, att:3, lines:98
+time:2025-06-06 09:49:42, type:TEST, key:fila_enc, c:0, e:6, att:3, lines:98
+time:2025-06-06 09:49:42, type:SIZE, key:fila_enc, e:6, att:4, lines:98
+time:2025-06-06 09:49:43, type:TEST, key:fila_enc, c:0, e:6, att:4, lines:98
+time:2025-06-06 09:49:54, type:TEST, key:fila_enc, c:33, e:6, att:4, lines:98
+time:2025-06-06 09:49:54, type:SIZE, key:fila_enc, e:6, att:5, lines:98
+time:2025-06-06 09:53:13, type:TEST, key:fila_enc, c:66, e:9, att:5, lines:98
+time:2025-06-06 09:53:13, type:SIZE, key:fila_enc, e:9, att:6, lines:112
+time:2025-06-06 09:53:50, type:TEST, key:fila_enc, c:66, e:10, att:6, lines:112
+time:2025-06-06 09:53:50, type:SIZE, key:fila_enc, e:10, att:7, lines:112
+time:2025-06-06 09:54:07, type:BACK, key:fila_enc, e:10, att:7, lines:112
+time:2025-06-06 09:54:11, type:PICK, key:fila_enc, e:10, att:7, lines:112
+time:2025-06-06 09:54:16, type:TEST, key:fila_enc, c:66, e:11, att:7, lines:112
+time:2025-06-06 09:54:16, type:SIZE, key:fila_enc, e:11, att:8, lines:114
+time:2025-06-06 09:55:57, type:TEST, key:fila_enc, c:0, e:12, att:8, lines:114
+time:2025-06-06 09:55:57, type:SIZE, key:fila_enc, e:12, att:9, lines:121
+time:2025-06-06 09:55:59, type:TEST, key:fila_enc, c:0, e:12, att:9, lines:121
+time:2025-06-06 09:56:14, type:TEST, key:fila_enc, c:66, e:12, att:9, lines:121
+time:2025-06-06 09:56:14, type:SIZE, key:fila_enc, e:12, att:10, lines:121
+time:2025-06-06 10:04:59, type:TEST, key:fila_enc, c:66, e:21, att:10, lines:121
+time:2025-06-06 10:04:59, type:SIZE, key:fila_enc, e:21, att:11, lines:128
+time:2025-06-06 10:05:25, type:TEST, key:fila_enc, c:0, e:22, att:11, lines:128
+time:2025-06-06 10:05:25, type:SIZE, key:fila_enc, e:22, att:12, lines:128
+time:2025-06-06 10:06:48, type:TEST, key:fila_enc, c:0, e:23, att:12, lines:128
+time:2025-06-06 10:06:48, type:SIZE, key:fila_enc, e:23, att:13, lines:129
+time:2025-06-06 10:06:48, type:TEST, key:fila_enc, c:0, e:23, att:13, lines:129
+time:2025-06-06 10:06:48, type:SIZE, key:fila_enc, e:23, att:14, lines:129
+time:2025-06-06 10:07:33, type:TEST, key:fila_enc, c:66, e:24, att:14, lines:129
+time:2025-06-06 10:07:33, type:SIZE, key:fila_enc, e:24, att:15, lines:129
+time:2025-06-06 10:08:19, type:TEST, key:fila_enc, c:100, e:25, att:15, lines:129
+time:2025-06-06 10:08:19, type:SIZE, key:fila_enc, e:25, att:16, lines:129
+time:2025-06-06 10:08:21, type:BACK, key:fila_enc, e:25, att:16, lines:129
+time:2025-06-06 10:09:07, type:SELF, key:fila_enc, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:25, att:16, lines:129
