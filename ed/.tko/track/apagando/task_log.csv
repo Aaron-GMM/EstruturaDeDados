@@ -1,0 +1,64 @@
+time:2025-04-09 17:37:57, type:DOWN, key:apagando
+time:2025-04-09 18:05:30, type:PICK, key:apagando, e:27
+time:2025-04-09 18:05:34, type:TEST, key:apagando, c:0, e:27
+time:2025-04-09 18:05:55, type:TEST, key:apagando, c:0, e:27
+time:2025-04-09 18:07:10, type:TEST, key:apagando, c:0, e:29
+time:2025-04-09 18:08:14, type:TEST, key:apagando, c:0, e:30
+time:2025-04-09 18:11:22, type:TEST, key:apagando, c:0, e:33
+time:2025-04-09 18:11:28, type:BACK, key:apagando, e:33
+time:2025-04-09 18:11:36, type:PICK, key:apagando, e:33
+time:2025-04-09 18:11:40, type:TEST, key:apagando, c:0, e:33
+time:2025-04-09 18:19:02, type:TEST, key:apagando, c:0, e:41
+time:2025-04-09 18:21:32, type:TEST, key:apagando, c:0, e:43
+time:2025-04-09 18:21:46, type:TEST, key:apagando, c:0, e:43
+time:2025-04-09 18:24:23, type:TEST, key:apagando, c:0, e:46
+time:2025-04-09 18:25:01, type:TEST, key:apagando, c:0, e:47
+time:2025-04-09 18:37:57, type:TEST, key:apagando, c:0, e:60
+time:2025-04-09 18:38:55, type:TEST, key:apagando, c:0, e:60
+time:2025-04-10 22:53:53, type:DOWN, key:apagando, e:60
+time:2025-04-15 08:28:07, type:DOWN, key:apagando, e:60
+time:2025-04-15 08:42:29, type:PICK, key:apagando, e:75
+time:2025-04-15 08:42:35, type:TEST, key:apagando, c:0, e:75
+time:2025-04-15 08:46:57, type:TEST, key:apagando, c:0, e:79
+time:2025-04-15 09:38:57, type:TEST, key:apagando, c:0, e:131
+time:2025-04-15 09:39:03, type:TEST, key:apagando, c:0, e:131
+time:2025-04-15 09:40:24, type:TEST, key:apagando, c:0, e:133
+time:2025-04-15 09:41:10, type:TEST, key:apagando, c:0, e:134
+time:2025-04-15 09:42:24, type:TEST, key:apagando, c:0, e:135
+time:2025-04-15 09:43:42, type:BACK, key:apagando, e:136
+time:2025-04-15 09:43:44, type:PICK, key:apagando, e:136
+time:2025-04-15 09:43:55, type:TEST, key:apagando, c:0, e:136
+time:2025-04-15 09:44:59, type:TEST, key:apagando, c:0, e:137
+time:2025-04-15 09:48:41, type:TEST, key:apagando, c:0, e:141
+time:2025-04-15 09:48:58, type:TEST, key:apagando, c:0, e:141
+time:2025-04-15 09:49:14, type:TEST, key:apagando, c:0, e:142
+time:2025-04-15 09:49:57, type:TEST, key:apagando, c:0, e:142
+time:2025-04-15 09:50:36, type:TEST, key:apagando, c:0, e:143
+time:2025-04-15 09:51:19, type:TEST, key:apagando, c:0, e:144
+time:2025-04-15 09:52:57, type:TEST, key:apagando, c:33, e:145
+time:2025-04-15 10:05:04, type:TEST, key:apagando, c:0, e:157
+time:2025-04-15 10:14:29, type:PICK, key:apagando, e:167
+time:2025-04-15 10:14:37, type:TEST, key:apagando, c:0, e:167
+time:2025-04-15 10:16:25, type:TEST, key:apagando, c:0, e:169
+time:2025-04-15 10:16:35, type:TEST, key:apagando, c:0, e:169
+time:2025-04-15 10:16:55, type:TEST, key:apagando, c:0, e:169
+time:2025-04-15 10:17:48, type:TEST, key:apagando, c:0, e:170
+time:2025-04-15 10:18:18, type:TEST, key:apagando, c:0, e:171
+time:2025-04-15 10:19:24, type:TEST, key:apagando, c:0, e:172
+time:2025-04-16 08:57:25, type:PICK, key:apagando, e:172
+time:2025-04-16 08:57:31, type:TEST, key:apagando, c:0, e:172
+time:2025-04-16 08:58:09, type:TEST, key:apagando, c:0, e:172
+time:2025-04-16 08:58:25, type:TEST, key:apagando, c:0, e:173
+time:2025-04-16 09:06:43, type:TEST, key:apagando, c:0, e:181
+time:2025-04-16 09:07:25, type:TEST, key:apagando, c:0, e:182
+time:2025-04-16 09:07:43, type:TEST, key:apagando, c:0, e:182
+time:2025-04-16 09:08:14, type:TEST, key:apagando, c:0, e:183
+time:2025-04-16 09:08:36, type:TEST, key:apagando, c:100, e:183
+time:2025-04-16 09:12:22, type:BACK, key:apagando, e:187
+time:2025-04-16 09:12:56, type:SELF, key:apagando, c:100, a:4, s:5, e:187
+time:2025-04-26 11:57:25, type:SELF, key:apagando, c:100, a:4, s:5, e:187
+time:2025-05-05 10:08:00, type:SELF, key:apagando, c:100, a:4, s:5, e:187
+time:2025-05-05 10:18:29, type:SELF, key:apagando, c:100, a:4, s:5, e:198
+time:2025-06-14 17:32:07, type:PICK, key:apagando, e:198
+time:2025-06-14 17:32:12, type:TEST, key:apagando, c:100, e:198
+time:2025-06-14 17:32:13, type:BACK, key:apagando, e:198

@@ -1,0 +1,16 @@
+time:2025-04-21 20:10:49, type:DOWN, key:resto
+time:2025-04-21 20:10:51, type:PICK, key:resto, e:0
+time:2025-04-21 20:10:52, type:TEST, key:resto, c:0, e:0
+time:2025-04-21 20:21:06, type:TEST, key:resto, c:0, e:10
+time:2025-04-21 20:21:10, type:TEST, key:resto, c:0, e:10
+time:2025-04-21 20:21:38, type:TEST, key:resto, c:0, e:10
+time:2025-04-21 20:26:37, type:TEST, key:resto, c:0, e:15
+time:2025-04-21 20:26:46, type:TEST, key:resto, c:0, e:15
+time:2025-04-21 20:27:02, type:TEST, key:resto, c:0, e:16
+time:2025-04-21 20:27:10, type:TEST, key:resto, c:0, e:16
+time:2025-04-21 20:27:17, type:TEST, key:resto, c:100, e:16
+time:2025-04-21 20:28:27, type:BACK, key:resto, e:17
+time:2025-04-21 20:28:39, type:SELF, key:resto, c:100, a:5, s:5, e:17
+time:2025-04-21 20:33:59, type:SELF, key:resto, c:100, a:5, s:5, e:23
+time:2025-04-26 11:55:07, type:SELF, key:resto, c:100, a:5, s:5, e:23
+time:2025-06-14 17:33:38, type:SELF, key:resto, c:100, a:6, s:5, clear:5, fun:4, easy:5, e:23

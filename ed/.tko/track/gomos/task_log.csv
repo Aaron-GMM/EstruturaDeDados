@@ -1,0 +1,25 @@
+time:2025-04-08 21:36:30, type:DOWN, key:gomos
+time:2025-04-08 21:36:34, type:PICK, key:gomos, e:0
+time:2025-04-08 21:40:16, type:BACK, key:gomos, e:3
+time:2025-04-09 17:38:25, type:PICK, key:gomos, e:3
+time:2025-04-09 17:38:28, type:TEST, key:gomos, c:0, e:3
+time:2025-04-09 17:44:56, type:TEST, key:gomos, c:0, e:10
+time:2025-04-09 17:45:12, type:TEST, key:gomos, c:0, e:10
+time:2025-04-09 17:46:22, type:TEST, key:gomos, c:0, e:11
+time:2025-04-09 17:52:27, type:TEST, key:gomos, c:0, e:17
+time:2025-04-09 17:54:44, type:TEST, key:gomos, c:0, e:20
+time:2025-04-09 17:54:45, type:TEST, key:gomos, c:0, e:20
+time:2025-04-09 17:54:47, type:TEST, key:gomos, c:0, e:20
+time:2025-04-09 18:01:27, type:TEST, key:gomos, c:100, e:26
+time:2025-04-09 18:01:35, type:BACK, key:gomos, e:26
+time:2025-04-10 22:08:32, type:PICK, key:gomos, e:26
+time:2025-04-10 22:08:35, type:TEST, key:gomos, c:100, e:26
+time:2025-04-10 22:50:58, type:TEST, key:gomos, c:100, e:69
+time:2025-04-10 22:51:11, type:BACK, key:gomos, e:69
+time:2025-04-10 22:51:31, type:SELF, key:gomos, c:100, a:4, s:3, e:69
+time:2025-04-13 22:42:59, type:PICK, key:gomos, e:69
+time:2025-04-13 22:43:00, type:BACK, key:gomos, e:69
+time:2025-04-13 22:43:09, type:SELF, key:gomos, c:100, a:6, s:4, e:70
+time:2025-04-13 22:44:20, type:SELF, key:gomos, c:100, a:5, s:4, e:71
+time:2025-04-26 12:00:30, type:SELF, key:gomos, c:100, a:5, s:4, e:71
+time:2025-06-14 17:32:42, type:SELF, key:gomos, c:100, a:6, s:5, clear:4, fun:4, easy:4, e:71

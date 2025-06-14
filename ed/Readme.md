@@ -41,19 +41,41 @@ Significado das tags nas questões:
 - [ ] `#rec_read  leitura    +01  :info`[Recursividade](https://github.com/qxcodeed/arcade/blob/master/wiki/recursao/recursao.md)
 - [ ] `@triangulo vetores    *02  :leet`[Imprimindo ao contrário](https://github.com/qxcodeed/arcade/blob/master/base/triangulo/Readme.md)
 - [ ] `@treinando vetores    *04  :leet`[Treinando recursão com vetores](https://github.com/qxcodeed/arcade/blob/master/base/treinando/Readme.md)
-- [ ] `@queimada  vetores    *02  :leet`[Tocando fogo na floresta](https://github.com/qxcodeed/arcade/blob/master/base/queimada/Readme.md)
 - [ ] `@resto     matemática *01  :leet`[Divisão e Resto](https://github.com/qxcodeed/arcade/blob/master/base/resto/Readme.md)
 - [ ] `@mdc       matemática *01  :leet`[Implemente o mdc recursivo](https://github.com/qxcodeed/arcade/blob/master/base/mdc/Readme.md)
 - [ ] `@eh_primo  matemática +02  :leet`[Retorna se é ou não é](https://github.com/qxcodeed/arcade/blob/master/base/eh_primo/Readme.md)
 - [ ] `@enesimo   matemática +02  :leet`[Gere o enesimo primo](https://github.com/qxcodeed/arcade/blob/master/base/enesimo/Readme.md)
 - [ ] `@priminhos matemática +03  :leet`[Carrega a lista de primos](https://github.com/qxcodeed/arcade/blob/master/base/priminhos/Readme.md)
-- [ ] `@labirinto retrocesso *04  :leet`[Escapando do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/labirinto/Readme.md)
-- [ ] `@distancia retrocesso +05  :leet`[Colocando os números no lugar certo](https://github.com/qxcodeed/arcade/blob/master/base/distancia/Readme.md)
-- [ ] `@sudoku    retrocesso +10  :leet`[Sudoku](https://github.com/qxcodeed/arcade/blob/master/base/sudoku/Readme.md)
 - [ ] `@fractais             *10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais/Readme.md)
 - [ ] `@fractais_png         +10  :open`[Desenhando Fractais](https://github.com/qxcodeed/arcade/blob/master/base/fractais_png/Readme.md)
 - [ ] `@hex                  +10  :open`[Desenhando labirinto perfeito](https://github.com/qxcodeed/arcade/blob/master/base/hex/Readme.md)
 - [ ] `@vetequals            +01  :leet`[Verifique se dois vetores são iguais recursivamente](https://github.com/qxcodeed/arcade/blob/master/base/vetequals/Readme.md)
+
+### Busca em Profundidade - DFS (Depth-First Search)
+
+- [ ] `#dfs_bfs_bak      :into`[Vídeos de introdução a DFS e BFS](https://github.com/qxcodeed/arcade/blob/master/wiki/dfs/Readme.md)
+- [ ] `@queimada     *02 :leet`[Tocando fogo na floresta](https://github.com/qxcodeed/arcade/blob/master/base/queimada/Readme.md)
+- [ ] `@ilhas        *01 :leet`[LeetCode 200. Number os islands](https://github.com/qxcodeed/arcade/blob/master/base/ilhas/Readme.md)
+- [ ] `@queimando    *02 :leet`[Pilha: Queimando árvores](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
+- [ ] `#cercado      *01 :leet`[Regiões cercadas](https://leetcode.com/problems/surrounded-regions/description/)
+- [ ] `#pintura      *01 :leet`[Pintura de regiões](https://leetcode.com/problems/flood-fill/description/)
+- [ ] `#longest      *01 :leet`[Caminho mais longo](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/)
+- [ ] `#battleship   *01 :leet`[Batalha naval](https://leetcode.com/problems/battleships-in-a-board/description/)
+
+### Busca em Largura - BFS (Breadth-First Search)
+
+- [ ] `@caminho      +03 :leet`[Fila: Menor caminho entre dois pontos](https://github.com/qxcodeed/arcade/blob/master/base/caminho/Readme.md)
+- [ ] `#rotten       +01 :leet`[Tomate podre](https://leetcode.com/problems/rotting-oranges/description/)
+- [ ] `#detonate     +01 :leet`[Detonando bombas](https://leetcode.com/problems/detonate-the-maximum-bombs/description/)
+- [ ] `#escapeSpread +01 :leet`[Escape do fogo](https://leetcode.com/problems/escape-the-spreading-fire/description/)
+
+### Algoritmo de Retrocesso - Backtracking
+
+- [ ] `@wordsearch   *02 :leet`[Word Search LeetCode 79](https://github.com/qxcodeed/arcade/blob/master/base/wordsearch/Readme.md)
+- [ ] `@labirinto    *02 :leet`[Escapando do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/labirinto/Readme.md)
+- [ ] `@pilhado      *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
+- [ ] `@distancia    +05 :leet`[Colocando os números no lugar certo](https://github.com/qxcodeed/arcade/blob/master/base/distancia/Readme.md)
+- [ ] `@sudoku       +10 :leet`[Sudoku](https://github.com/qxcodeed/arcade/blob/master/base/sudoku/Readme.md)
 
 ### Vetor
 
@@ -81,10 +103,7 @@ Significado das tags nas questões:
 - [ ] `@bufferring  *04 :make`[Buffer Circular (Deque Dinâmico)](https://github.com/qxcodeed/arcade/blob/master/base/bufferring/Readme.md)
 - [ ] `@fila_enc    *02 :make`[Fila usando lista encadeada simples](https://github.com/qxcodeed/arcade/blob/master/base/fila_enc/Readme.md)
 - [ ] `@pilha       *02 :make`[Pilha sobre uma lista sequencial](https://github.com/qxcodeed/arcade/blob/master/base/pilha/Readme.md)
-- [ ] `@queimando   *03 :leet`[Pilha: Queimando árvores](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
-- [ ] `@pilhado     *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
 - [ ] `@chaves      *01 :leet`[Fila: Chaves de disputa](https://github.com/qxcodeed/arcade/blob/master/base/chaves/Readme.md)
-- [ ] `@caminho     +03 :leet`[Fila: Menor caminho entre dois pontos](https://github.com/qxcodeed/arcade/blob/master/base/caminho/Readme.md)
 
 ### Ordenação
 

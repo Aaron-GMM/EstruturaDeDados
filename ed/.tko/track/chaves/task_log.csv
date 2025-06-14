@@ -1,0 +1,23 @@
+time:2025-06-11 18:52:25, type:DOWN, key:chaves
+time:2025-06-11 18:57:19, type:PICK, key:chaves, e:4
+time:2025-06-11 18:57:20, type:TEST, key:chaves, c:0, e:4
+time:2025-06-11 18:57:20, type:SIZE, key:chaves, e:4, att:1, lines:63
+time:2025-06-11 18:57:22, type:TEST, key:chaves, c:0, e:4, att:1, lines:63
+time:2025-06-11 18:57:53, type:TEST, key:chaves, c:0, e:5, att:1, lines:63
+time:2025-06-11 18:57:53, type:SIZE, key:chaves, e:5, att:2, lines:52
+time:2025-06-11 18:58:00, type:TEST, key:chaves, c:0, e:5, att:2, lines:52
+time:2025-06-11 19:28:55, type:TEST, key:chaves, c:0, e:36, att:2, lines:52
+time:2025-06-11 19:28:55, type:SIZE, key:chaves, e:36, att:3, lines:91
+time:2025-06-11 19:29:02, type:TEST, key:chaves, c:0, e:36, att:3, lines:91
+time:2025-06-11 19:29:50, type:TEST, key:chaves, c:0, e:37, att:3, lines:91
+time:2025-06-11 19:29:50, type:SIZE, key:chaves, e:37, att:4, lines:92
+time:2025-06-11 19:29:56, type:TEST, key:chaves, c:0, e:37, att:4, lines:92
+time:2025-06-11 19:30:13, type:BACK, key:chaves, e:37, att:4, lines:92
+time:2025-06-14 17:30:09, type:PICK, key:chaves, e:37, att:4, lines:92
+time:2025-06-14 17:30:12, type:TEST, key:chaves, c:0, e:37, att:4, lines:92
+time:2025-06-14 17:30:17, type:TEST, key:chaves, c:0, e:37, att:4, lines:92
+time:2025-06-14 17:31:00, type:TEST, key:chaves, c:0, e:38, att:4, lines:92
+time:2025-06-14 17:31:00, type:SIZE, key:chaves, e:38, att:5, lines:94
+time:2025-06-14 17:31:05, type:TEST, key:chaves, c:100, e:38, att:5, lines:94
+time:2025-06-14 17:31:11, type:BACK, key:chaves, e:38, att:5, lines:94
+time:2025-06-14 17:31:29, type:SELF, key:chaves, c:100, a:6, s:5, clear:5, fun:5, easy:4, e:39, att:5, lines:94

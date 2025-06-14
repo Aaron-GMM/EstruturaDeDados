@@ -1,0 +1,96 @@
+time:2025-04-16 10:56:54, type:DOWN, key:triangulo
+time:2025-04-16 11:30:13, type:PICK, key:triangulo, e:33
+time:2025-04-16 11:31:14, type:TEST, key:triangulo, c:0, e:34
+time:2025-04-16 11:31:55, type:TEST, key:triangulo, c:0, e:35
+time:2025-04-16 11:34:56, type:TEST, key:triangulo, c:0, e:38
+time:2025-04-16 11:35:10, type:TEST, key:triangulo, c:0, e:38
+time:2025-04-16 11:36:01, type:TEST, key:triangulo, c:0, e:39
+time:2025-04-16 11:36:11, type:TEST, key:triangulo, c:0, e:39
+time:2025-04-16 11:36:36, type:TEST, key:triangulo, c:0, e:39
+time:2025-04-16 11:37:18, type:TEST, key:triangulo, c:0, e:40
+time:2025-04-16 11:37:30, type:TEST, key:triangulo, c:0, e:40
+time:2025-04-16 11:37:40, type:TEST, key:triangulo, c:0, e:40
+time:2025-04-16 11:37:50, type:TEST, key:triangulo, c:0, e:40
+time:2025-04-16 11:37:58, type:TEST, key:triangulo, c:0, e:41
+time:2025-04-16 11:38:12, type:TEST, key:triangulo, c:0, e:41
+time:2025-04-16 11:38:24, type:TEST, key:triangulo, c:0, e:41
+time:2025-04-16 11:38:49, type:TEST, key:triangulo, c:0, e:41
+time:2025-04-16 11:39:02, type:TEST, key:triangulo, c:0, e:42
+time:2025-04-16 11:39:25, type:TEST, key:triangulo, c:0, e:42
+time:2025-04-16 11:39:44, type:TEST, key:triangulo, c:0, e:42
+time:2025-04-16 11:40:08, type:TEST, key:triangulo, c:0, e:43
+time:2025-04-16 11:40:20, type:TEST, key:triangulo, c:0, e:43
+time:2025-04-16 11:40:27, type:TEST, key:triangulo, c:0, e:43
+time:2025-04-16 11:40:37, type:TEST, key:triangulo, c:0, e:43
+time:2025-04-16 11:41:10, type:TEST, key:triangulo, c:0, e:44
+time:2025-04-16 11:41:18, type:TEST, key:triangulo, c:0, e:44
+time:2025-04-16 11:42:22, type:TEST, key:triangulo, c:0, e:45
+time:2025-04-16 11:43:07, type:TEST, key:triangulo, c:0, e:46
+time:2025-04-16 11:43:17, type:TEST, key:triangulo, c:0, e:46
+time:2025-04-16 11:43:25, type:TEST, key:triangulo, c:0, e:46
+time:2025-04-16 11:43:32, type:TEST, key:triangulo, c:0, e:46
+time:2025-04-16 11:44:06, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:44:13, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:44:21, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:44:21, type:BACK, key:triangulo, e:47
+time:2025-04-16 11:44:24, type:PICK, key:triangulo, e:47
+time:2025-04-16 11:44:36, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:44:37, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:44:51, type:TEST, key:triangulo, c:0, e:47
+time:2025-04-16 11:45:09, type:TEST, key:triangulo, c:0, e:48
+time:2025-04-16 11:45:24, type:TEST, key:triangulo, c:0, e:48
+time:2025-04-16 11:45:42, type:TEST, key:triangulo, c:0, e:48
+time:2025-04-16 11:46:05, type:TEST, key:triangulo, c:0, e:49
+time:2025-04-16 11:46:14, type:TEST, key:triangulo, c:0, e:49
+time:2025-04-16 11:47:03, type:TEST, key:triangulo, c:0, e:50
+time:2025-04-16 11:47:13, type:TEST, key:triangulo, c:0, e:50
+time:2025-04-16 11:47:34, type:TEST, key:triangulo, c:0, e:50
+time:2025-04-16 11:48:42, type:TEST, key:triangulo, c:0, e:51
+time:2025-04-16 11:49:15, type:TEST, key:triangulo, c:0, e:52
+time:2025-04-16 11:50:07, type:TEST, key:triangulo, c:0, e:53
+time:2025-04-16 11:50:51, type:TEST, key:triangulo, c:0, e:53
+time:2025-04-16 11:51:08, type:TEST, key:triangulo, c:0, e:54
+time:2025-04-16 11:56:16, type:TEST, key:triangulo, c:0, e:59
+time:2025-04-16 11:56:44, type:TEST, key:triangulo, c:0, e:59
+time:2025-04-16 11:57:03, type:TEST, key:triangulo, c:100, e:60
+time:2025-04-16 11:57:10, type:BACK, key:triangulo, e:60
+time:2025-04-16 11:57:12, type:PICK, key:triangulo, e:60
+time:2025-04-16 11:57:20, type:TEST, key:triangulo, c:0, e:60
+time:2025-04-16 11:57:25, type:TEST, key:triangulo, c:0, e:60
+time:2025-04-16 11:58:08, type:TEST, key:triangulo, c:0, e:61
+time:2025-04-16 19:18:47, type:TEST, key:triangulo, c:0, e:61
+time:2025-04-16 19:18:48, type:BACK, key:triangulo, e:61
+time:2025-04-16 19:18:49, type:PICK, key:triangulo, e:61
+time:2025-04-16 19:19:02, type:TEST, key:triangulo, c:0, e:61
+time:2025-04-16 19:19:20, type:TEST, key:triangulo, c:0, e:61
+time:2025-04-16 19:19:38, type:TEST, key:triangulo, c:0, e:62
+time:2025-04-20 10:02:17, type:PICK, key:triangulo, e:62
+time:2025-04-20 10:02:41, type:PICK, key:triangulo, e:62
+time:2025-04-20 10:03:20, type:TEST, key:triangulo, c:0, e:63
+time:2025-04-20 10:03:57, type:TEST, key:triangulo, c:0, e:63
+time:2025-04-20 10:04:11, type:FREE, key:triangulo, e:63
+time:2025-04-20 10:05:09, type:TEST, key:triangulo, c:0, e:64
+time:2025-04-20 10:05:20, type:TEST, key:triangulo, c:0, e:65
+time:2025-04-20 10:05:51, type:TEST, key:triangulo, c:0, e:65
+time:2025-04-20 10:06:17, type:TEST, key:triangulo, c:0, e:66
+time:2025-04-20 10:06:28, type:TEST, key:triangulo, c:0, e:66
+time:2025-04-20 10:07:18, type:TEST, key:triangulo, c:100, e:67
+time:2025-04-20 10:07:36, type:BACK, key:triangulo, e:67
+time:2025-04-20 10:08:13, type:SELF, key:triangulo, c:100, a:5, s:4, e:68
+time:2025-04-26 11:56:36, type:SELF, key:triangulo, c:100, a:5, s:4, e:68
+time:2025-04-29 10:22:59, type:PICK, key:triangulo, e:68
+time:2025-04-29 10:23:01, type:BACK, key:triangulo, e:68
+time:2025-04-29 10:23:10, type:SELF, key:triangulo, c:100, a:5, s:4, e:68
+time:2025-04-29 10:23:12, type:PICK, key:triangulo, e:68
+time:2025-04-29 10:23:22, type:TEST, key:triangulo, c:0, e:68
+time:2025-04-29 10:23:23, type:BACK, key:triangulo, e:68
+time:2025-04-29 10:23:24, type:PICK, key:triangulo, e:68
+time:2025-04-29 10:24:07, type:BACK, key:triangulo, e:69
+time:2025-04-29 10:24:12, type:SELF, key:triangulo, c:0, a:5, s:5, e:69
+time:2025-06-14 17:33:04, type:PICK, key:triangulo, e:69
+time:2025-06-14 17:33:07, type:TEST, key:triangulo, c:100, e:69
+time:2025-06-14 17:33:08, type:BACK, key:triangulo, e:69
+time:2025-06-14 17:33:15, type:SELF, key:triangulo, c:100, a:6, s:5, clear:4, fun:5, easy:4, e:69
+time:2025-06-14 17:33:15, type:PICK, key:triangulo, e:69
+time:2025-06-14 17:33:17, type:TEST, key:triangulo, c:100, e:69
+time:2025-06-14 17:33:17, type:BACK, key:triangulo, e:69
