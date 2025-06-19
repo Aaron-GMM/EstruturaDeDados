@@ -1,0 +1,28 @@
+{
+    "patches": [
+        {
+            "label": "2025-06-18_22-25-07",
+            "content": "@@ -53,33 +53,8 @@\n aus \n-int,numeroPossibilidades \n int)\n@@ -61,17 +61,16 @@\n   int %7B%0A\n-%0A\n     if n\n@@ -171,97 +171,18 @@\n   %7D%0A\n-%0A    if numeroDeDegraus == 2 %7B%0A        return 2%0A    %7D%0A%0A       %0A    numeroPossibilidades =\n+    return\n  sub\n@@ -203,38 +203,16 @@\n egraus-1\n-, numeroPossibilidades\n ) + subi\n@@ -235,64 +235,10 @@\n aus-\n-2, numeroPossibilidades)%0A    return numeroPossibilidades\n+3)\n %0A%7D%0A%0A\n@@ -287,43 +287,8 @@\n nt %0A\n-  var numeroPossibilidades int = 0%0A\n   fm\n@@ -313,16 +313,18 @@\n graus)%0A%0A\n+  \n   fmt.Pr\n@@ -356,30 +356,8 @@\n raus\n-, numeroPossibilidades\n ))%0A \n"
+        },
+        {
+            "label": "2025-06-18_22-30-50",
+            "content": "@@ -172,10 +172,40 @@\n = 1 \n-%7C%7C\n+%7B%0A        return 1%0A    %7D%0A%0A    if\n  num\n@@ -221,16 +221,17 @@\n aus == 2\n+ \n %7B%0A      \n@@ -243,17 +243,17 @@\n urn \n-1%0A\n+2\n %0A    %7D%0A\n+%0A\n     \n"
+        },
+        {
+            "label": "2025-06-18_22-31-41",
+            "content": "@@ -331,9 +331,9 @@\n aus-\n-3\n+2\n , nu\n"
+        },
+        {
+            "label": "2025-06-18_22-32-00",
+            "content": "@@ -49,16 +49,41 @@\n Degraus \n+int,numeroPossibilidades \n int)  in\n@@ -210,16 +210,17 @@\n eturn 1%0A\n+%0A\n     %7D%0A  \n@@ -229,22 +229,38 @@\n    %0A    \n-return\n+numeroPossibilidades =\n  subindo\n@@ -277,16 +277,38 @@\n egraus-1\n+, numeroPossibilidades\n ) + subi\n@@ -328,22 +328,71 @@\n egraus-3\n-)%0A    \n+, numeroPossibilidades)%0A    return numeroPossibilidades\n %0A%7D%0A%0Afunc\n@@ -433,16 +433,51 @@\n us int %0A\n+  var numeroPossibilidades int = 0%0A\n   fmt.Sc\n@@ -535,16 +535,38 @@\n eDegraus\n+, numeroPossibilidades\n ))%0A    %0A\n"
+        },
+        {
+            "label": "2025-06-18_22-36-46",
+            "content": "@@ -195,61 +195,8 @@\n   %7D%0A\n-    if numeroDeDegraus == 3 %7B%0A        return 2%0A    %7D%0A\n     \n"
+        },
+        {
+            "label": "2025-06-18_22-37-17",
+            "content": "package main\nimport \"fmt\"\n\nfunc subindo(numeroDeDegraus int)  int {\n\n    if numeroDeDegraus == 0 {\n        return 0\n    }\n    if numeroDeDegraus == 1 || numeroDeDegraus == 2{\n        return 1\n    }\n    if numeroDeDegraus == 3 {\n        return 2\n    }\n       \n    return subindo(numeroDeDegraus-1) + subindo(numeroDeDegraus-3)\n    \n}\n\nfunc main() {\n    \n  var numeroDeDegraus int \n  fmt.Scan(&numeroDeDegraus)\n\n  fmt.Println(subindo(numeroDeDegraus))\n    \n\n}\n"
+        }
+    ]
+}

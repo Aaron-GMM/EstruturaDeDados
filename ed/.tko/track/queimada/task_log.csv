@@ -1,0 +1,22 @@
+time:2025-04-21 19:36:19, type:DOWN, key:queimada
+time:2025-04-21 19:36:20, type:PICK, key:queimada, e:0
+time:2025-04-21 19:37:08, type:BACK, key:queimada, e:0
+time:2025-04-21 19:39:15, type:PICK, key:queimada, e:2
+time:2025-04-21 20:04:26, type:PICK, key:queimada, e:28
+time:2025-04-21 20:04:28, type:TEST, key:queimada, c:0, e:28
+time:2025-04-21 20:04:31, type:TEST, key:queimada, c:0, e:28
+time:2025-04-21 20:04:43, type:TEST, key:queimada, c:16, e:28
+time:2025-04-21 20:05:25, type:TEST, key:queimada, c:0, e:29
+time:2025-04-21 20:05:27, type:TEST, key:queimada, c:0, e:29
+time:2025-04-21 20:08:10, type:TEST, key:queimada, c:100, e:31
+time:2025-04-21 20:10:20, type:BACK, key:queimada, e:34
+time:2025-04-21 20:10:43, type:SELF, key:queimada, c:100, a:4, s:4, e:34
+time:2025-04-26 11:55:26, type:SELF, key:queimada, c:100, a:4, s:4, e:34
+time:2025-04-29 09:27:16, type:SELF, key:queimada, c:100, a:5, s:4, e:34
+time:2025-04-29 10:22:01, type:SELF, key:queimada, c:100, a:5, s:4, e:89
+time:2025-04-29 10:24:27, type:SELF, key:queimada, c:100, a:5, s:4, e:91
+time:2025-06-17 11:15:59, type:PICK, key:queimada, e:91
+time:2025-06-17 11:16:53, type:TEST, key:queimada, c:0, e:92
+time:2025-06-17 11:16:53, type:SIZE, key:queimada, e:92, att:1, lines:55
+time:2025-06-17 11:16:57, type:TEST, key:queimada, c:100, e:92, att:1, lines:55
+time:2025-06-17 11:20:41, type:BACK, key:queimada, e:96, att:1, lines:55

@@ -7,7 +7,7 @@ import (
 	"os"
 )
 type Sudoku struct {
-    tamanho int // tamanho do tabuleiro 4 ou 9
+    tamanho int 
     dim int
     grid [][]rune
     holes [][2]int
@@ -65,7 +65,7 @@ func (s *Sudoku)solve(idx int) bool {
             if s.solve(idx + 1) {
                 return true
             }
-            s.grid[a][b] = '.' // backtrack
+            s.grid[a][b] = '.' 
         }
     }
     return false

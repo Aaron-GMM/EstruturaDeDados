@@ -1,1 +1,27 @@
 time:2025-06-14 17:31:47, type:DOWN, key:serial
+time:2025-06-14 17:47:56, type:PICK, key:serial, e:16
+time:2025-06-14 18:18:30, type:TEST, key:serial, c:0, e:46
+time:2025-06-14 18:18:30, type:SIZE, key:serial, e:46, att:1, lines:24
+time:2025-06-14 18:18:34, type:TEST, key:serial, c:0, e:46, att:1, lines:24
+time:2025-06-14 18:28:43, type:TEST, key:serial, c:0, e:56, att:1, lines:24
+time:2025-06-14 18:28:43, type:SIZE, key:serial, e:56, att:2, lines:70
+time:2025-06-17 10:14:27, type:PICK, key:serial, e:56, att:2, lines:70
+time:2025-06-17 10:14:29, type:TEST, key:serial, c:0, e:56, att:2, lines:70
+time:2025-06-17 10:14:29, type:SIZE, key:serial, e:56, att:3, lines:75
+time:2025-06-17 10:14:32, type:TEST, key:serial, c:0, e:57, att:3, lines:75
+time:2025-06-17 10:16:02, type:TEST, key:serial, c:0, e:58, att:3, lines:75
+time:2025-06-17 10:16:02, type:SIZE, key:serial, e:58, att:4, lines:83
+time:2025-06-17 10:29:54, type:BACK, key:serial, e:72, att:4, lines:83
+time:2025-06-17 22:23:28, type:PICK, key:serial, e:72, att:4, lines:83
+time:2025-06-17 22:23:53, type:TEST, key:serial, c:0, e:72, att:4, lines:83
+time:2025-06-17 22:23:55, type:TEST, key:serial, c:0, e:72, att:4, lines:83
+time:2025-06-17 22:23:57, type:TEST, key:serial, c:0, e:72, att:4, lines:83
+time:2025-06-17 22:23:57, type:BACK, key:serial, e:72, att:4, lines:83
+time:2025-06-18 10:34:12, type:PICK, key:serial, e:72, att:4, lines:83
+time:2025-06-18 10:34:36, type:BACK, key:serial, e:73, att:4, lines:83
+time:2025-06-18 10:34:39, type:DOWN, key:serial, e:73, att:4, lines:83
+time:2025-06-18 10:34:41, type:PICK, key:serial, e:73, att:4, lines:83
+time:2025-06-18 10:37:13, type:BACK, key:serial, e:75, att:4, lines:83
+time:2025-06-18 11:20:17, type:PICK, key:serial, e:118, att:4, lines:83
+time:2025-06-18 11:21:43, type:TEST, key:serial, c:0, e:120, att:4, lines:83
+time:2025-06-18 11:21:43, type:SIZE, key:serial, e:120, att:5, lines:34

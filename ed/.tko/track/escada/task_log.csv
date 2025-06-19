@@ -1,0 +1,23 @@
+time:2025-06-17 22:24:17, type:DOWN, key:escada
+time:2025-06-17 22:24:33, type:PICK, key:escada, e:0
+time:2025-06-18 10:33:58, type:PICK, key:escada, e:0
+time:2025-06-18 10:34:02, type:BACK, key:escada, e:0
+time:2025-06-18 22:25:06, type:PICK, key:escada, e:0
+time:2025-06-18 22:25:07, type:TEST, key:escada, c:0, e:0
+time:2025-06-18 22:25:07, type:SIZE, key:escada, e:0, att:1, lines:22
+time:2025-06-18 22:25:11, type:TEST, key:escada, c:3, e:0, att:1, lines:22
+time:2025-06-18 22:25:18, type:TEST, key:escada, c:3, e:0, att:1, lines:22
+time:2025-06-18 22:30:50, type:TEST, key:escada, c:3, e:6, att:1, lines:22
+time:2025-06-18 22:30:50, type:SIZE, key:escada, e:6, att:2, lines:31
+time:2025-06-18 22:31:41, type:TEST, key:escada, c:13, e:6, att:2, lines:31
+time:2025-06-18 22:31:41, type:SIZE, key:escada, e:6, att:3, lines:27
+time:2025-06-18 22:32:00, type:TEST, key:escada, c:6, e:7, att:3, lines:27
+time:2025-06-18 22:32:00, type:SIZE, key:escada, e:7, att:4, lines:27
+time:2025-06-18 22:32:09, type:TEST, key:escada, c:6, e:7, att:4, lines:27
+time:2025-06-18 22:36:46, type:TEST, key:escada, c:6, e:12, att:4, lines:27
+time:2025-06-18 22:36:46, type:SIZE, key:escada, e:12, att:5, lines:25
+time:2025-06-18 22:37:17, type:TEST, key:escada, c:100, e:12, att:5, lines:25
+time:2025-06-18 22:37:17, type:SIZE, key:escada, e:12, att:6, lines:28
+time:2025-06-18 22:37:19, type:BACK, key:escada, e:12, att:6, lines:28
+time:2025-06-18 22:37:34, type:SELF, key:escada, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:12, att:6, lines:28
+time:2025-06-18 22:37:59, type:SELF, key:escada, c:100, a:6, s:5, clear:5, fun:5, easy:5, e:13, att:6, lines:28

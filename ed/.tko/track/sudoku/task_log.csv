@@ -1,0 +1,43 @@
+time:2025-05-05 10:41:33, type:DOWN, key:sudoku
+time:2025-05-05 10:47:01, type:SELF, key:sudoku, c:0, a:0, s:0, e:5
+time:2025-05-05 10:47:03, type:PICK, key:sudoku, e:5
+time:2025-05-05 16:45:02, type:BACK, key:sudoku, e:5
+time:2025-05-05 17:07:28, type:PICK, key:sudoku, e:27
+time:2025-05-05 17:07:31, type:TEST, key:sudoku, c:0, e:27
+time:2025-05-05 17:07:35, type:TEST, key:sudoku, c:0, e:28
+time:2025-05-05 17:08:16, type:TEST, key:sudoku, c:0, e:28
+time:2025-05-05 17:09:20, type:TEST, key:sudoku, c:0, e:29
+time:2025-05-05 17:10:19, type:TEST, key:sudoku, c:0, e:30
+time:2025-05-05 17:11:05, type:TEST, key:sudoku, c:0, e:31
+time:2025-05-05 17:11:48, type:TEST, key:sudoku, c:0, e:32
+time:2025-05-05 17:14:12, type:TEST, key:sudoku, c:0, e:34
+time:2025-05-05 17:14:21, type:TEST, key:sudoku, c:0, e:34
+time:2025-05-05 17:14:31, type:TEST, key:sudoku, c:0, e:34
+time:2025-05-05 17:14:41, type:TEST, key:sudoku, c:0, e:35
+time:2025-05-05 17:14:50, type:TEST, key:sudoku, c:0, e:35
+time:2025-05-05 17:15:27, type:TEST, key:sudoku, c:0, e:35
+time:2025-05-05 17:15:57, type:TEST, key:sudoku, c:0, e:36
+time:2025-05-05 17:16:19, type:TEST, key:sudoku, c:0, e:36
+time:2025-05-05 17:16:28, type:TEST, key:sudoku, c:0, e:36
+time:2025-05-05 17:16:56, type:TEST, key:sudoku, c:0, e:37
+time:2025-05-05 17:17:22, type:TEST, key:sudoku, c:0, e:37
+time:2025-05-05 17:17:32, type:TEST, key:sudoku, c:0, e:38
+time:2025-05-05 17:17:39, type:TEST, key:sudoku, c:0, e:38
+time:2025-05-05 17:17:53, type:TEST, key:sudoku, c:0, e:38
+time:2025-05-05 17:18:56, type:TEST, key:sudoku, c:0, e:39
+time:2025-05-05 17:20:40, type:TEST, key:sudoku, c:80, e:41
+time:2025-05-05 17:20:44, type:BACK, key:sudoku, e:41
+time:2025-05-05 17:20:56, type:SELF, key:sudoku, c:80, a:0, s:0, e:41
+time:2025-05-05 17:20:58, type:PICK, key:sudoku, e:41
+time:2025-05-05 17:21:24, type:BACK, key:sudoku, e:41
+time:2025-05-05 17:22:13, type:SELF, key:sudoku, c:80, a:4, s:2, e:42
+time:2025-05-05 17:22:18, type:SELF, key:sudoku, c:80, a:4, s:2, e:42
+time:2025-05-06 11:36:24, type:PICK, key:sudoku, e:42
+time:2025-05-06 11:36:27, type:TEST, key:sudoku, c:0, e:42
+time:2025-05-06 11:36:31, type:TEST, key:sudoku, c:80, e:42
+time:2025-05-06 11:36:40, type:BACK, key:sudoku, e:43
+time:2025-06-17 10:41:26, type:SELF, key:sudoku, c:80, a:2, s:2, clear:0, fun:0, easy:0, e:43
+time:2025-06-18 10:48:56, type:PICK, key:sudoku, e:43
+time:2025-06-18 10:48:58, type:TEST, key:sudoku, c:0, e:43
+time:2025-06-18 10:49:05, type:TEST, key:sudoku, c:80, e:43
+time:2025-06-18 10:49:50, type:BACK, key:sudoku, e:43

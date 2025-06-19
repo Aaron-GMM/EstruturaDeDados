@@ -1,0 +1,31 @@
+time:2025-04-27 19:06:39, type:DOWN, key:distancia
+time:2025-04-27 19:06:41, type:PICK, key:distancia, e:0
+time:2025-05-03 14:42:19, type:PICK, key:distancia, e:0
+time:2025-05-03 14:52:32, type:TEST, key:distancia, c:0, e:10
+time:2025-05-03 14:52:39, type:TEST, key:distancia, c:0, e:10
+time:2025-05-03 14:54:17, type:TEST, key:distancia, c:0, e:12
+time:2025-05-03 14:54:31, type:TEST, key:distancia, c:0, e:12
+time:2025-05-03 14:55:09, type:TEST, key:distancia, c:0, e:12
+time:2025-05-03 14:55:33, type:TEST, key:distancia, c:0, e:13
+time:2025-05-03 14:57:21, type:TEST, key:distancia, c:0, e:15
+time:2025-05-03 14:57:24, type:TEST, key:distancia, c:0, e:15
+time:2025-05-03 14:57:40, type:TEST, key:distancia, c:0, e:15
+time:2025-05-03 14:58:02, type:TEST, key:distancia, c:0, e:15
+time:2025-05-03 14:58:04, type:TEST, key:distancia, c:0, e:15
+time:2025-05-03 14:58:26, type:TEST, key:distancia, c:0, e:16
+time:2025-05-03 14:58:44, type:TEST, key:distancia, c:0, e:16
+time:2025-05-03 14:59:29, type:TEST, key:distancia, c:0, e:17
+time:2025-05-03 15:00:04, type:TEST, key:distancia, c:0, e:17
+time:2025-05-03 15:01:33, type:BACK, key:distancia, e:19
+time:2025-05-05 09:54:40, type:PICK, key:distancia, e:19
+time:2025-05-05 09:54:52, type:TEST, key:distancia, c:0, e:19
+time:2025-05-05 09:54:57, type:TEST, key:distancia, c:0, e:19
+time:2025-05-05 10:06:12, type:TEST, key:distancia, c:0, e:30
+time:2025-05-05 10:06:16, type:TEST, key:distancia, c:100, e:30
+time:2025-05-05 10:06:24, type:BACK, key:distancia, e:31
+time:2025-05-05 10:07:01, type:SELF, key:distancia, c:100, a:5, s:5, e:31
+time:2025-05-06 10:47:44, type:PICK, key:distancia, e:31
+time:2025-05-06 10:48:56, type:BACK, key:distancia, e:32
+time:2025-05-06 10:50:32, type:PICK, key:distancia, e:34
+time:2025-05-06 10:50:57, type:BACK, key:distancia, e:34
+time:2025-06-17 10:41:47, type:SELF, key:distancia, c:100, a:4, s:4, clear:4, fun:4, easy:2, e:34
