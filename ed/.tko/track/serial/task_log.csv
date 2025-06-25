@@ -25,3 +25,11 @@ time:2025-06-18 10:37:13, type:BACK, key:serial, e:75, att:4, lines:83
 time:2025-06-18 11:20:17, type:PICK, key:serial, e:118, att:4, lines:83
 time:2025-06-18 11:21:43, type:TEST, key:serial, c:0, e:120, att:4, lines:83
 time:2025-06-18 11:21:43, type:SIZE, key:serial, e:120, att:5, lines:34
+time:2025-06-18 22:45:46, type:DOWN, key:serial, e:120, att:5, lines:34
+time:2025-06-18 22:45:47, type:PICK, key:serial, e:120, att:5, lines:34
+time:2025-06-18 22:58:23, type:TEST, key:serial, c:0, e:133, att:5, lines:34
+time:2025-06-18 22:58:23, type:SIZE, key:serial, e:133, att:6, lines:25
+time:2025-06-18 22:58:25, type:TEST, key:serial, c:0, e:133, att:6, lines:25
+time:2025-06-18 22:58:25, type:BACK, key:serial, e:133, att:6, lines:25
+time:2025-06-18 22:58:31, type:PICK, key:serial, e:133, att:6, lines:25
+time:2025-06-18 22:58:34, type:TEST, key:serial, c:0, e:133, att:6, lines:25

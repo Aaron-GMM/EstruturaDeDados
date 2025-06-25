@@ -18,7 +18,11 @@
         },
         {
             "label": "2025-06-18_11-21-43",
-            "content": "package main\nimport \"fmt\"\ntype Node struct {\n    value int   \n    next  *Node\n    prev  *Node\n}\n\ntype Btree struct{\n    value int\n    root *Node\n    left *Node\n    right *Node\n}\nfunc NewNode(value int) *Node {\n    return &Node{\n        value: value,\n        next:  nil,\n        prev:  nil,}\n}\n\nfunc NewBtree(value int) *Btree {\n    return &Btree{\n        value: value,\n        root:  NewNode(value),\n        left:  nil,\n        right: nil,\n    }\n}\n\n\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n"
+            "content": "@@ -38,25 +38,25 @@\n truct %7B%0A    \n-V\n+v\n alue int %0A  \n@@ -56,17 +56,20 @@\n int \n+  \n %0A    \n-Left\n+next \n  *No\n@@ -75,21 +75,21 @@\n ode%0A    \n-Right\n+prev \n  *Node%0A%7D\n@@ -89,16 +89,17 @@\n *Node%0A%7D%0A\n+%0A\n type Btr\n@@ -111,18 +111,62 @@\n ruct\n- \n %7B%0A    \n-Roo\n+value int%0A    root *Node%0A    left *Node%0A    righ\n t *N\n@@ -233,9 +233,9 @@\n     \n-V\n+v\n alue\n@@ -255,11 +255,11 @@\n     \n-Lef\n+nex\n t:  \n@@ -275,27 +275,23 @@\n     \n-Right:\n+prev: \n  nil,\n+%7D\n %0A\n-    \n %7D%0A\n-%7D\n %0Afun\n@@ -301,16 +301,25 @@\n ewBtree(\n+value int\n ) *Btree\n@@ -352,11 +352,85 @@\n     \n-Roo\n+value: value,%0A        root:  NewNode(value),%0A        left:  nil,%0A        righ\n t: n\n@@ -441,16 +441,18 @@\n     %7D%0A%7D%0A\n+%0A%0A\n func mai\n"
+        },
+        {
+            "label": "2025-06-18_22-58-23",
+            "content": "package main\nimport \"fmt\"\ntype Node struct {\n    Value int \n    Left *Node\n    Right *Node\n}\ntype Btree struct {\n    Root *Node\n}\nfunc NewNode(value int) *Node {\n    return &Node{\n        Value: value,\n        Left:  nil,\n        Right: nil,\n    }\n}\nfunc NewBtree() *Btree {\n    return &Btree{\n        Root: nil,\n    }\n}\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n"
         }
     ]
 }

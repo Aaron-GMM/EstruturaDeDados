@@ -5,8 +5,6 @@ expanded:
 - local_task_cluster_sem_quest
 - main-quest
 - side-quests
-- recursão-padrões-e-conceitos
-- busca-em-profundidade---dfs-depth-first-search
 tasks:
   pintando: '{cove:100, appr:6, auto:5, neat:4, cool:5, easy:5, idx:0}'
   mumia: '{cove:100, appr:6, auto:5, neat:5, cool:4, easy:5, idx:0}'
@@ -63,4 +61,4 @@ flags:
   graph: 1
 new_items: []
 lang: go
-index: busca-em-profundidade---dfs-depth-first-search
+index: main-quest
