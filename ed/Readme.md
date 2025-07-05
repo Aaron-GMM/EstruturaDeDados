@@ -58,7 +58,8 @@ Significado das tags nas questões:
 - [ ] `@queimada     *02 :leet`[Tocando fogo na floresta](https://github.com/qxcodeed/arcade/blob/master/base/queimada/Readme.md)
 - [ ] `@ilhas        *01 :leet`[LeetCode 200. Number os islands](https://github.com/qxcodeed/arcade/blob/master/base/ilhas/Readme.md)
 - [ ] `@queimando    *02 :leet`[Pilha: Queimando árvores](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
-- [ ] `#cercado      *01 :link`[Regiões cercadas](https://leetcode.com/problems/surrounded-regions/description/)
+- [ ] `#cercado      *01 :open`[Capturar Regiões Cercadas](https://github.com/qxcodeed/arcade/blob/master/base/cercado/Readme.md)
+- [ ] `@labirinto    *02 :leet`[Escapando do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/labirinto/Readme.md)
 - [ ] `#pintura      *01 :link`[Pintura de regiões](https://leetcode.com/problems/flood-fill/description/)
 - [ ] `#longest      *01 :link`[Caminho mais longo](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/)
 - [ ] `#battleship   *01 :link`[Batalha naval](https://leetcode.com/problems/battleships-in-a-board/description/)
@@ -73,10 +74,12 @@ Significado das tags nas questões:
 ### Algoritmo de Retrocesso - Backtracking
 
 - [ ] `@wordsearch   *02 :leet`[Word Search LeetCode 79](https://github.com/qxcodeed/arcade/blob/master/base/wordsearch/Readme.md)
-- [ ] `@labirinto    *02 :leet`[Escapando do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/labirinto/Readme.md)
 - [ ] `@pilhado      *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
 - [ ] `@distancia    +05 :leet`[Colocando os números no lugar certo](https://github.com/qxcodeed/arcade/blob/master/base/distancia/Readme.md)
 - [ ] `@sudoku       +10 :leet`[Sudoku](https://github.com/qxcodeed/arcade/blob/master/base/sudoku/Readme.md)
+- [ ] `@subset_sum   +05 :leet`[Soma subconjuntos](https://github.com/qxcodeed/arcade/blob/master/base/subset_sum/Readme.md)
+- [ ] `@n_rainhas    +05 :leet`[N-Rainhas](https://github.com/qxcodeed/arcade/blob/master/base/n_rainhas/Readme.md)
+- [ ] `@permutacoes  +05 :leet`[Permutando coisas](https://github.com/qxcodeed/arcade/blob/master/base/permutacoes/Readme.md)
 
 ### Vetor
 
