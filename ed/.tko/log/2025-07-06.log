@@ -20,3 +20,18 @@
 2025-07-06 11:41:52, EXEC, v:1, k:queimando, mode:FULL, rate:100, size:135
 2025-07-06 11:42:05, MOVE, v:1, k:queimando, mode:BACK
 2025-07-06 11:42:21, SELF, v:1, k:queimando, rate:100, flow:6, edge:5
+2025-07-06 11:46:16, MOVE, v:1, k:queimando, mode:PICK
+2025-07-06 11:46:19, EXEC, v:1, k:queimando, mode:FULL, rate:100
+2025-07-06 11:46:19, MOVE, v:1, k:queimando, mode:BACK
+2025-07-06 11:46:22, MOVE, v:1, k:queimando, mode:PICK
+2025-07-06 11:46:24, EXEC, v:1, k:queimando, mode:FULL, rate:100
+2025-07-06 11:46:25, MOVE, v:1, k:queimando, mode:BACK
+2025-07-06 11:46:29, MOVE, v:1, k:ilhas, mode:PICK
+2025-07-06 11:46:31, EXEC, v:1, k:ilhas, mode:FULL, rate:100, size:60
+2025-07-06 11:46:31, MOVE, v:1, k:ilhas, mode:BACK
+2025-07-06 11:46:36, MOVE, v:1, k:queimada, mode:PICK
+2025-07-06 11:46:38, EXEC, v:1, k:queimada, mode:FULL, rate:100
+2025-07-06 11:46:38, MOVE, v:1, k:queimada, mode:BACK
+2025-07-06 11:46:50, MOVE, v:1, k:labirinto, mode:PICK
+2025-07-06 11:46:52, EXEC, v:1, k:labirinto, mode:FULL, rate:100, size:108
+2025-07-06 11:46:52, MOVE, v:1, k:labirinto, mode:BACK
