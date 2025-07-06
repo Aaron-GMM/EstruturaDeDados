@@ -23,6 +23,14 @@ func getNeib(p Pos) []Pos {
 
 // Verifica se a posição está dentro da matriz
 func inside(mat [][]rune, p Pos) bool {
+	nl := len(mat)
+	nc := len(mat[0])
+	if nl == 0 || nc == 0 {
+		return false
+	}
+	if (p.l >= 0 && p.l < nl) && (p.c >= 0 && p.c < nc) {
+		return true
+	}
 	return false
 	/* Essa função retorna uma booleana que
 	   diz se a posição p está dentro da
@@ -32,8 +40,29 @@ func inside(mat [][]rune, p Pos) bool {
 // Função para propagar a "chama" (substitui '#' por 'o')
 func queimar(mat [][]rune, l, c int) {
 	stack := NewStack[Pos]()
-	_ , _ , _ = mat, l, c
+	
+	if !inside(mat, Pos{l, c}) || mat[l][c] != '#' {
+		return
+	}
+	stack.Push(Pos{l, c})
+	for !stack.IsEmpty() {
 
+		pos := *stack.Top()
+		stack.Pop()
+
+		if mat[pos.l][pos.c] == 'o' {
+			continue
+		}
+
+		mat[pos.l][pos.c] = 'o'
+
+		for _, p := range getNeib(pos) {
+			if inside(mat, p) && mat[p.l][p.c] == '#' {
+				//mat[p.l][p.c] = 'o'
+				stack.Push(p)
+			}
+		}
+	}
 	// Essa função deve usar uma list como pilha
 	// e marcar as árvores na matriz como
 	// queimados

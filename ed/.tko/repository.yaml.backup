@@ -3,8 +3,11 @@ version: 0.0.1
 database: database
 expanded:
 - local_task_cluster_sem_quest
-- main-quest
 - side-quests
+- main-quest
+- local_task_cluster
+- local_task_cluster_sem_quest
+- busca-em-profundidade---dfs-depth-first-search
 tasks:
   pintando: '{rate:100, flow:6, edge:5, neat:4, cool:5, easy:5}'
   mumia: '{rate:100, flow:6, edge:5, neat:5, cool:4, easy:5}'
@@ -28,7 +31,9 @@ tasks:
   priminhos: '{rate:100, flow:6, edge:5}'
   fractais: '{rate:20, flow:3, edge:2, neat:4, cool:4, easy:1}'
   vetequals: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
-  queimada: '{rate:100, flow:5, edge:4, neat:3, cool:3, easy:3}'
+  queimada: '{rate:100, flow:6, edge:5, neat:4, cool:3, easy:3}'
+  ilhas: '{rate:100, flow:6, edge:5}'
+  queimando: '{rate:100, flow:6, edge:5}'
   labirinto: '{rate:100, flow:5, edge:4, neat:3, cool:4, easy:3}'
   distancia: '{rate:100, flow:4, edge:4, neat:4, cool:4, easy:2}'
   sudoku: '{rate:80, flow:2, edge:2}'
@@ -60,4 +65,4 @@ flags:
   skills: 1
   graph: 1
 lang: go
-index: main-quest
+index: cercado

@@ -1,0 +1,22 @@
+2025-07-06 11:13:32, MOVE, v:1, k:queimando, mode:PICK
+2025-07-06 11:14:52, MOVE, v:1, k:queimando, mode:BACK
+2025-07-06 11:14:54, MOVE, v:1, k:queimando, mode:PICK
+2025-07-06 11:25:54, EXEC, v:1, k:queimando, mode:FULL, rate:0, size:118
+2025-07-06 11:25:57, EXEC, v:1, k:queimando, mode:FULL, rate:20
+2025-07-06 11:28:21, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:118
+2025-07-06 11:29:13, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:119
+2025-07-06 11:31:56, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:120
+2025-07-06 11:33:24, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:120
+2025-07-06 11:35:11, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:126
+2025-07-06 11:36:04, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:128
+2025-07-06 11:37:01, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:133
+2025-07-06 11:37:04, EXEC, v:1, k:queimando, mode:FULL, rate:20
+2025-07-06 11:38:21, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:135
+2025-07-06 11:39:12, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:135
+2025-07-06 11:39:35, EXEC, v:1, k:queimando, mode:FULL, rate:0, size:135
+2025-07-06 11:39:36, EXEC, v:1, k:queimando, mode:FULL, rate:0
+2025-07-06 11:39:42, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:135
+2025-07-06 11:41:33, EXEC, v:1, k:queimando, mode:FULL, rate:20, size:135
+2025-07-06 11:41:52, EXEC, v:1, k:queimando, mode:FULL, rate:100, size:135
+2025-07-06 11:42:05, MOVE, v:1, k:queimando, mode:BACK
+2025-07-06 11:42:21, SELF, v:1, k:queimando, rate:100, flow:6, edge:5

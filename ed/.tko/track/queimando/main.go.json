@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2025-07-06_11-25-54",
+            "content": "@@ -389,18 +389,18 @@\n (p.l%3E=0 \n-&&\n+%7C%7C\n  p.l %3E=n\n@@ -405,18 +405,18 @@\n =nl)\n-&&\n+%7C%7C\n (p.c%3E=0 \n && p\n@@ -415,10 +415,10 @@\n %3E=0 \n-&&\n+%7C%7C\n  p.c\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-07-06_11-28-21",
+            "content": "@@ -777,31 +777,29 @@\n %0A%09%0A%09\n-stack.Push(Pos%7Bl, c%7D)%0A%09\n+_ , _ , _ = mat, l, c\n %0A%0A%09/\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-07-06_11-29-13",
+            "content": "@@ -752,16 +752,36 @@\n turn%0A%09%7D%0A\n+%09mat%5Bl%5D%5Bc%5D = 'o' %0A%09%0A\n %09stack.P\n@@ -799,59 +799,10 @@\n c%7D)%0A\n+%09\n %0A\n-%09if mat%5Bl%5D%5Bc%5D == 'o'%7B%0A%09%09return%0A%09%7D%0A%09mat%5Bl%5D%5Bc%5D = 'o'\n %0A%09//\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-07-06_11-31-56",
+            "content": "@@ -779,46 +779,20 @@\n c%7D)%0A\n-%09pos:= stack.Top()%0A%09if mat%5Bpos.l%5D%5Bpos.\n+%0A%09if mat%5Bl%5D%5B\n c%5D =\n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-07-06_11-33-24",
+            "content": "@@ -782,17 +782,16 @@\n %0A%09pos:= \n-*\n stack.To\n@@ -857,141 +857,8 @@\n 'o'%0A\n-%09for _, p := range getNeib(Pos%7Bl, c%7D) %7B%0A%09%09if inside(mat, p) && mat%5Bp.l%5D%5Bp.c%5D == '#' %7B%0A%09%09%09mat%5Bp.l%5D%5Bp.c%5D = 'o'%0A%09%09%09stack.Push(p)%0A%09%09%7D%0A%09%7D%0A\n %09// \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-07-06_11-35-11",
+            "content": "@@ -779,32 +779,8 @@\n c%7D)%0A\n-%09for !stack.IsEmpty() %7B%0A\n %09pos\n@@ -838,35 +838,27 @@\n urn%0A%09%7D%0A%09mat%5B\n-pos.l%5D%5Bpos.\n+l%5D%5B\n c%5D = 'o'%0A%09fo\n@@ -987,18 +987,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%7D%0A\n %09// Essa\n",
+            "lines": "95"
+        },
+        {
+            "label": "2025-07-06_11-36-04",
+            "content": "@@ -385,17 +385,14 @@\n %0A%09if\n- \n (p.l\n- \n %3E=\n- \n 0 &&\n@@ -402,24 +402,19 @@\n l %3E=\n- \n nl)\n- \n &&\n- \n (p.c\n- \n %3E=\n- \n 0 &&\n@@ -424,13 +424,11 @@\n c %3E=\n- \n nc)\n- \n %7B%0A%09%09\n@@ -803,15 +803,12 @@\n ) %7B%0A\n-%0A%09\n %09pos\n- \n := *\n@@ -823,24 +823,8 @@\n p()%0A\n-%09%09stack.Pop()%0A%0A%09\n %09if \n@@ -851,29 +851,22 @@\n  'o'\n- \n %7B%0A%09%09\n-%09continue%0A%09%09%7D%0A%0A%09\n+return%0A%09%7D%0A\n %09mat\n@@ -886,18 +886,16 @@\n %5D = 'o'%0A\n-%0A%09\n %09for _, \n@@ -928,17 +928,16 @@\n c%7D) %7B%0A%09%09\n-%09\n if insid\n@@ -971,25 +971,24 @@\n == '#' %7B%0A%09%09%09\n-%09\n mat%5Bp.l%5D%5Bp.c\n@@ -995,17 +995,16 @@\n %5D = 'o'%0A\n-%09\n %09%09%09stack\n@@ -1012,28 +1012,25 @@\n Push(p)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n-\n %09%7D%0A\n+%7D%0A\n %09// Essa\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-07-06_11-37-01",
+            "content": "@@ -381,50 +381,8 @@\n 0%5D)%0A\n-%09if nl == 0 %7C%7C nc == 0 %7B%0A%09%09return false%0A%09%7D\n %0A%09if\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-07-06_11-38-21",
+            "content": "@@ -441,17 +441,18 @@\n  && p.l \n-%3C\n+%3E=\n  nl) && \n@@ -468,17 +468,18 @@\n  && p.c \n-%3C\n+%3E=\n  nc) %7B%0A%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-07-06_11-39-12",
+            "content": "@@ -442,17 +442,16 @@\n && p.l %3C\n-=\n  nl) && \n@@ -468,17 +468,16 @@\n && p.c %3C\n-=\n  nc) %7B%0A%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-07-06_11-39-35",
+            "content": "@@ -442,16 +442,17 @@\n && p.l %3C\n+=\n  nl) && \n@@ -469,16 +469,17 @@\n && p.c %3C\n+=\n  nc) %7B%0A%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-07-06_11-39-42",
+            "content": "@@ -730,16 +730,25 @@\n Pos%5D()%0A%09\n+_ = stack\n %0A%09if !in\n@@ -991,19 +991,25 @@\n getNeib(\n-p\n+P\n os\n+%7Bl, c%7D\n ) %7B%0A%09%09%09i\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-07-06_11-41-33",
+            "content": "@@ -1040,18 +1040,16 @@\n ' %7B%0A%09%09%09%09\n-//\n mat%5Bp.l%5D\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-07-06_11-41-52",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\n// Retorna os vizinhos (acima, abaixo, esquerda, direita)\nfunc getNeib(p Pos) []Pos {\n\treturn []Pos{\n\t\t{p.l - 1, p.c},\n\t\t{p.l + 1, p.c},\n\t\t{p.l, p.c - 1},\n\t\t{p.l, p.c + 1},\n\t}\n}\n\n// Verifica se a posi\u00e7\u00e3o est\u00e1 dentro da matriz\nfunc inside(mat [][]rune, p Pos) bool {\n\tnl := len(mat)\n\tnc := len(mat[0])\n\tif nl == 0 || nc == 0 {\n\t\treturn false\n\t}\n\tif (p.l >= 0 && p.l < nl) && (p.c >= 0 && p.c < nc) {\n\t\treturn true\n\t}\n\treturn false\n\t/* Essa fun\u00e7\u00e3o retorna uma booleana que\n\t   diz se a posi\u00e7\u00e3o p est\u00e1 dentro da\n\t   matriz mat */\n}\n\n// Fun\u00e7\u00e3o para propagar a \"chama\" (substitui '#' por 'o')\nfunc queimar(mat [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\t\n\tif !inside(mat, Pos{l, c}) || mat[l][c] != '#' {\n\t\treturn\n\t}\n\tstack.Push(Pos{l, c})\n\tfor !stack.IsEmpty() {\n\n\t\tpos := *stack.Top()\n\t\tstack.Pop()\n\n\t\tif mat[pos.l][pos.c] == 'o' {\n\t\t\tcontinue\n\t\t}\n\n\t\tmat[pos.l][pos.c] = 'o'\n\n\t\tfor _, p := range getNeib(pos) {\n\t\t\tif inside(mat, p) && mat[p.l][p.c] == '#' {\n\t\t\t\t//mat[p.l][p.c] = 'o'\n\t\t\t\tstack.Push(p)\n\t\t\t}\n\t\t}\n\t}\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como\n\t// queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha se poss\u00edvel tocar fogo nele\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - pegar o elemento do topo\n\t//   - ver se tem algum de seus vizinhos que pode ser queimado\n\t//   - se sim, tocar fogo nele e adicionar na pilha\n\t//   - se n\u00e3o, remover o elemento do topo da pilha\n}\n\nfunc main() {\n\tvar nl, nc, l, c int\n\tfmt.Scan(&nl, &nc, &l, &c)\n\n\tmat := make([][]rune, nl)\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Split(bufio.ScanLines)\n\n\tfor i := 0; i < nl; {\n\t\tif scanner.Scan() {\n\t\t\tline := scanner.Text()\n\t\t\tif len(line) == nc {\n\t\t\t\tmat[i] = []rune(line)\n\t\t\t\ti++\n\t\t\t}\n\t\t}\n\t}\n\n\tqueimar(mat, l, c)\n\tshowMat(mat)\n}\n\nfunc showMat(mat [][]rune) {\n\tfor _, row := range mat {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "104"
+        }
+    ]
+}

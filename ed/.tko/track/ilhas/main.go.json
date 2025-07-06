@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2025-07-05_18-05-01",
+            "content": "@@ -323,17 +323,19 @@\n %5D%5Bj%5D == \n-1\n+'1'\n  %7B%0A%09%09%09%09c\n@@ -725,18 +725,16 @@\n eight%0A%7D%0A\n-%09%0A\n // N%C3%A3o m\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-07-05_18-06-00",
+            "content": "@@ -372,11 +372,17 @@\n i, j\n+, m, n\n ) %0A\n-\n %09%09%09%7D\n@@ -451,49 +451,19 @@\n i, j\n+, m,n\n  int)%7B\n-%0A%09m := len(grid)%0A%09n := len(grid%5B0%5D)\n %0A%09if\n@@ -581,24 +581,30 @@\n grid, i-1, j\n+, m, n\n ) // up%0A%09mar\n@@ -623,16 +623,22 @@\n , i+1, j\n+, m, n\n ) // dow\n@@ -663,16 +663,22 @@\n , i, j-1\n+, m, n\n ) // lef\n@@ -703,16 +703,22 @@\n , i, j+1\n+, m, n\n ) // rei\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-07-05_18-07-18",
+            "content": "@@ -1,1072 +1,100 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0A// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o numIslands%0A// Ela %C3%A9 a fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode para resolver o problema%0Afunc numIslands(grid %5B%5D%5B%5Dbyte) int %7B%0A%09var contIslan int%0A%09m := len(grid)%0A%09n := len(grid%5B0%5D)%0A%09for i := 0; i%3C=m; i++ %7B%0A%09%09for j := 0; j%3C=n; i++%7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == 1 %7B%0A%09%09%09%09contIslan++%0A%09%09%09%09marcarIlha(grid, i, j) %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09%0A%09return contIslan%0A%7D%0Afunc marcarIlha(grid %5B%5D%5B%5Dbyte, i, j int)%7B%0A%09m := len(grid)%0A%09n := len(grid%5B0%5D)%0A%09if (i %3C 0 %7C%7C i%3E= m) %7C%7C (j %3C0 %7C%7C j%3E=n)%7B%0A%09%09return%0A%09%7D%0A%09if grid%5Bi%5D%5Bj%5D != 1%7B%0A%09%09return%0A%09%7D%0A%09grid%5Bi%5D%5Bj%5D = 7 %0A%09marcarIlha(grid, i-1, j) // up%0A%09marcarIlha(grid, i+1, j) // down%0A%09marcarIlha(grid, i, j-1) // left%0A%09marcarIlha(grid, i, j+1) // reight%0A%7D%0A%09%0A// N%C3%A3o modifique a fun%C3%A7%C3%A3o main%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09line := scanner.Text()%0A%09var nl, nc int%0A%09fmt.Sscanf(line, %22%25d %25d%22, &nl, &nc)%0A%09grid := make(%5B%5D%5B%5Dbyte, nl)%0A%09for i := 0; i %3C\n+@@ -270,17 +270,16 @@%0A := 0; i%253C%0A-=%0A m; i++ %257B%0A@@ -295,17 +295,16 @@%0A := 0; j%253C%0A-=%0A\n  n\n-l\n ; i++\n- %7B%0A%09%09scanner.Scan()%0A%09%09grid%5Bi%5D = %5B%5Dbyte(scanner.Text())%0A%09%7D%0A%09result := numIslands(grid)%0A%09fmt.Println(result)%0A%7D\n+%257B%250A\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-07-05_18-08-06",
+            "content": "@@ -333,30 +333,8 @@\n 1 %7B%0A\n-%09%09%09%09fmt.Println(grid)%0A\n %09%09%09%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-07-05_18-08-35",
+            "content": "@@ -370,18 +370,16 @@\n an++%0A%09%09%09\n-//\n %09marcarI\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-07-05_18-08-43",
+            "content": "@@ -300,17 +300,17 @@\n ; j%3C=n; \n-j\n+i\n ++%7B%0A%09%09%09i\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-07-05_18-09-17",
+            "content": "@@ -259,39 +259,8 @@\n 0%5D)%0A\n-%09fmt.Println(%22m:%22, m, %22n:%22, n)%0A\n %09for\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-07-05_18-09-36",
+            "content": "@@ -386,16 +386,27 @@\n id)%0A%09%09%09%09\n+contIslan++\n %0A%09%09%09//%09m\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-07-05_18-10-04",
+            "content": "@@ -384,32 +384,8 @@\n grid\n-%5Bi%5D%5Bj%5D, %22i:%22, i, %22j:%22, j\n )%0A%09%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-07-05_18-10-29",
+            "content": "@@ -205,44 +205,8 @@\n t %7B%0A\n-%09if len(grid) == 0 %7B%0A%09%09return 0 %0A%09%7D%0A\n %09var\n@@ -360,11 +360,9 @@\n  == \n-'1'\n+1\n  %7B%0A%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-07-05_18-13-38",
+            "content": "@@ -379,79 +379,77 @@\n %0A%09%09%09\n-fmt.Println(grid%5Bi%5D%5Bj%5D)%0A%09%09%09// if grid%5Bi%5D%5Bj%5D == '1' %7B%0A%09%09%09// %09contIslan++\n+if grid%5Bi%5D%5Bj%5D == '1' %7B%0A%09%09%09%09fmt.Println(grid%5Bi%5D%5Bj%5D, %22i:%22, i, %22j:%22, j)%0A\n %09%09%09%09\n@@ -454,19 +454,16 @@\n %09%09%0A%09%09%09//\n- //\n %09marcarI\n@@ -482,19 +482,16 @@\n  j) %0A%09%09%09\n-// \n %7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-07-05_18-14-31",
+            "content": "@@ -337,16 +337,17 @@\n := 0; i%3C\n+=\n m; i++ %7B\n@@ -363,16 +363,17 @@\n := 0; j%3C\n+=\n n; j++%7B%0A\n@@ -375,16 +375,46 @@\n j++%7B%0A%09%09%09\n+fmt.Println(grid%5Bi%5D%5Bj%5D)%0A%09%09%09// \n if grid%5B\n@@ -431,16 +431,19 @@\n 1' %7B%0A%09%09%09\n+// \n %09contIsl\n@@ -454,16 +454,21 @@\n %09%09%09%09%0A%09%09%09\n+// //\n %09marcarI\n@@ -487,16 +487,19 @@\n  j) %0A%09%09%09\n+// \n %7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-07-05_18-15-33",
+            "content": "@@ -291,16 +291,47 @@\n rid%5B0%5D)%0A\n+%09fmt.Println(%22m:%22, m, %22n:%22, n)%0A\n %09for i :\n@@ -626,19 +626,17 @@\n %5D%5Bj%5D != \n-'1'\n+1\n %7B%0A%09%09retu\n@@ -659,11 +659,9 @@\n %5D = \n-'0'\n+7\n  %0A%09m\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-07-05_18-16-01",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tif len(grid) == 0 {\n\t\treturn 0 \n\t}\n\tvar contIslan int\n\tm := len(grid)\n\tn := len(grid[0])\n\tfor i := 0; i<m; i++ {\n\t\tfor j := 0; j<n; j++{\n\t\t\tif grid[i][j] == '1' {\n\t\t\t\tcontIslan++\t\t\t\t\n\t\t\t\tmarcarIlha(grid, i, j) \n\t\t\t}\n\t\t}\n\t}\n\n\t\n\treturn contIslan\n}\nfunc marcarIlha(grid [][]byte, i, j int){\n\tm := len(grid)\n\tn := len(grid[0])\n\tif (i < 0 || i>= m) || (j <0 || j>=n){\n\t\treturn\n\t}\n\tif grid[i][j] != '1'{\n\t\treturn\n\t}\n\tgrid[i][j] = '0' \n\tmarcarIlha(grid, i-1, j) // up\n\tmarcarIlha(grid, i+1, j) // down\n\tmarcarIlha(grid, i, j-1) // left\n\tmarcarIlha(grid, i, j+1) // reight\n}\n\t\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "60"
+        }
+    ]
+}

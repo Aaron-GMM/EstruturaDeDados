@@ -1,0 +1,48 @@
+2025-07-05 12:28:08, SELF, v:1, k:queimada, rate:100, flow:6, edge:5, neat:4, cool:3, easy:3
+2025-07-05 12:28:18, MOVE, v:1, k:ilhas, mode:DOWN
+2025-07-05 12:28:19, MOVE, v:1, k:ilhas, mode:PICK
+2025-07-05 12:32:47, MOVE, v:1, k:ilhas, mode:BACK
+2025-07-05 15:42:38, MOVE, v:1, k:ilhas, mode:PICK
+2025-07-05 17:41:36, MOVE, v:1, k:ilhas, mode:PICK
+2025-07-05 18:05:01, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:54
+2025-07-05 18:05:04, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:05:04, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:05:07, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:06:00, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:55
+2025-07-05 18:06:01, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:06:05, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:07:18, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:57
+2025-07-05 18:07:19, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:07:21, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:08:04, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:57
+2025-07-05 18:08:04, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:57
+2025-07-05 18:08:06, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:57
+2025-07-05 18:08:35, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:58
+2025-07-05 18:08:36, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:08:43, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:58
+2025-07-05 18:08:44, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:09:17, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:58
+2025-07-05 18:09:19, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:09:36, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:59
+2025-07-05 18:09:37, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:10:04, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:59
+2025-07-05 18:10:05, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:10:29, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:59
+2025-07-05 18:10:31, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:13:38, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:62
+2025-07-05 18:14:31, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:62
+2025-07-05 18:15:33, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:61
+2025-07-05 18:15:35, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:16:01, EXEC, v:1, k:ilhas, mode:FULL, rate:0, size:60
+2025-07-05 18:16:02, EXEC, v:1, k:ilhas, mode:FULL, rate:100
+2025-07-05 18:19:28, MOVE, v:1, k:ilhas, mode:BACK
+2025-07-05 18:19:44, SELF, v:1, k:ilhas, rate:100, flow:6, edge:5
+2025-07-05 18:20:10, SELF, v:1, k:pintura
+2025-07-05 18:20:14, MOVE, v:1, k:queimando, mode:PICK
+2025-07-05 18:20:22, MOVE, v:1, k:queimando, mode:BACK
+2025-07-05 18:21:43, MOVE, v:1, k:queimando, mode:PICK
+2025-07-05 18:22:15, MOVE, v:1, k:queimando, mode:BACK
+2025-07-05 18:31:56, MOVE, v:1, k:ilhas, mode:PICK
+2025-07-05 18:31:58, EXEC, v:1, k:ilhas, mode:FULL, rate:0
+2025-07-05 18:32:00, EXEC, v:1, k:ilhas, mode:FULL, rate:100
+2025-07-05 18:32:10, MOVE, v:1, k:ilhas, mode:BACK
