@@ -2,12 +2,11 @@ remote: https://github.com/qxcodeed/arcade/blob/master/Readme.md
 version: 0.0.1
 database: database
 expanded:
-- local_task_cluster_sem_quest
 - side-quests
 - main-quest
-- local_task_cluster
 - local_task_cluster_sem_quest
-- busca-em-profundidade---dfs-depth-first-search
+- árvore
+- busca-em-largura---bfs-breadth-first-search
 tasks:
   pintando: '{rate:100, flow:6, edge:5, neat:4, cool:5, easy:5}'
   mumia: '{rate:100, flow:6, edge:5, neat:5, cool:4, easy:5}'
@@ -35,6 +34,8 @@ tasks:
   ilhas: '{rate:100, flow:6, edge:5}'
   queimando: '{rate:100, flow:6, edge:5}'
   labirinto: '{rate:100, flow:5, edge:4, neat:3, cool:4, easy:3}'
+  pintura: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
+  caminho: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   distancia: '{rate:100, flow:4, edge:4, neat:4, cool:4, easy:2}'
   sudoku: '{rate:80, flow:2, edge:2}'
   vetbuild: '{rate:100, flow:6, edge:5, neat:5, cool:4, easy:3}'
@@ -55,14 +56,15 @@ tasks:
   fila_enc: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   pilha: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   chaves: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:4}'
+  serial: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   escada: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   ListaIda: '{rate:100, flow:3, edge:3}'
   ListalinkadaIdavolta: '{rate:100, flow:3}'
 flags:
   minimum: 1
   percent: 0
-  admin: 0
+  admin: 1
   skills: 1
   graph: 1
 lang: go
-index: queimando
+index: revisão-fup
