@@ -44,3 +44,6 @@
 2025-07-08 12:17:06, EXEC, v:1, k:caminho, mode:FULL, rate:100
 2025-07-08 12:17:16, MOVE, v:1, k:caminho, mode:BACK
 2025-07-08 12:17:30, SELF, v:1, k:caminho, rate:100, flow:6, edge:5, neat:5, cool:5, easy:5
+2025-07-08 14:23:12, MOVE, v:1, k:vacina, mode:DOWN
+2025-07-08 14:23:13, MOVE, v:1, k:vacina, mode:PICK
+2025-07-08 21:49:43, SELF, v:1, k:longest, rate:100, flow:6, edge:5, neat:5, cool:5, easy:5

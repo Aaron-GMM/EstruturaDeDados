@@ -5,7 +5,6 @@ expanded:
 - side-quests
 - main-quest
 - local_task_cluster_sem_quest
-- árvore
 - busca-em-largura---bfs-breadth-first-search
 tasks:
   pintando: '{rate:100, flow:6, edge:5, neat:4, cool:5, easy:5}'
@@ -33,8 +32,11 @@ tasks:
   queimada: '{rate:100, flow:6, edge:5, neat:4, cool:3, easy:3}'
   ilhas: '{rate:100, flow:6, edge:5}'
   queimando: '{rate:100, flow:6, edge:5}'
+  cercado: '{rate:100, flow:6, edge:5, neat:5, cool:5}'
   labirinto: '{rate:100, flow:5, edge:4, neat:3, cool:4, easy:3}'
   pintura: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
+  longest: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
+  battleship: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   caminho: '{rate:100, flow:6, edge:5, neat:5, cool:5, easy:5}'
   distancia: '{rate:100, flow:4, edge:4, neat:4, cool:4, easy:2}'
   sudoku: '{rate:80, flow:2, edge:2}'
@@ -67,4 +69,4 @@ flags:
   skills: 1
   graph: 1
 lang: go
-index: revisão-fup
+index: ordenação
